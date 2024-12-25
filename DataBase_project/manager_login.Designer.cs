@@ -45,6 +45,7 @@
             this.change_password_button.Size = new System.Drawing.Size(123, 16);
             this.change_password_button.TabIndex = 12;
             this.change_password_button.Text = "Change password?";
+            this.change_password_button.Click += new System.EventHandler(this.change_password_button_Click);
             // 
             // login_button
             // 
