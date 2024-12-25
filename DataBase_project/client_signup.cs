@@ -24,13 +24,21 @@ namespace DataBase_project
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            if (client_IDtb.Text != "" && Fnametb.Text != "" && Lnametb.Text != "" && emailtb.Text != "" && phonetb.Text != "" && usernametb.Text != "" && passkeytb.Text != "")
+            int clientID =27;
+            if ( Fnametb.Text != "" && Lnametb.Text != "" && emailtb.Text != "" && phonetb.Text != "" && usernametb.Text != "" && passkeytb.Text != "")
             {
-                int s = c.InsertNewClient(Convert.ToInt32(client_IDtb.Text), Fnametb.Text, Lnametb.Text, emailtb.Text, phonetb.Text, usernametb.Text, passkeytb.Text);
-                if (s != 0) 
+                clientID++;
+                int s = c.InsertNewClient(clientID, Fnametb.Text, Lnametb.Text, emailtb.Text, phonetb.Text, usernametb.Text, passkeytb.Text);
+                if (s != 0)
+                {
                     MessageBox.Show("Sign up done successfully, You're now a registered client");
+                    client_login cl = new client_login();
+                    cl.Show();
+                }
                 else
+                {
                     MessageBox.Show("Sign up failed.");
+                }
             }
             else
             {

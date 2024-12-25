@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.clientlabel = new System.Windows.Forms.Label();
-            this.client_IDtb = new System.Windows.Forms.TextBox();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.Fnametb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,24 +42,10 @@
             this.passkeytb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.signupbutton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // clientlabel
-            // 
-            this.clientlabel.AutoSize = true;
-            this.clientlabel.Location = new System.Drawing.Point(34, 35);
-            this.clientlabel.Name = "clientlabel";
-            this.clientlabel.Size = new System.Drawing.Size(72, 20);
-            this.clientlabel.TabIndex = 0;
-            this.clientlabel.Text = "client_ID";
-            // 
-            // client_IDtb
-            // 
-            this.client_IDtb.Location = new System.Drawing.Point(160, 35);
-            this.client_IDtb.Name = "client_IDtb";
-            this.client_IDtb.Size = new System.Drawing.Size(100, 26);
-            this.client_IDtb.TabIndex = 1;
             // 
             // fileSystemWatcher1
             // 
@@ -102,7 +86,7 @@
             // 
             // emailtb
             // 
-            this.emailtb.Location = new System.Drawing.Point(160, 207);
+            this.emailtb.Location = new System.Drawing.Point(510, 80);
             this.emailtb.Name = "emailtb";
             this.emailtb.Size = new System.Drawing.Size(100, 26);
             this.emailtb.TabIndex = 7;
@@ -110,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 207);
+            this.label3.Location = new System.Drawing.Point(384, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 20);
             this.label3.TabIndex = 6;
@@ -118,7 +102,7 @@
             // 
             // phonetb
             // 
-            this.phonetb.Location = new System.Drawing.Point(160, 283);
+            this.phonetb.Location = new System.Drawing.Point(510, 156);
             this.phonetb.Name = "phonetb";
             this.phonetb.Size = new System.Drawing.Size(100, 26);
             this.phonetb.TabIndex = 9;
@@ -126,7 +110,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 283);
+            this.label4.Location = new System.Drawing.Point(384, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 8;
@@ -134,7 +118,7 @@
             // 
             // usernametb
             // 
-            this.usernametb.Location = new System.Drawing.Point(160, 350);
+            this.usernametb.Location = new System.Drawing.Point(160, 220);
             this.usernametb.Name = "usernametb";
             this.usernametb.Size = new System.Drawing.Size(100, 26);
             this.usernametb.TabIndex = 11;
@@ -142,7 +126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 350);
+            this.label5.Location = new System.Drawing.Point(34, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 20);
             this.label5.TabIndex = 10;
@@ -150,7 +134,7 @@
             // 
             // passkeytb
             // 
-            this.passkeytb.Location = new System.Drawing.Point(160, 420);
+            this.passkeytb.Location = new System.Drawing.Point(160, 290);
             this.passkeytb.Name = "passkeytb";
             this.passkeytb.Size = new System.Drawing.Size(100, 26);
             this.passkeytb.TabIndex = 13;
@@ -158,7 +142,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 420);
+            this.label6.Location = new System.Drawing.Point(34, 290);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 20);
             this.label6.TabIndex = 12;
@@ -166,7 +150,7 @@
             // 
             // signupbutton
             // 
-            this.signupbutton.Location = new System.Drawing.Point(243, 469);
+            this.signupbutton.Location = new System.Drawing.Point(203, 395);
             this.signupbutton.Name = "signupbutton";
             this.signupbutton.Size = new System.Drawing.Size(157, 42);
             this.signupbutton.TabIndex = 14;
@@ -174,11 +158,29 @@
             this.signupbutton.UseVisualStyleBackColor = true;
             this.signupbutton.Click += new System.EventHandler(this.signupbutton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 349);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 20);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "confirm passkey";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(178, 350);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(113, 26);
+            this.textBox1.TabIndex = 16;
+            // 
             // client_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.signupbutton);
             this.Controls.Add(this.passkeytb);
             this.Controls.Add(this.label6);
@@ -192,8 +194,6 @@
             this.Controls.Add(this.Lname);
             this.Controls.Add(this.Fnametb);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.client_IDtb);
-            this.Controls.Add(this.clientlabel);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "client_signup";
             this.Text = "client_signup";
@@ -204,9 +204,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label clientlabel;
-        private System.Windows.Forms.TextBox client_IDtb;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.TextBox passkeytb;
         private System.Windows.Forms.Label label6;
@@ -221,5 +218,7 @@
         private System.Windows.Forms.TextBox Fnametb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button signupbutton;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

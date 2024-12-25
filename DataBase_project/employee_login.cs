@@ -22,5 +22,15 @@ namespace DataBase_project
             e_change_pass f = new e_change_pass();
             f.Show();
         }
+
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            if (username_textbox.Text != "" && password_textbox.Text != "")
+            {
+                //3ayzeen ne3mel check en el username w el password relevant le ba3d
+                employee_home eh = new employee_home();
+                eh.Show();
+            }
+        }
     }
 }

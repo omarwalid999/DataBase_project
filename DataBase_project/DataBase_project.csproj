@@ -78,6 +78,12 @@
     <Compile Include="employee_first.Designer.cs">
       <DependentUpon>employee_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="employee_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_home.Designer.cs">
+      <DependentUpon>employee_home.cs</DependentUpon>
+    </Compile>
     <Compile Include="employee_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,24 @@
     </Compile>
     <Compile Include="e_change_pass.Designer.cs">
       <DependentUpon>e_change_pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="e_scheduled_events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="e_scheduled_events.Designer.cs">
+      <DependentUpon>e_scheduled_events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="e_taskslist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="e_taskslist.Designer.cs">
+      <DependentUpon>e_taskslist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="e_vendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="e_vendors.Designer.cs">
+      <DependentUpon>e_vendors.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -131,11 +155,17 @@
     <EmbeddedResource Include="employee_first.resx">
       <DependentUpon>employee_first.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="employee_home.resx">
+      <DependentUpon>employee_home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employee_login.resx">
       <DependentUpon>employee_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="e_change_pass.resx">
       <DependentUpon>e_change_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="e_vendors.resx">
+      <DependentUpon>e_vendors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

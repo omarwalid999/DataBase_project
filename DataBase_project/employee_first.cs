@@ -28,5 +28,11 @@ namespace DataBase_project
             employee_login f=new employee_login();
             f.Show();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            Home h = new Home();
+            h.Show();
+        }
     }
 }
