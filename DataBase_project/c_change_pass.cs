@@ -16,5 +16,13 @@ namespace DataBase_project
         {
             InitializeComponent();
         }
+
+        private void change_pass_button_Click(object sender, EventArgs e)
+        {
+            //ye check old password
+            //law sah yeghayarlo el passwordw ye print changed successfully
+            //law ghalat yetala3lo error
+
+        }
     }
 }
