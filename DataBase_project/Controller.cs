@@ -21,6 +21,10 @@ namespace DBapplication
         public void noor()
         {
 
+        public void omar()
+        {
+
+        }
         };
     }
 };
