@@ -22,7 +22,11 @@ namespace DBapplication
         { 
         }
         public void omar 2(){
-            }
+        }
+        public norrrr()
+    {
+
+    }
         public void omar()
         {
 
