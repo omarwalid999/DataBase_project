@@ -27,7 +27,10 @@ namespace DBapplication
         }
         public void omar 2(){
         }
-        public norrrr()
+        public norrrr()  {
+
+         }
+    public noor274()
     {
 
     }
