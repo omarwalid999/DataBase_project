@@ -16,5 +16,16 @@ namespace DataBase_project
         {
             InitializeComponent();
         }
+
+        private void client_home_Load(object sender, EventArgs e)
+        {
+            ////
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            client_login cl = new client_login();
+            cl.Show();
+        }
     }
 }

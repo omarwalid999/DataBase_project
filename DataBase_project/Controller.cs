@@ -52,6 +52,16 @@ namespace DBapplication
             string query = "SELECT * FROM Vendors;";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable ShowAllEvents(int clientid) //for datagrid view
+        {
+            string query = "SELECT * FROM events Where client_ID="+clientid+";";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable ShowEvents(int clientid) //for combobox
+        {
+            string query = "SELECT * FROM events Where client_ID=" + clientid + ";";
+            return dbMan.ExecuteReader(query);
+        }
 
         //rawan
 

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="client_events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client_events.Designer.cs">
+      <DependentUpon>client_events.cs</DependentUpon>
+    </Compile>
     <Compile Include="client_first.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,8 +146,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="client_events.resx">
+      <DependentUpon>client_events.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="client_first.resx">
       <DependentUpon>client_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_home.resx">
+      <DependentUpon>client_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="client_login.resx">
       <DependentUpon>client_login.cs</DependentUpon>
