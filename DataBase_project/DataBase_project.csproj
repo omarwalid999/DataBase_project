@@ -96,11 +96,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="managaer_login.cs">
+    <Compile Include="manager_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="managaer_login.Designer.cs">
-      <DependentUpon>managaer_login.cs</DependentUpon>
+    <Compile Include="manager_login.Designer.cs">
+      <DependentUpon>manager_login.cs</DependentUpon>
     </Compile>
     <Compile Include="m_change_pass.cs">
       <SubType>Form</SubType>
@@ -134,8 +134,8 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="managaer_login.resx">
-      <DependentUpon>managaer_login.cs</DependentUpon>
+    <EmbeddedResource Include="manager_login.resx">
+      <DependentUpon>manager_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="m_change_pass.resx">
       <DependentUpon>m_change_pass.cs</DependentUpon>

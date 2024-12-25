@@ -16,11 +16,5 @@ namespace DataBase_project
         {
             InitializeComponent();
         }
-
-        private void change_password_button_Click(object sender, EventArgs e)
-        {
-            m_change_pass f = new m_change_pass();
-            f.Show();
-        }
     }
 }

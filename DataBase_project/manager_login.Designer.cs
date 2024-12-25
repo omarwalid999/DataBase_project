@@ -40,16 +40,15 @@
             // 
             this.change_password_button.AutoSize = true;
             this.change_password_button.ForeColor = System.Drawing.Color.Red;
-            this.change_password_button.Location = new System.Drawing.Point(362, 253);
+            this.change_password_button.Location = new System.Drawing.Point(357, 241);
             this.change_password_button.Name = "change_password_button";
             this.change_password_button.Size = new System.Drawing.Size(123, 16);
             this.change_password_button.TabIndex = 12;
             this.change_password_button.Text = "Change password?";
-            this.change_password_button.Click += new System.EventHandler(this.change_password_button_Click);
             // 
             // login_button
             // 
-            this.login_button.Location = new System.Drawing.Point(354, 285);
+            this.login_button.Location = new System.Drawing.Point(349, 273);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(144, 46);
             this.login_button.TabIndex = 11;
@@ -59,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 220);
+            this.label2.Location = new System.Drawing.Point(220, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 10;
@@ -68,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(225, 170);
+            this.label1.Location = new System.Drawing.Point(220, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 16);
             this.label1.TabIndex = 9;
@@ -76,7 +75,7 @@
             // 
             // password_textbox
             // 
-            this.password_textbox.Location = new System.Drawing.Point(308, 217);
+            this.password_textbox.Location = new System.Drawing.Point(303, 205);
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '*';
             this.password_textbox.Size = new System.Drawing.Size(212, 22);
@@ -84,12 +83,12 @@
             // 
             // username_textbox
             // 
-            this.username_textbox.Location = new System.Drawing.Point(308, 167);
+            this.username_textbox.Location = new System.Drawing.Point(303, 155);
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(212, 22);
             this.username_textbox.TabIndex = 7;
             // 
-            // managaer_login
+            // manager_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,8 +99,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_textbox);
             this.Controls.Add(this.username_textbox);
-            this.Name = "managaer_login";
-            this.Text = "managaer_login";
+            this.Name = "manager_login";
+            this.Text = "manager_login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
