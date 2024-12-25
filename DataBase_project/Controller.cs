@@ -27,6 +27,9 @@ namespace DBapplication
         {
 
         }
-        };
+        public tarekk()
+            {
+
+            };
     }
 };
