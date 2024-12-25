@@ -19,8 +19,10 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
         public void noor()
-        {
-
+        { 
+        }
+        public void omar 2(){
+            }
         public void omar()
         {
 
