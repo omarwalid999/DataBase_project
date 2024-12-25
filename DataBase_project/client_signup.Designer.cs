@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.passkeytb = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.signupbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,11 +164,22 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "passkey";
             // 
+            // signupbutton
+            // 
+            this.signupbutton.Location = new System.Drawing.Point(243, 469);
+            this.signupbutton.Name = "signupbutton";
+            this.signupbutton.Size = new System.Drawing.Size(157, 42);
+            this.signupbutton.TabIndex = 14;
+            this.signupbutton.Text = "sign up";
+            this.signupbutton.UseVisualStyleBackColor = true;
+            this.signupbutton.Click += new System.EventHandler(this.signupbutton_Click);
+            // 
             // client_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.signupbutton);
             this.Controls.Add(this.passkeytb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.usernametb);
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Label Lname;
         private System.Windows.Forms.TextBox Fnametb;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button signupbutton;
     }
 }

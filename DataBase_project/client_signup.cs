@@ -16,5 +16,10 @@ namespace DataBase_project
         {
             InitializeComponent();
         }
+
+        private void signupbutton_Click(object sender, EventArgs e)
+        {
+            //call function in controller to add
+        }
     }
 }

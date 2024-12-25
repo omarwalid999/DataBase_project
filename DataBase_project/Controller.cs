@@ -34,7 +34,13 @@ namespace DBapplication
 
 
         //noor
-
+        //hagat client signup
+        public int InsertNewClient(string clientid, int Fname, string Lname, string email, string phone, string username, string)
+        {
+            string query = "INSERT INTO client (client_ID, Fname, Lname, email, phone, username,passkey)" +
+                            "Values ('" + Pname + "'," + pnumber + ",'" + Plocation + "'," + Dnum + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
 
 
