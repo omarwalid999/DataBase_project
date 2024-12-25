@@ -20,6 +20,28 @@ namespace DBapplication
         }
         public void omar3()
         {
+//
+//
+///
+//
+//
+//
+//
+//
+//
+//
+//
+///
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
         }
         public void noor()
