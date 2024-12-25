@@ -14,12 +14,13 @@ namespace DBapplication
         {
             dbMan = new DBManager();
         }
-
-
         public void TerminateConnection()
         {
             dbMan.CloseConnection();
         }
+        public void noor()
+        {
 
+        };
     }
 };
