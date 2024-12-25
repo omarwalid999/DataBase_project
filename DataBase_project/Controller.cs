@@ -21,5 +21,9 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
 
+        public void omar()
+        {
+
+        }
     }
 };
