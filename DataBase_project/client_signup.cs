@@ -27,22 +27,28 @@ namespace DataBase_project
             int clientID =27;
             if ( Fnametb.Text != "" && Lnametb.Text != "" && emailtb.Text != "" && phonetb.Text != "" && usernametb.Text != "" && passkeytb.Text != "")
             {
-                clientID++;
-                int s = c.InsertNewClient(clientID, Fnametb.Text, Lnametb.Text, emailtb.Text, phonetb.Text, usernametb.Text, passkeytb.Text);
-                if (s != 0)
+                if (passkeytb.Text == confirmpasskey.Text)
                 {
-                    MessageBox.Show("Sign up done successfully, You're now a registered client");
-                    client_login cl = new client_login();
-                    cl.Show();
-                }
-                else
+                    clientID++;
+                    int s = c.InsertNewClient(clientID, Fnametb.Text, Lnametb.Text, emailtb.Text, phonetb.Text, usernametb.Text, passkeytb.Text);
+                    if (s != 0)
+                    {
+                        MessageBox.Show("Sign up done successfully, You're now a registered client");
+                        client_login cl = new client_login();
+                        cl.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sign up failed.");
+                    }
+                } else
                 {
-                    MessageBox.Show("Sign up failed.");
+                    perror_message.Visible = true;
                 }
             }
             else
             {
-                MessageBox.Show("error please enter all fields");
+                error_message.Visible = true;
             }
         }
     }

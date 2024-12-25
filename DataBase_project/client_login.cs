@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace DataBase_project
 {
     public partial class client_login : Form
     {
+        Controller cobj = new Controller();
         public client_login()
         {
             InitializeComponent();
@@ -26,7 +28,11 @@ namespace DataBase_project
         private void login_button_Click(object sender, EventArgs e)
         {
             //ye check credentials
+            int s = cobj.CheckUsername(username_textbox.Text, password_textbox.Text);
+
             //law sah yerouh lel form eltanya
+            //client_home ch = new client_home();
+            //ch.Show();
             //law ghalat ye2olo ghalat
         }
     }

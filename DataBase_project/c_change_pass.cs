@@ -21,8 +21,10 @@ namespace DataBase_project
         {
             //ye check old password
             //law sah yeghayarlo el passwordw ye print changed successfully
+            //w yerga3 le form home
+            //client_home ch2 = new client_home();
+            //ch2.Show();
             //law ghalat yetala3lo error
-            //omar was here
         }
     }
 }
