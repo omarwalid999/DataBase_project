@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,12 @@ namespace DataBase_project
         {
             id1 = id;
             InitializeComponent();
+            Controller c = new Controller();
+            DataTable dt= c.ShowClientEvents(id);
+            DataTable dt1 = c.ShowClientEventsNames(id);
+            clientseventdatagridview.DataSource = dt;
+            eventscombobox.DataSource = dt1;
+            eventscombobox.DisplayMember = "eventname";
         }
 
         private void client_event_Load(object sender, EventArgs e)

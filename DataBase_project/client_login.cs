@@ -27,15 +27,28 @@ namespace DataBase_project
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            int id=cobj.client_id(username_textbox.Text);
-            if (cobj.check_login_c(username_textbox.Text, password_textbox.Text))
+            if (username_textbox.Text != "" && password_textbox.Text != "")
             {
-                client_home f = new client_home(id);
-                f.Show();
-            }
-            else
+                int id = cobj.client_id(username_textbox.Text);
+                if (id != -1)
+                {
+                    if (cobj.check_login_c(username_textbox.Text, password_textbox.Text))
+                    {
+                        client_home f = new client_home(id);
+                        f.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("please enter username and password correctly!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("invalid username!");
+                }
+            } else
             {
-                MessageBox.Show("please enter username and password correctly!");
+                MessageBox.Show("please enter username and password");
             }
        
         }
