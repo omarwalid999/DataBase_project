@@ -12,9 +12,11 @@ namespace DataBase_project
 {
     public partial class client_home : Form
     {
-        public client_home()
+        int id;
+        public client_home(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void client_home_Load(object sender, EventArgs e)

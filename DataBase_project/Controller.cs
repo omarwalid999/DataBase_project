@@ -34,6 +34,11 @@ namespace DBapplication
             }
         }
 
+        public int client_id(string username)
+        {
+            string query = $"SELECT client_ID FROM client WHERE username = '{username}'";
+            return (int)dbMan.ExecuteScalar(query);
+        }
 
 
 
