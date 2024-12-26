@@ -43,7 +43,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.signupbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.confirmpasskey = new System.Windows.Forms.TextBox();
+            this.perror_message = new System.Windows.Forms.Label();
+            this.error_message = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +152,7 @@
             // 
             // signupbutton
             // 
-            this.signupbutton.Location = new System.Drawing.Point(203, 395);
+            this.signupbutton.Location = new System.Drawing.Point(228, 422);
             this.signupbutton.Name = "signupbutton";
             this.signupbutton.Size = new System.Drawing.Size(157, 42);
             this.signupbutton.TabIndex = 14;
@@ -167,19 +169,43 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "confirm passkey";
             // 
-            // textBox1
+            // confirmpasskey
             // 
-            this.textBox1.Location = new System.Drawing.Point(178, 350);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(113, 26);
-            this.textBox1.TabIndex = 16;
+            this.confirmpasskey.Location = new System.Drawing.Point(178, 350);
+            this.confirmpasskey.Name = "confirmpasskey";
+            this.confirmpasskey.Size = new System.Drawing.Size(113, 26);
+            this.confirmpasskey.TabIndex = 16;
+            // 
+            // perror_message
+            // 
+            this.perror_message.AutoSize = true;
+            this.perror_message.ForeColor = System.Drawing.Color.Red;
+            this.perror_message.Location = new System.Drawing.Point(118, 388);
+            this.perror_message.Name = "perror_message";
+            this.perror_message.Size = new System.Drawing.Size(215, 20);
+            this.perror_message.TabIndex = 17;
+            this.perror_message.Text = "Error! passwords don\'t match";
+            this.perror_message.Visible = false;
+            // 
+            // error_message
+            // 
+            this.error_message.AutoSize = true;
+            this.error_message.ForeColor = System.Drawing.Color.Red;
+            this.error_message.Location = new System.Drawing.Point(111, 388);
+            this.error_message.Name = "error_message";
+            this.error_message.Size = new System.Drawing.Size(222, 20);
+            this.error_message.TabIndex = 18;
+            this.error_message.Text = "Error! you have to fill in all data";
+            this.error_message.Visible = false;
             // 
             // client_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.error_message);
+            this.Controls.Add(this.perror_message);
+            this.Controls.Add(this.confirmpasskey);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.signupbutton);
             this.Controls.Add(this.passkeytb);
@@ -218,7 +244,9 @@
         private System.Windows.Forms.TextBox Fnametb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button signupbutton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox confirmpasskey;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label perror_message;
+        private System.Windows.Forms.Label error_message;
     }
 }

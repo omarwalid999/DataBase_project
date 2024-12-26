@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_task.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_task.Designer.cs">
-      <DependentUpon>Add_task.cs</DependentUpon>
-    </Compile>
     <Compile Include="client_first.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,17 +140,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="status.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="status.Designer.cs">
-      <DependentUpon>status.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Add_task.resx">
-      <DependentUpon>Add_task.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="client_first.resx">
       <DependentUpon>client_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_home.resx">
+      <DependentUpon>client_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="client_login.resx">
       <DependentUpon>client_login.cs</DependentUpon>
