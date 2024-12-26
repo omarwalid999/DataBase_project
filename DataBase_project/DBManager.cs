@@ -12,7 +12,7 @@ namespace DBapplication
     {
         //TODO: Make Sure to change Connection String to your Database 
 
-        static string DB_Connection_String = @"Data Source=LAPTOP-P724ABJE\SQLEXPRESS;Initial Catalog=Eventura;Integrated Security=True;Encrypt=False";
+        static string DB_Connection_String = @"Data Source=MOHAMED\SQLEXPRESS;Initial Catalog=Eventura;Integrated Security=True;Encrypt=False";
         SqlConnection myConnection;
 
         public DBManager()
@@ -70,7 +70,10 @@ namespace DBapplication
                 return null;
             }
         }
-
+        public SqlCommand CreateCommand()
+        {
+            return myConnection.CreateCommand();
+        }
         public object ExecuteScalar(string query)
         {
             try
@@ -97,7 +100,7 @@ namespace DBapplication
             }
         }
 
-
+        
     }
 }
 ;

@@ -35,9 +35,10 @@
             // 
             // ScheduledEventsButton
             // 
-            this.ScheduledEventsButton.Location = new System.Drawing.Point(159, 79);
+            this.ScheduledEventsButton.Location = new System.Drawing.Point(141, 63);
+            this.ScheduledEventsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ScheduledEventsButton.Name = "ScheduledEventsButton";
-            this.ScheduledEventsButton.Size = new System.Drawing.Size(316, 65);
+            this.ScheduledEventsButton.Size = new System.Drawing.Size(281, 52);
             this.ScheduledEventsButton.TabIndex = 0;
             this.ScheduledEventsButton.Text = "Scheduled Events";
             this.ScheduledEventsButton.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // TasksListButton
             // 
-            this.TasksListButton.Location = new System.Drawing.Point(159, 185);
+            this.TasksListButton.Location = new System.Drawing.Point(141, 148);
+            this.TasksListButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TasksListButton.Name = "TasksListButton";
-            this.TasksListButton.Size = new System.Drawing.Size(316, 68);
+            this.TasksListButton.Size = new System.Drawing.Size(281, 54);
             this.TasksListButton.TabIndex = 1;
             this.TasksListButton.Text = "Tasks List";
             this.TasksListButton.UseVisualStyleBackColor = true;
@@ -55,9 +57,10 @@
             // 
             // VendorsButton
             // 
-            this.VendorsButton.Location = new System.Drawing.Point(159, 284);
+            this.VendorsButton.Location = new System.Drawing.Point(141, 227);
+            this.VendorsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VendorsButton.Name = "VendorsButton";
-            this.VendorsButton.Size = new System.Drawing.Size(316, 62);
+            this.VendorsButton.Size = new System.Drawing.Size(281, 50);
             this.VendorsButton.TabIndex = 2;
             this.VendorsButton.Text = "Vendors";
             this.VendorsButton.UseVisualStyleBackColor = true;
@@ -65,14 +68,16 @@
             // 
             // employee_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 450);
+            this.ClientSize = new System.Drawing.Size(545, 360);
             this.Controls.Add(this.VendorsButton);
             this.Controls.Add(this.TasksListButton);
             this.Controls.Add(this.ScheduledEventsButton);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "employee_home";
             this.Text = "employee_home";
+            this.Load += new System.EventHandler(this.employee_home_Load);
             this.ResumeLayout(false);
 
         }

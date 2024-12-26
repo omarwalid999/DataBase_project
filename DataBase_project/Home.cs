@@ -27,6 +27,7 @@ namespace DataBase_project
         {
             employee_first employee = new employee_first();
             employee.Show();
+            this.Hide();
         }
     }
 }

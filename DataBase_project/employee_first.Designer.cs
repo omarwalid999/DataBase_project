@@ -35,10 +35,9 @@
             // 
             // manager_button
             // 
-            this.manager_button.Location = new System.Drawing.Point(316, 152);
-            this.manager_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.manager_button.Location = new System.Drawing.Point(281, 122);
             this.manager_button.Name = "manager_button";
-            this.manager_button.Size = new System.Drawing.Size(250, 121);
+            this.manager_button.Size = new System.Drawing.Size(222, 97);
             this.manager_button.TabIndex = 0;
             this.manager_button.Text = "Manager";
             this.manager_button.UseVisualStyleBackColor = true;
@@ -46,10 +45,9 @@
             // 
             // employee_button
             // 
-            this.employee_button.Location = new System.Drawing.Point(316, 296);
-            this.employee_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.employee_button.Location = new System.Drawing.Point(281, 237);
             this.employee_button.Name = "employee_button";
-            this.employee_button.Size = new System.Drawing.Size(250, 121);
+            this.employee_button.Size = new System.Drawing.Size(222, 97);
             this.employee_button.TabIndex = 1;
             this.employee_button.Text = "Employee";
             this.employee_button.UseVisualStyleBackColor = true;
@@ -57,9 +55,10 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(611, 453);
+            this.BackButton.Location = new System.Drawing.Point(543, 362);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(194, 40);
+            this.BackButton.Size = new System.Drawing.Size(172, 32);
             this.BackButton.TabIndex = 2;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
@@ -67,15 +66,15 @@
             // 
             // employee_first
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.employee_button);
             this.Controls.Add(this.manager_button);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "employee_first";
             this.Text = "employee_first";
+            this.Load += new System.EventHandler(this.employee_first_Load);
             this.ResumeLayout(false);
 
         }
