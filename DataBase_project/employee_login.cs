@@ -23,10 +23,7 @@ namespace DataBase_project
             InitializeComponent();
    
             DataTable dt = controllerobj.get_employees(); 
-            comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "username";
-            comboBox1.ValueMember = "employee_ID";
-
+     
 
         }
 
@@ -38,25 +35,24 @@ namespace DataBase_project
 
         private void login_button_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(comboBox1.SelectedValue);
-            string enteredPassword = password_textbox.Text;
+           int id=controllerobj.emp_id(username_textbox.Text);
 
-            if (string.IsNullOrEmpty(enteredPassword))
+            if (username_textbox.Text=="" || password_textbox.Text=="")
             {
                 MessageBox.Show("❌ Please enter both username and password.");
                 return;
             }
 
-            if (controllerobj.CheckPass(id, password_textbox.Text) is true)
-            {
-                employee_home eh = new employee_home(id);
-                eh.Show();
-                this.Hide();
+            if (controllerobj.check_login_e(username_textbox.Text, password_textbox.Text)) {
+
+                MessageBox.Show("Logged in successfuly!");
+                employee_home login = new employee_home(id);
+                login.Show();
+
             }
             else
             {
-                MessageBox.Show("Invalid username or password!");
-                return ;
+                MessageBox.Show("please enter username and password correctly!");
             }
         }
 
@@ -69,6 +65,11 @@ namespace DataBase_project
         }
 
         private void employee_login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

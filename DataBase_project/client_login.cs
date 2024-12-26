@@ -29,7 +29,7 @@ namespace DataBase_project
         {
             //ye check credentials
             // int s = cobj.CheckUsername(username_textbox.Text, password_textbox.Text);
-            if (cobj.check_login(username_textbox.Text, password_textbox.Text))
+            if (cobj.check_login_c(username_textbox.Text, password_textbox.Text))
             {
                 client_home f = new client_home();
                 f.Show();

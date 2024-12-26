@@ -20,7 +20,7 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
         //omar
-        public bool check_login (string username, string password)
+        public bool check_login_c (string username, string password)
         {
             string query = $"SELECT passkey FROM client WHERE username = '{username}'";
             string pass=dbMan.ExecuteScalar(query).ToString();
@@ -49,6 +49,19 @@ namespace DBapplication
 
             // Compare the stored password with the entered password
             return storedPassword != null && storedPassword.ToString() == enteredpassword;
+        }
+        public bool check_login_e(string username, string password)
+        {
+            string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
+            string pass = dbMan.ExecuteScalar(query).ToString();
+            if (pass != password)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         public int emp_id(string username)
         {
