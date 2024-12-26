@@ -21,9 +21,9 @@ namespace DataBase_project
          
             controllerobj = new Controller();
             InitializeComponent();
-   
-            DataTable dt = controllerobj.get_employees(); 
-     
+
+            DataTable dt = controllerobj.get_employees();
+
 
         }
 
