@@ -32,17 +32,17 @@ namespace DataBase_project
 
         private void mark_Click(object sender, EventArgs e)
         {
-            status f = new status(val);
-            f.Show();
-            this.Hide();   
-            dataGridView1.Refresh();
+            //status f = new status(val);
+            //f.Show();
+            //this.Hide();   
+            //dataGridView1.Refresh();
         }
 
         private void add_task_Click(object sender, EventArgs e)
         {
-            Add_task f = new Add_task(val);
-            f.Show();
-            this.Hide();
+            //Add_task f = new Add_task(val);
+            //f.Show();
+            //this.Hide();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

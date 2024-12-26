@@ -25,5 +25,10 @@ namespace DataBase_project
         {
 
         }
+
+        private void editevent_Click(object sender, EventArgs e)
+        {
+            ///
+        }
     }
 }

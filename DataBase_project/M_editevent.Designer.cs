@@ -36,38 +36,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 75);
+            this.label1.Location = new System.Drawing.Point(161, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Size = new System.Drawing.Size(109, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Choose Event";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(273, 75);
+            this.comboBox1.Location = new System.Drawing.Point(307, 94);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(136, 28);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // editevent
             // 
-            this.editevent.Location = new System.Drawing.Point(239, 146);
+            this.editevent.Location = new System.Drawing.Point(269, 182);
+            this.editevent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.editevent.Name = "editevent";
-            this.editevent.Size = new System.Drawing.Size(75, 23);
+            this.editevent.Size = new System.Drawing.Size(84, 29);
             this.editevent.TabIndex = 3;
             this.editevent.Text = "Edit Event";
             this.editevent.UseVisualStyleBackColor = true;
+            this.editevent.Click += new System.EventHandler(this.editevent_Click);
             // 
             // M_editevent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.editevent);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "M_editevent";
             this.Text = "M_editevent";
             this.ResumeLayout(false);
