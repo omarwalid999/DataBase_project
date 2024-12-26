@@ -38,6 +38,7 @@ namespace DataBase_project
             {
                 MessageBox.Show("please enter username and password correctly!");
             }
+            //int s = cobj.CheckUsername(username_textbox.Text, password_textbox.Text);
 
             //law sah yerouh lel form eltanya
             //client_home ch = new client_home();

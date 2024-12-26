@@ -109,11 +109,6 @@ namespace DBapplication
 
 
 
-
-
-
-
-
         //noor
         //hagat client signup
         public int InsertNewClient(int clientid, string Fname, string Lname, string email, string phone, string username, string passkey)
@@ -122,14 +117,19 @@ namespace DBapplication
                             "Values (" + clientid + ",'" + Fname + "','" + Lname + "','" + email + "','"+ phone+"','"+ username+"','"+passkey+"');";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int CheckUsername(string username, string password)
-        {
-            string query = "SELECT client_ID FROM client WHERE username='" + username + "' AND passkey='"+password+"';";
-            return Convert.ToInt32(query);
-        }
+        //public int CheckUsername(string username, string password)
+        //{
+            //string query = "SELECT client_ID FROM client WHERE username='" + username + "' AND passkey='"+password+"';";
+            //return Convert.ToInt32(query);
+        // }
         public DataTable ShowVendors()
         {
             string query = "SELECT * FROM Vendors;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable ShowTypes()
+        {
+            string query = "SELECT * FROM event_types;";
             return dbMan.ExecuteReader(query);
         }
         public DataTable ShowAllEvents(int clientid) //for datagrid view
@@ -180,7 +180,5 @@ namespace DBapplication
             string query= "DELETE * FROM employee WHERE employee_ID=" + employeeid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
-
-
     };
 }

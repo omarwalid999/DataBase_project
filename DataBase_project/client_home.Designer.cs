@@ -51,6 +51,7 @@
             this.NewEvent.TabIndex = 1;
             this.NewEvent.Text = "New Event";
             this.NewEvent.UseVisualStyleBackColor = true;
+            this.NewEvent.Click += new System.EventHandler(this.NewEvent_Click);
             // 
             // previousevents
             // 

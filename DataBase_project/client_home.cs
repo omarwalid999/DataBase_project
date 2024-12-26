@@ -26,6 +26,15 @@ namespace DataBase_project
         {
             client_login cl = new client_login();
             cl.Show();
+            this.Hide();
         }
+
+        private void NewEvent_Click(object sender, EventArgs e)
+        {
+            client_newevent c = new client_newevent();
+            c.Show();
+            this.Hide();
+        }
+        //momken neshil previous events w nezawed fi my events button feedback
     }
 }
