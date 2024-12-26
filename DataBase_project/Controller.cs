@@ -41,19 +41,19 @@ namespace DBapplication
         }
          public void change_pass_c(string username,string pass)
         {
-            string query = $"UPDATE client SET password={pass} WHERE username={username} ";
+            string query = $"UPDATE client SET password={pass} WHERE username='{username}' ";
             dbMan.ExecuteNonQuery(query);
         }
 
         public void change_pass_e(string username, string pass)
         {
-            string query = $"UPDATE employee SET password={pass} WHERE username={username} ";
+            string query = $"UPDATE employee SET password={pass} WHERE username='{username}' ";
             dbMan.ExecuteNonQuery(query);
         }
 
         public int get_dep_id(string user)
         {
-            string query = $"SELECT dep_ID FROM employee WHERE username={user}";
+            string query = $"SELECT dep_ID FROM employee WHERE username='{user}'";
             return (int)dbMan.ExecuteScalar(query);
         }
 

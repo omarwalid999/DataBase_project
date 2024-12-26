@@ -35,7 +35,7 @@ namespace DataBase_project
 
         private void login_button_Click(object sender, EventArgs e)
         {
-           int id=controllerobj.emp_id(username_textbox.Text);
+           
 
             if (username_textbox.Text=="" || password_textbox.Text=="")
             {
@@ -44,7 +44,7 @@ namespace DataBase_project
             }
 
             if (controllerobj.check_login_e(username_textbox.Text, password_textbox.Text)) {
-
+                int id = controllerobj.emp_id(username_textbox.Text);
                 MessageBox.Show("Logged in successfuly!");
                 employee_home login = new employee_home(id);
                 login.Show();
