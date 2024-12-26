@@ -92,6 +92,7 @@
             this.Controls.Add(this.typesofevents);
             this.Name = "client_newevent";
             this.Text = "client_newevent";
+            this.Load += new System.EventHandler(this.client_newevent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

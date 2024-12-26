@@ -30,37 +30,28 @@
         {
             this.events = new System.Windows.Forms.Button();
             this.NewEvent = new System.Windows.Forms.Button();
-            this.previousevents = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // events
             // 
-            this.events.Location = new System.Drawing.Point(120, 57);
+            this.events.Location = new System.Drawing.Point(120, 76);
             this.events.Name = "events";
             this.events.Size = new System.Drawing.Size(312, 73);
             this.events.TabIndex = 0;
             this.events.Text = "My Events";
             this.events.UseVisualStyleBackColor = true;
+            this.events.Click += new System.EventHandler(this.events_Click);
             // 
             // NewEvent
             // 
-            this.NewEvent.Location = new System.Drawing.Point(120, 150);
+            this.NewEvent.Location = new System.Drawing.Point(120, 214);
             this.NewEvent.Name = "NewEvent";
             this.NewEvent.Size = new System.Drawing.Size(312, 69);
             this.NewEvent.TabIndex = 1;
             this.NewEvent.Text = "New Event";
             this.NewEvent.UseVisualStyleBackColor = true;
             this.NewEvent.Click += new System.EventHandler(this.NewEvent_Click);
-            // 
-            // previousevents
-            // 
-            this.previousevents.Location = new System.Drawing.Point(120, 239);
-            this.previousevents.Name = "previousevents";
-            this.previousevents.Size = new System.Drawing.Size(311, 72);
-            this.previousevents.TabIndex = 2;
-            this.previousevents.Text = "Previous Events";
-            this.previousevents.UseVisualStyleBackColor = true;
             // 
             // logout
             // 
@@ -78,7 +69,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.logout);
-            this.Controls.Add(this.previousevents);
             this.Controls.Add(this.NewEvent);
             this.Controls.Add(this.events);
             this.Name = "client_home";
@@ -92,7 +82,6 @@
 
         private System.Windows.Forms.Button events;
         private System.Windows.Forms.Button NewEvent;
-        private System.Windows.Forms.Button previousevents;
         private System.Windows.Forms.Button logout;
     }
 }
