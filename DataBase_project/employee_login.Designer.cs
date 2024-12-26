@@ -41,7 +41,7 @@
             this.change_password_button.AutoSize = true;
             this.change_password_button.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.change_password_button.ForeColor = System.Drawing.Color.Red;
-            this.change_password_button.Location = new System.Drawing.Point(378, 247);
+            this.change_password_button.Location = new System.Drawing.Point(342, 246);
             this.change_password_button.Name = "change_password_button";
             this.change_password_button.Size = new System.Drawing.Size(125, 18);
             this.change_password_button.TabIndex = 12;
