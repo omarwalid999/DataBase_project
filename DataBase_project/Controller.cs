@@ -70,9 +70,8 @@ namespace DBapplication
         }
         public int insert_task(int taskid, string tasks, string status, int id)
         {
-            string query1 = $"SELECT COUNT(task) FROM task ";
-            int count=(int)dbMan.ExecuteScalar(query1);
-            string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', {status}, '{id}')"; ;
+           
+            string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', '{status}', {id})"; ;
 
             return dbMan.ExecuteNonQuery(query);
         }
