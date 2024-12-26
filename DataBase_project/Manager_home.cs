@@ -32,5 +32,33 @@ namespace DataBase_project
             all_Employees.Show();
             this.Hide();
         }
+
+        private void allclients_Click(object sender, EventArgs e)
+        {
+            AllClients allclients = new AllClients();
+            allclients.Show();
+            this.Hide();
+        }
+
+        private void eventtypes_Click(object sender, EventArgs e)
+        {
+            Event_Types event_Types = new Event_Types();
+            event_Types.Show();
+            this.Hide();
+        }
+
+        private void vendors_Click(object sender, EventArgs e)
+        {
+            Vendors vendors = new Vendors();
+            vendors.Show();
+            this.Hide();
+        }
+
+        private void services_Click(object sender, EventArgs e)
+        {
+            Services services = new Services();
+            services.Show();
+            this.Hide();
+        }
     }
 }

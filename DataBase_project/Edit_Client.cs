@@ -11,25 +11,23 @@ using System.Windows.Forms;
 
 namespace DataBase_project
 {
-    public partial class M_editevent : Form
+    public partial class Edit_Client : Form
     {
+        int clientid;
         Controller c;
-        public M_editevent()
+        public Edit_Client(int id)
         {
+            clientid = id; 
             InitializeComponent();
-            c=new Controller();
-
-
+            c= new Controller();
+            DataTable dt = c.clientinfo(clientid);
+            clientinfoview.DataSource = dt; 
+            clientinfoview.Refresh();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void Edit_Client_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void editevent_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

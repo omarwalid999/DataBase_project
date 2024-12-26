@@ -52,6 +52,12 @@
     <Compile Include="Add_task.Designer.cs">
       <DependentUpon>Add_task.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllClients.Designer.cs">
+      <DependentUpon>AllClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="All_Employees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
       <DependentUpon>c_change_pass.cs</DependentUpon>
     </Compile>
     <Compile Include="DBManager.cs" />
+    <Compile Include="Edit_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Client.Designer.cs">
+      <DependentUpon>Edit_Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="employee_event.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     </Compile>
     <Compile Include="client_login.Designer.cs">
       <DependentUpon>client_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event_Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event_Types.Designer.cs">
+      <DependentUpon>Event_Types.cs</DependentUpon>
     </Compile>
     <Compile Include="e_change_pass.cs">
       <SubType>Form</SubType>
@@ -200,14 +218,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
     <Compile Include="status.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="status.Designer.cs">
       <DependentUpon>status.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendors.Designer.cs">
+      <DependentUpon>Vendors.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Add_task.resx">
       <DependentUpon>Add_task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllClients.resx">
+      <DependentUpon>AllClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="All_Employees.resx">
       <DependentUpon>All_Employees.cs</DependentUpon>
@@ -233,6 +266,9 @@
     <EmbeddedResource Include="c_change_pass.resx">
       <DependentUpon>c_change_pass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Client.resx">
+      <DependentUpon>Edit_Client.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employee_event.resx">
       <DependentUpon>employee_event.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="employee_login.resx">
       <DependentUpon>employee_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event_Types.resx">
+      <DependentUpon>Event_Types.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="e_change_pass.resx">
       <DependentUpon>e_change_pass.cs</DependentUpon>
@@ -290,8 +329,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="status.resx">
       <DependentUpon>status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendors.resx">
+      <DependentUpon>Vendors.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

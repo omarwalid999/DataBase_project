@@ -5,6 +5,10 @@ using System.Text;
 using System.Data;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DBapplication
 {
@@ -167,7 +171,7 @@ namespace DBapplication
 
         public DataTable AllEvents()
         {
-            string query = "SELECT E.event_ID, E.budget, F.event_type, E.event_date,  CONCAT(fname,' ',lname) AS e_name, V.venue_name, CONCAT(Fname,' ',Lname) AS c_name, E.no_of_attendees FROM event AS E, employee AS T, event_types AS F, venue AS V, client AS C WHERE E.event_type=F.types_ID, E.employee_ID=T.employee_ID, E.venue_ID=V.venue_ID, E.client_ID=C.client_ID ;";
+            string query = "SELECT E.event_ID, E.budget, F.event_type, E.event_date,  CONCAT(fname,' ',lname) AS e_name, V.venue_name, CONCAT(Fname,' ',Lname) AS c_name, E.no_of_attendees FROM event AS E, employee AS T, event_types AS F, venue AS V, client AS C WHERE E.event_type=F.types_ID AND E.employee_ID=T.employee_ID AND E.venue_ID=V.venue_ID AND E.client_ID=C.client_ID ;";
             return dbMan.ExecuteReader(query);
         }
       //  public DataTable EventsList()
@@ -199,6 +203,68 @@ namespace DBapplication
         {
             string query= "DELETE * FROM employee WHERE employee_ID=" + employeeid + ";";
             return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable allclients()
+        {
+            string query = "SELECT * FROM client;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable clientnames()
+        {
+            string query = "SELECT CONCAT(Fname, ' ' , Lname) AS name FROM client ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable clientinfo(int clientid)
+        {
+            string query = "SELECT * FROM client WHERE client_ID= " + clientid + " ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable eventtypes()
+        {
+            string query = "SELECT * FROM event_types ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int addtype(int type_ID, string type_name)
+        {
+            string query = "INSERT INTO event_type (types_ID, event_type)" +
+                          "Values (" + type_ID + ",'" + type_name +  "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int deletetype(int type_ID, string type_name)
+        {
+            string query = "DELETE * FROM event_type WHERE types_ID= " + type_ID + " AND event_type=" + type_name + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable vendorsdetails()
+        {
+            string query = "SELECT vendors.*, services_offered.name_of_service FROM vendors JOIN services_offered ON vendors.vendor_ID=services_offered.vendor_ID ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
+        {
+            string query = "INSERT INTO vendors (vendor_ID, vendor_name, rating, vendor_address, phone, email)" +
+                            "Values (" + vendor_ID + ",'" + vendor_name + "','" + rating + "','" + address + "','" + phone + "','" + email + "');";
+            string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)" + "Values(" + vendor_ID + ",'" + service + "');";
+            int result1=dbMan.ExecuteNonQuery(query);
+            int result2=dbMan.ExecuteNonQuery(query2);
+            int result = result1 + result2;
+            return result;
+            
+        }
+        public int deletevendor(int vendor_ID)
+        {
+            string query = "DELETE vendors.*, services_offered.* FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendor.vendor_ID=" + vendor_ID + ";";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+        public int Updatevendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
+        {
+            string query = "UPDATE vendor SET vendor_ID='" + vendor_ID + "' , vendor_name='" + vendor_name + "' , rating='" + rating + "' , vendor_address='" + address + "' , phone='" + phone + "' , email='" + email + "' WHERE vendor_ID= '" +vendor_ID + "' ; ";
+            string query2 ="UPDATE services_offered SET vendor_ID= '" + vendor_ID + " ' , name_of_service= ' " + service +" ' WHERE vendor_ID= ' " + vendor_ID + " ' ;";
+            int result1= dbMan.ExecuteNonQuery(query);
+            int result2= dbMan.ExecuteNonQuery(query2);
+            int result = result1 + result2;
+            return result;
         }
     };
 }
