@@ -39,6 +39,7 @@ namespace DataBase_project
         {
             e_vendors ev = new e_vendors();
             ev.Show();
+            this.Hide();
         }
 
         private void employee_home_Load(object sender, EventArgs e)
