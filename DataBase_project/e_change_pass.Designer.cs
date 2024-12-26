@@ -111,6 +111,7 @@
             this.change_pass_button.TabIndex = 9;
             this.change_pass_button.Text = "Change password";
             this.change_pass_button.UseVisualStyleBackColor = true;
+            this.change_pass_button.Click += new System.EventHandler(this.change_pass_button_Click);
             // 
             // e_change_pass
             // 

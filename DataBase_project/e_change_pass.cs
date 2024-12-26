@@ -16,5 +16,10 @@ namespace DataBase_project
         {
             InitializeComponent();
         }
+
+        private void change_pass_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -20,7 +20,19 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
         //omar
-
+        public bool check_login (string username, string password)
+        {
+            string query = $"SELECT passkey FROM client WHERE username = '{username}'";
+            string pass=dbMan.ExecuteScalar(query).ToString();
+            if(pass != password)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
 
 
@@ -70,9 +82,8 @@ namespace DBapplication
         }
         public int insert_task(int taskid, string tasks, string status, int id)
         {
-            string query1 = $"SELECT COUNT(task) FROM task ";
-            int count=(int)dbMan.ExecuteScalar(query1);
-            string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', {status}, '{id}')"; ;
+           
+            string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', '{status}', {id})"; ;
 
             return dbMan.ExecuteNonQuery(query);
         }
