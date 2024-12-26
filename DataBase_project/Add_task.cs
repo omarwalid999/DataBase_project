@@ -35,7 +35,8 @@ namespace DataBase_project
 
         private void submit_Click(object sender, EventArgs e)
         {
-            int count=controllerobj.get_count();
+            int count=controllerobj.get_count()+1;
+            MessageBox.Show("num is"+ count );
             string stat = "Not Yet";
             int result=controllerobj.insert_task(count, tasks.Text, stat, val);
             if (result == 0)
@@ -44,7 +45,7 @@ namespace DataBase_project
             }
             else
             {
-                MessageBox.Show("The row isinsertedsuccessfully!");
+                MessageBox.Show("New task is inserted successfully!");
             }
 
 
