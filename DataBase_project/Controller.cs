@@ -121,8 +121,41 @@ namespace DBapplication
 
         //rawan
 
-
-
+        public DataTable AllEvents()
+        {
+            string query = "SELECT E.event_ID, E.budget, F.event_type, E.event_date,  CONCAT(fname,' ',lname) AS e_name, V.venue_name, CONCAT(Fname,' ',Lname) AS c_name, E.no_of_attendees FROM event AS E, employee AS T, event_types AS F, venue AS V, client AS C WHERE E.event_type=F.types_ID, E.employee_ID=T.employee_ID, E.venue_ID=V.venue_ID, E.client_ID=C.client_ID ;";
+            return dbMan.ExecuteReader(query);
+        }
+      //  public DataTable EventsList()
+       // {
+           // string query = "SELECT "
+      //  }
+        public DataTable AllEmployees()
+        {
+            string query = "SELECT * FROM employee ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable department()
+        {
+            string query = "SELECT dep_name FROM departments;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int InsertNewEmployee(int e_ID, string Fname, string Lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
+        {
+            string query = "INSERT INTO employee (employee_ID, fname, lname, email, phone, gender, username, passkey, dep_ID)" +
+                            "Values (" + e_ID + ",'" + Fname + "','" + Lname + "','" + email + "','" + phone + "','" + gender + "','" + age + "','" + username + "','" + passkey + "','" + depid + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable Employeesnames()
+        {
+            string query = "SELECT CONCAT(fname,' ',lname) AS name FROM employee ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int DeleteEmployee(int employeeid)
+        {
+            string query= "DELETE * FROM employee WHERE employee_ID=" + employeeid + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
 
     };

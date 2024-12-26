@@ -22,5 +22,13 @@ namespace DataBase_project
             m_change_pass f = new m_change_pass();
             f.Show();
         }
+
+        private void login_button_Click(object sender, EventArgs e)
+        { 
+            Manager_home manager_Home = new Manager_home();
+            manager_Home.Show();
+            this.Hide();
+
+        }
     }
-}
+    }

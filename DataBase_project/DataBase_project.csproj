@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All_Employees.Designer.cs">
+      <DependentUpon>All_Employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="client_first.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +126,23 @@
     <Compile Include="e_vendors.Designer.cs">
       <DependentUpon>e_vendors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hire.Designer.cs">
+      <DependentUpon>Hire.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_home.Designer.cs">
+      <DependentUpon>Manager_home.cs</DependentUpon>
     </Compile>
     <Compile Include="manager_login.cs">
       <SubType>Form</SubType>
@@ -138,8 +156,29 @@
     <Compile Include="m_change_pass.Designer.cs">
       <DependentUpon>m_change_pass.cs</DependentUpon>
     </Compile>
+    <Compile Include="M_editevent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M_editevent.Designer.cs">
+      <DependentUpon>M_editevent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M_Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M_Events.Designer.cs">
+      <DependentUpon>M_Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="M_Fire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="M_Fire.Designer.cs">
+      <DependentUpon>M_Fire.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="All_Employees.resx">
+      <DependentUpon>All_Employees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="client_first.resx">
       <DependentUpon>client_first.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,14 +215,29 @@
     <EmbeddedResource Include="e_vendors.resx">
       <DependentUpon>e_vendors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hire.resx">
+      <DependentUpon>Hire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_home.resx">
+      <DependentUpon>Manager_home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manager_login.resx">
       <DependentUpon>manager_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="m_change_pass.resx">
       <DependentUpon>m_change_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M_editevent.resx">
+      <DependentUpon>M_editevent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M_Events.resx">
+      <DependentUpon>M_Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="M_Fire.resx">
+      <DependentUpon>M_Fire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
