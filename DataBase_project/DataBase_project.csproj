@@ -283,13 +283,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="status.resx">
       <DependentUpon>status.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +300,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barn_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1hotel_wedding1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beach_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garden_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1garden_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1garden_wedding1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2garden_wedding.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
