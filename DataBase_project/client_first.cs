@@ -26,12 +26,14 @@ namespace DataBase_project
         {
             client_login f = new client_login();
             f.Show();
+            this.Hide();
         }
 
         private void signup_button_Click(object sender, EventArgs e)
         {
             client_signup f = new client_signup();
             f.Show();
+            this.Hide();
         }
     }
 }
