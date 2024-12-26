@@ -20,7 +20,19 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
         //omar
-
+        public bool check_login (string username, string password)
+        {
+            string query = $"SELECT passkey FROM client WHERE username = '{username}'";
+            string pass=dbMan.ExecuteScalar(query).ToString();
+            if(pass != password)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
 
 

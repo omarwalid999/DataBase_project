@@ -28,7 +28,16 @@ namespace DataBase_project
         private void login_button_Click(object sender, EventArgs e)
         {
             //ye check credentials
-            int s = cobj.CheckUsername(username_textbox.Text, password_textbox.Text);
+            // int s = cobj.CheckUsername(username_textbox.Text, password_textbox.Text);
+            if (cobj.check_login(username_textbox.Text, password_textbox.Text))
+            {
+                client_home f = new client_home();
+                f.Show();
+            }
+            else
+            {
+                MessageBox.Show("please enter username and password correctly!");
+            }
 
             //law sah yerouh lel form eltanya
             //client_home ch = new client_home();
