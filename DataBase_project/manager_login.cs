@@ -28,7 +28,7 @@ namespace DataBase_project
             Manager_home manager_Home = new Manager_home();
             manager_Home.Show();
             this.Hide();
-
+            //fadel ne check 3la elcredentials
         }
     }
     }
