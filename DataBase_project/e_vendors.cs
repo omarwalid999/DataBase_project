@@ -27,5 +27,10 @@ namespace DataBase_project
         {
 
         }
+
+        private void e_vendors_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
