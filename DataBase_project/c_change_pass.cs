@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,35 @@ namespace DataBase_project
 {
     public partial class c_change_pass : Form
     {
+        Controller controllerobj;
         public c_change_pass()
         {
             InitializeComponent();
+            controllerobj = new Controller();
         }
 
         private void change_pass_button_Click(object sender, EventArgs e)
         {
-            //ye check old password
-            //law sah yeghayarlo el passwordw ye print changed successfully
-            //w yerga3 le form home
-            //client_home ch2 = new client_home();
-            //ch2.Show();
-            //law ghalat yetala3lo error
+            if (username.Text == "" || oldpass.Text == "" || newpass.Text == "" || newpass_confirm.Text == "")
+            {
+                MessageBox.Show("please fill all required spaces!");
+            }
+            else if (!controllerobj.check_login_c(username.Text, oldpass.Text))
+            {
+                MessageBox.Show("username and old password incorrect!");
+            }
+            else if (newpass.Text != newpass_confirm.Text)
+            {
+                MessageBox.Show("new passwords don't match");
+            }
+            else
+            {
+                controllerobj.change_pass_c(username.Text, newpass.Text);
+                MessageBox.Show("password changed successfuly!");
+                this.Close();
+                client_login client_Login = new client_login();
+                client_Login.Show();
+            }
         }
     }
 }
