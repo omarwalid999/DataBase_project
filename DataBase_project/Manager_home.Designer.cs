@@ -34,11 +34,12 @@
             this.vendors = new System.Windows.Forms.Button();
             this.services = new System.Windows.Forms.Button();
             this.eventtypes = new System.Windows.Forms.Button();
+            this.allclients = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // allevents
             // 
-            this.allevents.Location = new System.Drawing.Point(123, 85);
+            this.allevents.Location = new System.Drawing.Point(554, 282);
             this.allevents.Name = "allevents";
             this.allevents.Size = new System.Drawing.Size(150, 46);
             this.allevents.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // allemployees
             // 
-            this.allemployees.Location = new System.Drawing.Point(123, 157);
+            this.allemployees.Location = new System.Drawing.Point(54, 42);
             this.allemployees.Name = "allemployees";
             this.allemployees.Size = new System.Drawing.Size(150, 44);
             this.allemployees.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             // goals
             // 
-            this.goals.Location = new System.Drawing.Point(138, 237);
+            this.goals.Location = new System.Drawing.Point(159, 237);
             this.goals.Name = "goals";
             this.goals.Size = new System.Drawing.Size(92, 33);
             this.goals.TabIndex = 2;
@@ -67,36 +68,50 @@
             // 
             // vendors
             // 
-            this.vendors.Location = new System.Drawing.Point(361, 97);
+            this.vendors.Location = new System.Drawing.Point(258, 47);
             this.vendors.Name = "vendors";
             this.vendors.Size = new System.Drawing.Size(87, 34);
             this.vendors.TabIndex = 3;
             this.vendors.Text = "Vendors";
             this.vendors.UseVisualStyleBackColor = true;
+            this.vendors.Click += new System.EventHandler(this.vendors_Click);
             // 
             // services
             // 
-            this.services.Location = new System.Drawing.Point(361, 178);
+            this.services.Location = new System.Drawing.Point(270, 123);
             this.services.Name = "services";
             this.services.Size = new System.Drawing.Size(75, 23);
             this.services.TabIndex = 4;
             this.services.Text = "Services";
             this.services.UseVisualStyleBackColor = true;
+            this.services.Click += new System.EventHandler(this.services_Click);
             // 
             // eventtypes
             // 
-            this.eventtypes.Location = new System.Drawing.Point(346, 247);
+            this.eventtypes.Location = new System.Drawing.Point(71, 116);
             this.eventtypes.Name = "eventtypes";
-            this.eventtypes.Size = new System.Drawing.Size(120, 23);
+            this.eventtypes.Size = new System.Drawing.Size(120, 37);
             this.eventtypes.TabIndex = 5;
             this.eventtypes.Text = "Event_Types";
             this.eventtypes.UseVisualStyleBackColor = true;
+            this.eventtypes.Click += new System.EventHandler(this.eventtypes_Click);
+            // 
+            // allclients
+            // 
+            this.allclients.Location = new System.Drawing.Point(227, 301);
+            this.allclients.Name = "allclients";
+            this.allclients.Size = new System.Drawing.Size(175, 61);
+            this.allclients.TabIndex = 6;
+            this.allclients.Text = "All Clients";
+            this.allclients.UseVisualStyleBackColor = true;
+            this.allclients.Click += new System.EventHandler(this.allclients_Click);
             // 
             // Manager_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.allclients);
             this.Controls.Add(this.eventtypes);
             this.Controls.Add(this.services);
             this.Controls.Add(this.vendors);
@@ -117,5 +132,6 @@
         private System.Windows.Forms.Button vendors;
         private System.Windows.Forms.Button services;
         private System.Windows.Forms.Button eventtypes;
+        private System.Windows.Forms.Button allclients;
     }
 }

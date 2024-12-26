@@ -18,13 +18,14 @@ namespace DataBase_project
         {
             InitializeComponent();
             c= new Controller();
+            DataTable dt = c.AllEmployees();
+            allemployeesview.DataSource = dt;
+            allemployeesview.Refresh();
         }
 
         private void All_Employees_Load(object sender, EventArgs e)
         {
-            DataTable dt = c.AllEmployees();
-            allemployeesview.DataSource = dt;
-            allemployeesview.Refresh();
+          
         }
 
         private void add_e_Click(object sender, EventArgs e)
@@ -39,6 +40,11 @@ namespace DataBase_project
             M_Fire m_Fire = new M_Fire();
             m_Fire.Show();  
             this.Hide();
+        }
+
+        private void allemployeesview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

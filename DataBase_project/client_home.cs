@@ -12,9 +12,11 @@ namespace DataBase_project
 {
     public partial class client_home : Form
     {
-        public client_home()
+        int id1;
+        public client_home(int id)
         {
             InitializeComponent();
+            this.id1 = id;
         }
 
         private void client_home_Load(object sender, EventArgs e)
@@ -31,8 +33,15 @@ namespace DataBase_project
 
         private void NewEvent_Click(object sender, EventArgs e)
         {
-            client_newevent c = new client_newevent();
+            client_newevent c = new client_newevent(id1);
             c.Show();
+            this.Hide();
+        }
+
+        private void events_Click(object sender, EventArgs e)
+        {
+            client_event ce = new client_event(id1);
+            ce.Show();
             this.Hide();
         }
         //momken neshil previous events w nezawed fi my events button feedback

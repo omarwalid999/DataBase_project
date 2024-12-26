@@ -43,6 +43,7 @@
             this.allemployeesview.RowTemplate.Height = 24;
             this.allemployeesview.Size = new System.Drawing.Size(417, 182);
             this.allemployeesview.TabIndex = 0;
+            this.allemployeesview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allemployeesview_CellContentClick);
             // 
             // add_e
             // 

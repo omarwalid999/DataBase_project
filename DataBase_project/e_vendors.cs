@@ -22,5 +22,15 @@ namespace DataBase_project
             vendorsdataGridView.DataSource = dt;
             vendorsdataGridView.Refresh();
         }
+
+        private void vendorsdataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void e_vendors_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

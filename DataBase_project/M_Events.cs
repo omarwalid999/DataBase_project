@@ -18,6 +18,9 @@ namespace DataBase_project
         {
             InitializeComponent();
             c=new Controller();
+            DataTable dt = c.AllEvents();
+            alleventsview.DataSource = dt;
+            alleventsview.Refresh();
         }
 
         private void alleventsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -27,9 +30,7 @@ namespace DataBase_project
 
         private void M_Events_Load(object sender, EventArgs e)
         {
-            DataTable dt = c.AllEvents();
-            alleventsview.DataSource = dt;
-            alleventsview.Refresh();
+           
         }
 
         private void edit_Click(object sender, EventArgs e)
