@@ -218,6 +218,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,11 +328,8 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,28 +353,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\hotel_wedding.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\barn_wedding.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1hotel_wedding1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\beach_wedding.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\garden_wedding.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1garden_wedding.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1garden_wedding1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\2garden_wedding.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

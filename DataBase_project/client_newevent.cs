@@ -33,8 +33,6 @@ namespace DataBase_project
             {
                 hotelbox1.Show();
                 beachbox1.Show();
-            } else if (){
-
             }
         }
 

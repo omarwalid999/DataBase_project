@@ -48,8 +48,9 @@ namespace DataBase_project
                 MessageBox.Show("Logged in successfuly!");
                 employee_home login = new employee_home(id);
                 login.Show();
-
+                this.Hide();
             }
+
             else
             {
                 MessageBox.Show("please enter username and password correctly!");

@@ -141,14 +141,19 @@ namespace DBapplication
                             "Values (" + clientid + ",'" + Fname + "','" + Lname + "','" + email + "','"+ phone+"','"+ username+"','"+passkey+"');";
             return dbMan.ExecuteNonQuery(query);
         }
-        //public int CheckUsername(string username, string password)
-        //{
-            //string query = "SELECT client_ID FROM client WHERE username='" + username + "' AND passkey='"+password+"';";
-            //return Convert.ToInt32(query);
-        // }
         public DataTable ShowVendors()
         {
             string query = "SELECT * FROM Vendors;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable ShowClientEvents(int clientid)
+        {
+            string query = "SELECT event.eventname,event_types.event_type,event.event_date,event.budget,event.no_of_attendees,employee.fname,employee.lname FROM event, event_types,employee WHERE event.client_ID="+clientid+" AND event.event_type=event_types.types_ID AND event.employee_ID=employee.employee_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable ShowClientEventsNames(int clientid) 
+        {
+            string query = "SELECT event.eventname FROM event  WHERE client_ID="+clientid+";";
             return dbMan.ExecuteReader(query);
         }
         public DataTable ShowTypes()
