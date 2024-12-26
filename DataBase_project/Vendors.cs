@@ -168,6 +168,12 @@ namespace DataBase_project
             }
         }
 
+        private void back5_Click(object sender, EventArgs e)
+        {
+            Manager_home M2 = new Manager_home();
+            M2.Show();
+            this.Hide();
+        }
     }
     }
    

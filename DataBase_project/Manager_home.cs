@@ -60,5 +60,12 @@ namespace DataBase_project
             services.Show();
             this.Hide();
         }
+
+        private void goals_Click(object sender, EventArgs e)
+        {
+            Goals goals = new Goals();
+            goals.Show();
+            this.Hide();
+        }
     }
 }

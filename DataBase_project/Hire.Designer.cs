@@ -50,6 +50,7 @@
             this.hirebutton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.eidtext = new System.Windows.Forms.TextBox();
+            this.back2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -240,11 +241,22 @@
             this.eidtext.Size = new System.Drawing.Size(100, 22);
             this.eidtext.TabIndex = 21;
             // 
+            // back2
+            // 
+            this.back2.Location = new System.Drawing.Point(688, 386);
+            this.back2.Name = "back2";
+            this.back2.Size = new System.Drawing.Size(75, 23);
+            this.back2.TabIndex = 22;
+            this.back2.Text = "Back";
+            this.back2.UseVisualStyleBackColor = true;
+            this.back2.Click += new System.EventHandler(this.back2_Click);
+            // 
             // Hire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back2);
             this.Controls.Add(this.eidtext);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.hirebutton);
@@ -298,5 +310,6 @@
         private System.Windows.Forms.Button hirebutton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox eidtext;
+        private System.Windows.Forms.Button back2;
     }
 }

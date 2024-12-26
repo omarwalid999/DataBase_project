@@ -168,16 +168,23 @@ namespace DBapplication
         }
 
         //rawan
-
+        //events
         public DataTable AllEvents()
         {
             string query = "SELECT E.event_ID, E.budget, F.event_type, E.event_date,  CONCAT(fname,' ',lname) AS e_name, V.venue_name, CONCAT(Fname,' ',Lname) AS c_name, E.no_of_attendees FROM event AS E, employee AS T, event_types AS F, venue AS V, client AS C WHERE E.event_type=F.types_ID AND E.employee_ID=T.employee_ID AND E.venue_ID=V.venue_ID AND E.client_ID=C.client_ID ;";
             return dbMan.ExecuteReader(query);
         }
-      //  public DataTable EventsList()
-       // {
-           // string query = "SELECT "
-      //  }
+      public DataTable EventsList()
+       {
+            string query = "SELECT eventname FROM event ;";
+            return dbMan.ExecuteReader(query) ;
+       }
+        public DataTable eventinfo(int eventid)
+        {
+            string query = "SELECT * FROM event WHERE event_ID=" + eventid + ";";
+            return dbMan.ExecuteReader(query);
+        }
+        //employees
         public DataTable AllEmployees()
         {
             string query = "SELECT * FROM employee ;";
@@ -204,6 +211,7 @@ namespace DBapplication
             string query= "DELETE * FROM employee WHERE employee_ID=" + employeeid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
+        //client
         public DataTable allclients()
         {
             string query = "SELECT * FROM client;";
@@ -219,6 +227,7 @@ namespace DBapplication
             string query = "SELECT * FROM client WHERE client_ID= " + clientid + " ;";
             return dbMan.ExecuteReader(query);
         }
+        //event_type
         public DataTable eventtypes()
         {
             string query = "SELECT * FROM event_types ;";
@@ -235,6 +244,7 @@ namespace DBapplication
             string query = "DELETE * FROM event_type WHERE types_ID= " + type_ID + " AND event_type=" + type_name + ";";
             return dbMan.ExecuteNonQuery(query);
         }
+        //vendor
         public DataTable vendorsdetails()
         {
             string query = "SELECT vendors.*, services_offered.name_of_service FROM vendors JOIN services_offered ON vendors.vendor_ID=services_offered.vendor_ID ;";
@@ -253,18 +263,56 @@ namespace DBapplication
         }
         public int deletevendor(int vendor_ID)
         {
-            string query = "DELETE vendors.*, services_offered.* FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendor.vendor_ID=" + vendor_ID + ";";
+            string query = "DELETE vendors.*, services_offered.* FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendors.vendor_ID=" + vendor_ID + ";";
             return dbMan.ExecuteNonQuery(query);
 
         }
         public int Updatevendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
         {
-            string query = "UPDATE vendor SET vendor_ID='" + vendor_ID + "' , vendor_name='" + vendor_name + "' , rating='" + rating + "' , vendor_address='" + address + "' , phone='" + phone + "' , email='" + email + "' WHERE vendor_ID= '" +vendor_ID + "' ; ";
+            string query = "UPDATE vendors SET vendor_ID='" + vendor_ID + "' , vendor_name='" + vendor_name + "' , rating='" + rating + "' , vendor_address='" + address + "' , phone='" + phone + "' , email='" + email + "' WHERE vendor_ID= '" +vendor_ID + "' ; ";
             string query2 ="UPDATE services_offered SET vendor_ID= '" + vendor_ID + " ' , name_of_service= ' " + service +" ' WHERE vendor_ID= ' " + vendor_ID + " ' ;";
             int result1= dbMan.ExecuteNonQuery(query);
             int result2= dbMan.ExecuteNonQuery(query2);
             int result = result1 + result2;
             return result;
+        }
+        //services
+        public DataTable allservices()
+        {
+            string query = "SELECT services_offered.*, vendors.vendor_name FROM services_offered, vendors WHERE vendors.vendor_ID=services_offered.vendor_ID;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int addservice(int service_ID,int vendor_ID, string name_of_service, int invoice_ID, int price, string vendor_name)
+        {
+            string query = "INSERT INTO services_offered (service_ID, vendor_ID, name_of_service, invoice_id, price)" +
+                            "Values (" + service_ID + ",'" + vendor_ID + "','" + name_of_service + "','" + invoice_ID + "','" + price + "');";
+            string query2 = "INSERT INTO vendors (vendor_ID, vendor_name)" + "Values (" + vendor_ID + " , '" + vendor_name + "');";
+            int result1=dbMan.ExecuteNonQuery(query);
+            int result2=dbMan.ExecuteNonQuery(query2);
+            int result = result1 + result2;
+            return result;
+
+        }
+        public int deleteservice(int service_ID)
+        {
+            string query = "DELETE * FROM services_offered WHERE service_ID=" + service_ID + ";";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+        public int Updateservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price, string vendor_name)
+        {
+            string query = "UPDATE services_offered SET service_ID='" + service_ID + "' , vendor_ID='" + vendor_ID + "' , name_of_service='" + name_of_service + "' , invoice_id='" + invoice_ID + "' , price='" + price + "' WHERE service_ID= '" + service_ID + "' ; ";
+            string query2 = "UPDATE vendors SET vendor_ID= '" + vendor_ID + " ' , vendor_name= ' " + vendor_name + " ' WHERE vendor_ID= ' " + vendor_ID + " ' ;";
+            int result1 = dbMan.ExecuteNonQuery(query);
+            int result2 = dbMan.ExecuteNonQuery(query2);
+            int result = result1 + result2;
+            return result;
+        }
+        //Goals
+        public DataTable goalslist()
+        {
+            string query = "SELECT goals.*, departments.dep_name FROM goals, departments WHERE departments.dep_ID=goals.dep_ID ;";
+            return dbMan.ExecuteReader(query);
         }
     };
 }

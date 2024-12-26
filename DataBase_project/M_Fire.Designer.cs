@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.firecombo = new System.Windows.Forms.ComboBox();
             this.fire = new System.Windows.Forms.Button();
+            this.back3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,11 +62,22 @@
             this.fire.UseVisualStyleBackColor = true;
             this.fire.Click += new System.EventHandler(this.fire_Click);
             // 
+            // back3
+            // 
+            this.back3.Location = new System.Drawing.Point(590, 349);
+            this.back3.Name = "back3";
+            this.back3.Size = new System.Drawing.Size(75, 23);
+            this.back3.TabIndex = 3;
+            this.back3.Text = "Back";
+            this.back3.UseVisualStyleBackColor = true;
+            this.back3.Click += new System.EventHandler(this.back3_Click);
+            // 
             // M_Fire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back3);
             this.Controls.Add(this.fire);
             this.Controls.Add(this.firecombo);
             this.Controls.Add(this.label1);
@@ -81,5 +93,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox firecombo;
         private System.Windows.Forms.Button fire;
+        private System.Windows.Forms.Button back3;
     }
 }

@@ -101,5 +101,12 @@ namespace DataBase_project
             
 
         }
+
+        private void back2_Click(object sender, EventArgs e)
+        {
+            All_Employees all_Employees = new All_Employees();
+            all_Employees.Show();
+            this.Hide();
+        }
     }
 }

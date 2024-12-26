@@ -46,6 +46,7 @@
             this.addvendor = new System.Windows.Forms.Button();
             this.deletevendor = new System.Windows.Forms.Button();
             this.updatevendor = new System.Windows.Forms.Button();
+            this.back5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vendorsview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,11 +203,22 @@
             this.updatevendor.UseVisualStyleBackColor = true;
             this.updatevendor.Click += new System.EventHandler(this.updatevendor_Click);
             // 
+            // back5
+            // 
+            this.back5.Location = new System.Drawing.Point(623, 365);
+            this.back5.Name = "back5";
+            this.back5.Size = new System.Drawing.Size(75, 23);
+            this.back5.TabIndex = 18;
+            this.back5.Text = "Back";
+            this.back5.UseVisualStyleBackColor = true;
+            this.back5.Click += new System.EventHandler(this.back5_Click);
+            // 
             // Vendors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back5);
             this.Controls.Add(this.updatevendor);
             this.Controls.Add(this.deletevendor);
             this.Controls.Add(this.addvendor);
@@ -254,5 +266,6 @@
         private System.Windows.Forms.Button addvendor;
         private System.Windows.Forms.Button deletevendor;
         private System.Windows.Forms.Button updatevendor;
+        private System.Windows.Forms.Button back5;
     }
 }

@@ -30,6 +30,8 @@
         {
             this.alleventsview = new System.Windows.Forms.DataGridView();
             this.edit = new System.Windows.Forms.Button();
+            this.eventscombo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.alleventsview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(148, 340);
+            this.edit.Location = new System.Drawing.Point(463, 318);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(75, 23);
             this.edit.TabIndex = 1;
@@ -54,11 +56,31 @@
             this.edit.UseVisualStyleBackColor = true;
             this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
+            // eventscombo
+            // 
+            this.eventscombo.FormattingEnabled = true;
+            this.eventscombo.Location = new System.Drawing.Point(229, 315);
+            this.eventscombo.Name = "eventscombo";
+            this.eventscombo.Size = new System.Drawing.Size(121, 24);
+            this.eventscombo.TabIndex = 2;
+            this.eventscombo.SelectedIndexChanged += new System.EventHandler(this.eventscombo_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(101, 318);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Choose Event";
+            // 
             // M_Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.eventscombo);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.alleventsview);
             this.Name = "M_Events";
@@ -66,6 +88,7 @@
             this.Load += new System.EventHandler(this.M_Events_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alleventsview)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -73,5 +96,7 @@
 
         private System.Windows.Forms.DataGridView alleventsview;
         private System.Windows.Forms.Button edit;
+        private System.Windows.Forms.ComboBox eventscombo;
+        private System.Windows.Forms.Label label1;
     }
 }

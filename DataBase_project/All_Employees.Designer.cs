@@ -31,6 +31,7 @@
             this.allemployeesview = new System.Windows.Forms.DataGridView();
             this.add_e = new System.Windows.Forms.Button();
             this.remove_e = new System.Windows.Forms.Button();
+            this.back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.allemployeesview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,11 +66,22 @@
             this.remove_e.UseVisualStyleBackColor = true;
             this.remove_e.Click += new System.EventHandler(this.remove_e_Click);
             // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(631, 358);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(75, 23);
+            this.back.TabIndex = 3;
+            this.back.Text = "Back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // All_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.remove_e);
             this.Controls.Add(this.add_e);
             this.Controls.Add(this.allemployeesview);
@@ -86,5 +98,6 @@
         private System.Windows.Forms.DataGridView allemployeesview;
         private System.Windows.Forms.Button add_e;
         private System.Windows.Forms.Button remove_e;
+        private System.Windows.Forms.Button back;
     }
 }

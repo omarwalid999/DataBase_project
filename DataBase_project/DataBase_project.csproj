@@ -168,6 +168,12 @@
     <Compile Include="e_vendors.Designer.cs">
       <DependentUpon>e_vendors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Goals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goals.Designer.cs">
+      <DependentUpon>Goals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hire.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +301,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="e_vendors.resx">
       <DependentUpon>e_vendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goals.resx">
+      <DependentUpon>Goals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Hire.resx">
       <DependentUpon>Hire.cs</DependentUpon>
