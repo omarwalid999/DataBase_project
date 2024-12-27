@@ -139,6 +139,12 @@ namespace DBapplication
                 return true;
             }
         }
+        public void change_venue(string venuename, int venue_id, int e)
+        {
+            string query = $"UPDATE event SET venue_ID={venue_id} WHERE event_ID={e}";
+            dbMan.ExecuteNonQuery(query);
+        }
+
         public int emp_id(string username)
         {
             string query = $"SELECT employee_ID FROM employee WHERE username = '{username}'";
@@ -155,6 +161,11 @@ namespace DBapplication
         public DataTable get_employees()
         {
             string query = "SELECT employee_ID, username FROM employee;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable get_venue()
+        {
+            string query = "SELECT venue_name, venue_ID FROM venue;";
             return dbMan.ExecuteReader(query);
         }
         public DataTable sch_events(int id)
@@ -183,9 +194,9 @@ namespace DBapplication
             string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', '{status}', {id})"; ;
             return dbMan.ExecuteNonQuery(query);
         }
-        public DataTable chosen(int id, int id2)
+        public DataTable chosen(int id)
         {
-            string query = $"SELECT Fname, eventname, event_date, venue_name, client.client_ID, no_of_attendees FROM client, venue, event WHERE employee_ID = {id2} AND event_ID={id} ;";
+            string query = $"SELECT DISTINCT client.Fname, event.eventname, event.event_date, venue.venue_name, client.client_ID, event.no_of_attendees FROM event INNER JOIN client ON event.client_ID = client.client_ID INNER JOIN venue ON event.venue_ID = venue.venue_ID INNER JOIN employee ON event.employee_ID = employee.employee_ID\r\nWHERE \r\n    event.event_ID = {id};\r\n ";
             return dbMan.ExecuteReader(query);
         }
         public DataTable invoice(int id)
