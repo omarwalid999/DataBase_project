@@ -403,5 +403,41 @@
   <ItemGroup>
     <None Include="Resources\bachellorette31.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corporateevent1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corporateevent2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corporateevent3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engagement1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engagement2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engagement3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charity1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charity2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\charity3.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

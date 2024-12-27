@@ -206,7 +206,7 @@ namespace DBapplication
         }
       public DataTable EventsList()
        {
-            string query = "SELECT eventname FROM event ;";
+            string query = "SELECT * FROM event ;";
             return dbMan.ExecuteReader(query) ;
        }
         public DataTable eventinfo(int eventid)
@@ -222,7 +222,7 @@ namespace DBapplication
         }
         public DataTable department()
         {
-            string query = "SELECT dep_name FROM departments;";
+            string query = "SELECT * FROM departments;";
             return dbMan.ExecuteReader(query);
         }
         public int InsertNewEmployee(int e_ID, string Fname, string Lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
@@ -233,7 +233,7 @@ namespace DBapplication
         }
         public DataTable Employeesnames()
         {
-            string query = "SELECT CONCAT(fname,' ',lname) AS name FROM employee ;";
+            string query = "SELECT *,CONCAT(fname,' ',lname) AS name FROM employee ;";
             return dbMan.ExecuteReader(query);
         }
         public int DeleteEmployee(int employeeid)
@@ -249,7 +249,7 @@ namespace DBapplication
         }
         public DataTable clientnames()
         {
-            string query = "SELECT CONCAT(Fname, ' ' , Lname) AS name FROM client ;";
+            string query = "SELECT *, CONCAT(Fname, ' ' , Lname) AS name FROM client ;";
             return dbMan.ExecuteReader(query);
         }
         public DataTable clientinfo(int clientid)

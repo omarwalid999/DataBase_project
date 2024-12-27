@@ -21,13 +21,13 @@ namespace DataBase_project
             DataTable dt = c.Employeesnames();
             firecombo.DataSource = dt;
             firecombo.DisplayMember = "fname + ' ' + lname";
-            firecombo.ValueMember = "employee_ID";
+            firecombo.ValueMember = "employee_ID"; 
 
         }
 
         private void firecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void fire_Click(object sender, EventArgs e)

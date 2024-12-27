@@ -24,7 +24,7 @@ namespace DataBase_project
             DataTable dt2 = c.clientnames();
             clientcombo.DataSource = dt2;
             clientcombo.DisplayMember = "Fname + ' ' + Lname";
-            clientcombo.ValueMember = "client_ID";
+            clientcombo.ValueMember = "client_ID"; 
         }
 
         private void AllClients_Load(object sender, EventArgs e)
