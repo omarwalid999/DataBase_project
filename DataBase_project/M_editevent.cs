@@ -14,10 +14,15 @@ namespace DataBase_project
     public partial class M_editevent : Form
     {
         Controller c;
-        public M_editevent()
+        int eventid;
+        public M_editevent(int id)
         {
+            eventid = id;
             InitializeComponent();
             c=new Controller();
+            DataTable dt = c.eventinfo(eventid);
+            eventinfoview.DataSource = dt;
+
 
 
         }
@@ -30,6 +35,11 @@ namespace DataBase_project
         private void editevent_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void M_editevent_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

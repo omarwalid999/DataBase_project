@@ -41,5 +41,13 @@ namespace DataBase_project
             }
 
         }
+
+        private void back3_Click(object sender, EventArgs e)
+        {
+            All_Employees E =new All_Employees();
+            E.Show();
+            this.Hide();
+
+        }
     }
 }

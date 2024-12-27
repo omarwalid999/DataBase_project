@@ -39,9 +39,9 @@
             // 
             // allevents
             // 
-            this.allevents.Location = new System.Drawing.Point(554, 282);
+            this.allevents.Location = new System.Drawing.Point(94, 323);
             this.allevents.Name = "allevents";
-            this.allevents.Size = new System.Drawing.Size(150, 46);
+            this.allevents.Size = new System.Drawing.Size(175, 63);
             this.allevents.TabIndex = 0;
             this.allevents.Text = "All Events";
             this.allevents.UseVisualStyleBackColor = true;
@@ -49,9 +49,9 @@
             // 
             // allemployees
             // 
-            this.allemployees.Location = new System.Drawing.Point(54, 42);
+            this.allemployees.Location = new System.Drawing.Point(86, 54);
             this.allemployees.Name = "allemployees";
-            this.allemployees.Size = new System.Drawing.Size(150, 44);
+            this.allemployees.Size = new System.Drawing.Size(183, 82);
             this.allemployees.TabIndex = 1;
             this.allemployees.Text = "All Employees";
             this.allemployees.UseVisualStyleBackColor = true;
@@ -59,18 +59,19 @@
             // 
             // goals
             // 
-            this.goals.Location = new System.Drawing.Point(159, 237);
+            this.goals.Location = new System.Drawing.Point(569, 171);
             this.goals.Name = "goals";
-            this.goals.Size = new System.Drawing.Size(92, 33);
+            this.goals.Size = new System.Drawing.Size(132, 57);
             this.goals.TabIndex = 2;
             this.goals.Text = "Goals";
             this.goals.UseVisualStyleBackColor = true;
+            this.goals.Click += new System.EventHandler(this.goals_Click);
             // 
             // vendors
             // 
-            this.vendors.Location = new System.Drawing.Point(258, 47);
+            this.vendors.Location = new System.Drawing.Point(569, 64);
             this.vendors.Name = "vendors";
-            this.vendors.Size = new System.Drawing.Size(87, 34);
+            this.vendors.Size = new System.Drawing.Size(132, 63);
             this.vendors.TabIndex = 3;
             this.vendors.Text = "Vendors";
             this.vendors.UseVisualStyleBackColor = true;
@@ -78,9 +79,9 @@
             // 
             // services
             // 
-            this.services.Location = new System.Drawing.Point(270, 123);
+            this.services.Location = new System.Drawing.Point(367, 64);
             this.services.Name = "services";
-            this.services.Size = new System.Drawing.Size(75, 23);
+            this.services.Size = new System.Drawing.Size(160, 63);
             this.services.TabIndex = 4;
             this.services.Text = "Services";
             this.services.UseVisualStyleBackColor = true;
@@ -88,9 +89,9 @@
             // 
             // eventtypes
             // 
-            this.eventtypes.Location = new System.Drawing.Point(71, 116);
+            this.eventtypes.Location = new System.Drawing.Point(367, 171);
             this.eventtypes.Name = "eventtypes";
-            this.eventtypes.Size = new System.Drawing.Size(120, 37);
+            this.eventtypes.Size = new System.Drawing.Size(160, 57);
             this.eventtypes.TabIndex = 5;
             this.eventtypes.Text = "Event_Types";
             this.eventtypes.UseVisualStyleBackColor = true;
@@ -98,9 +99,9 @@
             // 
             // allclients
             // 
-            this.allclients.Location = new System.Drawing.Point(227, 301);
+            this.allclients.Location = new System.Drawing.Point(94, 183);
             this.allclients.Name = "allclients";
-            this.allclients.Size = new System.Drawing.Size(175, 61);
+            this.allclients.Size = new System.Drawing.Size(175, 72);
             this.allclients.TabIndex = 6;
             this.allclients.Text = "All Clients";
             this.allclients.UseVisualStyleBackColor = true;

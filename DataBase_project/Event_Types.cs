@@ -75,7 +75,7 @@ namespace DataBase_project
                     result = c.deletetype(id, eventtypetext.Text);
                     if (result != 0)
                     {
-                        MessageBox.Show("Type added successfully");
+                        MessageBox.Show("Type deleted successfully");
                         eventtypesview.Refresh();
                     }
 
@@ -83,6 +83,13 @@ namespace DataBase_project
                 }
 
             }
+        }
+
+        private void back6_Click(object sender, EventArgs e)
+        {
+            Manager_home M3= new Manager_home();
+            M3.Show();
+            this.Hide();
         }
     }
 }

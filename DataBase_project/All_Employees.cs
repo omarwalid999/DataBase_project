@@ -46,5 +46,12 @@ namespace DataBase_project
         {
 
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Manager_home manager_Home = new Manager_home();
+            manager_Home.Show();
+            this.Hide();
+        }
     }
 }
