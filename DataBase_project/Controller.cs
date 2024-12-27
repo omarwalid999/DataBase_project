@@ -295,7 +295,7 @@ namespace DBapplication
         }
       public DataTable EventsList()
        {
-            string query = "SELECT eventname FROM event ;";
+            string query = "SELECT * FROM event ;";
             return dbMan.ExecuteReader(query) ;
        }
         public DataTable eventinfo(int eventid)
@@ -308,12 +308,7 @@ namespace DBapplication
             string query="DELETE * FROM event WHERE event_ID=" + eventid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int insertevent(int eventid, int budget, int eventtype, string date, int employee, int venue, int client, int capacity, string eventname)
-        {
-            string query = "INSERT INTO event (event_ID, budget, event_type, event_date, employee_ID, venue_ID, client_ID, no_of_attendees, eventname)" +
-                           "Values (" + eventid + "," + budget + "," + eventtype + ",'" + date + "'," + employee + "," + venue + "," + client + "," + capacity + ",'" + eventname +  "');";
-            return dbMan.ExecuteNonQuery(query);
-        }
+        
         public int updatevent(int eventid, int budget, int eventtype, string date, int employee, int venue, int client, int capacity, string eventname)
         {
             string query = "UPDATE event SET event_ID=" + eventid + ", budget=" + budget + ", event_type=" + eventtype + ", event_date='" + date + "' , employee_ID=" + employee + ", venue_ID=" + venue + ", client_ID=" + client + ", no_of_attendees=" + capacity + ", eventname='" + eventname + "' WHERE event_ID= " + eventid + "; ";
@@ -491,5 +486,11 @@ namespace DBapplication
             string query = "SELECT capacity FROM venue WHERE venue_ID=" + venue + ";";
             return (int)dbMan.ExecuteScalar(query);
         }
+        public int UpdateEvent(int eventid,int budget, int event_type, string date, int employee_id, int venue_id, int client_id, int noa, string eventname)
+        {
+            string query = "UPDATE event SET budget=" + budget + ", event_type=" + event_type + ",event_date='" + date + "', employee_id=" + employee_id + ", venue_id=" + venue_id + ", client_id=" + client_id + ", no_of_attendees=" + noa + ", eventname='"+ eventname + "'WHERE event_id="+eventid+";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        
     };
 }

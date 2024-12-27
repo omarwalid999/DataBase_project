@@ -25,7 +25,7 @@ namespace DataBase_project
             DataTable dt2 = c.EventsList();
             eventscombo.DataSource = dt2;
             eventscombo.DisplayMember = "eventname";
-            //eventscombo.ValueMember = "event_ID";
+            eventscombo.ValueMember = "event_ID";
         }
 
         private void alleventsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,9 +40,7 @@ namespace DataBase_project
 
         private void edit_Click(object sender, EventArgs e)
         {
-            string selectedevent=eventscombo.SelectedItem.ToString();
-            int eventid=c.eventid(selectedevent);
-            M_editevent m_Editevent = new M_editevent(eventid);
+            M_editevent m_Editevent = new M_editevent(Convert.ToInt32(eventscombo.SelectedValue));
             m_Editevent.Show();
             this.Hide();
         }
