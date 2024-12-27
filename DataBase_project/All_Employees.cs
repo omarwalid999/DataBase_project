@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class All_Employees : Form
     {
         Controller c;
-        public All_Employees()
+        int manager_id;
+        public All_Employees(int id)
         {
             InitializeComponent();
             c= new Controller();
+            manager_id= id;
             DataTable dt = c.AllEmployees();
             allemployeesview.DataSource = dt;
             allemployeesview.Refresh();
@@ -49,7 +51,7 @@ namespace DataBase_project
 
         private void back_Click(object sender, EventArgs e)
         {
-            Manager_home manager_Home = new Manager_home();
+            Manager_home manager_Home = new Manager_home(manager_id);
             manager_Home.Show();
             this.Hide();
         }

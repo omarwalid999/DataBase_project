@@ -51,7 +51,7 @@ namespace DataBase_project
                 if (dep_id == 6)
                 {
                     MessageBox.Show(" Manager Logged in successfuly!");
-                    Manager_home f = new Manager_home();
+                    Manager_home f = new Manager_home(id);
                     f.Show();
                     this.Hide();
 

@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class AllClients : Form
     {
         Controller c;
-        public AllClients()
+        int manager_id;
+        public AllClients(int id)
         {
             InitializeComponent();
             c = new Controller();
+            manager_id = id;
             DataTable dt = c.allclients();
             allclientsview.DataSource = dt;
             allclientsview.Refresh();

@@ -18,11 +18,12 @@ namespace DataBase_project
         int id2;
         int id3;
         int id4;
-
-        public Services()
+        int manager_id;
+        public Services(int id)
         {
             InitializeComponent();
             c=new Controller();
+            manager_id=id;
             DataTable dt = c.allservices();
             servicesview.DataSource = dt;
         }
@@ -128,7 +129,7 @@ namespace DataBase_project
 
         private void back4_Click(object sender, EventArgs e)
         {
-            Manager_home M = new Manager_home();
+            Manager_home M = new Manager_home(manager_id);
             M.Show();
             this.Hide();
         }

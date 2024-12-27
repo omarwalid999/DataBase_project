@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class Event_Types : Form
     {
         Controller c;
-        public Event_Types()
+        int manager_id;
+        public Event_Types(int id)
         {
             InitializeComponent();
             c = new Controller();
+            manager_id = id;
             DataTable dt = c.eventtypes();
             eventtypesview.DataSource = dt;
 
@@ -83,7 +85,7 @@ namespace DataBase_project
 
         private void back6_Click(object sender, EventArgs e)
         {
-            Manager_home M3= new Manager_home();
+            Manager_home M3= new Manager_home(manager_id);
             M3.Show();
             this.Hide();
         }

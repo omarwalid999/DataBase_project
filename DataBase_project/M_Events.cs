@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class M_Events : Form
     {
         Controller c;
-        public M_Events()
+        int m_id;
+        public M_Events(int id)
         {
             InitializeComponent();
             c=new Controller();
+            m_id = id;
             DataTable dt = c.AllEvents();
             alleventsview.DataSource = dt;
             
@@ -54,7 +56,7 @@ namespace DataBase_project
 
         private void back7_Click(object sender, EventArgs e)
         {
-            Manager_home M4= new Manager_home();
+            Manager_home M4= new Manager_home(m_id);
             M4.Show();
             this.Hide();
 

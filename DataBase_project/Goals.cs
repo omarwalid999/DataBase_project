@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class Goals : Form
     {
         Controller c;
-        public Goals()
+        int manager_id;
+        public Goals(int id)
         {
             InitializeComponent();
             c=new Controller();
+            manager_id=id;
             DataTable dt = c.goalslist();
             goalsview.DataSource=dt;
             DataTable dt2 = c.department();

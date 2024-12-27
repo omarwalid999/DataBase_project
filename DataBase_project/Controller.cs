@@ -117,17 +117,62 @@ namespace DBapplication
             string query = $"SELECT fname,lname,username FROM employee WHERE dep_ID={dep}";
             return dbMan.ExecuteReader(query);
         }
-
+        
+        public DataTable get_employee_clients_username(int emp_id)
+        {
+            int dep = 6;
+            string query = $"SELECT DISTINCT client.username FROM client, event, employee WHERE event.employee_ID={emp_id} AND client.client_ID=event.client_ID UNION SELECT username FROM employee WHERE dep_ID={dep} ";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable get_employee_clients(int emp_id)
         {
             string query = $"SELECT DISTINCT client.Fname, client.Lname, client.username FROM client, event, employee WHERE event.employee_ID={emp_id} AND client.client_ID=event.client_ID ";
+            return dbMan.ExecuteReader(query);
+        }
+        public int get_emp_id_with_username(string username)
+        {
+            string query = $"SELECT employee_ID FROM employee WHERE username='{username}'";
+            var result =dbMan.ExecuteScalar(query);
+            if (result==null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)result;
+            }
+            
+        }
+        public int get_client_id_with_username(string username)
+        {
+            string query = $"SELECT client_ID FROM client WHERE username='{username}'";
+            var result = dbMan.ExecuteScalar(query);
+            if (result == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)result;
+            }
+        }
+
+        public int addmessage_em(int msg_id, string text, DateTime time, int client_id, int employee_id, bool flag)
+        {
+            string query = $"INSERT into messages_em VALUES({msg_id},'{text}','{time}','{flag}',{client_id},{employee_id})";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable get_employees_for_messages()
+        {
+            string query = $"SELECT fname,lname,username FROM employee";
             return dbMan.ExecuteReader(query);
         }
         //tarek
         //employee
         //public bool CheckPass(int id, string enteredpassword)
         //{
-    
+
         //    string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
 
         //    var storedPassword = dbMan.ExecuteScalar(query);
