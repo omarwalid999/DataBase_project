@@ -305,7 +305,7 @@ namespace DBapplication
         }
         public int deleteevent(int eventid)
         {
-            string query="DELETE * FROM event WHERE event_ID=" + eventid + ";";
+            string query="DELETE FROM event WHERE event_ID=" + eventid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
         
