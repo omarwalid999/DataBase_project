@@ -14,9 +14,12 @@ namespace DataBase_project
 {
     public partial class e_vendors : Form
     {
-        public e_vendors()
+        int b;
+        public e_vendors(int id)
         {
+            
             InitializeComponent();
+            b = id;
             Controller controllerObj = new Controller();
             DataTable dt = controllerObj.ShowVendors();
             vendorsdataGridView.DataSource = dt;
@@ -31,6 +34,13 @@ namespace DataBase_project
         private void e_vendors_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            employee_home eh = new employee_home(b);
+            eh.Show();
+            this.Hide();
         }
     }
 }

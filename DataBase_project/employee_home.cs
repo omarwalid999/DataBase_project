@@ -37,7 +37,7 @@ namespace DataBase_project
 
         private void VendorsButton_Click(object sender, EventArgs e)
         {
-            e_vendors ev = new e_vendors();
+            e_vendors ev = new e_vendors(id);
             ev.Show();
             this.Hide();
         }
@@ -45,6 +45,13 @@ namespace DataBase_project
         private void employee_home_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            employee_login el = new employee_login();
+            el.Show();
+            this.Hide();
         }
     }
 }
