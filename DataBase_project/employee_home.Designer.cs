@@ -41,6 +41,9 @@
             this.submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.taskss = new System.Windows.Forms.TextBox();
+            this.combo_task = new System.Windows.Forms.ComboBox();
+            this.not_done = new System.Windows.Forms.Button();
+            this.Done = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -123,6 +126,7 @@
             this.choose_event.Text = "Choose Event";
             this.choose_event.UseVisualStyleBackColor = true;
             this.choose_event.Visible = false;
+            this.choose_event.Click += new System.EventHandler(this.choose_event_Click);
             // 
             // event_combo
             // 
@@ -132,6 +136,7 @@
             this.event_combo.Size = new System.Drawing.Size(175, 24);
             this.event_combo.TabIndex = 7;
             this.event_combo.Visible = false;
+            this.event_combo.SelectedIndexChanged += new System.EventHandler(this.event_combo_SelectedIndexChanged);
             // 
             // mark
             // 
@@ -186,11 +191,44 @@
             this.taskss.Visible = false;
             this.taskss.TextChanged += new System.EventHandler(this.tasks_TextChanged);
             // 
+            // combo_task
+            // 
+            this.combo_task.FormattingEnabled = true;
+            this.combo_task.Location = new System.Drawing.Point(11, 305);
+            this.combo_task.Name = "combo_task";
+            this.combo_task.Size = new System.Drawing.Size(239, 24);
+            this.combo_task.TabIndex = 16;
+            // 
+            // not_done
+            // 
+            this.not_done.BackColor = System.Drawing.Color.Red;
+            this.not_done.Location = new System.Drawing.Point(274, 327);
+            this.not_done.Name = "not_done";
+            this.not_done.Size = new System.Drawing.Size(88, 29);
+            this.not_done.TabIndex = 15;
+            this.not_done.Text = "Not Done";
+            this.not_done.UseVisualStyleBackColor = false;
+            this.not_done.Click += new System.EventHandler(this.not_done_Click);
+            // 
+            // Done
+            // 
+            this.Done.BackColor = System.Drawing.Color.Lime;
+            this.Done.Location = new System.Drawing.Point(274, 292);
+            this.Done.Name = "Done";
+            this.Done.Size = new System.Drawing.Size(88, 29);
+            this.Done.TabIndex = 14;
+            this.Done.Text = "Done";
+            this.Done.UseVisualStyleBackColor = false;
+            this.Done.Click += new System.EventHandler(this.Done_Click);
+            // 
             // employee_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 360);
+            this.Controls.Add(this.combo_task);
+            this.Controls.Add(this.not_done);
+            this.Controls.Add(this.Done);
             this.Controls.Add(this.submit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.taskss);
@@ -230,5 +268,8 @@
         private System.Windows.Forms.Button submit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox taskss;
+        private System.Windows.Forms.ComboBox combo_task;
+        private System.Windows.Forms.Button not_done;
+        private System.Windows.Forms.Button Done;
     }
 }

@@ -126,16 +126,7 @@ namespace DBapplication
         }
         //tarek
         //employee
-        //public bool CheckPass(int id, string enteredpassword)
-        //{
-    
-        //    string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
-
-        //    var storedPassword = dbMan.ExecuteScalar(query);
-
-        //    // Compare the stored password with the entered password
-        //    return storedPassword != null && storedPassword.ToString() == enteredpassword;
-        //}
+        
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
@@ -191,8 +182,17 @@ namespace DBapplication
         {
            
             string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', '{status}', {id})"; ;
-
             return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable chosen(int id, int id2)
+        {
+            string query = $"SELECT Fname, eventname, event_date, venue_name, client.client_ID, no_of_attendees FROM client, venue, event WHERE employee_ID = {id2} AND event_ID={id} ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable invoice(int id)
+        {
+            string query = $"SELECT amount, name_of_service, vendor_name FROM vendors, services_offered, event, invoice WHERE invoice.event_ID=event.event_ID AND invoice.event_ID={id} AND services_offered.service_ID=vendors.service_id AND vendors.service_ID=invoice.service_ID;";
+            return dbMan.ExecuteReader(query);
         }
         public int get_count()
         {
