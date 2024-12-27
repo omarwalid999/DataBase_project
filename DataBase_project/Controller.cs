@@ -120,8 +120,7 @@ namespace DBapplication
 
         public DataTable get_employee_clients(int emp_id)
         {
-            string query = $"SELECT client.Fname,client.Lname,client.username FROM client,event,employee WHERE " +
-                $"event.employee_ID={emp_id} AND client.client_ID=event.client.id ";
+            string query = $"SELECT DISTINCT client.Fname, client.Lname, client.username FROM client, event, employee WHERE event.employee_ID={emp_id} AND client.client_ID=event.client_ID ";
             return dbMan.ExecuteReader(query);
         }
         //tarek
