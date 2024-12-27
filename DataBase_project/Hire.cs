@@ -29,8 +29,6 @@ namespace DataBase_project
         private void hirebutton_Click(object sender, EventArgs e)
         {
             int age;
-            
-            int depid = (int)departcombo.SelectedValue;
             string gender = "";
             if (radioButton1.Checked)
             {
@@ -40,8 +38,7 @@ namespace DataBase_project
             {
                 gender = "Male";
             }
-            int age;
-            int id;
+            
             string selecteddep=departcombo.SelectedItem.ToString();
             int depid=c.depid(selecteddep);
           
