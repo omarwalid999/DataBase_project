@@ -64,16 +64,16 @@ namespace DBapplication
 
         //tarek
         //employee
-        public bool CheckPass(int id, string enteredpassword)
-        {
+        //public bool CheckPass(int id, string enteredpassword)
+        //{
     
-            string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
+        //    string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
 
-            var storedPassword = dbMan.ExecuteScalar(query);
+        //    var storedPassword = dbMan.ExecuteScalar(query);
 
-            // Compare the stored password with the entered password
-            return storedPassword != null && storedPassword.ToString() == enteredpassword;
-        }
+        //    // Compare the stored password with the entered password
+        //    return storedPassword != null && storedPassword.ToString() == enteredpassword;
+        //}
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";

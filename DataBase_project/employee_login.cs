@@ -43,11 +43,12 @@ namespace DataBase_project
                 return;
             }
 
-            if (controllerobj.check_login_e(username_textbox.Text, password_textbox.Text)) {
+            if (controllerobj.check_login_e(username_textbox.Text, password_textbox.Text) is true) {
                 int id = controllerobj.emp_id(username_textbox.Text);
                 MessageBox.Show("Logged in successfuly!");
                 employee_home login = new employee_home(id);
                 login.Show();
+                this.Hide();
 
             }
             else
