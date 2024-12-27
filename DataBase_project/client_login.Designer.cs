@@ -81,7 +81,7 @@
             // 
             // login_button
             // 
-            this.login_button.Location = new System.Drawing.Point(382, 352);
+            this.login_button.Location = new System.Drawing.Point(360, 357);
             this.login_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(162, 58);
@@ -112,9 +112,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_textbox);
             this.Controls.Add(this.username_textbox);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "client_login";
-            this.Text = "Form2";
+            this.Text = "Welcome back!";
             this.ResumeLayout(false);
             this.PerformLayout();
 

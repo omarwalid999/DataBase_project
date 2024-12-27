@@ -125,5 +125,10 @@ namespace DataBase_project
         {
 
         }
+
+        private void clientseventdatagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

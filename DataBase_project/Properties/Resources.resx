@@ -118,68 +118,107 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="corporateevent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corporateevent1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="corporateevent3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corporateevent3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="birthday3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\birthday3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="birthday1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\birthday1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="912841506896fdf51b089d4922dc74c3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\912841506896fdf51b089d4922dc74c3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="charity2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\charity2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1hotel_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1hotel_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="birthday2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\birthday2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bachellorette2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bachellorette2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="garden_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\garden_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bachellorette3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bachellorette3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="messages" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\messages.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="engagement3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engagement3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beach_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\beach_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="corporateevent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corporateevent2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bachellorette3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bachellorette3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bachellorette1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bachellorette1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bachellorette31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bachellorette31.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="engagement2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engagement2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="birthday3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birthday3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="engagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\engagement1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="charity1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\charity1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garden_engagement11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garden_engagement11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bachellorette31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bachellorette31.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="charity3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\charity3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="engagement3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engagement3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="birthday2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birthday2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="garden_engagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garden_engagement1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="outdoor_corporateorbirthday_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\outdoor_corporateorbirthday_.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1hotel_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1hotel_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sofitel_indoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sofitel_indoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="birthdaynew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birthdaynew.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="charity2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\charity2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="engagement2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engagement2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corporateevent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corporateevent1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beach_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beach_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sofitel_outdoor_cb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sofitel_outdoor_cb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corporateevent3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corporateevent3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bachellorette1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bachellorette1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skyline_plaza_birthday" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skyline_plaza_birthday.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="birthday1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\birthday1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corporateevent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corporateevent2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bachellorette2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bachellorette2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city_hall1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city_hall1.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="garden_engagement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garden_engagement.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="downtown_club_marathon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downtown_club_marathon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="garden_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garden_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beach_wedding1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beach_wedding1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="charity1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\charity1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="downtown_club_pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downtown_club_pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="downtown_club_indoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downtown_club_indoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

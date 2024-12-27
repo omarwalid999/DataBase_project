@@ -139,5 +139,13 @@ namespace DataBase_project
                 MessageBox.Show("New task is inserted successfully!");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            message_employee f = new message_employee(id);
+            f.Show();
+            this.Hide();
+
+        }
     }
 }

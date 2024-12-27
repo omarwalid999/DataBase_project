@@ -22,8 +22,8 @@ namespace DataBase_project
             DataTable dt = c.Employeesnames();
             firecombo.DataSource = dt;
             firecombo.DisplayMember = "name";
-           // firecombo.ValueMember = "employee_ID";
-            
+            firecombo.ValueMember = "employee_ID";
+
 
         }
 
@@ -34,17 +34,16 @@ namespace DataBase_project
 
         private void fire_Click(object sender, EventArgs e)
         {
-            int empid;
-            if (int.TryParse(firecombo.SelectedItem.ToString(), out empid))
+            int empid =Convert.ToInt32(firecombo.SelectedValue.ToString());
+            int result;
+            result=c.DeleteEmployee(empid);
+            if (result != 0)
             {
-                int result = c.DeleteEmployee(empid);
-                if (result != 0)
-                {
-                    MessageBox.Show("Employee fired ");
-                    firecombo.Refresh();
-                }
+                MessageBox.Show("Employee fired ");
+            } else
+            {
+                MessageBox.Show("Failed to fire employee");
             }
-
         }
         //= Convert.ToInt32(firecombo.SelectedValue.ToString());
         // string selectedemp = firecombo.SelectedItem.ToString();
