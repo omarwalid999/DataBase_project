@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DataBase_project
 {
@@ -28,7 +29,7 @@ namespace DataBase_project
 
         private void firecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //
+            
         }
 
         private void fire_Click(object sender, EventArgs e)
@@ -44,6 +45,10 @@ namespace DataBase_project
                 MessageBox.Show("Failed to fire employee");
             }
         }
+        //= Convert.ToInt32(firecombo.SelectedValue.ToString());
+        // string selectedemp = firecombo.SelectedItem.ToString();
+        // int empid = c.empid(selectedemp);
+
 
         private void back3_Click(object sender, EventArgs e)
         {

@@ -23,10 +23,7 @@ namespace DataBase_project
             DataTable dt = c.allclients();
             allclientsview.DataSource = dt;
             allclientsview.Refresh();
-            DataTable dt2 = c.clientnames();
-            clientcombo.DataSource = dt2;
-            clientcombo.DisplayMember = "Fname";
-            clientcombo.ValueMember = "client_ID"; 
+           
         }
 
         private void AllClients_Load(object sender, EventArgs e)
@@ -36,13 +33,22 @@ namespace DataBase_project
 
         private void editclient_Click(object sender, EventArgs e)
         {
-            int clientid = (int)clientcombo.SelectedValue;
-            Edit_Client edit_Client = new Edit_Client(clientid);
-            edit_Client.Show();
-            this.Hide();
+           
         }
 
         private void clientcombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back12_Click(object sender, EventArgs e)
+        {
+            Manager_home M6= new Manager_home();
+            M6.Show();
+            this.Hide();
+        }
+
+        private void allclientsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

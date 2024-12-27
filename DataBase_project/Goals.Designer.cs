@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.depcombo = new System.Windows.Forms.ComboBox();
             this.setgoal = new System.Windows.Forms.Button();
+            this.back92 = new System.Windows.Forms.Button();
+            this.deletegoal = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.goalsview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,12 +109,35 @@
             this.setgoal.TabIndex = 7;
             this.setgoal.Text = "SET";
             this.setgoal.UseVisualStyleBackColor = true;
+            this.setgoal.Click += new System.EventHandler(this.setgoal_Click);
+            // 
+            // back92
+            // 
+            this.back92.Location = new System.Drawing.Point(680, 367);
+            this.back92.Name = "back92";
+            this.back92.Size = new System.Drawing.Size(75, 23);
+            this.back92.TabIndex = 8;
+            this.back92.Text = "Back";
+            this.back92.UseVisualStyleBackColor = true;
+            this.back92.Click += new System.EventHandler(this.back92_Click);
+            // 
+            // deletegoal
+            // 
+            this.deletegoal.Location = new System.Drawing.Point(713, 307);
+            this.deletegoal.Name = "deletegoal";
+            this.deletegoal.Size = new System.Drawing.Size(75, 23);
+            this.deletegoal.TabIndex = 9;
+            this.deletegoal.Text = "DELETE";
+            this.deletegoal.UseVisualStyleBackColor = true;
+            this.deletegoal.Click += new System.EventHandler(this.deletegoal_Click);
             // 
             // Goals
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deletegoal);
+            this.Controls.Add(this.back92);
             this.Controls.Add(this.setgoal);
             this.Controls.Add(this.depcombo);
             this.Controls.Add(this.label3);
@@ -140,5 +165,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox depcombo;
         private System.Windows.Forms.Button setgoal;
+        private System.Windows.Forms.Button back92;
+        private System.Windows.Forms.Button deletegoal;
     }
 }

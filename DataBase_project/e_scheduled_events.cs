@@ -32,10 +32,7 @@ namespace DataBase_project
 
         private void choose_event_Click(object sender, EventArgs e)
         {
-            int id = event_combo.SelectedIndex;
-            employee_event ee = new employee_event(id);
-            ee.Show();
-            this.Hide();
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -209,7 +209,7 @@
             // garden
             // 
             this.garden.AutoSize = true;
-            this.garden.Image = global::DataBase_project.Properties.Resources.garden_engagement;
+           // this.garden.Image = global::DataBase_project.Properties.Resources.garden_engagement;
             this.garden.Location = new System.Drawing.Point(1355, 643);
             this.garden.Name = "garden";
             this.garden.Size = new System.Drawing.Size(450, 333);
