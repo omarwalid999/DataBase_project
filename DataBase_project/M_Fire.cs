@@ -33,7 +33,7 @@ namespace DataBase_project
 
         private void fire_Click(object sender, EventArgs e)
         {
-            int empid =Convert.ToInt32(firecombo.SelectedValue.ToString());
+            int empid =Convert.ToInt32(firecombo.SelectedValue);
             int result;
             result=c.DeleteEmployee(empid);
             if (result != 0)
