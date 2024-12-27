@@ -66,11 +66,64 @@ namespace DBapplication
 
         public int get_dep_id(string user)
         {
-            string query = $"SELECT dep_ID FROM employee WHERE username= '{user}' ";
+            string query = $"SELECT dep_ID FROM employee WHERE username= '{user}' ;";
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public DataTable client_events(int client_id)
+        {
+            string query = $"SELECT * FROM event WHERE client_ID='{client_id}' ";
+            return dbMan.ExecuteReader(query);
+        }
 
+        public string get_employee_fname(int eventid)
+        {
+            string query = $"SELECT fname FROM employee,event WHERE event_ID={eventid} AND employee.employee_ID = event.employee_ID ";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public string get_employee_lname(int eventid)
+        {
+            string query = $"SELECT lname FROM employee,event WHERE event_ID={eventid} AND employee.employee_ID = event.employee_ID ";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public int message_count_ec()
+        {
+            string query = $"SELECT COUNT(*) FROM messages_ec";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int message_count_em()
+        {
+            string query = $"SELECT COUNT(*) FROM messages_em";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int addmessage_ec(int msg_id , string text ,DateTime time ,int client_id,int employee_id,bool flag)
+        {
+            string query = $"INSERT into messages_ec VALUES({msg_id},'{text}','{time}',{client_id},{employee_id},'{flag}')";
+             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int employee_event(int event_id)
+        {
+            string query = $"SELECT employee_ID FROM event WHERE event_ID={event_id}";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public DataTable get_managers()
+        {
+            int dep = 6;
+            string query = $"SELECT fname,lname,username FROM employee WHERE dep_ID={dep}";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable get_employee_clients(int emp_id)
+        {
+            string query = $"SELECT client.Fname,client.Lname,client.username FROM client,event,employee WHERE " +
+                $"event.employee_ID={emp_id} AND client.client_ID=event.client.id ";
+            return dbMan.ExecuteReader(query);
+        }
         //tarek
         //employee
         //public bool CheckPass(int id, string enteredpassword)

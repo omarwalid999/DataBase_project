@@ -47,9 +47,10 @@ namespace DataBase_project
             this.Hide();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            client_message m = new client_message(id1);
+            message_client m = new message_client(id1);
             m.Show();
             this.Hide();
         }

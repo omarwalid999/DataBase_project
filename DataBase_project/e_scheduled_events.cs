@@ -20,11 +20,7 @@ namespace DataBase_project
         {
             controllerobj = new Controller();
             InitializeComponent();
-            DataTable events = controllerobj.sch_events(val);
-            dataGridView1.DataSource= events;
-            event_combo.DataSource = events;
-            event_combo.DisplayMember = "eventname";
-            event_combo.ValueMember = "event_ID";
+           
 
 
         }
