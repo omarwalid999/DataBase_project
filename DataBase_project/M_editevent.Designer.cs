@@ -41,7 +41,6 @@
             this.eventidtext = new System.Windows.Forms.TextBox();
             this.budgettext = new System.Windows.Forms.TextBox();
             this.capacitytext = new System.Windows.Forms.TextBox();
-            this.datetext = new System.Windows.Forms.TextBox();
             this.eventnametext = new System.Windows.Forms.TextBox();
             this.clienttext = new System.Windows.Forms.TextBox();
             this.updatevent = new System.Windows.Forms.Button();
@@ -167,13 +166,6 @@
             this.capacitytext.Size = new System.Drawing.Size(100, 22);
             this.capacitytext.TabIndex = 13;
             // 
-            // datetext
-            // 
-            this.datetext.Location = new System.Drawing.Point(361, 385);
-            this.datetext.Name = "datetext";
-            this.datetext.Size = new System.Drawing.Size(100, 22);
-            this.datetext.TabIndex = 15;
-            // 
             // eventnametext
             // 
             this.eventnametext.Location = new System.Drawing.Point(688, 216);
@@ -262,7 +254,6 @@
             this.Controls.Add(this.updatevent);
             this.Controls.Add(this.clienttext);
             this.Controls.Add(this.eventnametext);
-            this.Controls.Add(this.datetext);
             this.Controls.Add(this.capacitytext);
             this.Controls.Add(this.budgettext);
             this.Controls.Add(this.eventidtext);
@@ -300,7 +291,6 @@
         private System.Windows.Forms.TextBox eventidtext;
         private System.Windows.Forms.TextBox budgettext;
         private System.Windows.Forms.TextBox capacitytext;
-        private System.Windows.Forms.TextBox datetext;
         private System.Windows.Forms.TextBox eventnametext;
         private System.Windows.Forms.TextBox clienttext;
         private System.Windows.Forms.Button updatevent;

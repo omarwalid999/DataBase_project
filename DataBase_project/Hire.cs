@@ -29,6 +29,7 @@ namespace DataBase_project
         private void hirebutton_Click(object sender, EventArgs e)
         {
             int age;
+            int id;
             string gender = "";
             if (radioButton1.Checked)
             {
@@ -67,9 +68,9 @@ namespace DataBase_project
             else
             {
                 id = Convert.ToInt32(eidtext.Text);
+                age = Convert.ToInt32(agetext.Text);
                 int result;
-                string selecteddep = departcombo.SelectedItem.ToString();
-                int depid = c.depid(selecteddep);
+      
                 result = c.InsertNewEmployee(id, fnametext.Text, lnametext.Text, emailtext.Text, phonetext.Text, gender, age, usernametext.Text, passkeytext.Text, depid);
                 if (result != 0)
                 {
