@@ -42,7 +42,15 @@ namespace DBapplication
         public int client_id(string username)
         {
             string query = $"SELECT client_ID FROM client WHERE username = '{username}'";
-            return (int)dbMan.ExecuteScalar(query);
+            var result = dbMan.ExecuteScalar(query);
+            if (result == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)dbMan.ExecuteScalar(query);
+            }
         }
          public void change_pass_c(string username,string pass)
         {
@@ -58,7 +66,7 @@ namespace DBapplication
 
         public int get_dep_id(string user)
         {
-            string query = $"SELECT dep_ID FROM employee WHERE username='{user}'";
+            string query = $"SELECT dep_ID FROM employee WHERE username= '{user}' ";
             return (int)dbMan.ExecuteScalar(query);
         }
 
@@ -91,7 +99,15 @@ namespace DBapplication
         public int emp_id(string username)
         {
             string query = $"SELECT employee_ID FROM employee WHERE username = '{username}'";
-            return (int)dbMan.ExecuteScalar(query);
+            var result = dbMan.ExecuteScalar(query);
+            if (result == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)dbMan.ExecuteScalar(query);
+            }
         }
         public DataTable get_employees()
         {

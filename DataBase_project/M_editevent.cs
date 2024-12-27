@@ -106,7 +106,7 @@ namespace DataBase_project
                 }
             }
         }
-        }
+        
 
         private void back8_Click(object sender, EventArgs e)
         {

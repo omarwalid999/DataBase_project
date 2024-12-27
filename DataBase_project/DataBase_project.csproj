@@ -132,12 +132,6 @@
     <Compile Include="employee_event.Designer.cs">
       <DependentUpon>employee_event.cs</DependentUpon>
     </Compile>
-    <Compile Include="employee_first.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="employee_first.Designer.cs">
-      <DependentUpon>employee_first.cs</DependentUpon>
-    </Compile>
     <Compile Include="employee_home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,12 +203,6 @@
     </Compile>
     <Compile Include="Manager_home.Designer.cs">
       <DependentUpon>Manager_home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="manager_login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="manager_login.Designer.cs">
-      <DependentUpon>manager_login.cs</DependentUpon>
     </Compile>
     <Compile Include="m_change_pass.cs">
       <SubType>Form</SubType>
@@ -310,9 +298,6 @@
     <EmbeddedResource Include="employee_event.resx">
       <DependentUpon>employee_event.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employee_first.resx">
-      <DependentUpon>employee_first.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="employee_home.resx">
       <DependentUpon>employee_home.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_home.resx">
       <DependentUpon>Manager_home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="manager_login.resx">
-      <DependentUpon>manager_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="m_change_pass.resx">
       <DependentUpon>m_change_pass.cs</DependentUpon>

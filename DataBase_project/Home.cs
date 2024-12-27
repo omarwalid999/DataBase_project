@@ -26,7 +26,7 @@ namespace DataBase_project
 
         private void employee_button_Click(object sender, EventArgs e)
         {
-            employee_first employee = new employee_first();
+            employee_login employee = new employee_login();
             employee.Show();
             this.Hide();
         }
