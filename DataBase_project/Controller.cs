@@ -261,13 +261,21 @@ namespace DBapplication
      
         public DataTable department()          //combobox in hiring 
         {
-            string query = "SELECT dep_name FROM departments;";
+            string query = "SELECT * FROM departments;";
             return dbMan.ExecuteReader(query);
         }
         public int depid(string depname)
         {
-            string query = "SELECT dep_ID FROM departments WHERE dep_name='" + depname + "';";
-            return dbMan.ExecuteNonQuery(query);
+            string query = $"SELECT dep_ID FROM departments WHERE dep_name = '{depname}'";
+            var result = dbMan.ExecuteScalar(query);
+            if (result == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)dbMan.ExecuteScalar(query);
+            }
         }
         public int empid(string employee)
         {
