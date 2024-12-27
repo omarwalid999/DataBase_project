@@ -126,16 +126,7 @@ namespace DBapplication
         }
         //tarek
         //employee
-        //public bool CheckPass(int id, string enteredpassword)
-        //{
-    
-        //    string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
-
-        //    var storedPassword = dbMan.ExecuteScalar(query);
-
-        //    // Compare the stored password with the entered password
-        //    return storedPassword != null && storedPassword.ToString() == enteredpassword;
-        //}
+        
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
@@ -191,8 +182,17 @@ namespace DBapplication
         {
            
             string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', '{status}', {id})"; ;
-
             return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable chosen(int id, int id2)
+        {
+            string query = $"SELECT Fname, eventname, event_date, venue_name, client.client_ID, no_of_attendees FROM client, venue, event WHERE employee_ID = {id2} AND event_ID={id} ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable invoice(int id)
+        {
+            string query = $"SELECT amount, name_of_service, vendor_name FROM vendors, services_offered, event, invoice WHERE invoice.event_ID=event.event_ID AND invoice.event_ID={id} AND services_offered.service_ID=vendors.service_id AND vendors.service_ID=invoice.service_ID;";
+            return dbMan.ExecuteReader(query);
         }
         public int get_count()
         {
@@ -296,7 +296,7 @@ namespace DBapplication
         }
       public DataTable EventsList()
        {
-            string query = "SELECT eventname FROM event ;";
+            string query = "SELECT * FROM event ;";
             return dbMan.ExecuteReader(query) ;
        }
         public DataTable eventinfo(int eventid)
@@ -306,15 +306,10 @@ namespace DBapplication
         }
         public int deleteevent(int eventid)
         {
-            string query="DELETE * FROM event WHERE event_ID=" + eventid + ";";
+            string query="DELETE FROM event WHERE event_ID=" + eventid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int insertevent(int eventid, int budget, int eventtype, string date, int employee, int venue, int client, int capacity, string eventname)
-        {
-            string query = "INSERT INTO event (event_ID, budget, event_type, event_date, employee_ID, venue_ID, client_ID, no_of_attendees, eventname)" +
-                           "Values (" + eventid + "," + budget + "," + eventtype + ",'" + date + "'," + employee + "," + venue + "," + client + "," + capacity + ",'" + eventname +  "');";
-            return dbMan.ExecuteNonQuery(query);
-        }
+        
         public int updatevent(int eventid, int budget, int eventtype, string date, int employee, int venue, int client, int capacity, string eventname)
         {
             string query = "UPDATE event SET event_ID=" + eventid + ", budget=" + budget + ", event_type=" + eventtype + ", event_date='" + date + "' , employee_ID=" + employee + ", venue_ID=" + venue + ", client_ID=" + client + ", no_of_attendees=" + capacity + ", eventname='" + eventname + "' WHERE event_ID= " + eventid + "; ";
@@ -511,5 +506,11 @@ namespace DBapplication
             string query = "SELECT capacity FROM venue WHERE venue_ID=" + venue + ";";
             return (int)dbMan.ExecuteScalar(query);
         }
+        public int UpdateEvent(int eventid,int budget, int event_type, string date, int employee_id, int venue_id, int client_id, int noa, string eventname)
+        {
+            string query = "UPDATE event SET budget=" + budget + ", event_type=" + event_type + ",event_date='" + date + "', employee_id=" + employee_id + ", venue_id=" + venue_id + ", client_id=" + client_id + ", no_of_attendees=" + noa + ", eventname='"+ eventname + "'WHERE event_id="+eventid+";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        
     };
 }

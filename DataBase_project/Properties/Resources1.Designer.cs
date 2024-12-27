@@ -353,6 +353,16 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mail {
             get {
                 object obj = ResourceManager.GetObject("mail", resourceCulture);
@@ -373,39 +383,9 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap outdoor_corporateorbirthday_ {
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_12_27_at_18_41_44_c42ab493 {
             get {
-                object obj = ResourceManager.GetObject("outdoor_corporateorbirthday_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap skyline_plaza_birthday {
-            get {
-                object obj = ResourceManager.GetObject("skyline_plaza_birthday", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sofitel_indoor {
-            get {
-                object obj = ResourceManager.GetObject("sofitel_indoor", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sofitel_outdoor_cb {
-            get {
-                object obj = ResourceManager.GetObject("sofitel_outdoor_cb", resourceCulture);
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-12-27 at 18.41.44_c42ab493", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
