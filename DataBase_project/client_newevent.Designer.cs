@@ -60,16 +60,20 @@
             // typesofevents
             // 
             this.typesofevents.FormattingEnabled = true;
+            this.typesofevents.Location = new System.Drawing.Point(184, 19);
+            this.typesofevents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.typesofevents.Location = new System.Drawing.Point(252, 231);
             this.typesofevents.Name = "typesofevents";
-            this.typesofevents.Size = new System.Drawing.Size(255, 28);
+            this.typesofevents.Size = new System.Drawing.Size(227, 24);
             this.typesofevents.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(28, 22);
             this.label1.Location = new System.Drawing.Point(45, 234);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 16);
             this.label1.Size = new System.Drawing.Size(104, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Type of event";
@@ -115,10 +119,13 @@
             // 
             // eventname
             // 
-            this.eventname.Location = new System.Drawing.Point(255, 63);
-            this.eventname.Name = "eventname";
-            this.eventname.Size = new System.Drawing.Size(201, 26);
-            this.eventname.TabIndex = 60;
+            this.engagement3.Image = global::DataBase_project.Properties.Resources.engagement3;
+            this.engagement3.Location = new System.Drawing.Point(660, 111);
+            this.engagement3.Name = "engagement3";
+            this.engagement3.Size = new System.Drawing.Size(290, 278);
+            this.engagement3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.engagement3.TabIndex = 17;
+            this.engagement3.TabStop = false;
             // 
             // label4
             // 
@@ -263,7 +270,7 @@
             // 
             // client_newevent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.back2);
@@ -286,6 +293,7 @@
             this.Controls.Add(this.venues);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.typesofevents);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "client_newevent";
             this.Text = "client_newevent";
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).EndInit();

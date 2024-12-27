@@ -101,7 +101,7 @@
             // 
             this.deletevent.Location = new System.Drawing.Point(486, 318);
             this.deletevent.Name = "deletevent";
-            this.deletevent.Size = new System.Drawing.Size(75, 23);
+            this.deletevent.Size = new System.Drawing.Size(116, 23);
             this.deletevent.TabIndex = 6;
             this.deletevent.Text = "DELETE";
             this.deletevent.UseVisualStyleBackColor = true;

@@ -73,6 +73,16 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _912841506896fdf51b089d4922dc74c3 {
+            get {
+                object obj = ResourceManager.GetObject("912841506896fdf51b089d4922dc74c3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bachellorette1 {
             get {
                 object obj = ResourceManager.GetObject("bachellorette1", resourceCulture);
@@ -343,9 +353,9 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap mail {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("mail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

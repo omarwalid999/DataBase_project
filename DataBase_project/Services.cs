@@ -14,6 +14,11 @@ namespace DataBase_project
     public partial class Services : Form
     {
         Controller c;
+        int id;
+        int id2;
+        int id3;
+        int id4;
+
         public Services()
         {
             InitializeComponent();
@@ -28,11 +33,8 @@ namespace DataBase_project
         }
 
         private void addservice_Click(object sender, EventArgs e)
-        {
-            int id;
-            int id2;
-            int id3;
-            int id4;
+        { 
+
             if (serviceidtext.Text == "" || vendornametext.Text == "" || vendortext.Text=="" || servicenametext.Text=="" || invoicetext.Text=="" || pricetext.Text=="")
             {
                 MessageBox.Show("Please enter all required fields");
@@ -44,8 +46,12 @@ namespace DataBase_project
             }
              else
              {
-                    int result;
-                    result = c.addservice(id, id2, servicenametext.Text, id3, id4, vendornametext.Text);
+                 int result;
+                id=Convert.ToInt32(serviceidtext.Text);
+                id2=Convert.ToInt32(vendortext.Text);
+                id3=Convert.ToInt32(invoicetext.Text);
+                id4 = Convert.ToInt32(pricetext.Text);
+                result = c.addservice(id, id2, servicenametext.Text, id3, id4);
 
                     if (result != 0)
                     {

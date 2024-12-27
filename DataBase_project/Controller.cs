@@ -66,11 +66,63 @@ namespace DBapplication
 
         public int get_dep_id(string user)
         {
-            string query = $"SELECT dep_ID FROM employee WHERE username= '{user}' ";
+            string query = $"SELECT dep_ID FROM employee WHERE username= '{user}' ;";
             return (int)dbMan.ExecuteScalar(query);
         }
 
+        public DataTable client_events(int client_id)
+        {
+            string query = $"SELECT * FROM event WHERE client_ID='{client_id}' ";
+            return dbMan.ExecuteReader(query);
+        }
 
+        public string get_employee_fname(int eventid)
+        {
+            string query = $"SELECT fname FROM employee,event WHERE event_ID={eventid} AND employee.employee_ID = event.employee_ID ";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public string get_employee_lname(int eventid)
+        {
+            string query = $"SELECT lname FROM employee,event WHERE event_ID={eventid} AND employee.employee_ID = event.employee_ID ";
+            return dbMan.ExecuteScalar(query).ToString();
+        }
+
+        public int message_count_ec()
+        {
+            string query = $"SELECT COUNT(*) FROM messages_ec";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int message_count_em()
+        {
+            string query = $"SELECT COUNT(*) FROM messages_em";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int addmessage_ec(int msg_id , string text ,DateTime time ,int client_id,int employee_id,bool flag)
+        {
+            string query = $"INSERT into messages_ec VALUES({msg_id},'{text}','{time}',{client_id},{employee_id},'{flag}')";
+             return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int employee_event(int event_id)
+        {
+            string query = $"SELECT employee_ID FROM event WHERE event_ID={event_id}";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public DataTable get_managers()
+        {
+            int dep = 6;
+            string query = $"SELECT fname,lname,username FROM employee WHERE dep_ID={dep}";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable get_employee_clients(int emp_id)
+        {
+            string query = $"SELECT DISTINCT client.Fname, client.Lname, client.username FROM client, event, employee WHERE event.employee_ID={emp_id} AND client.client_ID=event.client_ID ";
+            return dbMan.ExecuteReader(query);
+        }
         //tarek
         //employee
         //public bool CheckPass(int id, string enteredpassword)
@@ -233,8 +285,13 @@ namespace DBapplication
         //events
         public DataTable AllEvents()
         {
-            string query = "SELECT E.event_ID, E.budget, F.event_type, E.event_date, CONCAT(fname,' ',lname) AS e_name, V.venue_name, CONCAT(Fname,' ',Lname) AS c_name, E.no_of_attendees, E.eventname FROM event AS E, employee AS T, venue AS V, event_types AS F, event AS E WHERE E.event_type=F.types_ID AND E.employee_ID=T.employee_ID AND E.venue_ID=V.venue_ID AND E.client_ID=C.client_ID ;";
+            string query = "SELECT * FROM event;";
             return dbMan.ExecuteReader(query);
+        }
+        public int eventid(string eventname){
+            string query = "SELECT event_ID FROM event WHERE eventname='" + eventname + "';";
+            return dbMan.ExecuteNonQuery(query);
+
         }
       public DataTable EventsList()
        {
@@ -254,12 +311,12 @@ namespace DBapplication
         public int insertevent(int eventid, int budget, int eventtype, string date, int employee, int venue, int client, int capacity, string eventname)
         {
             string query = "INSERT INTO event (event_ID, budget, event_type, event_date, employee_ID, venue_ID, client_ID, no_of_attendees, eventname)" +
-                           "Values (" + eventid + ",'" + budget + "','" + eventtype + "','" + date + "','" + employee + "','" + venue + "','" + client + "','" + capacity + "','" + eventname +  "');";
+                           "Values (" + eventid + "," + budget + "," + eventtype + ",'" + date + "'," + employee + "," + venue + "," + client + "," + capacity + ",'" + eventname +  "');";
             return dbMan.ExecuteNonQuery(query);
         }
         public int updatevent(int eventid, int budget, int eventtype, string date, int employee, int venue, int client, int capacity, string eventname)
         {
-            string query = "UPDATE event SET event_ID='" + eventid + "', budget='" + budget + "' , event_type='" + eventtype + "' , event_date='" + date + "' , employee_ID='" + employee + "' , venue_ID='" + venue + "' , client_ID='" + client + "' , no_of_attendees='" + capacity + "' , eventname='" + eventname + "' WHERE event_ID= " + eventid + "; ";
+            string query = "UPDATE event SET event_ID=" + eventid + ", budget=" + budget + ", event_type=" + eventtype + ", event_date='" + date + "' , employee_ID=" + employee + ", venue_ID=" + venue + ", client_ID=" + client + ", no_of_attendees=" + capacity + ", eventname='" + eventname + "' WHERE event_ID= " + eventid + "; ";
             return dbMan.ExecuteNonQuery(query);
         }
         //employees
@@ -268,6 +325,7 @@ namespace DBapplication
             string query = "SELECT * FROM employee ;";
             return dbMan.ExecuteReader(query);
         }
+     
         public DataTable department()          //combobox in hiring 
         {
             string query = "SELECT * FROM departments;";
@@ -285,6 +343,11 @@ namespace DBapplication
             {
                 return (int)dbMan.ExecuteScalar(query);
             }
+        }
+        public int empid(string employee)
+        {
+            string query = "SELECT employee_ID FROM employee WHERE (SELECT CONCAT(fname,' ',lname) AS name FROM employee) AND name= " + employee + ";";
+            return dbMan.ExecuteNonQuery(query);
         }
         public int InsertNewEmployee(int e_ID, string Fname, string Lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
         {
@@ -333,13 +396,18 @@ namespace DBapplication
         }
         public int deletetype(int type_ID)          // delete a type 
         {
-            string query = "DELETE * FROM event_types WHERE types_ID=" + type_ID + ";";
+            string query = "DELETE FROM event_types WHERE types_ID=" + type_ID + ";";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable typesnames()
         {
             string query = "SELECT event_type FROM event_types;";
             return dbMan.ExecuteReader(query);
+        }
+        public int typeid(string typname)
+        {
+            string query = "SELECT types_ID FROM event_types WHERE event_type='" + typname + "';";
+            return dbMan.ExecuteNonQuery(query);
         }
         //vendor
         public DataTable vendorsdetails()
@@ -376,18 +444,19 @@ namespace DBapplication
         //services
         public DataTable allservices()
         {
-            string query = "SELECT services_offered.*, vendors.vendor_name FROM services_offered, vendors WHERE vendors.vendor_ID=services_offered.vendor_ID;";
+            string query = "SELECT * FROM services_offered, vendors WHERE vendors.vendor_ID=services_offered.vendor_ID;";
             return dbMan.ExecuteReader(query);
         }
-        public int addservice(int service_ID,int vendor_ID, string name_of_service, int invoice_ID, int price, string vendor_name)
+        public int addservice(int service_ID,int vendor_ID, string name_of_service, int invoice_ID, int price)
         {
-            string query = "INSERT INTO services_offered (service_ID, vendor_ID, name_of_service, invoice_id, price)" +
-                            "Values (" + service_ID + ",'" + vendor_ID + "','" + name_of_service + "','" + invoice_ID + "','" + price + "');";
-            string query2 = "INSERT INTO vendors (vendor_ID, vendor_name)" + "Values (" + vendor_ID + " , '" + vendor_name + "');";
-            int result1=dbMan.ExecuteNonQuery(query);
-            int result2=dbMan.ExecuteNonQuery(query2);
-            int result = result1 + result2;
-            return result;
+            string query = "INSERT INTO services_offered(service_ID, vendor_ID, name_of_service, invoice_id, price)" +
+                            "Values (" + service_ID + "," + vendor_ID + ",'" + name_of_service + "'," + invoice_ID + "," + price + ");";
+           // string query2 = "INSERT INTO vendors(vendor_ID, vendor_name)" + "Values (" + vendor_ID + " , '" + vendor_name + "');";
+         // int result1=dbMan.ExecuteNonQuery(query);
+          // int result2=dbMan.ExecuteNonQuery(query2);
+          //  int result = result1 + result2;
+          // return result;
+           return dbMan.ExecuteNonQuery(query);
 
         }
         public int deleteservice(int service_ID)
@@ -417,9 +486,9 @@ namespace DBapplication
             string query = "SELECT venue_name FROM venue;";
             return dbMan.ExecuteReader(query);
         }
-        public int capacity(int venueid)
+        public int capacity(string venue)
         {
-            string query = "SELECT capacity FROM venue WHERE venue_ID=" + venueid + ";";
+            string query = "SELECT capacity FROM venue WHERE venue_ID='" + venue + "';";
             return dbMan.ExecuteNonQuery(query);
         }
     };

@@ -94,12 +94,6 @@
     <Compile Include="client_home.Designer.cs">
       <DependentUpon>client_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="client_message.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="client_message.Designer.cs">
-      <DependentUpon>client_message.cs</DependentUpon>
-    </Compile>
     <Compile Include="client_newevent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +198,18 @@
     <Compile Include="Manager_home.Designer.cs">
       <DependentUpon>Manager_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="message_client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="message_client.Designer.cs">
+      <DependentUpon>message_client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="message_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="message_employee.Designer.cs">
+      <DependentUpon>message_employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="m_change_pass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,9 +286,6 @@
     <EmbeddedResource Include="client_login.resx">
       <DependentUpon>client_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="client_message.resx">
-      <DependentUpon>client_message.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="client_newevent.resx">
       <DependentUpon>client_newevent.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,6 +333,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manager_home.resx">
       <DependentUpon>Manager_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="message_client.resx">
+      <DependentUpon>message_client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="message_employee.resx">
+      <DependentUpon>message_employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="m_change_pass.resx">
       <DependentUpon>m_change_pass.cs</DependentUpon>
@@ -431,46 +440,10 @@
     <None Include="Resources\charity3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\912841506896fdf51b089d4922dc74c3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\birthdaynew.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sofitel_indoor.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\outdoor_corporateorbirthday_.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sofitel_outdoor_cb.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\downtown_club_pool.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\skyline_plaza_birthday.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\downtown_club_marathon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\garden_engagement.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\beach_wedding1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\garden_engagement1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\garden_engagement11.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\city_hall1.JPG" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\downtown_club_indoor.jpg" />
+    <None Include="Resources\mail.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

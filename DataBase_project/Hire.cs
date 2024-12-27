@@ -66,6 +66,7 @@ namespace DataBase_project
             else
             {
                 id = Convert.ToInt32(eidtext.Text);
+                age = Convert.ToInt32(agetext.Text);
                 int result;
                 result = c.InsertNewEmployee(id, fnametext.Text, lnametext.Text, emailtext.Text, phonetext.Text, gender, Convert.ToInt32(agetext.Text), usernametext.Text, passkeytext.Text, Convert.ToInt32(departcombo.SelectedValue));
                 if (result != 0)

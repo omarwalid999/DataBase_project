@@ -20,10 +20,11 @@ namespace DataBase_project
             c=new Controller();
             DataTable dt = c.AllEvents();
             alleventsview.DataSource = dt;
+            
            
-           // DataTable dt2 = c.EventsList();
-            //eventscombo.DataSource = dt2;
-           // eventscombo.DisplayMember = "eventname";
+            DataTable dt2 = c.EventsList();
+            eventscombo.DataSource = dt2;
+            eventscombo.DisplayMember = "eventname";
             //eventscombo.ValueMember = "event_ID";
         }
 
@@ -39,7 +40,8 @@ namespace DataBase_project
 
         private void edit_Click(object sender, EventArgs e)
         {
-            int eventid = (int)eventscombo.SelectedValue;
+            string selectedevent=eventscombo.SelectedItem.ToString();
+            int eventid=c.eventid(selectedevent);
             M_editevent m_Editevent = new M_editevent(eventid);
             m_Editevent.Show();
             this.Hide();
@@ -66,7 +68,7 @@ namespace DataBase_project
             if (result != 0)
             {
                 MessageBox.Show("Event deleted successfully");
-                alleventsview.Refresh();
+               
             }
 
         }
