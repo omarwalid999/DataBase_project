@@ -32,12 +32,13 @@
             this.NewEvent = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // events
             // 
-            this.events.Location = new System.Drawing.Point(223, 77);
+            this.events.Location = new System.Drawing.Point(223, 88);
             this.events.Name = "events";
             this.events.Size = new System.Drawing.Size(312, 73);
             this.events.TabIndex = 0;
@@ -47,7 +48,7 @@
             // 
             // NewEvent
             // 
-            this.NewEvent.Location = new System.Drawing.Point(223, 180);
+            this.NewEvent.Location = new System.Drawing.Point(223, 217);
             this.NewEvent.Name = "NewEvent";
             this.NewEvent.Size = new System.Drawing.Size(312, 69);
             this.NewEvent.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // logout
             // 
-            this.logout.Location = new System.Drawing.Point(498, 324);
+            this.logout.Location = new System.Drawing.Point(518, 350);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(219, 44);
             this.logout.TabIndex = 3;
@@ -76,11 +77,22 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(27, 349);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(184, 45);
+            this.back.TabIndex = 5;
+            this.back.Text = "back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // client_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.NewEvent);
@@ -99,5 +111,6 @@
         private System.Windows.Forms.Button NewEvent;
         private System.Windows.Forms.Button logout;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button back;
     }
 }

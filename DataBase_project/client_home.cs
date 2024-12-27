@@ -53,6 +53,13 @@ namespace DataBase_project
             m.Show();
             this.Hide();
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Home m = new Home();
+            m.Show();
+            this.Hide();
+        }
         //momken neshil previous events w nezawed fi my events button feedback
     }
 }

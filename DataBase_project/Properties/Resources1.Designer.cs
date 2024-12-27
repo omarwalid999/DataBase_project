@@ -123,6 +123,16 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap beach_wedding1 {
+            get {
+                object obj = ResourceManager.GetObject("beach_wedding1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap birthday1 {
             get {
                 object obj = ResourceManager.GetObject("birthday1", resourceCulture);
@@ -146,6 +156,16 @@ namespace DataBase_project.Properties {
         internal static System.Drawing.Bitmap birthday3 {
             get {
                 object obj = ResourceManager.GetObject("birthday3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap birthdaynew {
+            get {
+                object obj = ResourceManager.GetObject("birthdaynew", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,6 +203,16 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap city_hall1 {
+            get {
+                object obj = ResourceManager.GetObject("city_hall1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap corporateevent1 {
             get {
                 object obj = ResourceManager.GetObject("corporateevent1", resourceCulture);
@@ -206,6 +236,36 @@ namespace DataBase_project.Properties {
         internal static System.Drawing.Bitmap corporateevent3 {
             get {
                 object obj = ResourceManager.GetObject("corporateevent3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downtown_club_indoor {
+            get {
+                object obj = ResourceManager.GetObject("downtown_club_indoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downtown_club_marathon {
+            get {
+                object obj = ResourceManager.GetObject("downtown_club_marathon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap downtown_club_pool {
+            get {
+                object obj = ResourceManager.GetObject("downtown_club_pool", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +303,36 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap garden_engagement {
+            get {
+                object obj = ResourceManager.GetObject("garden_engagement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap garden_engagement1 {
+            get {
+                object obj = ResourceManager.GetObject("garden_engagement1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap garden_engagement11 {
+            get {
+                object obj = ResourceManager.GetObject("garden_engagement11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap garden_wedding {
             get {
                 object obj = ResourceManager.GetObject("garden_wedding", resourceCulture);
@@ -253,9 +343,59 @@ namespace DataBase_project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap messages {
             get {
                 object obj = ResourceManager.GetObject("messages", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap outdoor_corporateorbirthday_ {
+            get {
+                object obj = ResourceManager.GetObject("outdoor_corporateorbirthday_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap skyline_plaza_birthday {
+            get {
+                object obj = ResourceManager.GetObject("skyline_plaza_birthday", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sofitel_indoor {
+            get {
+                object obj = ResourceManager.GetObject("sofitel_indoor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sofitel_outdoor_cb {
+            get {
+                object obj = ResourceManager.GetObject("sofitel_outdoor_cb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

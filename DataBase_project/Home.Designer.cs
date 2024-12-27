@@ -34,9 +34,10 @@
             // 
             // client_button
             // 
-            this.client_button.Location = new System.Drawing.Point(191, 155);
+            this.client_button.Location = new System.Drawing.Point(215, 194);
+            this.client_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.client_button.Name = "client_button";
-            this.client_button.Size = new System.Drawing.Size(179, 100);
+            this.client_button.Size = new System.Drawing.Size(201, 125);
             this.client_button.TabIndex = 0;
             this.client_button.Text = "Client";
             this.client_button.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // employee_button
             // 
-            this.employee_button.Location = new System.Drawing.Point(423, 155);
+            this.employee_button.Location = new System.Drawing.Point(476, 194);
+            this.employee_button.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.employee_button.Name = "employee_button";
-            this.employee_button.Size = new System.Drawing.Size(179, 100);
+            this.employee_button.Size = new System.Drawing.Size(201, 125);
             this.employee_button.TabIndex = 1;
             this.employee_button.Text = "Employee";
             this.employee_button.UseVisualStyleBackColor = true;
@@ -54,13 +56,14 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.employee_button);
             this.Controls.Add(this.client_button);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Home";
-            this.Text = "Form1";
+            this.Text = "Eventura";
             this.ResumeLayout(false);
 
         }

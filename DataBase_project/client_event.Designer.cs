@@ -62,6 +62,7 @@
             this.clientseventdatagridview.RowTemplate.Height = 28;
             this.clientseventdatagridview.Size = new System.Drawing.Size(773, 299);
             this.clientseventdatagridview.TabIndex = 0;
+            this.clientseventdatagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientseventdatagridview_CellContentClick);
             // 
             // label1
             // 
