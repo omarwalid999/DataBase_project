@@ -81,7 +81,7 @@
             // 
             this.removetype.Location = new System.Drawing.Point(592, 250);
             this.removetype.Name = "removetype";
-            this.removetype.Size = new System.Drawing.Size(75, 23);
+            this.removetype.Size = new System.Drawing.Size(97, 23);
             this.removetype.TabIndex = 4;
             this.removetype.Text = "REMOVE";
             this.removetype.UseVisualStyleBackColor = true;

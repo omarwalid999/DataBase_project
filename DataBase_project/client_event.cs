@@ -120,5 +120,10 @@ namespace DataBase_project
                 }
             }
         }
+
+        private void eventdateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

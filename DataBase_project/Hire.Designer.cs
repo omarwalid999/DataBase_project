@@ -46,7 +46,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.passkeytext = new System.Windows.Forms.TextBox();
-            this.departmentcombo = new System.Windows.Forms.ComboBox();
+            this.departcombo = new System.Windows.Forms.ComboBox();
             this.hirebutton = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.eidtext = new System.Windows.Forms.TextBox();
@@ -206,14 +206,14 @@
             this.passkeytext.Size = new System.Drawing.Size(100, 22);
             this.passkeytext.TabIndex = 17;
             // 
-            // departmentcombo
+            // departcombo
             // 
-            this.departmentcombo.FormattingEnabled = true;
-            this.departmentcombo.Location = new System.Drawing.Point(462, 232);
-            this.departmentcombo.Name = "departmentcombo";
-            this.departmentcombo.Size = new System.Drawing.Size(121, 24);
-            this.departmentcombo.TabIndex = 18;
-            this.departmentcombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.departcombo.FormattingEnabled = true;
+            this.departcombo.Location = new System.Drawing.Point(462, 232);
+            this.departcombo.Name = "departcombo";
+            this.departcombo.Size = new System.Drawing.Size(121, 24);
+            this.departcombo.TabIndex = 18;
+            this.departcombo.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // hirebutton
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.eidtext);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.hirebutton);
-            this.Controls.Add(this.departmentcombo);
+            this.Controls.Add(this.departcombo);
             this.Controls.Add(this.passkeytext);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -306,7 +306,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox passkeytext;
-        private System.Windows.Forms.ComboBox departmentcombo;
+        private System.Windows.Forms.ComboBox departcombo;
         private System.Windows.Forms.Button hirebutton;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox eidtext;

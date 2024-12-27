@@ -57,7 +57,7 @@ namespace DataBase_project
         private void removetype_Click(object sender, EventArgs e)
         {
             int id;
-            if (eventtypetext.Text == "" || typeidtext.Text == "")
+            if ( typeidtext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
@@ -69,7 +69,7 @@ namespace DataBase_project
             else
             {
                 int result;
-                result = c.deletetype(id, eventtypetext.Text);
+                result = c.deletetype(id);
                 if (result != 0)
                 {
                     MessageBox.Show("Type deleted successfully");
