@@ -141,27 +141,32 @@ namespace DBapplication
                             "Values (" + clientid + ",'" + Fname + "','" + Lname + "','" + email + "','"+ phone+"','"+ username+"','"+passkey+"');";
             return dbMan.ExecuteNonQuery(query);
         }
+        //haget feedback
         public int InsertFeedback(int feedbackid, int  clientid, string comment, string date, int rating)
         {
             string query = "INSERT INTO feedbacks (feedback_ID, client_ID, comment,feedback_date,rating)" +
                             "Values (" + feedbackid + "," + clientid + ",'" + comment + "','" + date + "'," + rating + ");" ;
             return dbMan.ExecuteNonQuery(query);
         }
+        //in employee show all vendors
         public DataTable ShowVendors()
         {
             string query = "SELECT * FROM Vendors;";
             return dbMan.ExecuteReader(query);
         }
+        //shows client events datagrid view in clinet_event
         public DataTable ShowClientEvents(int clientid)
         {
             string query = "SELECT event.eventname,event_types.event_type,event.event_date,event.budget,event.no_of_attendees,employee.fname,employee.lname FROM event, event_types,employee WHERE event.client_ID="+clientid+" AND event.event_type=event_types.types_ID AND event.employee_ID=employee.employee_ID;";
             return dbMan.ExecuteReader(query);
         }
+        //shows eventnames gowa combox
         public DataTable ShowClientEventsNames(int clientid) 
         {
             string query = "SELECT event.eventname FROM event  WHERE client_ID="+clientid+";";
             return dbMan.ExecuteReader(query);
         }
+        //show types of events 3lhsna new event
         public DataTable ShowTypes()
         {
             string query = "SELECT * FROM event_types;";
@@ -177,11 +182,20 @@ namespace DBapplication
             string query = "SELECT * FROM events Where client_ID=" + clientid + ";";
             return dbMan.ExecuteReader(query);
         }
+        //changes event details from client_event form
         public int change_event_details(int clientid,string eventname, int budget, int noa, string date)
         {
             string query = "UPDATE event\r\nSET eventname = '" + eventname + "', budget=" + budget + ", no_of_attendees=" + noa + ",event_date='" + date + "'\r\nWHERE client_ID=" + clientid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
+        //gets employee id responsible for event from client id
+        public int get_emp_id(int clientid)
+        {
+            string query = "SELECT employee_ID FROM employee,event WHERE client_ID = "+clientid+" AND employee.client_ID = event.employee_ID";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+
 
         //rawan
         //events

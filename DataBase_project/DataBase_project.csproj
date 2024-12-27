@@ -88,6 +88,12 @@
     <Compile Include="client_home.Designer.cs">
       <DependentUpon>client_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="client_message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client_message.Designer.cs">
+      <DependentUpon>client_message.cs</DependentUpon>
+    </Compile>
     <Compile Include="client_newevent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,6 +283,9 @@
     <EmbeddedResource Include="client_login.resx">
       <DependentUpon>client_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="client_message.resx">
+      <DependentUpon>client_message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="client_newevent.resx">
       <DependentUpon>client_newevent.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,7 +380,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\garden_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messages.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beach_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1hotel_wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bachellorette1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bachellorette2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bachellorette3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bachellorette31.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

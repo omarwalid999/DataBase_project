@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace DataBase_project
     public partial class client_home : Form
     {
         int id1;
+        Controller c = new Controller();
         public client_home(int id)
         {
             InitializeComponent();
@@ -42,6 +44,13 @@ namespace DataBase_project
         {
             client_event ce = new client_event(id1);
             ce.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            client_message m = new client_message(id1);
+            m.Show();
             this.Hide();
         }
         //momken neshil previous events w nezawed fi my events button feedback

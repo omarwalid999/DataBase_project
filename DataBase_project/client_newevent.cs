@@ -17,28 +17,50 @@ namespace DataBase_project
         public client_newevent(int id)
         {
             InitializeComponent();
-            hotelbox1.Hide();
-            beachbox1.Hide();
+            
             this.id2 = id;
             Controller cobj = new Controller();
             DataTable dt = cobj.ShowTypes();
             typesofevents.DataSource = dt;
             typesofevents.DisplayMember = "event_type";
-            typesofevents.ValueMember = "types_ID";
+            //typesofevents.ValueMember = "types_ID";
+            
         }
 
         private void typesofevents_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(typesofevents.SelectedIndex == 1) //wedding
-            {
-                hotelbox1.Show();
-                beachbox1.Show();
-            }
+            //
         }
 
         private void client_newevent_Load(object sender, EventArgs e)
         {
+            hotelwedding.Visible = false;
+            beachwedding.Visible = false;
+            gardenwedding.Visible = false;
+            bachellorrette1.Visible = false;
+            bachellorrette2.Visible = false;
+            bachellorrette3.Visible = false;
+        }
 
+        private void themes_Click(object sender, EventArgs e)
+        {
+            if (typesofevents.Text == "Wedding") //wedding
+            {
+                hotelwedding.Visible = true;
+                beachwedding.Visible = true;
+                gardenwedding.Visible= true;
+            }
+            if (typesofevents.Text == "Bachelorette") //wedding
+            {
+                bachellorrette1.Visible = true;
+                bachellorrette2.Visible = true;
+                bachellorrette3.Visible = true;
+            }
+        }
+
+        private void bachellorrette3_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }
