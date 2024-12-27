@@ -73,16 +73,16 @@ namespace DBapplication
 
         //tarek
         //employee
-        public bool CheckPass(int id, string enteredpassword)
-        {
+        //public bool CheckPass(int id, string enteredpassword)
+        //{
     
-            string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
+        //    string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
 
-            var storedPassword = dbMan.ExecuteScalar(query);
+        //    var storedPassword = dbMan.ExecuteScalar(query);
 
-            // Compare the stored password with the entered password
-            return storedPassword != null && storedPassword.ToString() == enteredpassword;
-        }
+        //    // Compare the stored password with the entered password
+        //    return storedPassword != null && storedPassword.ToString() == enteredpassword;
+        //}
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
@@ -265,8 +265,8 @@ namespace DBapplication
         }
         public int InsertNewEmployee(int e_ID, string Fname, string Lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
         {
-            string query = "INSERT INTO employee(employee_ID, fname, lname, email, phone, gender, age, username, passkey, dep_ID)" +
-                            "Values (" + e_ID + ",'" + Fname + "','" + Lname + "','" + email + "','" + phone + "','" + gender + "'," + age + ",'" + username + "','" + passkey + "'," + depid + ");";
+            string query = "INSERT INTO employee(employee_ID, fname, lname, email, phone, gender, age, username, passkey, dep_ID) " +
+                "Values(" + e_ID + ", '" + Fname + "', '" + Lname + "', '" + email + "', '" + phone + "', '" + gender + "'," + age + ", '" + username + "', '" + passkey + "'," + depid + ");";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable Employeesnames()

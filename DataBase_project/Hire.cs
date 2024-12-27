@@ -14,6 +14,7 @@ namespace DataBase_project
     public partial class Hire : Form
     {
         Controller c;
+        int id;
         public Hire()
         {
             InitializeComponent();
@@ -21,12 +22,13 @@ namespace DataBase_project
             DataTable dt = c.department();
             departcombo.DataSource = dt;
             departcombo.DisplayMember = "dep_name";
+            //departcombo.ValueMember = "dep_ID";
             
-
         }
 
         private void hirebutton_Click(object sender, EventArgs e)
         {
+            int age;
             string gender = "";
             if (radioButton1.Checked)
             {
@@ -36,10 +38,13 @@ namespace DataBase_project
             {
                 gender = "Male";
             }
-            int age;
-            int id;
+            
+            string selecteddep=departcombo.SelectedItem.ToString();
+            int depid=c.depid(selecteddep);
+            Console.WriteLine(depid);
+          
 
-            if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || departcombo.SelectedIndex == -1)
+            if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || (!radioButton1.Checked && !radioButton2.Checked) || departcombo.SelectedIndex == -1)
             {
                 MessageBox.Show("Please Enter All Required Fields");
             }
@@ -61,6 +66,7 @@ namespace DataBase_project
             }
             else
             {
+                id = Convert.ToInt32(eidtext.Text);
                 int result;
                 string selecteddep = departcombo.SelectedItem.ToString();
                 int depid = c.depid(selecteddep);
