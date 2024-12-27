@@ -52,6 +52,12 @@
             this.beachbox1 = new System.Windows.Forms.PictureBox();
             this.hotelbox3 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Button();
+            this.first = new System.Windows.Forms.Label();
+            this.second = new System.Windows.Forms.Label();
+            this.third = new System.Windows.Forms.Label();
+            this.themepicker = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.next = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.charity3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.charity2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.charity1)).BeginInit();
@@ -72,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gardenwedding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beachbox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelbox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.themepicker)).BeginInit();
             this.SuspendLayout();
             // 
             // typesofevents
@@ -105,7 +112,7 @@
             // charity3
             // 
             this.charity3.Image = global::DataBase_project.Properties.Resources.charity3;
-            this.charity3.Location = new System.Drawing.Point(660, 176);
+            this.charity3.Location = new System.Drawing.Point(659, 109);
             this.charity3.Name = "charity3";
             this.charity3.Size = new System.Drawing.Size(289, 278);
             this.charity3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,9 +122,9 @@
             // charity2
             // 
             this.charity2.Image = global::DataBase_project.Properties.Resources.charity2;
-            this.charity2.Location = new System.Drawing.Point(342, 169);
+            this.charity2.Location = new System.Drawing.Point(340, 109);
             this.charity2.Name = "charity2";
-            this.charity2.Size = new System.Drawing.Size(273, 293);
+            this.charity2.Size = new System.Drawing.Size(277, 291);
             this.charity2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.charity2.TabIndex = 19;
             this.charity2.TabStop = false;
@@ -125,7 +132,7 @@
             // charity1
             // 
             this.charity1.Image = global::DataBase_project.Properties.Resources.charity1;
-            this.charity1.Location = new System.Drawing.Point(18, 169);
+            this.charity1.Location = new System.Drawing.Point(21, 114);
             this.charity1.Name = "charity1";
             this.charity1.Size = new System.Drawing.Size(280, 286);
             this.charity1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +142,7 @@
             // engagement3
             // 
             this.engagement3.Image = global::DataBase_project.Properties.Resources.engagement3;
-            this.engagement3.Location = new System.Drawing.Point(659, 177);
+            this.engagement3.Location = new System.Drawing.Point(660, 111);
             this.engagement3.Name = "engagement3";
             this.engagement3.Size = new System.Drawing.Size(290, 278);
             this.engagement3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -145,9 +152,9 @@
             // engagement2
             // 
             this.engagement2.Image = global::DataBase_project.Properties.Resources.engagement2;
-            this.engagement2.Location = new System.Drawing.Point(341, 180);
+            this.engagement2.Location = new System.Drawing.Point(340, 111);
             this.engagement2.Name = "engagement2";
-            this.engagement2.Size = new System.Drawing.Size(274, 275);
+            this.engagement2.Size = new System.Drawing.Size(274, 281);
             this.engagement2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.engagement2.TabIndex = 16;
             this.engagement2.TabStop = false;
@@ -155,7 +162,7 @@
             // engagement1
             // 
             this.engagement1.Image = global::DataBase_project.Properties.Resources.engagement1;
-            this.engagement1.Location = new System.Drawing.Point(24, 182);
+            this.engagement1.Location = new System.Drawing.Point(21, 112);
             this.engagement1.Name = "engagement1";
             this.engagement1.Size = new System.Drawing.Size(274, 274);
             this.engagement1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +172,7 @@
             // corporate3
             // 
             this.corporate3.Image = global::DataBase_project.Properties.Resources.corporateevent3;
-            this.corporate3.Location = new System.Drawing.Point(659, 177);
+            this.corporate3.Location = new System.Drawing.Point(659, 111);
             this.corporate3.Name = "corporate3";
             this.corporate3.Size = new System.Drawing.Size(291, 279);
             this.corporate3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -175,7 +182,7 @@
             // corporate2
             // 
             this.corporate2.Image = global::DataBase_project.Properties.Resources.corporateevent2;
-            this.corporate2.Location = new System.Drawing.Point(343, 179);
+            this.corporate2.Location = new System.Drawing.Point(344, 114);
             this.corporate2.Name = "corporate2";
             this.corporate2.Size = new System.Drawing.Size(273, 283);
             this.corporate2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +192,7 @@
             // corporate1
             // 
             this.corporate1.Image = global::DataBase_project.Properties.Resources.corporateevent1;
-            this.corporate1.Location = new System.Drawing.Point(24, 180);
+            this.corporate1.Location = new System.Drawing.Point(24, 114);
             this.corporate1.Name = "corporate1";
             this.corporate1.Size = new System.Drawing.Size(273, 272);
             this.corporate1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +202,7 @@
             // birthday3
             // 
             this.birthday3.Image = global::DataBase_project.Properties.Resources.birthday3;
-            this.birthday3.Location = new System.Drawing.Point(659, 177);
+            this.birthday3.Location = new System.Drawing.Point(659, 111);
             this.birthday3.Name = "birthday3";
             this.birthday3.Size = new System.Drawing.Size(275, 271);
             this.birthday3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -205,7 +212,7 @@
             // birthday2
             // 
             this.birthday2.Image = global::DataBase_project.Properties.Resources.birthday2;
-            this.birthday2.Location = new System.Drawing.Point(340, 177);
+            this.birthday2.Location = new System.Drawing.Point(340, 111);
             this.birthday2.Name = "birthday2";
             this.birthday2.Size = new System.Drawing.Size(276, 274);
             this.birthday2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,7 +222,7 @@
             // birthday1
             // 
             this.birthday1.Image = global::DataBase_project.Properties.Resources.birthday1;
-            this.birthday1.Location = new System.Drawing.Point(21, 177);
+            this.birthday1.Location = new System.Drawing.Point(21, 111);
             this.birthday1.Name = "birthday1";
             this.birthday1.Size = new System.Drawing.Size(277, 275);
             this.birthday1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,7 +232,7 @@
             // bachellorrette3
             // 
             this.bachellorrette3.Image = global::DataBase_project.Properties.Resources.bachellorette3;
-            this.bachellorrette3.Location = new System.Drawing.Point(660, 179);
+            this.bachellorrette3.Location = new System.Drawing.Point(660, 113);
             this.bachellorrette3.Name = "bachellorrette3";
             this.bachellorrette3.Size = new System.Drawing.Size(276, 274);
             this.bachellorrette3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -236,7 +243,7 @@
             // bachellorrette2
             // 
             this.bachellorrette2.Image = global::DataBase_project.Properties.Resources.bachellorette2;
-            this.bachellorrette2.Location = new System.Drawing.Point(340, 177);
+            this.bachellorrette2.Location = new System.Drawing.Point(340, 111);
             this.bachellorrette2.Name = "bachellorrette2";
             this.bachellorrette2.Size = new System.Drawing.Size(276, 275);
             this.bachellorrette2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +253,7 @@
             // bachellorrette1
             // 
             this.bachellorrette1.Image = global::DataBase_project.Properties.Resources.bachellorette1;
-            this.bachellorrette1.Location = new System.Drawing.Point(22, 177);
+            this.bachellorrette1.Location = new System.Drawing.Point(22, 111);
             this.bachellorrette1.Name = "bachellorrette1";
             this.bachellorrette1.Size = new System.Drawing.Size(277, 276);
             this.bachellorrette1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,7 +263,7 @@
             // hotelwedding
             // 
             this.hotelwedding.Image = global::DataBase_project.Properties.Resources._1hotel_wedding;
-            this.hotelwedding.Location = new System.Drawing.Point(659, 177);
+            this.hotelwedding.Location = new System.Drawing.Point(659, 111);
             this.hotelwedding.Name = "hotelwedding";
             this.hotelwedding.Size = new System.Drawing.Size(277, 276);
             this.hotelwedding.TabIndex = 4;
@@ -265,7 +272,7 @@
             // beachwedding
             // 
             this.beachwedding.Image = global::DataBase_project.Properties.Resources.beach_wedding;
-            this.beachwedding.Location = new System.Drawing.Point(340, 177);
+            this.beachwedding.Location = new System.Drawing.Point(340, 111);
             this.beachwedding.Name = "beachwedding";
             this.beachwedding.Size = new System.Drawing.Size(277, 276);
             this.beachwedding.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +282,7 @@
             // gardenwedding
             // 
             this.gardenwedding.Image = global::DataBase_project.Properties.Resources.garden_wedding;
-            this.gardenwedding.Location = new System.Drawing.Point(22, 177);
+            this.gardenwedding.Location = new System.Drawing.Point(22, 111);
             this.gardenwedding.Name = "gardenwedding";
             this.gardenwedding.Size = new System.Drawing.Size(277, 276);
             this.gardenwedding.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -310,11 +317,75 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // first
+            // 
+            this.first.AutoSize = true;
+            this.first.Location = new System.Drawing.Point(125, 73);
+            this.first.Name = "first";
+            this.first.Size = new System.Drawing.Size(22, 20);
+            this.first.TabIndex = 23;
+            this.first.Text = "1 ";
+            // 
+            // second
+            // 
+            this.second.AutoSize = true;
+            this.second.Location = new System.Drawing.Point(432, 73);
+            this.second.Name = "second";
+            this.second.Size = new System.Drawing.Size(18, 20);
+            this.second.TabIndex = 24;
+            this.second.Text = "2";
+            // 
+            // third
+            // 
+            this.third.AutoSize = true;
+            this.third.Location = new System.Drawing.Point(755, 81);
+            this.third.Name = "third";
+            this.third.Size = new System.Drawing.Size(18, 20);
+            this.third.TabIndex = 25;
+            this.third.Text = "3";
+            // 
+            // themepicker
+            // 
+            this.themepicker.Location = new System.Drawing.Point(279, 434);
+            this.themepicker.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.themepicker.Name = "themepicker";
+            this.themepicker.Size = new System.Drawing.Size(48, 26);
+            this.themepicker.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 436);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Your chosen theme\'s number is";
+            // 
+            // next
+            // 
+            this.next.Location = new System.Drawing.Point(376, 426);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(109, 40);
+            this.next.TabIndex = 28;
+            this.next.Text = "next";
+            this.next.UseVisualStyleBackColor = true;
+            this.next.Click += new System.EventHandler(this.next_Click);
+            // 
             // client_newevent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 508);
+            this.ClientSize = new System.Drawing.Size(968, 508);
+            this.Controls.Add(this.next);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.themepicker);
+            this.Controls.Add(this.third);
+            this.Controls.Add(this.second);
+            this.Controls.Add(this.first);
             this.Controls.Add(this.back);
             this.Controls.Add(this.charity3);
             this.Controls.Add(this.charity2);
@@ -360,6 +431,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gardenwedding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beachbox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelbox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.themepicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +463,11 @@
         private System.Windows.Forms.PictureBox charity2;
         private System.Windows.Forms.PictureBox charity3;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Label first;
+        private System.Windows.Forms.Label second;
+        private System.Windows.Forms.Label third;
+        private System.Windows.Forms.NumericUpDown themepicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button next;
     }
 }
