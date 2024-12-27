@@ -461,10 +461,10 @@ namespace DBapplication
             string query = "SELECT * FROM services_offered ;";
             return dbMan.ExecuteReader(query);
         }
-        public int addservice(int service_ID,int vendor_ID, string name_of_service, int invoice_ID, int price)
+        public int addservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price)
         {
-            string query = "INSERT INTO services_offered(service_ID, vendor_ID, name_of_service, invoice_id, price)" +
-                 "Values(" + service_ID + "," + vendor_ID + ",'" + name_of_service + "', " + invoice_ID + ", " + price + "); ";
+            string query = "INSERT INTO services_offeres(service_ID, vendor_ID, name_of_service, invoice_id, price) " +
+                 "Values(" + service_ID + "," + vendor_ID + ", '" + name_of_service + "'," + invoice_ID + "," + price + ");";
             return dbMan.ExecuteNonQuery(query);
 
         }
