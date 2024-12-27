@@ -401,7 +401,7 @@ namespace DBapplication
         }
         public DataTable typesnames()
         {
-            string query = "SELECT event_type FROM event_types;";
+            string query = "SELECT * FROM event_types;";
             return dbMan.ExecuteReader(query);
         }
         public int typeid(string typname)
@@ -483,13 +483,13 @@ namespace DBapplication
         //venues 
         public DataTable venuesnames()
         {
-            string query = "SELECT venue_name FROM venue;";
+            string query = "SELECT * FROM venue;";
             return dbMan.ExecuteReader(query);
         }
-        public int capacity(string venue)
+        public int capacity(int venue)
         {
-            string query = "SELECT capacity FROM venue WHERE venue_ID='" + venue + "';";
-            return dbMan.ExecuteNonQuery(query);
+            string query = "SELECT capacity FROM venue WHERE venue_ID=" + venue + ";";
+            return (int)dbMan.ExecuteScalar(query);
         }
     };
 }
