@@ -76,7 +76,8 @@ namespace DataBase_project
             result = c.capacity(venueid);
             int eventtype = (int)evtypecombo.SelectedValue;
             int emp = (int)empcombo.SelectedValue;
-            if (eventidtext.Text == "" || datetext.Text == "" || budgettext.Text == "" || capacitytext.Text == "" || eventnametext.Text == "" || clienttext.Text == "" || evtypecombo.SelectedIndex == -1 || empcombo.SelectedIndex == -1 || venuecombo.SelectedIndex == -1 || cidtext.Text == "")
+            string date=dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            if (eventidtext.Text == "" ||  budgettext.Text == "" || capacitytext.Text == "" || eventnametext.Text == "" || clienttext.Text == "" || evtypecombo.SelectedIndex == -1 || empcombo.SelectedIndex == -1 || venuecombo.SelectedIndex == -1 || cidtext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
@@ -95,6 +96,22 @@ namespace DataBase_project
 
                 MessageBox.Show("Please Enter valid name");
             }
+            else if (datetext.Text != "")
+            {
+                if (DateTime.TryParse(date, out DateTime validdate))
+                {
+                    if (validdate < DateTime.Now)
+                    {
+                        MessageBox.Show("This date is in the past");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid date");
+                }
+
+
+            }
             else
             {
                 int r;
@@ -106,7 +123,7 @@ namespace DataBase_project
                 }
             }
         }
-        }
+        
 
         private void back8_Click(object sender, EventArgs e)
         {
@@ -116,6 +133,11 @@ namespace DataBase_project
         }
 
         private void eventinfoview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

@@ -19,16 +19,17 @@ namespace DataBase_project
             InitializeComponent();
             c = new Controller();
             DataTable dt = c.department();
-            departmentcombo.DataSource = dt;
-            departmentcombo.DisplayMember = "dep_name";
-            departmentcombo.ValueMember = "dep_ID";
+            departcombo.DataSource = dt;
+            departcombo.DisplayMember = "dep_name";
+            departcombo.ValueMember = "dep_ID";
+
         }
 
         private void hirebutton_Click(object sender, EventArgs e)
         {
             int age;
             int id;
-            int depid = (int)departmentcombo.SelectedIndex;
+            int depid = (int)departcombo.SelectedValue;
             string gender = "";
             if (radioButton1.Checked)
             {
@@ -39,7 +40,7 @@ namespace DataBase_project
                 gender = "Male";
             }
 
-            if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || !radioButton1.Checked || !radioButton2.Checked || departmentcombo.SelectedIndex == -1)
+            if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || !radioButton1.Checked || !radioButton2.Checked || departcombo.SelectedIndex == -1)
             {
                 MessageBox.Show("Please Enter All Required Fields");
             }

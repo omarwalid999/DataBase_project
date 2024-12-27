@@ -50,6 +50,7 @@
             this.venuecombo = new System.Windows.Forms.ComboBox();
             this.back8 = new System.Windows.Forms.Button();
             this.cidtext = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.eventinfoview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(589, 61);
+            this.label4.Location = new System.Drawing.Point(582, 42);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 4;
@@ -168,7 +169,7 @@
             // 
             // datetext
             // 
-            this.datetext.Location = new System.Drawing.Point(672, 58);
+            this.datetext.Location = new System.Drawing.Point(361, 385);
             this.datetext.Name = "datetext";
             this.datetext.Size = new System.Drawing.Size(100, 22);
             this.datetext.TabIndex = 15;
@@ -239,11 +240,20 @@
             this.cidtext.Size = new System.Drawing.Size(100, 22);
             this.cidtext.TabIndex = 26;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(588, 61);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 27;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // M_editevent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cidtext);
             this.Controls.Add(this.back8);
             this.Controls.Add(this.venuecombo);
@@ -299,5 +309,6 @@
         private System.Windows.Forms.ComboBox venuecombo;
         private System.Windows.Forms.Button back8;
         private System.Windows.Forms.TextBox cidtext;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

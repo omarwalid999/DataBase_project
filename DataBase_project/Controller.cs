@@ -286,9 +286,9 @@ namespace DBapplication
                           "Values (" + type_ID + ",'" + type_name +  "');";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int deletetype(int type_ID, string type_name)          // delete a type 
+        public int deletetype(int type_ID)          // delete a type 
         {
-            string query = "DELETE * FROM event_types WHERE types_ID= " + type_ID + " AND event_type=" + type_name + ";";
+            string query = "DELETE * FROM event_types WHERE types_ID=" + type_ID + ";";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable typesnames()

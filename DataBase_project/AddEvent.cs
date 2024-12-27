@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DataBase_project
 {
@@ -44,6 +45,8 @@ namespace DataBase_project
             result = c.capacity(venueid);
             int eventtype = (int)evtypecombo.SelectedValue;
             int emp = (int)empcombo.SelectedValue;
+            string date = datetext.Text;
+         
             if (eventidtext.Text == "" || datetext.Text == "" || budgettext.Text == "" || capacitytext.Text == "" || eventnametext.Text == "" || clienttext.Text == "" || evtypecombo.SelectedIndex == -1 || empcombo.SelectedIndex == -1 || venuecombo.SelectedIndex == -1 || cidtext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
@@ -63,10 +66,27 @@ namespace DataBase_project
 
                 MessageBox.Show("Please Enter valid name");
             }
+            else if (datetext.Text!="")
+            {
+                if (DateTime.TryParse(date, out DateTime validdate))
+                {
+                    if (validdate < DateTime.Now)
+                    {
+                        MessageBox.Show("This date is in the past");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invalid date");
+                }
+               
+
+            }
+            
             else
             {
                 int r;
-                r = c.insertevent(id, id2, eventtype, datetext.Text, emp, venueid, id4, id3, eventnametext.Text);
+                r = c.insertevent(id, id2, eventtype, date, emp, venueid, id4, id3, eventnametext.Text);
                 if (r != 0)
                 {
                     MessageBox.Show("Event added successfully");
@@ -101,5 +121,4 @@ namespace DataBase_project
         }
     }
     }
-    }
-}
+    
