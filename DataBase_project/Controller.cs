@@ -42,7 +42,15 @@ namespace DBapplication
         public int client_id(string username)
         {
             string query = $"SELECT client_ID FROM client WHERE username = '{username}'";
-            return (int)dbMan.ExecuteScalar(query);
+            var result = dbMan.ExecuteScalar(query);
+            if (result == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)dbMan.ExecuteScalar(query);
+            }
         }
          public void change_pass_c(string username,string pass)
         {
@@ -58,23 +66,23 @@ namespace DBapplication
 
         public int get_dep_id(string user)
         {
-            string query = $"SELECT dep_ID FROM employee WHERE username='{user}'";
+            string query = $"SELECT dep_ID FROM employee WHERE username= '{user}' ";
             return (int)dbMan.ExecuteScalar(query);
         }
 
 
         //tarek
         //employee
-        public bool CheckPass(int id, string enteredpassword)
-        {
+        //public bool CheckPass(int id, string enteredpassword)
+        //{
     
-            string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
+        //    string query = $"SELECT passkey FROM employee WHERE employee_ID = '{id}'";
 
-            var storedPassword = dbMan.ExecuteScalar(query);
+        //    var storedPassword = dbMan.ExecuteScalar(query);
 
-            // Compare the stored password with the entered password
-            return storedPassword != null && storedPassword.ToString() == enteredpassword;
-        }
+        //    // Compare the stored password with the entered password
+        //    return storedPassword != null && storedPassword.ToString() == enteredpassword;
+        //}
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
@@ -91,7 +99,15 @@ namespace DBapplication
         public int emp_id(string username)
         {
             string query = $"SELECT employee_ID FROM employee WHERE username = '{username}'";
-            return (int)dbMan.ExecuteScalar(query);
+            var result = dbMan.ExecuteScalar(query);
+            if (result == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)dbMan.ExecuteScalar(query);
+            }
         }
         public DataTable get_employees()
         {
@@ -242,6 +258,11 @@ namespace DBapplication
             string query = "SELECT dep_name FROM departments;";
             return dbMan.ExecuteReader(query);
         }
+        public int depid(string depname)
+        {
+            string query = "SELECT dep_ID FROM departments WHERE dep_name=" + depname + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
         public int InsertNewEmployee(int e_ID, string Fname, string Lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
         {
             string query = "INSERT INTO employee (employee_ID, fname, lname, email, phone, gender, username, passkey, dep_ID)" +
@@ -252,6 +273,11 @@ namespace DBapplication
         {
             string query = "SELECT CONCAT(fname,' ',lname) AS name FROM employee ;";
             return dbMan.ExecuteReader(query);
+        }
+        public int employeeid(string employee)
+        {
+            string query = "SELECT employee_ID FROM employee WHERE CONCAT(fname,' ',lname) AS name AND name= " + employee + ";";
+            return dbMan.ExecuteNonQuery(query);
         }
         public int DeleteEmployee(int employeeid)
         {

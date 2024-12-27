@@ -21,10 +21,10 @@ namespace DataBase_project
             DataTable dt = c.AllEvents();
             alleventsview.DataSource = dt;
            
-            DataTable dt2 = c.EventsList();
-            eventscombo.DataSource = dt2;
-            eventscombo.DisplayMember = "eventname";
-            eventscombo.ValueMember = "event_ID";
+           // DataTable dt2 = c.EventsList();
+            //eventscombo.DataSource = dt2;
+           // eventscombo.DisplayMember = "eventname";
+            //eventscombo.ValueMember = "event_ID";
         }
 
         private void alleventsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
