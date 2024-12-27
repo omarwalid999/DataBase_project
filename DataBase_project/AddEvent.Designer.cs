@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.eventidtext = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.datetext = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.evtypecombo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.clienttext = new System.Windows.Forms.TextBox();
             this.cidtext = new System.Windows.Forms.TextBox();
             this.back9 = new System.Windows.Forms.Button();
+            this.eventdate = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -75,13 +75,6 @@
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "Event_Date";
-            // 
-            // datetext
-            // 
-            this.datetext.Location = new System.Drawing.Point(140, 96);
-            this.datetext.Name = "datetext";
-            this.datetext.Size = new System.Drawing.Size(100, 22);
-            this.datetext.TabIndex = 16;
             // 
             // label3
             // 
@@ -228,11 +221,20 @@
             this.back9.UseVisualStyleBackColor = true;
             this.back9.Click += new System.EventHandler(this.back9_Click);
             // 
+            // eventdate
+            // 
+            this.eventdate.Location = new System.Drawing.Point(122, 99);
+            this.eventdate.Name = "eventdate";
+            this.eventdate.Size = new System.Drawing.Size(200, 22);
+            this.eventdate.TabIndex = 39;
+            this.eventdate.ValueChanged += new System.EventHandler(this.eventdate_ValueChanged);
+            // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.eventdate);
             this.Controls.Add(this.back9);
             this.Controls.Add(this.cidtext);
             this.Controls.Add(this.clienttext);
@@ -250,7 +252,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.evtypecombo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.datetext);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.eventidtext);
             this.Controls.Add(this.label1);
@@ -266,7 +267,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox eventidtext;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox datetext;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox evtypecombo;
         private System.Windows.Forms.Label label2;
@@ -284,5 +284,6 @@
         private System.Windows.Forms.TextBox clienttext;
         private System.Windows.Forms.TextBox cidtext;
         private System.Windows.Forms.Button back9;
+        private System.Windows.Forms.DateTimePicker eventdate;
     }
 }
