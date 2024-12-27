@@ -141,6 +141,12 @@ namespace DBapplication
                             "Values (" + clientid + ",'" + Fname + "','" + Lname + "','" + email + "','"+ phone+"','"+ username+"','"+passkey+"');";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int InsertFeedback(int feedbackid, int  clientid, string comment, string date, int rating)
+        {
+            string query = "INSERT INTO feedbacks (feedback_ID, client_ID, comment,feedback_date,rating)" +
+                            "Values (" + feedbackid + "," + clientid + ",'" + comment + "','" + date + "'," + rating + ");" ;
+            return dbMan.ExecuteNonQuery(query);
+        }
         public DataTable ShowVendors()
         {
             string query = "SELECT * FROM Vendors;";

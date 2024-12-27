@@ -45,7 +45,7 @@
             // 
             // NewEvent
             // 
-            this.NewEvent.Location = new System.Drawing.Point(120, 214);
+            this.NewEvent.Location = new System.Drawing.Point(120, 185);
             this.NewEvent.Name = "NewEvent";
             this.NewEvent.Size = new System.Drawing.Size(312, 69);
             this.NewEvent.TabIndex = 1;

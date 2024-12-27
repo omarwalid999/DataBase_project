@@ -70,6 +70,12 @@
     <Compile Include="client_event.Designer.cs">
       <DependentUpon>client_event.cs</DependentUpon>
     </Compile>
+    <Compile Include="client_feedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client_feedback.Designer.cs">
+      <DependentUpon>client_feedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="client_first.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client_event.resx">
       <DependentUpon>client_event.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="client_feedback.resx">
+      <DependentUpon>client_feedback.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="client_first.resx">
       <DependentUpon>client_first.cs</DependentUpon>
