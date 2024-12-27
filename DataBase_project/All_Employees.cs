@@ -53,5 +53,12 @@ namespace DataBase_project
             manager_Home.Show();
             this.Hide();
         }
+
+        private void editemp_Click(object sender, EventArgs e)
+        {
+            EditEmp empedit= new EditEmp();
+            empedit.Show();
+            this.Hide();
+        }
     }
 }

@@ -114,6 +114,12 @@
       <DependentUpon>c_change_pass.cs</DependentUpon>
     </Compile>
     <Compile Include="DBManager.cs" />
+    <Compile Include="EditEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmp.Designer.cs">
+      <DependentUpon>EditEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="c_change_pass.resx">
       <DependentUpon>c_change_pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmp.resx">
+      <DependentUpon>EditEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Client.resx">
       <DependentUpon>Edit_Client.cs</DependentUpon>

@@ -364,6 +364,11 @@ namespace DBapplication
                 "Values(" + e_ID + ", '" + Fname + "', '" + Lname + "', '" + email + "', '" + phone + "', '" + gender + "'," + age + ", '" + username + "', '" + passkey + "'," + depid + ");";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int updatemployee(int employeeid , string fname , string lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
+        {
+            string query = "UPDATE employee SET employee_ID="+employeeid+", fname='"+fname+"', lname='"+lname+"', email='"+email+"', phone='"+phone+"', gender='"+gender+"', age="+age+", username='"+username+"', passkey='"+passkey+"', dep_ID="+depid+" WHERE employee_ID= " + employeeid + " ;";
+            return dbMan.ExecuteNonQuery(query);
+        }
         public DataTable Employeesnames()
         {
             string query = "SELECT *,CONCAT(fname,' ',lname) AS name FROM employee ;";
@@ -378,7 +383,7 @@ namespace DBapplication
         //client
         public DataTable allclients()
         {
-            string query = "SELECT * FROM client;";
+            string query = "SELECT client.*, event.eventname, feedbacks.comment FROM client, event, feedbacks WHERE event.client_ID=client.client_ID AND event.client_ID=feedbacks.client_ID ;";
             return dbMan.ExecuteReader(query);
         }
         public DataTable clientnames()

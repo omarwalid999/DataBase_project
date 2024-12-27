@@ -119,13 +119,13 @@
             // 
             // eventname
             // 
-            this.engagement3.Image = global::DataBase_project.Properties.Resources.engagement3;
-            this.engagement3.Location = new System.Drawing.Point(660, 111);
-            this.engagement3.Name = "engagement3";
-            this.engagement3.Size = new System.Drawing.Size(290, 278);
-            this.engagement3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.engagement3.TabIndex = 17;
-            this.engagement3.TabStop = false;
+          //  this.engagement3.Image = global::DataBase_project.Properties.Resources.engagement3;
+          //  this.engagement3.Location = new System.Drawing.Point(660, 111);
+           // this.engagement3.Name = "engagement3";
+          //  this.engagement3.Size = new System.Drawing.Size(290, 278);
+         //   this.engagement3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+          //  this.engagement3.TabIndex = 17;
+          //  this.engagement3.TabStop = false;
             // 
             // label4
             // 
@@ -215,7 +215,7 @@
             // garden
             // 
             this.garden.AutoSize = true;
-            this.garden.Image = global::DataBase_project.Properties.Resources.garden_engagement;
+           // this.garden.Image = global::DataBase_project.Properties.Resources.garden_engagement;
             this.garden.Location = new System.Drawing.Point(1355, 643);
             this.garden.Name = "garden";
             this.garden.Size = new System.Drawing.Size(450, 333);
