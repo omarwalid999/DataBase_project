@@ -260,13 +260,13 @@ namespace DBapplication
         }
         public int depid(string depname)
         {
-            string query = "SELECT dep_ID FROM departments WHERE dep_name=" + depname + ";";
+            string query = "SELECT dep_ID FROM departments WHERE dep_name='" + depname + "';";
             return dbMan.ExecuteNonQuery(query);
         }
         public int InsertNewEmployee(int e_ID, string Fname, string Lname, string email, string phone, string gender, int age, string username, string passkey, int depid)
         {
-            string query = "INSERT INTO employee (employee_ID, fname, lname, email, phone, gender, username, passkey, dep_ID)" +
-                            "Values (" + e_ID + ",'" + Fname + "','" + Lname + "','" + email + "','" + phone + "','" + gender + "','" + age + "','" + username + "','" + passkey + "','" + depid + "');";
+            string query = "INSERT INTO employee(employee_ID, fname, lname, email, phone, gender, age, username, passkey, dep_ID)" +
+                            "Values (" + e_ID + ",'" + Fname + "','" + Lname + "','" + email + "','" + phone + "','" + gender + "'," + age + ",'" + username + "','" + passkey + "'," + depid + ");";
             return dbMan.ExecuteNonQuery(query);
         }
         public DataTable Employeesnames()
