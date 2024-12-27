@@ -70,6 +70,7 @@ namespace DataBase_project
         {
             int id, id2, id3, id4;
             int result;
+            //   int venueid = Convert.ToInt32(venuecombo.SelectedValue);
             string selectedvenue = venuecombo.SelectedItem.ToString();
             result = c.capacity(selectedvenue);
             Console.WriteLine(selectedvenue);

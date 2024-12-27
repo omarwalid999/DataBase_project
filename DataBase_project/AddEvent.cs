@@ -28,11 +28,11 @@ namespace DataBase_project
             DataTable dt2 = c.venuesnames();
             venuecombo.DataSource = dt2;
             venuecombo.DisplayMember = "venue_name";
-            // venuecombo.ValueMember = "venue_ID";
+            //venuecombo.ValueMember = "venue_ID";
             DataTable dt3=c.Employeesnames();
             empcombo.DataSource = dt3;
             empcombo.DisplayMember = "name";
-            //empcombo.ValueMember = "employee_ID";
+           // empcombo.ValueMember = "employee_ID";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,17 +40,23 @@ namespace DataBase_project
             int id, id2, id3, id4;
             int result;
             string selectedvenue=venuecombo.SelectedItem.ToString();
+            
             result=c.capacity(selectedvenue);
-            Console.WriteLine(selectedvenue);
+          // Console.WriteLine(venueid);
 
-            string eventtype=evtypecombo.SelectedItem.ToString();
-            int typeid = c.typeid(eventtype);
-            Console.WriteLine(typeid);
+           string eventtype=evtypecombo.SelectedItem.ToString();
+           int typeid = c.typeid(eventtype);
+           Console.WriteLine(typeid);
 
-            string employee=empcombo.SelectedItem.ToString();   
+           string employee=empcombo.SelectedItem.ToString();   
             int empid=c.empid(employee);
             Console.WriteLine(empid);
             id3 = Convert.ToInt32(capacitytext.Text);
+
+           // int venueid= Convert.ToInt32(venuecombo.SelectedValue.ToString());
+           // int typeid=Convert.ToInt32(evtypecombo.SelectedValue.ToString());
+           // int empid=Convert.ToInt32(empcombo.SelectedValue.ToString());
+            //  Convert.ToInt32(departcombo.SelectedValue)
 
 
             if (eventidtext.Text == "" || budgettext.Text == "" || capacitytext.Text == "" || eventnametext.Text == "" || clienttext.Text == "" || evtypecombo.SelectedIndex == -1 || empcombo.SelectedIndex == -1 || venuecombo.SelectedIndex == -1 || cidtext.Text == "")

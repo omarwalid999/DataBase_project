@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DataBase_project
 {
@@ -21,27 +22,34 @@ namespace DataBase_project
             DataTable dt = c.Employeesnames();
             firecombo.DataSource = dt;
             firecombo.DisplayMember = "name";
+           // firecombo.ValueMember = "employee_ID";
             
 
         }
 
         private void firecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //
+            
         }
 
         private void fire_Click(object sender, EventArgs e)
         {
-            string selectedemp = firecombo.SelectedItem.ToString();
-            int empid = c.emp_id(selectedemp);
-            int result;
-            result=c.DeleteEmployee(empid);
-            if (result != 0)
+            int empid;
+            if (int.TryParse(firecombo.SelectedItem.ToString(), out empid))
             {
-                MessageBox.Show("Employee fired ");
+                int result = c.DeleteEmployee(empid);
+                if (result != 0)
+                {
+                    MessageBox.Show("Employee fired ");
+                    firecombo.Refresh();
+                }
             }
 
         }
+        //= Convert.ToInt32(firecombo.SelectedValue.ToString());
+        // string selectedemp = firecombo.SelectedItem.ToString();
+        // int empid = c.empid(selectedemp);
+
 
         private void back3_Click(object sender, EventArgs e)
         {

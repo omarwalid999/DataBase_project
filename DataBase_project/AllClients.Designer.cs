@@ -32,6 +32,9 @@
             this.editclient = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.clientcombo = new System.Windows.Forms.ComboBox();
+            this.addclient = new System.Windows.Forms.Button();
+            this.deleteclient = new System.Windows.Forms.Button();
+            this.back11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.allclientsview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,11 +76,41 @@
             this.clientcombo.TabIndex = 3;
             this.clientcombo.SelectedIndexChanged += new System.EventHandler(this.clientcombo_SelectedIndexChanged);
             // 
+            // addclient
+            // 
+            this.addclient.Location = new System.Drawing.Point(111, 369);
+            this.addclient.Name = "addclient";
+            this.addclient.Size = new System.Drawing.Size(75, 23);
+            this.addclient.TabIndex = 4;
+            this.addclient.Text = "button1";
+            this.addclient.UseVisualStyleBackColor = true;
+            // 
+            // deleteclient
+            // 
+            this.deleteclient.Location = new System.Drawing.Point(565, 313);
+            this.deleteclient.Name = "deleteclient";
+            this.deleteclient.Size = new System.Drawing.Size(75, 23);
+            this.deleteclient.TabIndex = 5;
+            this.deleteclient.Text = "DELETE";
+            this.deleteclient.UseVisualStyleBackColor = true;
+            // 
+            // back11
+            // 
+            this.back11.Location = new System.Drawing.Point(659, 386);
+            this.back11.Name = "back11";
+            this.back11.Size = new System.Drawing.Size(75, 23);
+            this.back11.TabIndex = 6;
+            this.back11.Text = "Back";
+            this.back11.UseVisualStyleBackColor = true;
+            // 
             // AllClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back11);
+            this.Controls.Add(this.deleteclient);
+            this.Controls.Add(this.addclient);
             this.Controls.Add(this.clientcombo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.editclient);
@@ -97,5 +130,8 @@
         private System.Windows.Forms.Button editclient;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox clientcombo;
+        private System.Windows.Forms.Button addclient;
+        private System.Windows.Forms.Button deleteclient;
+        private System.Windows.Forms.Button back11;
     }
 }

@@ -35,7 +35,7 @@ namespace DataBase_project
         private void addservice_Click(object sender, EventArgs e)
         { 
 
-            if (serviceidtext.Text == "" || vendornametext.Text == "" || vendortext.Text=="" || servicenametext.Text=="" || invoicetext.Text=="" || pricetext.Text=="")
+            if (serviceidtext.Text == "" || vendortext.Text=="" || servicenametext.Text=="" || invoicetext.Text=="" || pricetext.Text=="")
             {
                 MessageBox.Show("Please enter all required fields");
             }
@@ -51,7 +51,7 @@ namespace DataBase_project
                 id2=Convert.ToInt32(vendortext.Text);
                 id3=Convert.ToInt32(invoicetext.Text);
                 id4 = Convert.ToInt32(pricetext.Text);
-                result = c.addservice(id, id2, servicenametext.Text, id3, id4);
+                result = c.addservice(Convert.ToInt32(serviceidtext.Text), id2, servicenametext.Text, id3, id4);
 
                     if (result != 0)
                     {
