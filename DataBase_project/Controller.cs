@@ -434,19 +434,19 @@ namespace DBapplication
         //services
         public DataTable allservices()
         {
-            string query = "SELECT services_offered.*, vendors.vendor_name FROM services_offered, vendors WHERE vendors.vendor_ID=services_offered.vendor_ID;";
+            string query = "SELECT * FROM services_offered, vendors WHERE vendors.vendor_ID=services_offered.vendor_ID;";
             return dbMan.ExecuteReader(query);
         }
         public int addservice(int service_ID,int vendor_ID, string name_of_service, int invoice_ID, int price)
         {
             string query = "INSERT INTO services_offered(service_ID, vendor_ID, name_of_service, invoice_id, price)" +
                             "Values (" + service_ID + "," + vendor_ID + ",'" + name_of_service + "'," + invoice_ID + "," + price + ");";
-            //string query2 = "INSERT INTO vendors(vendor_ID, vendor_name)" + "Values (" + vendor_ID + " , '" + vendor_name + "');";
-          // int result1=dbMan.ExecuteNonQuery(query);
-           // int result2=dbMan.ExecuteNonQuery(query2);
-           // int result = result1 + result2;
-           // return result;
-            return dbMan.ExecuteNonQuery(query);
+           // string query2 = "INSERT INTO vendors(vendor_ID, vendor_name)" + "Values (" + vendor_ID + " , '" + vendor_name + "');";
+         // int result1=dbMan.ExecuteNonQuery(query);
+          // int result2=dbMan.ExecuteNonQuery(query2);
+          //  int result = result1 + result2;
+          // return result;
+           return dbMan.ExecuteNonQuery(query);
 
         }
         public int deleteservice(int service_ID)

@@ -51,7 +51,7 @@ namespace DataBase_project
                 id2=Convert.ToInt32(vendortext.Text);
                 id3=Convert.ToInt32(invoicetext.Text);
                 id4 = Convert.ToInt32(pricetext.Text);
-                 result = c.addservice(id, id2, servicenametext.Text, id3, id4);
+                result = c.addservice(id, id2, servicenametext.Text, id3, id4);
 
                     if (result != 0)
                     {
