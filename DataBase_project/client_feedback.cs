@@ -36,6 +36,7 @@ namespace DataBase_project
             feedbackid++;
             if (comment.Text != " " && comment.Text != "")
             {
+                feedbackid++;
                 int s = cobj.InsertFeedback(feedbackid, id3, comment_tb.ToString(), date, Convert.ToInt32(ratingnumericUpDown1.Value));
                 if (s != 0)
                 {

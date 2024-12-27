@@ -41,7 +41,7 @@
             this.no_of_attendees = new System.Windows.Forms.Label();
             this.date = new System.Windows.Forms.Label();
             this.otherchanges = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.eventdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.back = new System.Windows.Forms.Button();
             this.done = new System.Windows.Forms.Button();
             this.message = new System.Windows.Forms.Button();
@@ -165,12 +165,12 @@
             this.otherchanges.TabIndex = 13;
             this.otherchanges.Text = "want to change other things?";
             // 
-            // dateTimePicker1
+            // eventdateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(174, 220);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(221, 26);
-            this.dateTimePicker1.TabIndex = 14;
+            this.eventdateTimePicker.Location = new System.Drawing.Point(174, 220);
+            this.eventdateTimePicker.Name = "eventdateTimePicker";
+            this.eventdateTimePicker.Size = new System.Drawing.Size(221, 26);
+            this.eventdateTimePicker.TabIndex = 14;
             // 
             // back
             // 
@@ -220,7 +220,7 @@
             this.Controls.Add(this.message);
             this.Controls.Add(this.done);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.eventdateTimePicker);
             this.Controls.Add(this.otherchanges);
             this.Controls.Add(this.date);
             this.Controls.Add(this.no_of_attendees);
@@ -258,7 +258,7 @@
         private System.Windows.Forms.Label no_of_attendees;
         private System.Windows.Forms.Label date;
         private System.Windows.Forms.Label otherchanges;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker eventdateTimePicker;
         private System.Windows.Forms.Button back;
         private System.Windows.Forms.Button done;
         private System.Windows.Forms.Button message;

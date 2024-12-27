@@ -14,6 +14,7 @@ namespace DataBase_project
     public partial class client_event : Form
     {
         int id1;
+        Controller c = new Controller();
         public client_event(int id)
         {
             id1 = id;
@@ -23,7 +24,7 @@ namespace DataBase_project
             eventname_tb.Visible =  false;
             budget_tb.Visible = false;
             date.Visible = false;
-            dateTimePicker1.Visible = false;
+            eventdateTimePicker.Visible = false;
             otherchanges.Visible = false;
             no_of_attendees_tb.Visible = false;
             no_of_attendees.Visible = false;
@@ -32,7 +33,7 @@ namespace DataBase_project
             done.Visible = false;
             editeventbutton.Visible = true;
             message.Visible = false;
-            Controller c = new Controller();
+            
             DataTable dt= c.ShowClientEvents(id);
             DataTable dt1 = c.ShowClientEventsNames(id);
             clientseventdatagridview.DataSource = dt;
@@ -44,7 +45,7 @@ namespace DataBase_project
 
         private void client_event_Load(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void editeventbutton_Click(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace DataBase_project
             eventname_tb.Visible = true;
             budget_tb.Visible = true;
             date.Visible = true;
-            dateTimePicker1.Visible = true;
+            eventdateTimePicker.Visible = true;
             otherchanges.Visible = true;
             no_of_attendees_tb.Visible = true;
             no_of_attendees.Visible = true;
@@ -92,7 +93,7 @@ namespace DataBase_project
             eventname_tb.Visible = false;
             budget_tb.Visible = false;
             date.Visible = false;
-            dateTimePicker1.Visible = false;
+            eventdateTimePicker.Visible = false;
             otherchanges.Visible = false;
             no_of_attendees_tb.Visible = false;
             no_of_attendees.Visible = false;
@@ -105,7 +106,19 @@ namespace DataBase_project
 
         private void done_Click(object sender, EventArgs e)
         {
-
+            if (eventname_tb.Text != "" && budget_tb.Text != "" && no_of_attendees_tb.Text != "")
+            {
+                string date = eventdateTimePicker.Value.ToString("yyyy-MM-dd");
+                int g = c.change_event_details(id1, eventname_tb.Text, Convert.ToInt32(budget_tb.Text), Convert.ToInt32(no_of_attendees_tb.Text), date);
+                if (g != 0)
+                {
+                    MessageBox.Show("event updated successfully");
+                }
+                else
+                {
+                    MessageBox.Show("update failed.");
+                }
+            }
         }
     }
 }

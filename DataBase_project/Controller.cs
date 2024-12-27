@@ -177,6 +177,11 @@ namespace DBapplication
             string query = "SELECT * FROM events Where client_ID=" + clientid + ";";
             return dbMan.ExecuteReader(query);
         }
+        public int change_event_details(int clientid,string eventname, int budget, int noa, string date)
+        {
+            string query = "UPDATE event\r\nSET eventname = '" + eventname + "', budget=" + budget + ", no_of_attendees=" + noa + ",event_date='" + date + "'\r\nWHERE client_ID=" + clientid + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
 
         //rawan
         //events
