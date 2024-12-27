@@ -31,13 +31,11 @@
             this.servicesview = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.serviceidtext = new System.Windows.Forms.TextBox();
             this.vendortext = new System.Windows.Forms.TextBox();
-            this.vendornametext = new System.Windows.Forms.TextBox();
             this.servicenametext = new System.Windows.Forms.TextBox();
             this.invoicetext = new System.Windows.Forms.TextBox();
             this.pricetext = new System.Windows.Forms.TextBox();
@@ -76,19 +74,10 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Vendor_ID";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(389, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Vendor_Name";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(389, 192);
+            this.label4.Location = new System.Drawing.Point(389, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 16);
             this.label4.TabIndex = 4;
@@ -97,7 +86,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(406, 232);
+            this.label5.Location = new System.Drawing.Point(401, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 16);
             this.label5.TabIndex = 5;
@@ -106,7 +95,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(416, 280);
+            this.label6.Location = new System.Drawing.Point(411, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 16);
             this.label6.TabIndex = 6;
@@ -126,30 +115,23 @@
             this.vendortext.Size = new System.Drawing.Size(100, 22);
             this.vendortext.TabIndex = 8;
             // 
-            // vendornametext
-            // 
-            this.vendornametext.Location = new System.Drawing.Point(514, 150);
-            this.vendornametext.Name = "vendornametext";
-            this.vendornametext.Size = new System.Drawing.Size(100, 22);
-            this.vendornametext.TabIndex = 9;
-            // 
             // servicenametext
             // 
-            this.servicenametext.Location = new System.Drawing.Point(514, 192);
+            this.servicenametext.Location = new System.Drawing.Point(500, 165);
             this.servicenametext.Name = "servicenametext";
             this.servicenametext.Size = new System.Drawing.Size(100, 22);
             this.servicenametext.TabIndex = 10;
             // 
             // invoicetext
             // 
-            this.invoicetext.Location = new System.Drawing.Point(514, 244);
+            this.invoicetext.Location = new System.Drawing.Point(495, 222);
             this.invoicetext.Name = "invoicetext";
             this.invoicetext.Size = new System.Drawing.Size(100, 22);
             this.invoicetext.TabIndex = 11;
             // 
             // pricetext
             // 
-            this.pricetext.Location = new System.Drawing.Point(514, 289);
+            this.pricetext.Location = new System.Drawing.Point(500, 270);
             this.pricetext.Name = "pricetext";
             this.pricetext.Size = new System.Drawing.Size(100, 22);
             this.pricetext.TabIndex = 12;
@@ -206,13 +188,11 @@
             this.Controls.Add(this.pricetext);
             this.Controls.Add(this.invoicetext);
             this.Controls.Add(this.servicenametext);
-            this.Controls.Add(this.vendornametext);
             this.Controls.Add(this.vendortext);
             this.Controls.Add(this.serviceidtext);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.servicesview);
@@ -230,13 +210,11 @@
         private System.Windows.Forms.DataGridView servicesview;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox serviceidtext;
         private System.Windows.Forms.TextBox vendortext;
-        private System.Windows.Forms.TextBox vendornametext;
         private System.Windows.Forms.TextBox servicenametext;
         private System.Windows.Forms.TextBox invoicetext;
         private System.Windows.Forms.TextBox pricetext;

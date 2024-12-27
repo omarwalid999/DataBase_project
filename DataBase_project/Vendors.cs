@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class Vendors : Form
     {
         Controller c;
-        public Vendors()
+        int manager_id;
+        public Vendors(int id)
         {
             InitializeComponent();
             c = new Controller();
+            manager_id = id;
             DataTable dt = c.vendorsdetails();
             vendorsview.DataSource = dt;
 
@@ -132,7 +134,7 @@ namespace DataBase_project
 
         private void back5_Click(object sender, EventArgs e)
         {
-            Manager_home M2 = new Manager_home();
+            Manager_home M2 = new Manager_home(manager_id);
             M2.Show();
             this.Hide();
         }

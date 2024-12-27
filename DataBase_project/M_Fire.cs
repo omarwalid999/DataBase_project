@@ -8,16 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DataBase_project
 {
     public partial class M_Fire : Form
     {
         Controller c;
-        public M_Fire()
+        int manager_id;
+        public M_Fire(int id)
         {
             InitializeComponent();
             c=new Controller();
+            manager_id=id;
             DataTable dt = c.Employeesnames();
             firecombo.DataSource = dt;
             firecombo.DisplayMember = "name";
@@ -28,7 +31,7 @@ namespace DataBase_project
 
         private void firecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //
+            
         }
 
         private void fire_Click(object sender, EventArgs e)
@@ -44,10 +47,14 @@ namespace DataBase_project
                 MessageBox.Show("Failed to fire employee");
             }
         }
+        //= Convert.ToInt32(firecombo.SelectedValue.ToString());
+        // string selectedemp = firecombo.SelectedItem.ToString();
+        // int empid = c.empid(selectedemp);
+
 
         private void back3_Click(object sender, EventArgs e)
         {
-            All_Employees E =new All_Employees();
+            All_Employees E =new All_Employees(manager_id);
             E.Show();
             this.Hide();
 

@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class All_Employees : Form
     {
         Controller c;
-        public All_Employees()
+        int manager_id;
+        public All_Employees(int id)
         {
             InitializeComponent();
             c= new Controller();
+            manager_id= id;
             DataTable dt = c.AllEmployees();
             allemployeesview.DataSource = dt;
             allemployeesview.Refresh();
@@ -30,14 +32,14 @@ namespace DataBase_project
 
         private void add_e_Click(object sender, EventArgs e)
         {
-           Hire h= new Hire();
+           Hire h= new Hire(manager_id);
             h.Show();
             this.Hide();
         }
 
         private void remove_e_Click(object sender, EventArgs e)
         {
-          M_Fire fire= new M_Fire();
+          M_Fire fire= new M_Fire(manager_id);
             fire.Show();
             this.Hide();
         }
@@ -49,8 +51,15 @@ namespace DataBase_project
 
         private void back_Click(object sender, EventArgs e)
         {
-            Manager_home manager_Home = new Manager_home();
+            Manager_home manager_Home = new Manager_home(manager_id);
             manager_Home.Show();
+            this.Hide();
+        }
+
+        private void editemp_Click(object sender, EventArgs e)
+        {
+            EditEmp empedit= new EditEmp();
+            empedit.Show();
             this.Hide();
         }
     }

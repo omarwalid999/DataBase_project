@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.subject = new System.Windows.Forms.TextBox();
-            this.receiver = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.send_button = new System.Windows.Forms.Button();
             this.message_text = new System.Windows.Forms.TextBox();
@@ -38,37 +35,15 @@
             this.clients = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.username_combobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.managers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clients)).BeginInit();
             this.SuspendLayout();
             // 
-            // subject
-            // 
-            this.subject.Location = new System.Drawing.Point(97, 120);
-            this.subject.Name = "subject";
-            this.subject.Size = new System.Drawing.Size(225, 22);
-            this.subject.TabIndex = 15;
-            // 
-            // receiver
-            // 
-            this.receiver.Location = new System.Drawing.Point(97, 88);
-            this.receiver.Name = "receiver";
-            this.receiver.Size = new System.Drawing.Size(225, 22);
-            this.receiver.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Subject: ";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 91);
+            this.label2.Location = new System.Drawing.Point(33, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 16);
             this.label2.TabIndex = 12;
@@ -82,6 +57,7 @@
             this.send_button.TabIndex = 9;
             this.send_button.Text = "Send";
             this.send_button.UseVisualStyleBackColor = true;
+            this.send_button.Click += new System.EventHandler(this.send_button_Click);
             // 
             // message_text
             // 
@@ -129,18 +105,24 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Clients";
             // 
+            // username_combobox
+            // 
+            this.username_combobox.FormattingEnabled = true;
+            this.username_combobox.Location = new System.Drawing.Point(77, 108);
+            this.username_combobox.Name = "username_combobox";
+            this.username_combobox.Size = new System.Drawing.Size(286, 24);
+            this.username_combobox.TabIndex = 20;
+            // 
             // message_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 601);
+            this.Controls.Add(this.username_combobox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clients);
             this.Controls.Add(this.managers);
-            this.Controls.Add(this.subject);
-            this.Controls.Add(this.receiver);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.send_button);
             this.Controls.Add(this.message_text);
@@ -155,10 +137,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox subject;
-        private System.Windows.Forms.TextBox receiver;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button send_button;
         private System.Windows.Forms.TextBox message_text;
@@ -166,5 +144,6 @@
         private System.Windows.Forms.DataGridView clients;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox username_combobox;
     }
 }

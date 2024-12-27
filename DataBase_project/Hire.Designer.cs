@@ -51,6 +51,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.eidtext = new System.Windows.Forms.TextBox();
             this.back2 = new System.Windows.Forms.Button();
+            this.updateemp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -251,11 +252,22 @@
             this.back2.UseVisualStyleBackColor = true;
             this.back2.Click += new System.EventHandler(this.back2_Click);
             // 
+            // updateemp
+            // 
+            this.updateemp.Location = new System.Drawing.Point(648, 335);
+            this.updateemp.Name = "updateemp";
+            this.updateemp.Size = new System.Drawing.Size(75, 23);
+            this.updateemp.TabIndex = 23;
+            this.updateemp.Text = "Update";
+            this.updateemp.UseVisualStyleBackColor = true;
+            this.updateemp.Click += new System.EventHandler(this.updateemp_Click);
+            // 
             // Hire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.updateemp);
             this.Controls.Add(this.back2);
             this.Controls.Add(this.eidtext);
             this.Controls.Add(this.label10);
@@ -311,5 +323,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox eidtext;
         private System.Windows.Forms.Button back2;
+        private System.Windows.Forms.Button updateemp;
     }
 }

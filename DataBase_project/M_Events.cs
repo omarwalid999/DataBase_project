@@ -14,10 +14,12 @@ namespace DataBase_project
     public partial class M_Events : Form
     {
         Controller c;
-        public M_Events()
+        int m_id;
+        public M_Events(int id)
         {
             InitializeComponent();
             c=new Controller();
+            m_id = id;
             DataTable dt = c.AllEvents();
             alleventsview.DataSource = dt;
             
@@ -25,7 +27,7 @@ namespace DataBase_project
             DataTable dt2 = c.EventsList();
             eventscombo.DataSource = dt2;
             eventscombo.DisplayMember = "eventname";
-            //eventscombo.ValueMember = "event_ID";
+            eventscombo.ValueMember = "event_ID";
         }
 
         private void alleventsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,9 +42,7 @@ namespace DataBase_project
 
         private void edit_Click(object sender, EventArgs e)
         {
-            string selectedevent=eventscombo.SelectedItem.ToString();
-            int eventid=c.eventid(selectedevent);
-            M_editevent m_Editevent = new M_editevent(eventid);
+            M_editevent m_Editevent = new M_editevent(Convert.ToInt32(eventscombo.SelectedValue),m_id);
             m_Editevent.Show();
             this.Hide();
         }
@@ -54,7 +54,7 @@ namespace DataBase_project
 
         private void back7_Click(object sender, EventArgs e)
         {
-            Manager_home M4= new Manager_home();
+            Manager_home M4= new Manager_home(m_id);
             M4.Show();
             this.Hide();
 
@@ -75,7 +75,7 @@ namespace DataBase_project
 
         private void addevent_Click(object sender, EventArgs e)
         {
-            AddEvent a=new AddEvent();
+            AddEvent a=new AddEvent(m_id);
             a.Show();
             this.Hide();
         }

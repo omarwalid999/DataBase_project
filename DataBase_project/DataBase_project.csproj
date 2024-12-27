@@ -114,6 +114,12 @@
       <DependentUpon>c_change_pass.cs</DependentUpon>
     </Compile>
     <Compile Include="DBManager.cs" />
+    <Compile Include="EditEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmp.Designer.cs">
+      <DependentUpon>EditEmp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_Client.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     <Compile Include="message_employee.Designer.cs">
       <DependentUpon>message_employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="message_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="message_manager.Designer.cs">
+      <DependentUpon>message_manager.cs</DependentUpon>
+    </Compile>
     <Compile Include="m_change_pass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -295,6 +307,9 @@
     <EmbeddedResource Include="c_change_pass.resx">
       <DependentUpon>c_change_pass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditEmp.resx">
+      <DependentUpon>EditEmp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_Client.resx">
       <DependentUpon>Edit_Client.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="message_employee.resx">
       <DependentUpon>message_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="message_manager.resx">
+      <DependentUpon>message_manager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="m_change_pass.resx">
       <DependentUpon>m_change_pass.cs</DependentUpon>

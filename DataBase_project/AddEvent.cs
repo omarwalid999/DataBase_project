@@ -16,10 +16,12 @@ namespace DataBase_project
     public partial class AddEvent : Form
     {
         Controller c;
-        public AddEvent()
+        int manager_id;
+        public AddEvent(int id)
         {
             InitializeComponent();
             c=new Controller();
+            manager_id=id;
    
             DataTable dt = c.typesnames();
             evtypecombo.DataSource = dt;
@@ -106,7 +108,7 @@ namespace DataBase_project
 
         private void back9_Click(object sender, EventArgs e)
         {
-            M_Events ev2 = new M_Events();
+            M_Events ev2 = new M_Events(manager_id);
             ev2.Show();
             this.Hide();
         }

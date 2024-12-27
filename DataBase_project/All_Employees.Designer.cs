@@ -52,7 +52,7 @@
             this.add_e.Name = "add_e";
             this.add_e.Size = new System.Drawing.Size(75, 23);
             this.add_e.TabIndex = 1;
-            this.add_e.Text = "Add";
+            this.add_e.Text = "Add/Edit";
             this.add_e.UseVisualStyleBackColor = true;
             this.add_e.Click += new System.EventHandler(this.add_e_Click);
             // 
