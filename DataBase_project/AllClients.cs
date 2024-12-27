@@ -43,7 +43,7 @@ namespace DataBase_project
 
         private void back12_Click(object sender, EventArgs e)
         {
-            Manager_home M6= new Manager_home();
+            Manager_home M6= new Manager_home(manager_id);
             M6.Show();
             this.Hide();
         }

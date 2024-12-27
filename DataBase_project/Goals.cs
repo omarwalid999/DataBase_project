@@ -19,8 +19,6 @@ namespace DataBase_project
         int g;
         int gid;
         public Goals(int id)
-        
-        public Goals()
         {
             InitializeComponent();
             c=new Controller();
@@ -74,7 +72,7 @@ namespace DataBase_project
 
         private void back92_Click(object sender, EventArgs e)
         {
-            Manager_home M6= new Manager_home();
+            Manager_home M6= new Manager_home(manager_id);
             M6.Show();
             this.Hide();
 

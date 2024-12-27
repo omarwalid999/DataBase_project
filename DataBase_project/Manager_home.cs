@@ -58,7 +58,7 @@ namespace DataBase_project
 
         private void services_Click(object sender, EventArgs e)
         {
-            Services services = new Services();
+            Services services = new Services(manager_id);
             services.Show();
             this.Hide();
         }

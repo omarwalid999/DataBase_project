@@ -42,7 +42,7 @@ namespace DataBase_project
 
         private void edit_Click(object sender, EventArgs e)
         {
-            M_editevent m_Editevent = new M_editevent(Convert.ToInt32(eventscombo.SelectedValue));
+            M_editevent m_Editevent = new M_editevent(Convert.ToInt32(eventscombo.SelectedValue),m_id);
             m_Editevent.Show();
             this.Hide();
         }
@@ -75,7 +75,7 @@ namespace DataBase_project
 
         private void addevent_Click(object sender, EventArgs e)
         {
-            AddEvent a=new AddEvent();
+            AddEvent a=new AddEvent(m_id);
             a.Show();
             this.Hide();
         }

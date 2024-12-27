@@ -17,10 +17,12 @@ namespace DataBase_project
         int id;
         int age;
         string gender = "";
-        public Hire()
+        int manager_id;
+        public Hire(int id)
         {
             InitializeComponent();
             c = new Controller();
+            manager_id = id;
             DataTable dt = c.department();
             departcombo.DataSource = dt;
             departcombo.DisplayMember = "dep_name";
@@ -94,7 +96,7 @@ namespace DataBase_project
 
         private void back2_Click(object sender, EventArgs e)
         {
-            All_Employees all_Employees = new All_Employees();
+            All_Employees all_Employees = new All_Employees(manager_id);
             all_Employees.Show();
             this.Hide();
         }

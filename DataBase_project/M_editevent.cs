@@ -16,10 +16,11 @@ namespace DataBase_project
     {
         Controller c;
         int eventid;
-        public M_editevent(int id)
+        int manager_id;
+        public M_editevent(int id,int manager)
         {
             eventid = id;
-
+            manager_id = manager;
             InitializeComponent();
             c = new Controller();
             DataTable dt4=c.eventinfo(eventid);
@@ -116,7 +117,7 @@ namespace DataBase_project
 
         private void back8_Click(object sender, EventArgs e)
         {
-            M_Events ev=new M_Events();
+            M_Events ev=new M_Events(manager_id);
             ev.Show();
             this.Hide();
         }
