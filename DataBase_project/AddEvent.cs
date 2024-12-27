@@ -24,66 +24,63 @@ namespace DataBase_project
             DataTable dt = c.typesnames();
             evtypecombo.DataSource = dt;
             evtypecombo.DisplayMember = "event_type";
-           // evtypecombo.ValueMember = "types_ID";
+            evtypecombo.ValueMember = "types_ID";
             DataTable dt2 = c.venuesnames();
             venuecombo.DataSource = dt2;
             venuecombo.DisplayMember = "venue_name";
-            // venuecombo.ValueMember = "venue_ID";
+            venuecombo.ValueMember = "venue_ID";
             DataTable dt3=c.Employeesnames();
             empcombo.DataSource = dt3;
             empcombo.DisplayMember = "name";
-            //empcombo.ValueMember = "employee_ID";
+            empcombo.ValueMember = "employee_ID";
+            DataTable dt4 = c.clientnames();
+
+            client_combobox.DataSource = dt4;
+            client_combobox.DisplayMember = "name";
+            client_combobox.ValueMember = "client_ID";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int id, id2, id3, id4;
-            int result;
-            string selectedvenue=venuecombo.SelectedItem.ToString();
-            result=c.capacity(selectedvenue);
-            Console.WriteLine(selectedvenue);
+            //check that event_id unique
+            //eventname string
+            //budget w no of attendees numbers
 
-            string eventtype=evtypecombo.SelectedItem.ToString();
-            int typeid = c.typeid(eventtype);
-            Console.WriteLine(typeid);
+          
+            int venue_id = Convert.ToInt32(venuecombo.SelectedValue); //venue
+            int typeid = Convert.ToInt32(evtypecombo.SelectedValue); //type
+            int empid = Convert.ToInt32(empcombo.SelectedValue);//employee
+            int budget = Convert.ToInt32(budgettext.Text.ToString());//budget
+            int capacity = Convert.ToInt32(capacitytext.Text.ToString());//capacity
+            int eventid = Convert.ToInt32(eventidtext.Text);//eventid
+            string eventname = eventnametext.Text;
+            int venue_cap = c.capacity(venue_id);
 
-            string employee=empcombo.SelectedItem.ToString();   
-            int empid=c.empid(employee);
-            Console.WriteLine(empid);
-            id3 = Convert.ToInt32(capacitytext.Text);
-
-
-            if (eventidtext.Text == "" || budgettext.Text == "" || capacitytext.Text == "" || eventnametext.Text == "" || clienttext.Text == "" || evtypecombo.SelectedIndex == -1 || empcombo.SelectedIndex == -1 || venuecombo.SelectedIndex == -1 || cidtext.Text == "")
+            if (eventidtext.Text == "" || budgettext.Text == "" || capacitytext.Text == "" || eventnametext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
-            else if (!int.TryParse(eventidtext.Text, out id) || !int.TryParse(budgettext.Text, out id2) || !int.TryParse(capacitytext.Text, out id3) || !int.TryParse(cidtext.Text, out id4))
+            else if (!int.TryParse(eventidtext.Text, out eventid) || !int.TryParse(budgettext.Text, out budget) || !int.TryParse(capacitytext.Text, out capacity))
             {
                 MessageBox.Show("Invalid value ");
 
             }
-            else if (result < id3)
+            else if (venue_cap < capacity)
             {
                 MessageBox.Show(" The number of attendees exceeds this venue's capacity");
             }
-            else if (!clienttext.Text.All(c => char.IsLetter(c)))
-
+            else
             {
-
-                MessageBox.Show("Please Enter valid name");
-            }
-            else {
                 string date = eventdate.Value.ToString("yyyy-MM-dd");
-                id=Convert.ToInt32(eventidtext.Text);
-                id2 = Convert.ToInt32(budgettext.Text);
-                id3= Convert.ToInt32(capacitytext.Text);    
-                id4= Convert.ToInt32(cidtext.Text);
-         
                 int r;
-                r = c.insertevent(id, id2, typeid, date , empid, result, id4, id3, eventnametext.Text);
+
+                r = c.InsertEvent(eventid, budget, typeid, date, empid, venue_id, Convert.ToInt32(client_combobox.SelectedValue), capacity, eventname);
                 if (r != 0)
                 {
                     MessageBox.Show("Event added successfully");
+                } else
+                {
+                    MessageBox.Show("failed to add event");
                 }
             }
         }

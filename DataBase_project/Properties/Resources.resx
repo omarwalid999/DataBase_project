@@ -121,8 +121,8 @@
   <data name="garden_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\garden_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="corporateevent3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\corporateevent3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="messages" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\messages.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="corporateevent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\corporateevent1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +130,8 @@
   <data name="birthday3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\birthday3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="birthday1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\birthday1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="engagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\engagement1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bachellorette1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bachellorette1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +148,14 @@
   <data name="birthday2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\birthday2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bachellorette2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bachellorette2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garden_engagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garden_engagement1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="messages" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\messages.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="engagement3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engagement3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="corporateevent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\corporateevent1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="beach_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\beach_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,17 +172,20 @@
   <data name="bachellorette31" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bachellorette31.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="engagement2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engagement2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garden_wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garden_wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="engagement1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\engagement1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="beach_wedding1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beach_wedding1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="corporateevent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\corporateevent2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="charity3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\charity3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="downtown_club_pool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downtown_club_pool.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="downtown_club_indoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\downtown_club_indoor.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WhatsApp Image 2024-12-27 at 18.41.44_c42ab493" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2024-12-27 at 18.41.44_c42ab493.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

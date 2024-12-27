@@ -96,7 +96,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DataBase_project.Properties.Resources.messages;
+            this.pictureBox1.Image = global::DataBase_project.Properties.Resources.mail;
             this.pictureBox1.Location = new System.Drawing.Point(11, 10);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
@@ -104,6 +104,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dataGridView1
             // 

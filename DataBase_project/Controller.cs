@@ -120,8 +120,7 @@ namespace DBapplication
 
         public DataTable get_employee_clients(int emp_id)
         {
-            string query = $"SELECT client.Fname,client.Lname,client.username FROM client,event,employee WHERE " +
-                $"event.employee_ID={emp_id} AND client.client_ID=event.client.id ";
+            string query = $"SELECT DISTINCT client.Fname, client.Lname, client.username FROM client, event, employee WHERE event.employee_ID={emp_id} AND client.client_ID=event.client_ID ";
             return dbMan.ExecuteReader(query);
         }
         //tarek
@@ -264,9 +263,24 @@ namespace DBapplication
             string query = "SELECT employee_ID FROM employee,event WHERE client_ID = "+clientid+" AND employee.client_ID = event.employee_ID";
             return (int)dbMan.ExecuteScalar(query);
         }
-
-
-
+        //gets venues
+        public DataTable ShowVeneus(int capacity, int price)
+        {
+            string query = "SELECT venue_name as venue, capacity as maximum_capacity, venue_address as adddress, price FROM venue WHERE capacity>="+capacity+" AND price=<"+price+";";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable ShowVeneusnames(int capacity, int price)
+        {
+            string query = "SELECT * FROM venue WHERE capacity>=" + capacity + " AND price=<" + price + ";";
+            return dbMan.ExecuteReader(query);
+        }
+        //insert new event 
+        public int InsertEvent(int event_id, int budget, int event_type, string date, int employee_id, int venue_id, int client_id, int noa, string eventname)
+        {
+            string query = "INSERT INTO event(event_ID, budget, event_type,event_date, employee_id, venue_id, client_id, no_of_attendees, eventname)" +
+                "Values("+event_id+", "+budget+","+event_type+", '"+date+"',"+employee_id+","+venue_id+","+client_id+","+noa+", '"+eventname+"'); ";
+            return dbMan.ExecuteNonQuery(query);
+        }
         //rawan
         //events
         public DataTable AllEvents()
@@ -343,17 +357,13 @@ namespace DBapplication
         }
         public DataTable Employeesnames()
         {
-            string query = "SELECT CONCAT(fname,' ',lname) AS name FROM employee ;";
+            string query = "SELECT *,CONCAT(fname,' ',lname) AS name FROM employee ;";
             return dbMan.ExecuteReader(query);
         }
-        public int employeeid(string employee)
-        {
-            string query = "SELECT employee_ID FROM employee WHERE CONCAT(fname,' ',lname) AS name AND name= " + employee + ";";
-            return dbMan.ExecuteNonQuery(query);
-        }
+        
         public int DeleteEmployee(int employeeid)
         {
-            string query= "DELETE * FROM employee WHERE employee_ID=" + employeeid + ";";
+            string query= "DELETE FROM employee WHERE employee_ID=" + employeeid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
         //client
@@ -391,7 +401,7 @@ namespace DBapplication
         }
         public DataTable typesnames()
         {
-            string query = "SELECT event_type FROM event_types;";
+            string query = "SELECT * FROM event_types;";
             return dbMan.ExecuteReader(query);
         }
         public int typeid(string typname)
@@ -473,13 +483,13 @@ namespace DBapplication
         //venues 
         public DataTable venuesnames()
         {
-            string query = "SELECT venue_name FROM venue;";
+            string query = "SELECT * FROM venue;";
             return dbMan.ExecuteReader(query);
         }
-        public int capacity(string venue)
+        public int capacity(int venue)
         {
-            string query = "SELECT capacity FROM venue WHERE venue_ID='" + venue + "';";
-            return dbMan.ExecuteNonQuery(query);
+            string query = "SELECT capacity FROM venue WHERE venue_ID=" + venue + ";";
+            return (int)dbMan.ExecuteScalar(query);
         }
     };
 }

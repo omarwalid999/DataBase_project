@@ -68,11 +68,11 @@ namespace DataBase_project
 
         private void updatevent_Click(object sender, EventArgs e)
         {
-            int id, id2, id3, id4;
+            /*int id, id2, id3, id4;
             int result;
-            string selectedvenue = venuecombo.SelectedItem.ToString();
-            result = c.capacity(selectedvenue);
-            Console.WriteLine(selectedvenue);
+            //string selectedvenue = venuecombo.SelectedItem.ToString();
+            //result = c.capacity(selectedvenue);
+            //Console.WriteLine(selectedvenue);
 
             string eventtype = evtypecombo.SelectedItem.ToString();
             int typeid = c.typeid(eventtype);
@@ -117,7 +117,7 @@ namespace DataBase_project
                 {
                     MessageBox.Show("Event added successfully");
                 }
-            }
+            }*/
         }
 
 
