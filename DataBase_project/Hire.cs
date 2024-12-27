@@ -22,7 +22,7 @@ namespace DataBase_project
             DataTable dt = c.department();
             departcombo.DataSource = dt;
             departcombo.DisplayMember = "dep_name";
-            departcombo.ValueMember = "dep_ID";
+            //departcombo.ValueMember = "dep_ID";
             
         }
 
@@ -41,6 +41,7 @@ namespace DataBase_project
             
             string selecteddep=departcombo.SelectedItem.ToString();
             int depid=c.depid(selecteddep);
+            Console.WriteLine(depid);
           
 
             if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || (!radioButton1.Checked && !radioButton2.Checked) || departcombo.SelectedIndex == -1)
