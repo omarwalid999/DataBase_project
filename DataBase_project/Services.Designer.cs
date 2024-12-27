@@ -160,7 +160,7 @@
             this.addservice.Name = "addservice";
             this.addservice.Size = new System.Drawing.Size(75, 23);
             this.addservice.TabIndex = 13;
-            this.addservice.Text = "ADD";
+            this.addservice.Text = "s";
             this.addservice.UseVisualStyleBackColor = true;
             this.addservice.Click += new System.EventHandler(this.addservice_Click);
             // 

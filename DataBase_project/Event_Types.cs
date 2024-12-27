@@ -69,6 +69,7 @@ namespace DataBase_project
             else
             {
                 int result;
+               
                 result = c.deletetype(id);
                 if (result != 0)
                 {
