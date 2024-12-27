@@ -15,6 +15,8 @@ namespace DataBase_project
     {
         Controller c;
         int id;
+        int age;
+        string gender = "";
         public Hire()
         {
             InitializeComponent();
@@ -22,14 +24,15 @@ namespace DataBase_project
             DataTable dt = c.department();
             departcombo.DataSource = dt;
             departcombo.DisplayMember = "dep_name";
-            //departcombo.ValueMember = "dep_ID";
+            departcombo.ValueMember = "dep_ID";
             
         }
 
         private void hirebutton_Click(object sender, EventArgs e)
         {
+
             int age;
-            string gender = "";
+            int dwpid = Convert.ToInt32(departcombo.SelectedValue.ToString());
             if (radioButton1.Checked)
             {
                 gender = "Female";
@@ -38,10 +41,6 @@ namespace DataBase_project
             {
                 gender = "Male";
             }
-            
-            string selecteddep=departcombo.SelectedItem.ToString();
-            int depid=c.depid(selecteddep);
-            Console.WriteLine(depid);
           
 
             if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || (!radioButton1.Checked && !radioButton2.Checked) || departcombo.SelectedIndex == -1)
@@ -68,7 +67,7 @@ namespace DataBase_project
             {
                 id = Convert.ToInt32(eidtext.Text);
                 int result;
-                result = c.InsertNewEmployee(id, fnametext.Text, lnametext.Text, emailtext.Text, phonetext.Text, gender, age, usernametext.Text, passkeytext.Text, depid);
+                result = c.InsertNewEmployee(id, fnametext.Text, lnametext.Text, emailtext.Text, phonetext.Text, gender, Convert.ToInt32(agetext.Text), usernametext.Text, passkeytext.Text, Convert.ToInt32(departcombo.SelectedValue));
                 if (result != 0)
                 {
                     MessageBox.Show("Added susscessfully");
