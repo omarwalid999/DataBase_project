@@ -158,15 +158,16 @@ namespace DBapplication
             }
         }
 
-        public int addmessage_em(int msg_id, string text, DateTime time, int client_id, int employee_id, bool flag)
+        public int addmessage_em(int msg_id, string text, DateTime time, int manager_id, int employee_id, bool flag)
         {
-            string query = $"INSERT into messages_em VALUES({msg_id},'{text}','{time}','{flag}',{client_id},{employee_id})";
+            string query = $"INSERT into messages_em VALUES({msg_id},'{text}','{time}','{flag}',{employee_id},{manager_id})";
             return dbMan.ExecuteNonQuery(query);
         }
 
         public DataTable get_employees_for_messages()
         {
-            string query = $"SELECT fname,lname,username FROM employee";
+            int department = 6;
+            string query = $"SELECT fname,lname,username FROM employee WHERE dep_ID != {department}";
             return dbMan.ExecuteReader(query);
         }
         //tarek
