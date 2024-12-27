@@ -32,6 +32,8 @@
             this.edit = new System.Windows.Forms.Button();
             this.show_invoices = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.event_details_GDview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +61,7 @@
             this.edit.TabIndex = 2;
             this.edit.Text = "edit";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // show_invoices
             // 
@@ -77,11 +80,30 @@
             this.pictureBox1.Image = global::DataBase_project.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 111);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 175);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(132, 24);
+            this.comboBox1.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
+            this.button1.Location = new System.Drawing.Point(90, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 25);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Done";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // employee_event
             // 
@@ -89,6 +111,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(852, 468);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.show_invoices);
             this.Controls.Add(this.edit);
@@ -109,5 +133,7 @@
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button show_invoices;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

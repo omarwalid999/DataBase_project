@@ -211,5 +211,10 @@ namespace DataBase_project
             this.Hide();
 
         }
+
+        private void combo_task_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

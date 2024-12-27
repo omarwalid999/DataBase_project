@@ -199,6 +199,7 @@
             this.combo_task.Name = "combo_task";
             this.combo_task.Size = new System.Drawing.Size(239, 24);
             this.combo_task.TabIndex = 16;
+            this.combo_task.SelectedIndexChanged += new System.EventHandler(this.combo_task_SelectedIndexChanged);
             // 
             // not_done
             // 

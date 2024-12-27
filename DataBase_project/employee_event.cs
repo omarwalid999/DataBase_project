@@ -22,8 +22,10 @@ namespace DataBase_project
             controllerobj = new Controller();
             event_id = ids;
             id2 = idd;
-            DataTable events = controllerobj.chosen(event_id, id2);
+            DataTable events = controllerobj.chosen(event_id);
             event_details_GDview.DataSource = events;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             
         }
 
@@ -34,6 +36,8 @@ namespace DataBase_project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button1.Visible = false;
+            comboBox1.Visible = false;
             event_details_GDview.Refresh();
             DataTable events = controllerobj.invoice(event_id);
             event_details_GDview.DataSource = events;
@@ -49,6 +53,28 @@ namespace DataBase_project
             employee_home ee = new employee_home(id2);
             ee.Show();
             this.Hide();
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            button1.Visible = true;
+            comboBox1.Visible = true;
+            DataTable events = controllerobj.get_venue();
+            comboBox1.DataSource = events;
+            comboBox1.DisplayMember = "venue_name";
+            comboBox1.ValueMember = "venue_ID";
+            event_details_GDview.Refresh();
+            DataTable eventss = controllerobj.chosen(event_id);
+            event_details_GDview.DataSource = eventss;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            controllerobj.change_venue(comboBox1.Text, (int)comboBox1.SelectedValue, event_id);
+            event_details_GDview.Refresh();
+            DataTable eventss = controllerobj.chosen(event_id);
+            event_details_GDview.DataSource = eventss;
         }
     }
 }
