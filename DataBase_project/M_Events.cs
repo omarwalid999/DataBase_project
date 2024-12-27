@@ -20,7 +20,11 @@ namespace DataBase_project
             c=new Controller();
             DataTable dt = c.AllEvents();
             alleventsview.DataSource = dt;
-            alleventsview.Refresh();
+           
+           // DataTable dt2 = c.EventsList();
+            //eventscombo.DataSource = dt2;
+           // eventscombo.DisplayMember = "eventname";
+            //eventscombo.ValueMember = "event_ID";
         }
 
         private void alleventsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,8 +39,42 @@ namespace DataBase_project
 
         private void edit_Click(object sender, EventArgs e)
         {
-            M_editevent m_Editevent = new M_editevent();
+            int eventid = (int)eventscombo.SelectedValue;
+            M_editevent m_Editevent = new M_editevent(eventid);
             m_Editevent.Show();
+            this.Hide();
+        }
+
+        private void eventscombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back7_Click(object sender, EventArgs e)
+        {
+            Manager_home M4= new Manager_home();
+            M4.Show();
+            this.Hide();
+
+        }
+
+        private void deletevent_Click(object sender, EventArgs e)
+        {
+            int eventid=(int)eventscombo.SelectedValue;
+            int result;
+            result=c.deleteevent(eventid);
+            if (result != 0)
+            {
+                MessageBox.Show("Event deleted successfully");
+                alleventsview.Refresh();
+            }
+
+        }
+
+        private void addevent_Click(object sender, EventArgs e)
+        {
+            AddEvent a=new AddEvent();
+            a.Show();
             this.Hide();
         }
     }

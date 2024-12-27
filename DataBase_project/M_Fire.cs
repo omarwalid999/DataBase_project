@@ -20,25 +20,34 @@ namespace DataBase_project
             c=new Controller();
             DataTable dt = c.Employeesnames();
             firecombo.DataSource = dt;
-            firecombo.DisplayMember = "fname + ' ' + lname";
-            firecombo.ValueMember = "employee_ID";
+            firecombo.DisplayMember = "name";
+            
 
         }
 
         private void firecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //
         }
 
         private void fire_Click(object sender, EventArgs e)
         {
-            int employeeid = (int)firecombo.SelectedValue;
+            string selectedemp = firecombo.SelectedItem.ToString();
+            int empid = c.emp_id(selectedemp);
             int result;
-            result=c.DeleteEmployee(employeeid);
+            result=c.DeleteEmployee(empid);
             if (result != 0)
             {
                 MessageBox.Show("Employee fired ");
             }
+
+        }
+
+        private void back3_Click(object sender, EventArgs e)
+        {
+            All_Employees E =new All_Employees();
+            E.Show();
+            this.Hide();
 
         }
     }

@@ -19,74 +19,61 @@ namespace DataBase_project
             InitializeComponent();
             c = new Controller();
             DataTable dt = c.department();
-            departmentcombo.DataSource = dt;
-            departmentcombo.DisplayMember = "dep_name";
-            departmentcombo.ValueMember = "dep_ID";
+            departcombo.DataSource = dt;
+            departcombo.DisplayMember = "dep_name";
+            
+
         }
 
         private void hirebutton_Click(object sender, EventArgs e)
         {
+            string gender = "";
+            if (radioButton1.Checked)
+            {
+                gender = "Female";
+            }
+            else if (radioButton2.Checked)
+            {
+                gender = "Male";
+            }
+            int age;
+            int id;
+            string selecteddep=departcombo.SelectedItem.ToString();
+            int depid=c.depid(selecteddep);
           
 
-            if (eidtext.Text=="" ||fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || !radioButton1.Checked || !radioButton2.Checked || departmentcombo.SelectedIndex == -1)
+            if (eidtext.Text == "" || fnametext.Text == "" || lnametext.Text == "" || emailtext.Text == "" || phonetext.Text == "" || agetext.Text == "" || usernametext.Text == "" || passkeytext.Text == "" || departcombo.SelectedIndex == -1)
             {
                 MessageBox.Show("Please Enter All Required Fields");
             }
+            else if (!radioButton1.Checked && !radioButton2.Checked)
+            {
+                MessageBox.Show("please choose gender");
+            }
+            else if (!int.TryParse(agetext.Text, out age) || !int.TryParse(eidtext.Text, out id))
+            {
+                MessageBox.Show("Incorrect Value");
+            }
+            else if (age <= 0)
+            {
+                MessageBox.Show("Please enter a valid age value");
+            }
+            else if (!fnametext.Text.All(c => char.IsLetter(c)) && !lnametext.Text.All(c => char.IsLetter(c)))
+            {
+                MessageBox.Show("Please Enter valid name");
+            }
             else
             {
-                int age;
-                if (!int.TryParse(agetext.Text, out age))
+                int result;
+                result = c.InsertNewEmployee(id, fnametext.Text, lnametext.Text, emailtext.Text, phonetext.Text, gender, age, usernametext.Text, passkeytext.Text, depid);
+                if (result != 0)
                 {
-                    MessageBox.Show("Incorrect Age Value");
-                }
-                else
-                {
-                    if (age <= 0)
-                    {
-                        MessageBox.Show("Please enter a valid age value");
-                    }
-                    else
-                    {
-                        if (!fnametext.Text.All(c => char.IsLetter(c)) && !lnametext.Text.All(c => char.IsLetter(c)))
-                        {
-                            MessageBox.Show("Please Enter valid name");
-                        }
-                        else
-                        {
-                            int id;
-                            if (!int.TryParse(eidtext.Text, out id))
-                                {
-                                    MessageBox.Show("Incorrect ID Value");
-                                }
-                            else
-                            {
-                                string gender = "";
-                                if (radioButton1.Checked)
-                                {
-                                    gender = "Female";
-                                }
-                                else if (radioButton2.Checked)
-                                {
-                                    gender = "Male";
-                                }
-                                int depid = (int)departmentcombo.SelectedIndex;
-                                int result;
-                                result = c.InsertNewEmployee(id, fnametext.Text, lnametext.Text, emailtext.Text, phonetext.Text, gender, age, usernametext.Text, passkeytext.Text, depid);
-                                if (result != 0)
-                                {
-                                    MessageBox.Show("Added susscessfully");
-                                }
-
-                            }
-                        }
-
-                    }
-
+                    MessageBox.Show("Added susscessfully");
                 }
             }
-           
-        
         }
+
+        
 
 
 
@@ -100,6 +87,13 @@ namespace DataBase_project
             
             
 
+        }
+
+        private void back2_Click(object sender, EventArgs e)
+        {
+            All_Employees all_Employees = new All_Employees();
+            all_Employees.Show();
+            this.Hide();
         }
     }
 }

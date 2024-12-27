@@ -29,5 +29,10 @@ namespace DataBase_project
         {
 
         }
+
+        private void clientinfoview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

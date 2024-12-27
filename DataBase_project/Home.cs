@@ -21,11 +21,12 @@ namespace DataBase_project
         {
             client_first first = new client_first();
             first.Show();
+            this.Hide();
         }
 
         private void employee_button_Click(object sender, EventArgs e)
         {
-            employee_first employee = new employee_first();
+            employee_login employee = new employee_login();
             employee.Show();
             this.Hide();
         }

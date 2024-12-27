@@ -23,8 +23,8 @@ namespace DataBase_project
             allclientsview.Refresh();
             DataTable dt2 = c.clientnames();
             clientcombo.DataSource = dt2;
-            clientcombo.DisplayMember = "Fname + ' ' + Lname";
-            clientcombo.ValueMember = "client_ID";
+            clientcombo.DisplayMember = "Fname";
+            clientcombo.ValueMember = "client_ID"; 
         }
 
         private void AllClients_Load(object sender, EventArgs e)

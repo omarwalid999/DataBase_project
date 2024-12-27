@@ -30,21 +30,28 @@ namespace DataBase_project
 
         private void add_e_Click(object sender, EventArgs e)
         {
-            Hire hire = new Hire();
-            hire.Show();
+           Hire h= new Hire();
+            h.Show();
             this.Hide();
         }
 
         private void remove_e_Click(object sender, EventArgs e)
         {
-            M_Fire m_Fire = new M_Fire();
-            m_Fire.Show();  
+          M_Fire fire= new M_Fire();
+            fire.Show();
             this.Hide();
         }
 
         private void allemployeesview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Manager_home manager_Home = new Manager_home();
+            manager_Home.Show();
+            this.Hide();
         }
     }
 }

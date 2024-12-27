@@ -30,59 +30,61 @@ namespace DataBase_project
 
         private void addtype_Click(object sender, EventArgs e)
         {
+            int id;
             if (eventtypetext.Text == "" || typeidtext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
+            else if (!int.TryParse(typeidtext.Text, out id))
+            {
+               MessageBox.Show("Invalid ID number ");
+
+            }
             else
             {
-                int id;
-                if (!int.TryParse(typeidtext.Text, out id))
+                int result;
+                result = c.addtype(id, eventtypetext.Text);
+                if (result != 0)
                 {
-                    MessageBox.Show("Invalid ID number ");
-
-                }
-                else
-                {
-                    int result;
-                    result = c.addtype(id, eventtypetext.Text);
-                    if (result != 0)
-                    {
-                        MessageBox.Show("Type added successfully");
-                        eventtypesview.Refresh();
-                    }
+                    MessageBox.Show("Type added successfully");
+                    eventtypesview.Refresh();
                 }
             }
+
         }
+
 
         private void removetype_Click(object sender, EventArgs e)
         {
-            if (eventtypetext.Text == "" || typeidtext.Text == "")
+            int id;
+            if ( typeidtext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
+            else if (!int.TryParse(typeidtext.Text, out id))
+            {
+                MessageBox.Show("Invalid ID number ");
+            }
+
             else
             {
-                int id;
-                if (!int.TryParse(typeidtext.Text, out id))
+                int result;
+                result = c.deletetype(id);
+                if (result != 0)
                 {
-                    MessageBox.Show("Invalid ID number ");
-
+                    MessageBox.Show("Type deleted successfully");
+                    eventtypesview.Refresh();
                 }
-                else
-                {
-                    int result;
-                    result = c.deletetype(id, eventtypetext.Text);
-                    if (result != 0)
-                    {
-                        MessageBox.Show("Type added successfully");
-                        eventtypesview.Refresh();
-                    }
 
-
-                }
 
             }
+        }
+
+        private void back6_Click(object sender, EventArgs e)
+        {
+            Manager_home M3= new Manager_home();
+            M3.Show();
+            this.Hide();
         }
     }
 }
