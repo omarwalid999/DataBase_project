@@ -32,6 +32,9 @@
             this.edit = new System.Windows.Forms.Button();
             this.eventscombo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.back7 = new System.Windows.Forms.Button();
+            this.addevent = new System.Windows.Forms.Button();
+            this.deletevent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.alleventsview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +51,7 @@
             // 
             // edit
             // 
-            this.edit.Location = new System.Drawing.Point(463, 318);
+            this.edit.Location = new System.Drawing.Point(387, 318);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(75, 23);
             this.edit.TabIndex = 1;
@@ -74,11 +77,44 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Choose Event";
             // 
+            // back7
+            // 
+            this.back7.Location = new System.Drawing.Point(648, 359);
+            this.back7.Name = "back7";
+            this.back7.Size = new System.Drawing.Size(75, 23);
+            this.back7.TabIndex = 4;
+            this.back7.Text = "Back";
+            this.back7.UseVisualStyleBackColor = true;
+            this.back7.Click += new System.EventHandler(this.back7_Click);
+            // 
+            // addevent
+            // 
+            this.addevent.Location = new System.Drawing.Point(138, 384);
+            this.addevent.Name = "addevent";
+            this.addevent.Size = new System.Drawing.Size(75, 23);
+            this.addevent.TabIndex = 5;
+            this.addevent.Text = "ADD";
+            this.addevent.UseVisualStyleBackColor = true;
+            this.addevent.Click += new System.EventHandler(this.addevent_Click);
+            // 
+            // deletevent
+            // 
+            this.deletevent.Location = new System.Drawing.Point(486, 318);
+            this.deletevent.Name = "deletevent";
+            this.deletevent.Size = new System.Drawing.Size(75, 23);
+            this.deletevent.TabIndex = 6;
+            this.deletevent.Text = "DELETE";
+            this.deletevent.UseVisualStyleBackColor = true;
+            this.deletevent.Click += new System.EventHandler(this.deletevent_Click);
+            // 
             // M_Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deletevent);
+            this.Controls.Add(this.addevent);
+            this.Controls.Add(this.back7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.eventscombo);
             this.Controls.Add(this.edit);
@@ -98,5 +134,8 @@
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.ComboBox eventscombo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button back7;
+        private System.Windows.Forms.Button addevent;
+        private System.Windows.Forms.Button deletevent;
     }
 }

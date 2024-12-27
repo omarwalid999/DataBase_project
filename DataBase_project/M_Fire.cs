@@ -20,7 +20,7 @@ namespace DataBase_project
             c=new Controller();
             DataTable dt = c.Employeesnames();
             firecombo.DataSource = dt;
-            firecombo.DisplayMember = "fname + ' ' + lname";
+            firecombo.DisplayMember = "fname";
             firecombo.ValueMember = "employee_ID"; 
 
         }

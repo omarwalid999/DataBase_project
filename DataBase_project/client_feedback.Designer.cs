@@ -42,64 +42,69 @@
             // 
             // comment_tb
             // 
-            this.comment_tb.Location = new System.Drawing.Point(50, 69);
+            this.comment_tb.Location = new System.Drawing.Point(44, 55);
+            this.comment_tb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comment_tb.MaxLength = 255;
             this.comment_tb.Multiline = true;
             this.comment_tb.Name = "comment_tb";
-            this.comment_tb.Size = new System.Drawing.Size(677, 101);
+            this.comment_tb.Size = new System.Drawing.Size(602, 82);
             this.comment_tb.TabIndex = 0;
             // 
             // comment
             // 
             this.comment.AutoSize = true;
-            this.comment.Location = new System.Drawing.Point(47, 35);
+            this.comment.Location = new System.Drawing.Point(42, 28);
             this.comment.Name = "comment";
-            this.comment.Size = new System.Drawing.Size(120, 20);
+            this.comment.Size = new System.Drawing.Size(98, 16);
             this.comment.TabIndex = 1;
             this.comment.Text = "enter comment:";
             // 
             // dateTimePickerof_feedback
             // 
-            this.dateTimePickerof_feedback.Location = new System.Drawing.Point(51, 227);
+            this.dateTimePickerof_feedback.Location = new System.Drawing.Point(45, 182);
+            this.dateTimePickerof_feedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerof_feedback.Name = "dateTimePickerof_feedback";
-            this.dateTimePickerof_feedback.Size = new System.Drawing.Size(305, 26);
+            this.dateTimePickerof_feedback.Size = new System.Drawing.Size(272, 22);
             this.dateTimePickerof_feedback.TabIndex = 2;
+            this.dateTimePickerof_feedback.ValueChanged += new System.EventHandler(this.dateTimePickerof_feedback_ValueChanged);
             // 
             // date
             // 
             this.date.AutoSize = true;
-            this.date.Location = new System.Drawing.Point(44, 185);
+            this.date.Location = new System.Drawing.Point(39, 148);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(172, 20);
+            this.date.Size = new System.Drawing.Size(146, 16);
             this.date.TabIndex = 3;
             this.date.Text = "select feedback\'s date:";
             // 
             // rating
             // 
             this.rating.AutoSize = true;
-            this.rating.Location = new System.Drawing.Point(47, 275);
+            this.rating.Location = new System.Drawing.Point(42, 220);
             this.rating.Name = "rating";
-            this.rating.Size = new System.Drawing.Size(160, 20);
+            this.rating.Size = new System.Drawing.Size(132, 16);
             this.rating.TabIndex = 4;
             this.rating.Text = "overall rating out of 5:";
             // 
             // ratingnumericUpDown1
             // 
-            this.ratingnumericUpDown1.Location = new System.Drawing.Point(130, 298);
+            this.ratingnumericUpDown1.Location = new System.Drawing.Point(116, 238);
+            this.ratingnumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ratingnumericUpDown1.Maximum = new decimal(new int[] {
             5,
             0,
             0,
             0});
             this.ratingnumericUpDown1.Name = "ratingnumericUpDown1";
-            this.ratingnumericUpDown1.Size = new System.Drawing.Size(168, 26);
+            this.ratingnumericUpDown1.Size = new System.Drawing.Size(149, 22);
             this.ratingnumericUpDown1.TabIndex = 5;
             // 
             // submit
             // 
-            this.submit.Location = new System.Drawing.Point(265, 372);
+            this.submit.Location = new System.Drawing.Point(236, 298);
+            this.submit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(211, 35);
+            this.submit.Size = new System.Drawing.Size(188, 28);
             this.submit.TabIndex = 6;
             this.submit.Text = "submit";
             this.submit.UseVisualStyleBackColor = true;
@@ -107,9 +112,10 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(549, 372);
+            this.cancel.Location = new System.Drawing.Point(488, 298);
+            this.cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(205, 34);
+            this.cancel.Size = new System.Drawing.Size(182, 27);
             this.cancel.TabIndex = 7;
             this.cancel.Text = "cancel";
             this.cancel.UseVisualStyleBackColor = true;
@@ -118,17 +124,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(574, 46);
+            this.label1.Location = new System.Drawing.Point(510, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 20);
+            this.label1.Size = new System.Drawing.Size(127, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "maximum 255 words";
             // 
             // client_feedback
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.submit);
@@ -138,6 +144,7 @@
             this.Controls.Add(this.dateTimePickerof_feedback);
             this.Controls.Add(this.comment);
             this.Controls.Add(this.comment_tb);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "client_feedback";
             this.Text = "client_feedback";
             ((System.ComponentModel.ISupportInitialize)(this.ratingnumericUpDown1)).EndInit();

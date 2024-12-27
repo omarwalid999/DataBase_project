@@ -35,136 +35,98 @@ namespace DataBase_project
 
         private void addvendor_Click(object sender, EventArgs e)
         {
+            int id;
+            int rate;
             if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
+            else if (!int.TryParse(vendoridtext.Text, out id) || !int.TryParse(ratingtext.Text, out rate))
+            {
+                MessageBox.Show("Invalid value");
+
+            }
+            else if (rate < '1' || rate > '5')
+            {
+                MessageBox.Show("Invalid Value");
+            }
             else
             {
-                int id;
-                if (!int.TryParse(vendoridtext.Text, out id))
+                int result;
+                result = c.addvendor(id, vendornametext.Text, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, servicetext.Text);
+                if (result != 0)
                 {
-                    MessageBox.Show("Invalid ID");
-
+                    MessageBox.Show("Added successfully");
+                    vendorsview.Refresh();
                 }
-                else
-                {
-                    int rate;
-                    if (!int.TryParse(ratingtext.Text, out rate))
-                    {
-                        MessageBox.Show("Invalid value");
 
-                    }
-                    else
-                    {
-                        if (rate < '1' || rate > '5')
-                        {
-                            MessageBox.Show("Invalid Value");
-                        }
-                        else
-                        {
-                            int result;
-                            result = c.addvendor(id, vendornametext.Text, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, servicetext.Text);
-                            if (result != 0)
-                            {
-                                MessageBox.Show("Added successfully");
-                                vendorsview.Refresh();
-                            }
-
-                        }
-
-                    }
-                }
             }
         }
+
 
         private void deletevendor_Click(object sender, EventArgs e)
         {
+            int id;
+            int rate;
             if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
+            else if (!int.TryParse(vendoridtext.Text, out id) || !int.TryParse(ratingtext.Text, out rate))
+            {
+                    MessageBox.Show("Invalid value");
+
+              }
+            else if (rate < '1' || rate > '5')
+            {
+                MessageBox.Show("Invalid Value");
+            }
             else
             {
-                int id;
-                if (!int.TryParse(vendoridtext.Text, out id))
+                int result;
+                result = c.deletevendor(id);
+                if (result != 0)
                 {
-                    MessageBox.Show("Invalid ID");
-
+                    MessageBox.Show("Deleted successfully");
+                    vendorsview.Refresh();
                 }
-                else
-                {
-                    int rate;
-                    if (!int.TryParse(ratingtext.Text, out rate))
-                    {
-                        MessageBox.Show("Invalid value");
 
-                    }
-                    else
-                    {
-                        if (rate < '1' || rate > '5')
-                        {
-                            MessageBox.Show("Invalid Value");
-                        }
-                        else
-                        {
-                            int result;
-                            result = c.deletevendor(id);
-                            if (result != 0)
-                            {
-                                MessageBox.Show("Deleted successfully");
-                                vendorsview.Refresh();
-                            }
-
-                        }
-
-                    }
-                }
             }
+
+
         }
+
+
 
         private void updatevendor_Click(object sender, EventArgs e)
         {
+            int id;
+            int rate;
             if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
+            else if (!int.TryParse(vendoridtext.Text, out id) || !int.TryParse(ratingtext.Text, out rate))
+            {
+                MessageBox.Show("Invalid value");
+            }
+            else if (rate < '1' || rate > '5')
+            {
+
+                MessageBox.Show("Invalid Value");
+            }
+
+
             else
             {
-                int id;
-                if (!int.TryParse(vendoridtext.Text, out id))
+                int result;
+                result = c.Updatevendor(id, vendornametext.Text, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, servicetext.Text);
+                if (result != 0)
                 {
-                    MessageBox.Show("Invalid ID");
-
+                    MessageBox.Show("Updated successfully");
+                    vendorsview.Refresh();
                 }
-                else
-                {
-                    int rate;
-                    if (!int.TryParse(ratingtext.Text, out rate))
-                    {
-                        MessageBox.Show("Invalid value");
 
-                    }
-                    else
-                    {
-                        if (rate < '1' || rate > '5')
-                        {
-                            MessageBox.Show("Invalid Value");
-                        }
-                        else
-                        {
-                            int result;
-                            result = c.Updatevendor(id, vendornametext.Text, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, servicetext.Text);
-                            if (result != 0)
-                            {
-                                MessageBox.Show("Updated successfully");
-                                vendorsview.Refresh();
-                            }
-
-                        }
-
-                    }
-                }
             }
         }
 

@@ -29,23 +29,21 @@ namespace DataBase_project
 
         private void addservice_Click(object sender, EventArgs e)
         {
+            int id;
+            int id2;
+            int id3;
+            int id4;
             if (serviceidtext.Text == "" || vendornametext.Text == "" || vendortext.Text=="" || servicenametext.Text=="" || invoicetext.Text=="" || pricetext.Text=="")
             {
                 MessageBox.Show("Please enter all required fields");
             }
-            else
+            else if (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
             {
-                int id;
-                int id2;
-                int id3;
-                int id4;
-                if (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
-                {
                     MessageBox.Show("Invalid ID number ");
 
-                }
-                else
-                {
+            }
+             else
+             {
                     int result;
                     result = c.addservice(id, id2, servicenametext.Text, id3, id4, vendornametext.Text);
 
@@ -55,30 +53,28 @@ namespace DataBase_project
                        servicesview.Refresh();
                     }
 
-                }
+              }
                    
-            }
-        }
+         }
+        
 
         private void deleteservice_Click(object sender, EventArgs e)
         {
+            int id;
+            int id2;
+            int id3;
+            int id4;
             if (serviceidtext.Text == "" || vendornametext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
-            else
-            {
-                int id;
-                int id2;
-                int id3;
-                int id4;
-                if (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
-                {
+            else if (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
+             {
                     MessageBox.Show("Invalid ID number ");
 
-                }
-                else
-                {
+             }
+              else
+               {
                     int result;
                     result = c.deleteservice(id);
 
@@ -91,21 +87,19 @@ namespace DataBase_project
                 }
 
             }
-        }
+        
 
         private void updateservice_Click(object sender, EventArgs e)
         {
+            int id;
+            int id2;
+            int id3;
+            int id4;
             if (serviceidtext.Text == "" || vendornametext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
-            else
-            {
-                int id;
-                int id2;
-                int id3;
-                int id4;
-                if (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
+            else if  (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
                 {
                     MessageBox.Show("Invalid ID number ");
 
@@ -124,7 +118,7 @@ namespace DataBase_project
                 }
 
             }
-        }
+        
 
         private void back4_Click(object sender, EventArgs e)
         {

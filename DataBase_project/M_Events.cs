@@ -20,7 +20,7 @@ namespace DataBase_project
             c=new Controller();
             DataTable dt = c.AllEvents();
             alleventsview.DataSource = dt;
-            alleventsview.Refresh();
+           
             DataTable dt2 = c.EventsList();
             eventscombo.DataSource = dt2;
             eventscombo.DisplayMember = "eventname";
@@ -48,6 +48,34 @@ namespace DataBase_project
         private void eventscombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void back7_Click(object sender, EventArgs e)
+        {
+            Manager_home M4= new Manager_home();
+            M4.Show();
+            this.Hide();
+
+        }
+
+        private void deletevent_Click(object sender, EventArgs e)
+        {
+            int eventid=(int)eventscombo.SelectedValue;
+            int result;
+            result=c.deleteevent(eventid);
+            if (result != 0)
+            {
+                MessageBox.Show("Event deleted successfully");
+                alleventsview.Refresh();
+            }
+
+        }
+
+        private void addevent_Click(object sender, EventArgs e)
+        {
+            AddEvent a=new AddEvent();
+            a.Show();
+            this.Hide();
         }
     }
 }

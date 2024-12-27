@@ -41,6 +41,7 @@
             this.clientinfoview.RowTemplate.Height = 24;
             this.clientinfoview.Size = new System.Drawing.Size(488, 167);
             this.clientinfoview.TabIndex = 0;
+            this.clientinfoview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientinfoview_CellContentClick);
             // 
             // Edit_Client
             // 

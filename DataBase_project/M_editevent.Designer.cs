@@ -40,16 +40,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.eventidtext = new System.Windows.Forms.TextBox();
             this.budgettext = new System.Windows.Forms.TextBox();
-            this.employeetext = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.etypetext = new System.Windows.Forms.TextBox();
+            this.capacitytext = new System.Windows.Forms.TextBox();
             this.datetext = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.eventnametext = new System.Windows.Forms.TextBox();
+            this.clienttext = new System.Windows.Forms.TextBox();
+            this.updatevent = new System.Windows.Forms.Button();
+            this.evtypecombo = new System.Windows.Forms.ComboBox();
+            this.empcombo = new System.Windows.Forms.ComboBox();
+            this.venuecombo = new System.Windows.Forms.ComboBox();
+            this.back8 = new System.Windows.Forms.Button();
+            this.cidtext = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.eventinfoview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +62,7 @@
             this.eventinfoview.RowTemplate.Height = 24;
             this.eventinfoview.Size = new System.Drawing.Size(285, 331);
             this.eventinfoview.TabIndex = 0;
+            this.eventinfoview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.eventinfoview_CellContentClick);
             // 
             // label1
             // 
@@ -75,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(381, 109);
+            this.label2.Location = new System.Drawing.Point(597, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 2;
@@ -84,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(589, 61);
+            this.label3.Location = new System.Drawing.Point(370, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 3;
@@ -93,7 +94,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(589, 115);
+            this.label4.Location = new System.Drawing.Point(589, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 4;
@@ -102,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(381, 170);
+            this.label5.Location = new System.Drawing.Point(370, 164);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 16);
             this.label5.TabIndex = 5;
@@ -111,38 +112,38 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(423, 201);
+            this.label6.Location = new System.Drawing.Point(603, 164);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.Size = new System.Drawing.Size(46, 16);
             this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
+            this.label6.Text = "Venue";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(512, 238);
+            this.label7.Location = new System.Drawing.Point(398, 265);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 7;
-            this.label7.Text = "label7";
+            this.label7.Text = "Client";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(520, 246);
+            this.label8.Location = new System.Drawing.Point(370, 216);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 16);
+            this.label8.Size = new System.Drawing.Size(102, 16);
             this.label8.TabIndex = 8;
-            this.label8.Text = "label8";
+            this.label8.Text = "No of attendees";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(528, 254);
+            this.label9.Location = new System.Drawing.Point(602, 219);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 16);
+            this.label9.Size = new System.Drawing.Size(81, 16);
             this.label9.TabIndex = 9;
-            this.label9.Text = "label9";
+            this.label9.Text = "Event Name";
             // 
             // eventidtext
             // 
@@ -153,102 +154,106 @@
             // 
             // budgettext
             // 
-            this.budgettext.Location = new System.Drawing.Point(456, 109);
+            this.budgettext.Location = new System.Drawing.Point(672, 106);
             this.budgettext.Name = "budgettext";
             this.budgettext.Size = new System.Drawing.Size(100, 22);
             this.budgettext.TabIndex = 11;
             // 
-            // employeetext
+            // capacitytext
             // 
-            this.employeetext.Location = new System.Drawing.Point(472, 170);
-            this.employeetext.Name = "employeetext";
-            this.employeetext.Size = new System.Drawing.Size(100, 22);
-            this.employeetext.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(472, 294);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 13;
-            // 
-            // etypetext
-            // 
-            this.etypetext.Location = new System.Drawing.Point(675, 58);
-            this.etypetext.Name = "etypetext";
-            this.etypetext.Size = new System.Drawing.Size(100, 22);
-            this.etypetext.TabIndex = 14;
+            this.capacitytext.Location = new System.Drawing.Point(478, 213);
+            this.capacitytext.Name = "capacitytext";
+            this.capacitytext.Size = new System.Drawing.Size(100, 22);
+            this.capacitytext.TabIndex = 13;
             // 
             // datetext
             // 
-            this.datetext.Location = new System.Drawing.Point(672, 115);
+            this.datetext.Location = new System.Drawing.Point(672, 58);
             this.datetext.Name = "datetext";
             this.datetext.Size = new System.Drawing.Size(100, 22);
             this.datetext.TabIndex = 15;
             // 
-            // textBox7
+            // eventnametext
             // 
-            this.textBox7.Location = new System.Drawing.Point(584, 310);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 16;
+            this.eventnametext.Location = new System.Drawing.Point(688, 216);
+            this.eventnametext.Name = "eventnametext";
+            this.eventnametext.Size = new System.Drawing.Size(100, 22);
+            this.eventnametext.TabIndex = 16;
             // 
-            // textBox8
+            // clienttext
             // 
-            this.textBox8.Location = new System.Drawing.Point(592, 318);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 17;
+            this.clienttext.Location = new System.Drawing.Point(477, 262);
+            this.clienttext.Name = "clienttext";
+            this.clienttext.Size = new System.Drawing.Size(100, 22);
+            this.clienttext.TabIndex = 17;
             // 
-            // textBox9
+            // updatevent
             // 
-            this.textBox9.Location = new System.Drawing.Point(600, 326);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 18;
+            this.updatevent.Location = new System.Drawing.Point(617, 350);
+            this.updatevent.Name = "updatevent";
+            this.updatevent.Size = new System.Drawing.Size(75, 23);
+            this.updatevent.TabIndex = 21;
+            this.updatevent.Text = "UPDATE";
+            this.updatevent.UseVisualStyleBackColor = true;
+            this.updatevent.Click += new System.EventHandler(this.updatevent_Click);
             // 
-            // button1
+            // evtypecombo
             // 
-            this.button1.Location = new System.Drawing.Point(608, 334);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.evtypecombo.FormattingEnabled = true;
+            this.evtypecombo.Location = new System.Drawing.Point(456, 106);
+            this.evtypecombo.Name = "evtypecombo";
+            this.evtypecombo.Size = new System.Drawing.Size(121, 24);
+            this.evtypecombo.TabIndex = 22;
+            this.evtypecombo.SelectedIndexChanged += new System.EventHandler(this.evtypecombo_SelectedIndexChanged);
             // 
-            // button2
+            // empcombo
             // 
-            this.button2.Location = new System.Drawing.Point(616, 342);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.empcombo.FormattingEnabled = true;
+            this.empcombo.Location = new System.Drawing.Point(445, 156);
+            this.empcombo.Name = "empcombo";
+            this.empcombo.Size = new System.Drawing.Size(121, 24);
+            this.empcombo.TabIndex = 23;
             // 
-            // button3
+            // venuecombo
             // 
-            this.button3.Location = new System.Drawing.Point(624, 350);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.venuecombo.FormattingEnabled = true;
+            this.venuecombo.Location = new System.Drawing.Point(655, 156);
+            this.venuecombo.Name = "venuecombo";
+            this.venuecombo.Size = new System.Drawing.Size(121, 24);
+            this.venuecombo.TabIndex = 24;
+            // 
+            // back8
+            // 
+            this.back8.Location = new System.Drawing.Point(701, 402);
+            this.back8.Name = "back8";
+            this.back8.Size = new System.Drawing.Size(75, 23);
+            this.back8.TabIndex = 25;
+            this.back8.Text = "Back";
+            this.back8.UseVisualStyleBackColor = true;
+            this.back8.Click += new System.EventHandler(this.back8_Click);
+            // 
+            // cidtext
+            // 
+            this.cidtext.Location = new System.Drawing.Point(630, 265);
+            this.cidtext.Name = "cidtext";
+            this.cidtext.Size = new System.Drawing.Size(100, 22);
+            this.cidtext.TabIndex = 26;
             // 
             // M_editevent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.cidtext);
+            this.Controls.Add(this.back8);
+            this.Controls.Add(this.venuecombo);
+            this.Controls.Add(this.empcombo);
+            this.Controls.Add(this.evtypecombo);
+            this.Controls.Add(this.updatevent);
+            this.Controls.Add(this.clienttext);
+            this.Controls.Add(this.eventnametext);
             this.Controls.Add(this.datetext);
-            this.Controls.Add(this.etypetext);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.employeetext);
+            this.Controls.Add(this.capacitytext);
             this.Controls.Add(this.budgettext);
             this.Controls.Add(this.eventidtext);
             this.Controls.Add(this.label9);
@@ -284,15 +289,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox eventidtext;
         private System.Windows.Forms.TextBox budgettext;
-        private System.Windows.Forms.TextBox employeetext;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox etypetext;
+        private System.Windows.Forms.TextBox capacitytext;
         private System.Windows.Forms.TextBox datetext;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox eventnametext;
+        private System.Windows.Forms.TextBox clienttext;
+        private System.Windows.Forms.Button updatevent;
+        private System.Windows.Forms.ComboBox evtypecombo;
+        private System.Windows.Forms.ComboBox empcombo;
+        private System.Windows.Forms.ComboBox venuecombo;
+        private System.Windows.Forms.Button back8;
+        private System.Windows.Forms.TextBox cidtext;
     }
 }

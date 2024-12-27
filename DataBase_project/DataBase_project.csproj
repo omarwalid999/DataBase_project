@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Add_task.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     <Compile Include="Vendors.Designer.cs">
       <DependentUpon>Vendors.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_task.resx">
       <DependentUpon>Add_task.cs</DependentUpon>
     </EmbeddedResource>

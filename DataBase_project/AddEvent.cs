@@ -5,24 +5,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DataBase_project
 {
-    public partial class M_editevent : Form
+    public partial class AddEvent : Form
     {
         Controller c;
-        int eventid;
-        public M_editevent(int id)
+        public AddEvent()
         {
-            eventid = id;
             InitializeComponent();
-            c = new Controller();
-            DataTable dt4=c.eventinfo(eventid);
-            eventinfoview.DataSource = dt4;
+            c=new Controller();
             DataTable dt = c.typesnames();
             evtypecombo.DataSource = dt;
             evtypecombo.DisplayMember = "event_type";
@@ -31,41 +27,13 @@ namespace DataBase_project
             venuecombo.DataSource = dt2;
             venuecombo.DisplayMember = "venue_name";
             venuecombo.ValueMember = "venue_ID";
-            DataTable dt3 = c.Employeesnames();
+            DataTable dt3=c.Employeesnames();
             empcombo.DataSource = dt3;
             empcombo.DisplayMember = "fname";
             empcombo.ValueMember = "employee_ID";
-
-
-
-
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editevent_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void M_editevent_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void evtypecombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addevent_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void updatevent_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             int id;
             int id2;
@@ -98,27 +66,40 @@ namespace DataBase_project
             else
             {
                 int r;
-                r = c.updatevent(id, id2, eventtype, datetext.Text, emp, venueid, id4, id3, eventnametext.Text);
+                r = c.insertevent(id, id2, eventtype, datetext.Text, emp, venueid, id4, id3, eventnametext.Text);
                 if (r != 0)
                 {
-                    MessageBox.Show("Event updated successfully");
-                    eventinfoview.Refresh();
+                    MessageBox.Show("Event added successfully");
                 }
             }
         }
+
+               
+
+             
+
+        private void evtypecombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
-        private void back8_Click(object sender, EventArgs e)
+        private void venuecombo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            M_Events ev=new M_Events();
-            ev.Show();
+
+        }
+
+        private void empcombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back9_Click(object sender, EventArgs e)
+        {
+            M_Events ev2 = new M_Events();
+            ev2.Show();
             this.Hide();
         }
-
-        private void eventinfoview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
     }
-
+    }
+}
