@@ -52,6 +52,12 @@
             this.beachbox1 = new System.Windows.Forms.PictureBox();
             this.hotelbox3 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Button();
+            this.first = new System.Windows.Forms.Label();
+            this.second = new System.Windows.Forms.Label();
+            this.third = new System.Windows.Forms.Label();
+            this.themepicker = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.next = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.charity3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.charity2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.charity1)).BeginInit();
@@ -72,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gardenwedding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beachbox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelbox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.themepicker)).BeginInit();
             this.SuspendLayout();
             // 
             // typesofevents
@@ -331,6 +338,64 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // first
+            // 
+            this.first.AutoSize = true;
+            this.first.Location = new System.Drawing.Point(125, 73);
+            this.first.Name = "first";
+            this.first.Size = new System.Drawing.Size(22, 20);
+            this.first.TabIndex = 23;
+            this.first.Text = "1 ";
+            // 
+            // second
+            // 
+            this.second.AutoSize = true;
+            this.second.Location = new System.Drawing.Point(432, 73);
+            this.second.Name = "second";
+            this.second.Size = new System.Drawing.Size(18, 20);
+            this.second.TabIndex = 24;
+            this.second.Text = "2";
+            // 
+            // third
+            // 
+            this.third.AutoSize = true;
+            this.third.Location = new System.Drawing.Point(755, 81);
+            this.third.Name = "third";
+            this.third.Size = new System.Drawing.Size(18, 20);
+            this.third.TabIndex = 25;
+            this.third.Text = "3";
+            // 
+            // themepicker
+            // 
+            this.themepicker.Location = new System.Drawing.Point(279, 434);
+            this.themepicker.Maximum = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.themepicker.Name = "themepicker";
+            this.themepicker.Size = new System.Drawing.Size(48, 26);
+            this.themepicker.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 436);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(232, 20);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Your chosen theme\'s number is";
+            // 
+            // next
+            // 
+            this.next.Location = new System.Drawing.Point(376, 426);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(109, 40);
+            this.next.TabIndex = 28;
+            this.next.Text = "next";
+            this.next.UseVisualStyleBackColor = true;
+            this.next.Click += new System.EventHandler(this.next_Click);
+            // 
             // client_newevent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,6 +447,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gardenwedding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beachbox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hotelbox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.themepicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +479,11 @@
         private System.Windows.Forms.PictureBox charity2;
         private System.Windows.Forms.PictureBox charity3;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Label first;
+        private System.Windows.Forms.Label second;
+        private System.Windows.Forms.Label third;
+        private System.Windows.Forms.NumericUpDown themepicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button next;
     }
 }

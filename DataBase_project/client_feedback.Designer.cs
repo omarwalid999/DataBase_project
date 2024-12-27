@@ -147,6 +147,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "client_feedback";
             this.Text = "client_feedback";
+            this.Load += new System.EventHandler(this.client_feedback_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ratingnumericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

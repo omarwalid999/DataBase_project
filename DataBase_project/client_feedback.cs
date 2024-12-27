@@ -59,5 +59,10 @@ namespace DataBase_project
         {
 
         }
+
+        private void client_feedback_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

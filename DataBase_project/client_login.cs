@@ -36,6 +36,7 @@ namespace DataBase_project
                     {
                         client_home f = new client_home(id);
                         f.Show();
+                        this.Hide();
                     }
                     else
                     {

@@ -80,7 +80,7 @@ namespace DataBase_project
                 charity2.Visible = false;
                 charity3.Visible = false;
             }
-            else if (typesofevents.Text == "Bachelorette") //wedding
+            else if (typesofevents.Text == "Bachelorette") 
             {
                 //bachellorette tru
                 bachellorrette1.Visible = true;
@@ -103,7 +103,7 @@ namespace DataBase_project
                 charity2.Visible = false;
                 charity3.Visible = false;
             }
-            else if (typesofevents.Text == "Birthday Party") //wedding
+            else if (typesofevents.Text == "Birthday Party") //birthday
             {
                 //birthday true
                 birthday1.Visible = true;
@@ -208,5 +208,104 @@ namespace DataBase_project
             c.Show();
             this.Hide();
         }
+
+        private void next_Click(object sender, EventArgs e)
+        {
+            //check themepicker
+            //check which type
+            //save them 
+            if (typesofevents.Text == "Wedding") //wedding
+            {
+             if(themepicker.Value == 1)
+                {
+
+                } 
+             else if(themepicker.Value == 2)
+                {
+
+                }
+                else if (themepicker.Value == 3)
+                {
+
+                }
+            }
+            else if (typesofevents.Text == "Bachelorette") 
+            {
+                if (themepicker.Value == 1)
+                {
+
+                }
+                else if (themepicker.Value == 2)
+                {
+
+                }
+                else if (themepicker.Value == 3)
+                {
+
+                }
+            }
+            else if (typesofevents.Text == "Birthday Party") 
+            {
+                if (themepicker.Value == 1)
+                {
+
+                }
+                else if (themepicker.Value == 2)
+                {
+
+                }
+                else if (themepicker.Value == 3)
+                {
+
+                }
+            }
+            else if (typesofevents.Text == "Engagement")
+            {
+                if (themepicker.Value == 1)
+                {
+                    //home ballons w kda setup
+                }
+                else if (themepicker.Value == 2)
+                {
+                    //garden
+                }
+                else if (themepicker.Value == 3)
+                {
+                    //home tarabiza
+                }
+            }
+            else if (typesofevents.Text == "Corporate Event")
+            {
+                if (themepicker.Value == 1)
+                {
+
+                }
+                else if (themepicker.Value == 2)
+                {
+
+                }
+                else if (themepicker.Value == 3)
+                {
+
+                }
+            }
+            else if (typesofevents.Text == "Charity Event")
+            {
+                if (themepicker.Value == 1)
+                {
+                    //ballroom
+                }
+                else if (themepicker.Value == 2)
+                {
+                    //marathon
+                }
+                else if (themepicker.Value == 3)
+                {
+                    //red carpet
+                }
+            }
+        }
     }
 }
+//nerouh nekhtar elbudget w elcapacity w date
+//el venue
