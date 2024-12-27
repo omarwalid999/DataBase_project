@@ -11,6 +11,7 @@ using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
 using DataBase_project;
+using System.Runtime.InteropServices;
 
 namespace DBapplication
 {
@@ -508,9 +509,9 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(query);
 
         }
-        public int deleteservice(int service_ID)
+        public int deleteservice(int service_ID , int invoiceide)
         {
-            string query = "DELETE * FROM services_offered WHERE service_ID=" + service_ID + ";";
+            string query = "DELETE FROM services_offered WHERE service_ID=" + service_ID + " AND invoice_id=" + invoiceide +";";
             return dbMan.ExecuteNonQuery(query);
 
         }
