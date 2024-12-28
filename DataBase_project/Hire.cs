@@ -93,13 +93,7 @@ namespace DataBase_project
             
 
         }
-
-        private void back2_Click(object sender, EventArgs e)
-        {
-            All_Employees all_Employees = new All_Employees(manager_id);
-            all_Employees.Show();
-            this.Hide();
-        }
+       
 
         private void updateemp_Click(object sender, EventArgs e)
         {
@@ -148,6 +142,17 @@ namespace DataBase_project
             }
         }
 
+        private void Hire_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            All_Employees all_Employees = new All_Employees(manager_id);
+            all_Employees.Show();
+            this.Hide();
+        }
     }
     }
 

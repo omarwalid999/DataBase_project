@@ -31,20 +31,21 @@
             this.allemployeesview = new System.Windows.Forms.DataGridView();
             this.add_e = new System.Windows.Forms.Button();
             this.remove_e = new System.Windows.Forms.Button();
-            this.back = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.allemployeesview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // allemployeesview
             // 
             this.allemployeesview.BackgroundColor = System.Drawing.Color.Honeydew;
             this.allemployeesview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.allemployeesview.Location = new System.Drawing.Point(34, 120);
+            this.allemployeesview.Location = new System.Drawing.Point(34, 152);
             this.allemployeesview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.allemployeesview.Name = "allemployeesview";
             this.allemployeesview.RowHeadersWidth = 51;
             this.allemployeesview.RowTemplate.Height = 24;
-            this.allemployeesview.Size = new System.Drawing.Size(827, 322);
+            this.allemployeesview.Size = new System.Drawing.Size(827, 290);
             this.allemployeesview.TabIndex = 0;
             this.allemployeesview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allemployeesview_CellContentClick);
             // 
@@ -63,7 +64,7 @@
             // remove_e
             // 
             this.remove_e.BackColor = System.Drawing.Color.Honeydew;
-            this.remove_e.Location = new System.Drawing.Point(396, 461);
+            this.remove_e.Location = new System.Drawing.Point(717, 461);
             this.remove_e.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.remove_e.Name = "remove_e";
             this.remove_e.Size = new System.Drawing.Size(132, 71);
@@ -72,25 +73,25 @@
             this.remove_e.UseVisualStyleBackColor = false;
             this.remove_e.Click += new System.EventHandler(this.remove_e_Click);
             // 
-            // back
+            // pictureBox2
             // 
-            this.back.BackColor = System.Drawing.Color.Honeydew;
-            this.back.Location = new System.Drawing.Point(724, 461);
-            this.back.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(137, 71);
-            this.back.TabIndex = 3;
-            this.back.Text = "Back";
-            this.back.UseVisualStyleBackColor = false;
-            this.back.Click += new System.EventHandler(this.back_Click);
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(123, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // All_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(900, 562);
-            this.Controls.Add(this.back);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.remove_e);
             this.Controls.Add(this.add_e);
             this.Controls.Add(this.allemployeesview);
@@ -99,6 +100,7 @@
             this.Text = "All_Employees";
             this.Load += new System.EventHandler(this.All_Employees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.allemployeesview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -108,6 +110,6 @@
         private System.Windows.Forms.DataGridView allemployeesview;
         private System.Windows.Forms.Button add_e;
         private System.Windows.Forms.Button remove_e;
-        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

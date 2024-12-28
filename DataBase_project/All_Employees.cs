@@ -49,17 +49,21 @@ namespace DataBase_project
 
         }
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            Manager_home manager_Home = new Manager_home(manager_id);
-            manager_Home.Show();
-            this.Hide();
-        }
+        
 
         private void editemp_Click(object sender, EventArgs e)
         {
             EditEmp empedit= new EditEmp();
             empedit.Show();
+            this.Hide();
+        }
+
+       
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Manager_home manager_Home = new Manager_home(manager_id);
+            manager_Home.Show();
             this.Hide();
         }
     }
