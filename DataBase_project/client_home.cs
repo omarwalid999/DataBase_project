@@ -567,6 +567,13 @@ namespace DataBase_project
                 MessageBox.Show("you can't submit an empty feedback.");
             }
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            client_home c = new client_home(id1);
+            c.Show();
+            this.Hide();
+        }
         //momken neshil previous events w nezawed fi my events button feedback
     }
 }

@@ -38,10 +38,10 @@ namespace DataBase_project
 
         private void addvendor_Click(object sender, EventArgs e)
         {
-            int id=Convert.ToInt32(vendoridtext.Text.ToString());
-            int rate=Convert.ToInt32(ratingtext.Text.ToString());  
-            string service=servicetext.Text.ToString();
-            string vendor=vendornametext.Text.ToString();
+            int id = Convert.ToInt32(vendoridtext.Text.ToString());
+            int rate = Convert.ToInt32(ratingtext.Text.ToString());
+            string service = servicetext.Text.ToString();
+            string vendor = vendornametext.Text.ToString();
             if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
@@ -55,23 +55,24 @@ namespace DataBase_project
             {
                 MessageBox.Show("Invalid Value");
             }
-            else
-            {
-                int result;
-                result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
-                if (result != 0)
-                {
-                    MessageBox.Show("Added successfully");
-                    DataTable dt1 = c.vendorsdetails();
-                    vendorsview.DataSource = dt1;
-                    vendorsview.Refresh();
-                } else
-                {
-                    MessageBox.Show("failed to add vendor");
-                }
-
-            }
         }
+            //else
+            //{
+            //    int result; }
+               // result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
+            //    if (result != 0)
+            //    {
+            //        MessageBox.Show("Added successfully");
+            //        DataTable dt1 = c.vendorsdetails();
+            //        vendorsview.DataSource = dt1;
+            //        vendorsview.Refresh();
+            //    } else
+            //    {
+            //        MessageBox.Show("failed to add vendor");
+            //    }
+
+            //}
+        
 
 
         private void deletevendor_Click(object sender, EventArgs e)
