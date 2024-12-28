@@ -118,5 +118,12 @@ namespace DataBase_project
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace DataBase_project
 
         private void signupbutton_Click(object sender, EventArgs e)
         {
-            int clientID =27;
+            int clientID = c.get_ct();
             if ( Fnametb.Text != "" && Lnametb.Text != "" && emailtb.Text != "" && phonetb.Text != "" && usernametb.Text != "" && passkeytb.Text != "")
             {
                 if (passkeytb.Text == confirmpasskey.Text)
@@ -57,11 +57,17 @@ namespace DataBase_project
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+       
+        private void back_button_Click(object sender, EventArgs e)
         {
-            Home f= new Home();
-            f.Show();
+            Home home = new Home();
+            home.Show();
             this.Close();
+        }
+
+        private void client_signup_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

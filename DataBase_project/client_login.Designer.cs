@@ -112,7 +112,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "client_login";
             this.Text = "Welcome back!";
-            this.Load += new System.EventHandler(this.client_login_Load);
+            //this.Load += new System.EventHandler(this.client_login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -32,7 +32,10 @@ namespace DataBase_project
                 int id = cobj.client_id(username_textbox.Text);
                 if (id != -1)
                 {
-                    if (cobj.check_login_c(username_textbox.Text, password_textbox.Text))
+                    string storedHashedPassword = cobj.get_hashed_password(username_textbox.Text); // Retrieve hashed password
+
+                    if (!string.IsNullOrEmpty(storedHashedPassword) &&
+                        PasswordHelper.VerifyPassword(password_textbox.Text, storedHashedPassword))
                     {
                         client_home f = new client_home(id);
                         f.Show();
@@ -40,24 +43,18 @@ namespace DataBase_project
                     }
                     else
                     {
-                        MessageBox.Show("please enter username and password correctly!");
+                        MessageBox.Show("Incorrect username or password!");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("invalid username!");
+                    MessageBox.Show("Invalid username!");
                 }
-            } else
-            {
-                MessageBox.Show("please enter username and password");
             }
-
-       
-        }
-
-        private void client_login_Load(object sender, EventArgs e)
-        {
-
+            else
+            {
+                MessageBox.Show("Please enter username and password");
+            }
         }
     }
-}
+    }

@@ -1,39 +1,39 @@
-﻿//using System;
-//using System.Security.Cryptography;
-//using System.Text;
+﻿using BCrypt.Net;
+using System;
 
-//class PasswordHasher
-//{
-//    // Method to hash the password
-//    public static string HashPassword(string password)
-//    {
-//        using (SHA256 sha256 = SHA256.Create())
-//        {
-//            // Convert the input string to bytes and compute the hash
-//            byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+class PasswordHelper
+{
+    public static string HashPassword(string plainPassword)
+    {
+        return BCrypt.Net.BCrypt.HashPassword(plainPassword);
+    }
 
-//            // Convert the byte array to a hexadecimal string
-//            StringBuilder hashedPassword = new StringBuilder();
-//            foreach (byte b in hashedBytes)
-//            {
-//                hashedPassword.Append(b.ToString("x2")); // Convert to lowercase hexadecimal
-//            }
-//            return hashedPassword.ToString();
-//        }
-//    }
-//}
+    public static bool VerifyPassword(string plainPassword, string hashedPassword)
+    {
+        try
+        {
+            // Check if the hashedPassword starts with a valid BCrypt identifier
+            if (!hashedPassword.StartsWith("$2a$") && !hashedPassword.StartsWith("$2b$") && !hashedPassword.StartsWith("$2y$"))
+            {
+                throw new FormatException("Stored hash is not in a valid BCrypt format.");
+            }
 
-//// Example usage
-//class Program
-//{
-//    static void Main(string[] args)
-//    {
-//        string plainPassword = "MySecurePassword123!";
-//        string hashedPassword = PasswordHasher.HashPassword(plainPassword);
-
-//        Console.WriteLine("Plain Password: " + plainPassword);
-//        Console.WriteLine("Hashed Password: " + hashedPassword);
-
-//        // Now you can save `hashedPassword` in the database
-//    }
-//}
+            return BCrypt.Net.BCrypt.Verify(plainPassword, hashedPassword);
+        }
+        catch (SaltParseException ex)
+        {
+            Console.WriteLine($"BCrypt SaltParseException: {ex.Message}");
+            return false;
+        }
+        catch (FormatException ex)
+        {
+            Console.WriteLine($"Format Exception: {ex.Message}");
+            return false;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Unexpected error during password verification: {ex.Message}");
+            return false;
+        }
+    }
+}
