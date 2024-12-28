@@ -23,7 +23,15 @@ namespace DataBase_project
 
         private void client_home_Load(object sender, EventArgs e)
         {
-            ////
+            int notif_count = c.get_client_notif(id1);
+            if (notif_count > 0)
+            {
+                notifications_count.Text = notif_count.ToString();
+            }
+            else
+            {
+                notifications_count.Hide();
+            }
         }
 
         private void logout_Click(object sender, EventArgs e)
