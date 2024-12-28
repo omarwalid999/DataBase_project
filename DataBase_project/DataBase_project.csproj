@@ -194,7 +194,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="c_change_pass.cs">
       <SubType>Form</SubType>
@@ -373,12 +372,6 @@
     <Compile Include="Statistics.Designer.cs">
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="statistics1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="statistics1.Designer.cs">
-      <DependentUpon>statistics1.cs</DependentUpon>
-    </Compile>
     <Compile Include="status.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -517,9 +510,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="statistics1.resx">
-      <DependentUpon>statistics1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="status.resx">
       <DependentUpon>status.cs</DependentUpon>

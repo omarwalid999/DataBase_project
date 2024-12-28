@@ -56,5 +56,10 @@ namespace DataBase_project
                 MessageBox.Show("Please enter username and password");
             }
         }
+
+        private void client_login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     }
