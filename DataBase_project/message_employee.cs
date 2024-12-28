@@ -69,5 +69,12 @@ namespace DataBase_project
                 this.Close();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            employee_home f = new employee_home(employee_id);
+            f.Show();
+            this.Close();
+        }
     }
 }

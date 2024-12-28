@@ -29,5 +29,12 @@ namespace DataBase_project
             messages.DataSource = dataTable;
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            client_home t = new client_home(client_id);
+            t.Show();
+            this.Close();
+        }
     }
 }
