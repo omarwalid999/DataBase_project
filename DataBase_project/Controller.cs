@@ -12,6 +12,8 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
 using DataBase_project;
 using System.Runtime.InteropServices;
+using System;
+using System.Data.SqlClient;
 
 namespace DBapplication
 {
@@ -231,18 +233,55 @@ namespace DBapplication
         //tarek
         //employee
 
-        public bool check_login_e(string username, string password)
+        //public bool check_login_e(string username, string password)
+        //{
+        //    string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
+        //    string pass = dbMan.ExecuteScalar(query).ToString();
+        //    if (pass != password)
+        //    {
+        //        return false;
+        //    }
+        //    else
+        //    {
+        //        return true;
+        //    }
+        //}
+    
+        public void RegisterUser(string username, string plainPassword)
         {
-            string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
-            string pass = dbMan.ExecuteScalar(query).ToString();
-            if (pass != password)
+            // Hash the password
+            string hashedPassword = PasswordHelper.HashPassword(plainPassword);
+
+            // Construct the SQL query
+            string query = $"INSERT INTO employee (username, passkey) VALUES ('{username}', '{hashedPassword}')";
+
+            // Execute the query
+            int result = dbMan.ExecuteNonQuery(query);
+
+            if (result > 0)
             {
-                return false;
+                MessageBox.Show("User registered successfully.");
             }
             else
             {
-                return true;
+                MessageBox.Show("User registration failed.");
             }
+        }
+        public bool check_login_e(string username, string inputPassword)
+        {
+            string query = $"SELECT PasswordHash FROM Users WHERE Username = '{username}'";
+
+            DataTable result = dbMan.ExecuteReader(query);
+
+            if (result != null && result.Rows.Count > 0)
+            {
+                string storedPasswordHash = result.Rows[0]["PasswordHash"].ToString();
+
+                // Verify the password using the helper class
+                return PasswordHelper.VerifyPassword(inputPassword, storedPasswordHash);
+            }
+
+            return false; // Return false if the user is not found
         }
         public void change_venue(string venuename, int venue_id, int e)
         {
@@ -320,14 +359,44 @@ namespace DBapplication
             int count = (int)dbMan.ExecuteScalar(query1);
            return count;
         }
+        public int get_ct()
+        {
+            string query1 = $"SELECT COUNT(client_ID) FROM client ";
+            int count = (int)dbMan.ExecuteScalar(query1);
+            return count;
+        }
+        public string get_hashed_password(string username)
+        {
+            try
+            {
+                string query = "SELECT passkey FROM client WHERE username = @username";
+
+                using (SqlCommand command = dbMan.CreateCommand())
+                {
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue("@username", username);
+
+                    var result = command.ExecuteScalar();
+                    return result != null ? result.ToString() : string.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return string.Empty;
+            }
+        }
+
+
 
 
         //noor
         //hagat client signup
         public int InsertNewClient(int clientid, string Fname, string Lname, string email, string phone, string username, string passkey)
         {
+            string hashedPassword = PasswordHelper.HashPassword(passkey);
             string query = "INSERT INTO client (client_ID, Fname, Lname, email, phone, username,passkey)" +
-                            "Values (" + clientid + ",'" + Fname + "','" + Lname + "','" + email + "','"+ phone+"','"+ username+"','"+passkey+"');";
+                            "Values (" + clientid + ",'" + Fname + "','" + Lname + "','" + email + "','"+ phone+"','"+ username+"','"+hashedPassword+"');";
             return dbMan.ExecuteNonQuery(query);
         }
         //haget feedback
@@ -337,6 +406,7 @@ namespace DBapplication
                             "Values (" + feedbackid + "," + clientid + ",'" + comment + "','" + date + "'," + rating + ");" ;
             return dbMan.ExecuteNonQuery(query);
         }
+
         //in employee show all vendors
         public DataTable ShowVendors()
         {
