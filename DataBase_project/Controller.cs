@@ -27,6 +27,25 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
         //omar
+        public int login_username_check(string username)
+        {
+            string query = $"SELECT employee_ID FROM employee WHERE username = '{username}'";
+            var employee = dbMan.ExecuteScalar(query);
+            string query1 = $"SELECT client_ID FROM client WHERE username= '{username}'";
+            var client = dbMan.ExecuteScalar(query1); 
+            if (employee == null && client==null)
+            {
+                return -1;
+            }
+            else if (employee == null)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+        }
         public bool check_login_c (string username, string password)
         {
             string query = $"SELECT passkey FROM client WHERE username = '{username}'";
@@ -171,9 +190,47 @@ namespace DBapplication
             string query = $"SELECT fname,lname,username FROM employee WHERE dep_ID != {department}";
             return dbMan.ExecuteReader(query);
         }
+
+        public int get_manager_notif(int manager_id)
+        {
+            string query = $"SELECT COUNT(*) FROM messages_em WHERE manager_ID='{manager_id}'AND flag=1";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int get_employee_notif(int employee_id)
+        {
+            string query = $"SELECT COUNT(*) FROM messages_em WHERE employee_ID='{employee_id}'AND flag=0";
+            string query2= $"SELECT COUNT(*) FROM messages_ec WHERE employee_ID='{employee_id}'AND client_flag=1";
+            return (int)dbMan.ExecuteScalar(query) + (int)dbMan.ExecuteScalar(query2);
+        }
+
+        public int get_client_notif(int client_id)
+        {
+        
+            string query = $"SELECT COUNT(*) FROM messages_ec WHERE cliend_ID='{client_id}'AND client_flag=0";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public DataTable employee_notifications(int employee_id)
+        {
+            string query = $"SELECT username,text_msg FROM employee,messages_em WHERE messages_em.employee_ID={employee_id} AND flag=0 AND employee.employee_ID=messages_em.manager_ID UNION SELECT username,text_msg FROM client,messages_ec WHERE messages_ec.employee_ID={employee_id} AND client_flag=1 AND client.client_ID=messages_ec.client_ID";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable manager_notifications(int manager_id)
+        {
+            string query = $"SELECT username,text_msg FROM employee,messages_em WHERE messages_em.manager_ID={manager_id} AND flag=1 AND employee.employee_ID=messages_em.employee_ID";
+               
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable client_notifications(int client_id)
+        {
+            string query = $"SELECT username,text_msg FROM employee,messages_ec WHERE messages_ec.client_ID={client_id} AND flag=0 AND employee.employee_ID=messages_ec.employee_ID";
+
+            return dbMan.ExecuteReader(query);
+        }
         //tarek
         //employee
-        
+
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
@@ -258,7 +315,6 @@ namespace DBapplication
             int count = (int)dbMan.ExecuteScalar(query1);
            return count;
         }
-
 
 
         //noor

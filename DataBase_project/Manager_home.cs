@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBapplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace DataBase_project
     public partial class Manager_home : Form
     {
         int manager_id;
+        Controller controllerobj;
         public Manager_home(int id)
         {
             manager_id = id;
+            controllerobj = new Controller();
             InitializeComponent();
         }
 
@@ -79,12 +82,22 @@ namespace DataBase_project
 
         private void Manager_home_Load(object sender, EventArgs e)
         {
-
+            int notif_count = controllerobj.get_manager_notif(manager_id);
+            if (notif_count > 0)
+            {
+                notifications_count.Text = notif_count.ToString();
+            }
+            else
+            {
+                notifications_count.Hide();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            manager_notifications f =new manager_notifications(manager_id);
+            f.Show();
+            this.Hide();
         }
     }
 }
