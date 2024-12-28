@@ -55,23 +55,23 @@ namespace DataBase_project
             {
                 MessageBox.Show("Invalid Value");
             }
-            else
-            {
-                int result;
-                result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
-                if (result != 0)
-                {
-                    MessageBox.Show("Added successfully");
-                    DataTable dt1 = c.vendorsdetails();
-                    vendorsview.DataSource = dt1;
-                    vendorsview.Refresh();
-                } else
-                {
-                    MessageBox.Show("failed to add vendor");
-                }
+            //else
+            //{
+            //    int result;
+            //    result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
+            //    if (result != 0)
+            //    {
+            //        MessageBox.Show("Added successfully");
+            //        DataTable dt1 = c.vendorsdetails();
+            //        vendorsview.DataSource = dt1;
+            //        vendorsview.Refresh();
+            //    } else
+            //    {
+            //        MessageBox.Show("failed to add vendor");
+            //    }
 
             }
-        }
+        
 
 
         private void deletevendor_Click(object sender, EventArgs e)
