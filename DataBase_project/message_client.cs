@@ -63,5 +63,12 @@ namespace DataBase_project
                 controllerobj.addmessage_ec(msg_id, message_text.Text, time, id, employee_id, flag);
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            client_home f = new client_home(id);
+            f.Show();
+            this.Hide();
+        }
     }
 }

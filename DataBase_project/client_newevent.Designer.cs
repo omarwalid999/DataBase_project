@@ -60,21 +60,19 @@
             // typesofevents
             // 
             this.typesofevents.FormattingEnabled = true;
-            this.typesofevents.Location = new System.Drawing.Point(184, 19);
-            this.typesofevents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.typesofevents.Location = new System.Drawing.Point(252, 231);
+            this.typesofevents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.typesofevents.Name = "typesofevents";
             this.typesofevents.Size = new System.Drawing.Size(227, 24);
             this.typesofevents.TabIndex = 0;
+            this.typesofevents.SelectedIndexChanged += new System.EventHandler(this.typesofevents_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 22);
             this.label1.Location = new System.Drawing.Point(45, 234);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 16);
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Type of event";
             // 
@@ -113,20 +111,24 @@
             this.name.AutoSize = true;
             this.name.Location = new System.Drawing.Point(50, 63);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(100, 20);
+            this.name.Size = new System.Drawing.Size(84, 16);
             this.name.TabIndex = 61;
             this.name.Text = "Event Name:";
             // 
             // eventname
             // 
-           
+            this.eventname.Location = new System.Drawing.Point(0, 0);
+            this.eventname.Name = "eventname";
+            this.eventname.Size = new System.Drawing.Size(100, 22);
+            this.eventname.TabIndex = 74;
+            this.eventname.TextChanged += new System.EventHandler(this.eventname_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(52, 302);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 59;
             this.label4.Text = "Event Date:";
             // 
@@ -135,7 +137,7 @@
             this.title.AutoSize = true;
             this.title.Location = new System.Drawing.Point(50, 22);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(198, 20);
+            this.title.Size = new System.Drawing.Size(166, 16);
             this.title.TabIndex = 58;
             this.title.Text = "Please Enter Event Details";
             // 
@@ -144,7 +146,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(45, 177);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 20);
+            this.label3.Size = new System.Drawing.Size(133, 16);
             this.label3.TabIndex = 57;
             this.label3.Text = "Number of Attendees";
             // 
@@ -153,7 +155,7 @@
             this.budget_label.AutoSize = true;
             this.budget_label.Location = new System.Drawing.Point(51, 124);
             this.budget_label.Name = "budget_label";
-            this.budget_label.Size = new System.Drawing.Size(99, 20);
+            this.budget_label.Size = new System.Drawing.Size(81, 16);
             this.budget_label.TabIndex = 56;
             this.budget_label.Text = "Your Budget";
             // 
@@ -166,8 +168,9 @@
             0,
             0});
             this.capacity.Name = "capacity";
-            this.capacity.Size = new System.Drawing.Size(237, 26);
+            this.capacity.Size = new System.Drawing.Size(237, 22);
             this.capacity.TabIndex = 55;
+            this.capacity.ValueChanged += new System.EventHandler(this.capacity_ValueChanged);
             // 
             // budget
             // 
@@ -178,7 +181,7 @@
             0,
             0});
             this.budget.Name = "budget";
-            this.budget.Size = new System.Drawing.Size(240, 26);
+            this.budget.Size = new System.Drawing.Size(240, 22);
             this.budget.TabIndex = 54;
             // 
             // button1
@@ -203,16 +206,15 @@
             // 
             this.event_date_picker.Location = new System.Drawing.Point(252, 296);
             this.event_date_picker.Name = "event_date_picker";
-            this.event_date_picker.Size = new System.Drawing.Size(269, 26);
+            this.event_date_picker.Size = new System.Drawing.Size(269, 22);
             this.event_date_picker.TabIndex = 51;
             // 
             // garden
             // 
             this.garden.AutoSize = true;
-           // this.garden.Image = global::DataBase_project.Properties.Resources.garden_engagement;
             this.garden.Location = new System.Drawing.Point(1355, 643);
             this.garden.Name = "garden";
-            this.garden.Size = new System.Drawing.Size(450, 333);
+            this.garden.Size = new System.Drawing.Size(17, 16);
             this.garden.TabIndex = 70;
             this.garden.TabStop = true;
             this.garden.UseVisualStyleBackColor = true;
@@ -250,7 +252,7 @@
             this.venuess.FormattingEnabled = true;
             this.venuess.Location = new System.Drawing.Point(566, 352);
             this.venuess.Name = "venuess";
-            this.venuess.Size = new System.Drawing.Size(299, 28);
+            this.venuess.Size = new System.Drawing.Size(299, 24);
             this.venuess.TabIndex = 72;
             // 
             // back2
@@ -261,6 +263,7 @@
             this.back2.TabIndex = 73;
             this.back2.Text = "back";
             this.back2.UseVisualStyleBackColor = true;
+            this.back2.Click += new System.EventHandler(this.back2_Click);
             // 
             // client_newevent
             // 
@@ -290,6 +293,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "client_newevent";
             this.Text = "client_newevent";
+            this.Load += new System.EventHandler(this.client_newevent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.budget)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beachbox1)).EndInit();

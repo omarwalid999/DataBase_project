@@ -122,5 +122,30 @@ namespace DataBase_project
                 MessageBox.Show("event failed.");
             }
         }
+
+        private void eventname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void capacity_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void typesofevents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void client_newevent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
