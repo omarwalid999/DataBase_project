@@ -35,48 +35,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
-            this.message = new System.Windows.Forms.Button();
-            this.done = new System.Windows.Forms.Button();
-            this.eventdateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.otherchanges = new System.Windows.Forms.Label();
-            this.date = new System.Windows.Forms.Label();
-            this.no_of_attendees = new System.Windows.Forms.Label();
-            this.budget = new System.Windows.Forms.Label();
-            this.eventname = new System.Windows.Forms.Label();
-            this.no_of_attendees_tb = new System.Windows.Forms.TextBox();
-            this.budget_tb = new System.Windows.Forms.TextBox();
-            this.eventname_tb = new System.Windows.Forms.TextBox();
-            this.sendfeedbackbutton = new System.Windows.Forms.Button();
-            this.editeventbutton = new System.Windows.Forms.Button();
-            this.eventscombobox = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.clientseventdatagridview = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.submit = new System.Windows.Forms.Button();
-            this.ratingnumericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.rating = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePickerof_feedback = new System.Windows.Forms.DateTimePicker();
-            this.comment = new System.Windows.Forms.Label();
-            this.comment_tb = new System.Windows.Forms.TextBox();
-            this.cancell = new System.Windows.Forms.Button();
-            this.venuess = new System.Windows.Forms.ComboBox();
-            this.venuesDGview = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.budget_label = new System.Windows.Forms.Label();
-            this.capacity = new System.Windows.Forms.NumericUpDown();
-            this.budgett = new System.Windows.Forms.NumericUpDown();
-            this.event_date_picker = new System.Windows.Forms.DateTimePicker();
-            this.next = new System.Windows.Forms.Button();
-            this.venues = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.typesofevents = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.back2 = new System.Windows.Forms.Button();
-            this.nextt = new System.Windows.Forms.Button();
             this.notifications_count = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,38 +49,35 @@
             // 
             // events
             // 
-            this.events.BackColor = System.Drawing.Color.Honeydew;
-            this.events.Location = new System.Drawing.Point(164, -2);
+            this.events.Location = new System.Drawing.Point(223, 78);
             this.events.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.events.Name = "events";
-            this.events.Size = new System.Drawing.Size(117, 55);
+            this.events.Size = new System.Drawing.Size(312, 72);
             this.events.TabIndex = 0;
             this.events.Text = "My Events";
-            this.events.UseVisualStyleBackColor = false;
+            this.events.UseVisualStyleBackColor = true;
             this.events.Click += new System.EventHandler(this.events_Click);
             // 
             // NewEvent
             // 
-            this.NewEvent.BackColor = System.Drawing.Color.Honeydew;
-            this.NewEvent.Location = new System.Drawing.Point(287, -2);
+            this.NewEvent.Location = new System.Drawing.Point(223, 180);
             this.NewEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewEvent.Name = "NewEvent";
-            this.NewEvent.Size = new System.Drawing.Size(117, 55);
+            this.NewEvent.Size = new System.Drawing.Size(312, 69);
             this.NewEvent.TabIndex = 1;
             this.NewEvent.Text = "New Event";
-            this.NewEvent.UseVisualStyleBackColor = false;
+            this.NewEvent.UseVisualStyleBackColor = true;
             this.NewEvent.Click += new System.EventHandler(this.NewEvent_Click);
             // 
             // logout
             // 
-            this.logout.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.logout.Location = new System.Drawing.Point(410, 12);
+            this.logout.Location = new System.Drawing.Point(498, 324);
             this.logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(85, 27);
+            this.logout.Size = new System.Drawing.Size(219, 44);
             this.logout.TabIndex = 3;
             this.logout.Text = "Log Out";
-            this.logout.UseVisualStyleBackColor = false;
+            this.logout.UseVisualStyleBackColor = true;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // imageList1
@@ -134,10 +89,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DataBase_project.Properties.Resources.mail;
-            this.pictureBox1.Location = new System.Drawing.Point(806, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 87);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(103, 97);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -605,9 +560,10 @@
             // notifications_count
             // 
             this.notifications_count.ForeColor = System.Drawing.Color.Red;
-            this.notifications_count.Location = new System.Drawing.Point(671, 56);
+            this.notifications_count.Location = new System.Drawing.Point(755, 70);
+            this.notifications_count.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.notifications_count.Name = "notifications_count";
-            this.notifications_count.Size = new System.Drawing.Size(28, 22);
+            this.notifications_count.Size = new System.Drawing.Size(31, 26);
             this.notifications_count.TabIndex = 11;
             // 
             // pictureBox4
@@ -623,7 +579,7 @@
             // 
             // client_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(908, 624);
@@ -700,48 +656,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button back;
-        private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button message;
-        private System.Windows.Forms.Button done;
-        private System.Windows.Forms.DateTimePicker eventdateTimePicker;
-        private System.Windows.Forms.Label otherchanges;
-        private System.Windows.Forms.Label date;
-        private System.Windows.Forms.Label no_of_attendees;
-        private System.Windows.Forms.Label budget;
-        private System.Windows.Forms.Label eventname;
-        private System.Windows.Forms.TextBox no_of_attendees_tb;
-        private System.Windows.Forms.TextBox budget_tb;
-        private System.Windows.Forms.TextBox eventname_tb;
-        private System.Windows.Forms.Button sendfeedbackbutton;
-        private System.Windows.Forms.Button editeventbutton;
-        private System.Windows.Forms.ComboBox eventscombobox;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView clientseventdatagridview;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button submit;
-        private System.Windows.Forms.NumericUpDown ratingnumericUpDown1;
-        private System.Windows.Forms.Label rating;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePickerof_feedback;
-        private System.Windows.Forms.Label comment;
-        private System.Windows.Forms.TextBox comment_tb;
-        private System.Windows.Forms.Button cancell;
-        private System.Windows.Forms.ComboBox venuess;
-        private System.Windows.Forms.DataGridView venuesDGview;
-        private System.Windows.Forms.Label name;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label budget_label;
-        private System.Windows.Forms.NumericUpDown capacity;
-        private System.Windows.Forms.NumericUpDown budgett;
-        private System.Windows.Forms.DateTimePicker event_date_picker;
-        private System.Windows.Forms.Button next;
-        private System.Windows.Forms.Button venues;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox typesofevents;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button back2;
-        private System.Windows.Forms.Button nextt;
         private System.Windows.Forms.TextBox notifications_count;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
