@@ -11,6 +11,7 @@ using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
 using DataBase_project;
+using System.Runtime.InteropServices;
 
 namespace DBapplication
 {
@@ -26,6 +27,25 @@ namespace DBapplication
             dbMan.CloseConnection();
         }
         //omar
+        public int login_username_check(string username)
+        {
+            string query = $"SELECT employee_ID FROM employee WHERE username = '{username}'";
+            var employee = dbMan.ExecuteScalar(query);
+            string query1 = $"SELECT client_ID FROM client WHERE username= '{username}'";
+            var client = dbMan.ExecuteScalar(query1); 
+            if (employee == null && client==null)
+            {
+                return -1;
+            }
+            else if (employee == null)
+            {
+                return 1;
+            }
+            else
+            {
+                return 2;
+            }
+        }
         public bool check_login_c (string username, string password)
         {
             string query = $"SELECT passkey FROM client WHERE username = '{username}'";
@@ -158,20 +178,59 @@ namespace DBapplication
             }
         }
 
-        public int addmessage_em(int msg_id, string text, DateTime time, int client_id, int employee_id, bool flag)
+        public int addmessage_em(int msg_id, string text, DateTime time, int manager_id, int employee_id, bool flag)
         {
-            string query = $"INSERT into messages_em VALUES({msg_id},'{text}','{time}','{flag}',{client_id},{employee_id})";
+            string query = $"INSERT into messages_em VALUES({msg_id},'{text}','{time}','{flag}',{employee_id},{manager_id})";
             return dbMan.ExecuteNonQuery(query);
         }
 
         public DataTable get_employees_for_messages()
         {
-            string query = $"SELECT fname,lname,username FROM employee";
+            int department = 6;
+            string query = $"SELECT fname,lname,username FROM employee WHERE dep_ID != {department}";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int get_manager_notif(int manager_id)
+        {
+            string query = $"SELECT COUNT(*) FROM messages_em WHERE manager_ID='{manager_id}'AND flag=1";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public int get_employee_notif(int employee_id)
+        {
+            string query = $"SELECT COUNT(*) FROM messages_em WHERE employee_ID='{employee_id}'AND flag=0";
+            string query2= $"SELECT COUNT(*) FROM messages_ec WHERE employee_ID='{employee_id}'AND client_flag=1";
+            return (int)dbMan.ExecuteScalar(query) + (int)dbMan.ExecuteScalar(query2);
+        }
+
+        public int get_client_notif(int client_id)
+        {
+        
+            string query = $"SELECT COUNT(*) FROM messages_ec WHERE cliend_ID='{client_id}'AND client_flag=0";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public DataTable employee_notifications(int employee_id)
+        {
+            string query = $"SELECT username,text_msg FROM employee,messages_em WHERE messages_em.employee_ID={employee_id} AND flag=0 AND employee.employee_ID=messages_em.manager_ID UNION SELECT username,text_msg FROM client,messages_ec WHERE messages_ec.employee_ID={employee_id} AND client_flag=1 AND client.client_ID=messages_ec.client_ID";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable manager_notifications(int manager_id)
+        {
+            string query = $"SELECT username,text_msg FROM employee,messages_em WHERE messages_em.manager_ID={manager_id} AND flag=1 AND employee.employee_ID=messages_em.employee_ID";
+               
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable client_notifications(int client_id)
+        {
+            string query = $"SELECT username,text_msg FROM employee,messages_ec WHERE messages_ec.client_ID={client_id} AND flag=0 AND employee.employee_ID=messages_ec.employee_ID";
+
             return dbMan.ExecuteReader(query);
         }
         //tarek
         //employee
-        
+
         public bool check_login_e(string username, string password)
         {
             string query = $"SELECT passkey FROM employee WHERE username = '{username}'";
@@ -256,7 +315,6 @@ namespace DBapplication
             int count = (int)dbMan.ExecuteScalar(query1);
            return count;
         }
-
 
 
         //noor
@@ -480,20 +538,20 @@ namespace DBapplication
             string query = "SELECT vendors.*, services_offered.name_of_service FROM vendors, services_offered WHERE vendors.vendor_ID = services_offered.vendor_ID ;";
             return dbMan.ExecuteReader(query);
         }
-        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
+        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email)
         {
             string query = "INSERT INTO vendors (vendor_ID, vendor_name, rating, vendor_address, phone, email)" +
-                            "Values (" + vendor_ID + ",'" + vendor_name + "','" + rating + "','" + address + "','" + phone + "','" + email + "');";
-            string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)" + "Values(" + vendor_ID + ",'" + service + "');";
-            int result1=dbMan.ExecuteNonQuery(query);
-            int result2=dbMan.ExecuteNonQuery(query2);
-            int result = result1 + result2;
-            return result;
+                            "Values (" + vendor_ID + ",'" + vendor_name + "'," + rating + ",'" + address + "','" + phone + "','" + email + "');";
+            /*string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)"
+                + "Values(" + vendor_ID + ",'" + service + "');";*/
+           /* int result2=dbMan.ExecuteNonQuery(query2);
+            int result = result1 + result2;*/
+            return dbMan.ExecuteNonQuery(query);
             
         }
         public int deletevendor(int vendor_ID)
         {
-            string query = "DELETE vendors.*, services_offered.* FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendors.vendor_ID=" + vendor_ID + ";";
+            string query = "DELETE FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendors.vendor_ID=" + vendor_ID + ";";
             return dbMan.ExecuteNonQuery(query);
 
         }
@@ -512,27 +570,22 @@ namespace DBapplication
             string query = "SELECT * FROM services_offered ;";
             return dbMan.ExecuteReader(query);
         }
-        public int addservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price)
+        public int addservice(int service_id, int vendor_id, string name_of_service, int invoice_id, int price)
         {
-            string query = "INSERT INTO services_offeres(service_ID, vendor_ID, name_of_service, invoice_id, price) " +
-                 "Values(" + service_ID + "," + vendor_ID + ", '" + name_of_service + "'," + invoice_ID + "," + price + ");";
+            string query = "INSERT INTO services_offered(service_ID, vendor_ID,name_of_service, invoice_ID,price)" +
+                "Values("+ service_id + "," + vendor_id + ",'" + name_of_service + "'," + invoice_id + "," + price + "); ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int deleteservice(int service_ID , int invoiceide)
+        {
+            string query = "DELETE FROM services_offered WHERE service_ID=" + service_ID + " AND invoice_id=" + invoiceide +";";
             return dbMan.ExecuteNonQuery(query);
 
         }
-        public int deleteservice(int service_ID)
+        public int Updateservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price)
         {
-            string query = "DELETE * FROM services_offered WHERE service_ID=" + service_ID + ";";
+            string query = "UPDATE services_offered SET service_ID=" + service_ID + " , vendor_ID=" + vendor_ID + " , name_of_service='" + name_of_service + "' , invoice_id=" + invoice_ID + ", price=" + price + " WHERE service_ID= " + service_ID + " ; ";
             return dbMan.ExecuteNonQuery(query);
-
-        }
-        public int Updateservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price, string vendor_name)
-        {
-            string query = "UPDATE services_offered SET service_ID='" + service_ID + "' , vendor_ID='" + vendor_ID + "' , name_of_service='" + name_of_service + "' , invoice_id='" + invoice_ID + "' , price='" + price + "' WHERE service_ID= " + service_ID + " ; ";
-            string query2 = "UPDATE vendors SET vendor_ID= '" + vendor_ID + " ' , vendor_name= ' " + vendor_name + " ' WHERE vendor_ID= " + vendor_ID + " ;";
-            int result1 = dbMan.ExecuteNonQuery(query);
-            int result2 = dbMan.ExecuteNonQuery(query2);
-            int result = result1 + result2;
-            return result;
         }
         //Goals
         public DataTable goalslist()

@@ -82,6 +82,7 @@
             this.send_button.TabIndex = 22;
             this.send_button.Text = "Send";
             this.send_button.UseVisualStyleBackColor = true;
+            this.send_button.Click += new System.EventHandler(this.send_button_Click);
             // 
             // message_text
             // 

@@ -30,5 +30,25 @@ namespace DataBase_project
             username_combobox.DataSource = dt;
             username_combobox.DisplayMember ="username" ;
         }
+
+        private void send_button_Click(object sender, EventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            int msg_id;
+            int employee_id=controllerobj.get_emp_id_with_username(username_combobox.Text);
+            if (message_text.Text == "")
+            {
+                MessageBox.Show("Message is empty!");
+            }
+            else
+            {
+                msg_id = controllerobj.message_count_em() + 1;
+                controllerobj.addmessage_em(msg_id, message_text.Text, time, manager_id, employee_id, false);
+                MessageBox.Show("message sent to employee successfuly!");
+                employee_home f = new employee_home(employee_id);
+                f.Show();
+                this.Close();
+            }
+        }
     }
 }

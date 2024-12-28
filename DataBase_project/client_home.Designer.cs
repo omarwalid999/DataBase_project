@@ -77,6 +77,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.back2 = new System.Windows.Forms.Button();
             this.nextt = new System.Windows.Forms.Button();
+            this.notifications_count = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientseventdatagridview)).BeginInit();
@@ -84,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.venuesDGview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.budgett)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // events
@@ -598,6 +601,25 @@
             this.nextt.UseVisualStyleBackColor = true;
             this.nextt.Click += new System.EventHandler(this.nextt_Click);
             // 
+            // notifications_count
+            // 
+            this.notifications_count.ForeColor = System.Drawing.Color.Red;
+            this.notifications_count.Location = new System.Drawing.Point(671, 56);
+            this.notifications_count.Name = "notifications_count";
+            this.notifications_count.Size = new System.Drawing.Size(28, 22);
+            this.notifications_count.TabIndex = 11;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.notif1;
+            this.pictureBox2.Location = new System.Drawing.Point(629, 12);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // client_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -646,6 +668,9 @@
             this.Controls.Add(this.sendfeedbackbutton);
             this.Controls.Add(this.editeventbutton);
             this.Controls.Add(this.eventscombobox);
+            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.Controls.Add(this.notifications_count);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.NewEvent);
@@ -661,6 +686,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.venuesDGview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.budgett)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,5 +742,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button back2;
         private System.Windows.Forms.Button nextt;
+        private System.Windows.Forms.TextBox notifications_count;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

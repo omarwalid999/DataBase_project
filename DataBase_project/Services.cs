@@ -35,12 +35,12 @@ namespace DataBase_project
 
         private void addservice_Click(object sender, EventArgs e)
         {
-          int serviceid = Convert.ToInt32(serviceidtext.Text);
-            int vendorid = Convert.ToInt32(vendortext.Text);
-            int invoiceid = Convert.ToInt32(invoicetext.Text);
+            int serviceid = Convert.ToInt32(serviceidtext.Text.ToString());
+            int vendorid = Convert.ToInt32(vendortext.Text.ToString());
+            int invoiceid = Convert.ToInt32(invoicetext.Text.ToString());
             int price = Convert.ToInt32(pricetext.Text.ToString());
             string servicename = servicenametext.Text;
-            if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
+            if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "" )
             {
                 MessageBox.Show("Please enter all required fields");
             }
@@ -67,41 +67,43 @@ namespace DataBase_project
 
         private void deleteservice_Click(object sender, EventArgs e)
         {
-            int id;
-            int id2;
-            int id3;
-            int id4;
+            int serviceid = Convert.ToInt32(serviceidtext.Text.ToString());
+            int vendorid = Convert.ToInt32(vendortext.Text.ToString());
+            int invoiceid = Convert.ToInt32(invoicetext.Text.ToString());
+            int price = Convert.ToInt32(pricetext.Text.ToString());
+            string servicename = servicenametext.Text.ToString();
             if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
-            else if (!int.TryParse(serviceidtext.Text, out id) || !int.TryParse(vendortext.Text, out id2) || !int.TryParse(invoicetext.Text, out id3) || !int.TryParse(pricetext.Text, out id4))
-             {
-                    MessageBox.Show("Invalid ID number ");
+            else if (!int.TryParse(serviceidtext.Text, out serviceid) || !int.TryParse(vendortext.Text, out vendorid) || !int.TryParse(invoicetext.Text, out invoiceid) || !int.TryParse(pricetext.Text, out price))
+            {
+                MessageBox.Show("Invalid ID number ");
 
-             }
-              else
-               {
-                    int result;
-                    result = c.deleteservice(id);
+            }
+            else
+            {
+                int result;
+                result = c.deleteservice(serviceid, invoiceid);
 
-                    if (result != 0)
-                    {
-                        MessageBox.Show("service deleted successfully");
-                        servicesview.Refresh();
-                    }
-
+                if (result != 0)
+                {
+                    MessageBox.Show("service deleted successfully");
+                    servicesview.Refresh();
                 }
 
             }
+
+        }
+            
         
 
         private void updateservice_Click(object sender, EventArgs e)
         {
-            int id;
-            int id2;
-            int id3;
-            int id4;
+            int id= Convert.ToInt32(serviceidtext.Text.ToString());
+            int id2= Convert.ToInt32(vendortext.Text.ToString()); ;
+            int id3= Convert.ToInt32(invoicetext.Text.ToString()); ;
+            int id4= Convert.ToInt32(pricetext.Text.ToString()); ;
             if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
@@ -114,13 +116,16 @@ namespace DataBase_project
                 else
                 {
                     int result;
-                   // result = c.Updateservice(id, id2, servicenametext.Text, id3, id4);
+                   result = c.Updateservice(id, id2, servicenametext.Text.ToString(), id3, id4);
 
-                   // if (result != 0)
-                   // {
-                       // MessageBox.Show("service updates successfully");
-                       // servicesview.Refresh();
-                   // }
+                   if (result != 0)
+                   {
+                        MessageBox.Show("service updates successfully");
+                        servicesview.Refresh();
+                   } else
+                {
+
+                }
 
                 }
 

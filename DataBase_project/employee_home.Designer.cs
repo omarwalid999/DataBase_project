@@ -44,8 +44,11 @@
             this.combo_task = new System.Windows.Forms.ComboBox();
             this.not_done = new System.Windows.Forms.Button();
             this.Done = new System.Windows.Forms.Button();
+            this.notifications_count = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // ScheduledEventsButton
@@ -88,7 +91,7 @@
             this.logout.Location = new System.Drawing.Point(551, 12);
             this.logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(119, 30);
+            this.logout.Size = new System.Drawing.Size(94, 30);
             this.logout.TabIndex = 3;
             this.logout.Text = "Log out";
             this.logout.UseVisualStyleBackColor = false;
@@ -223,11 +226,33 @@
             this.Done.UseVisualStyleBackColor = false;
             this.Done.Click += new System.EventHandler(this.Done_Click);
             // 
+            // notifications_count
+            // 
+            this.notifications_count.ForeColor = System.Drawing.Color.Red;
+            this.notifications_count.Location = new System.Drawing.Point(693, 46);
+            this.notifications_count.Name = "notifications_count";
+            this.notifications_count.Size = new System.Drawing.Size(19, 22);
+            this.notifications_count.TabIndex = 18;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.notif1;
+            this.pictureBox2.Location = new System.Drawing.Point(651, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(61, 51);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // employee_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(713, 360);
+            this.Controls.Add(this.notifications_count);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.combo_task);
             this.Controls.Add(this.not_done);
             this.Controls.Add(this.Done);
@@ -250,6 +275,7 @@
             this.Load += new System.EventHandler(this.employee_home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +299,7 @@
         private System.Windows.Forms.ComboBox combo_task;
         private System.Windows.Forms.Button not_done;
         private System.Windows.Forms.Button Done;
+        private System.Windows.Forms.TextBox notifications_count;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

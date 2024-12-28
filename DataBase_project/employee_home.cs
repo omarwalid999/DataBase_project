@@ -96,7 +96,15 @@ namespace DataBase_project
 
         private void employee_home_Load(object sender, EventArgs e)
         {
-
+            int notif_count = controllerobj.get_employee_notif(id);
+            if (notif_count > 0)
+            {
+                notifications_count.Text = notif_count.ToString();
+            }
+            else
+            {
+                notifications_count.Hide();
+            }
         }
 
         private void logout_Click(object sender, EventArgs e)
@@ -177,10 +185,17 @@ namespace DataBase_project
 
         private void choose_event_Click(object sender, EventArgs e)
         {
-            int id1 = (int)event_combo.SelectedValue;
-            employee_event ee = new employee_event(id1, id);
-            ee.Show();
-            this.Hide();
+            if (event_combo.SelectedValue == null)
+            {
+                MessageBox.Show("please choose an event!");
+            }
+            else
+            {
+                int id1 = (int)event_combo.SelectedValue;
+                employee_event ee = new employee_event(id1, id);
+                ee.Show();
+                this.Hide();
+            }
         }
 
         private void Done_Click(object sender, EventArgs e)
@@ -214,6 +229,14 @@ namespace DataBase_project
 
         private void combo_task_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            employee_notifications f = new employee_notifications(id);
+            f.Show();
+            this.Hide();
 
         }
     }
