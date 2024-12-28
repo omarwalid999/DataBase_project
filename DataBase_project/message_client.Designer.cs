@@ -36,10 +36,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.receiver = new System.Windows.Forms.TextBox();
             this.subject = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // message_text
             // 
+            this.message_text.BackColor = System.Drawing.Color.Honeydew;
             this.message_text.Location = new System.Drawing.Point(90, 138);
             this.message_text.Multiline = true;
             this.message_text.Name = "message_text";
@@ -48,16 +51,18 @@
             // 
             // send_button
             // 
+            this.send_button.BackColor = System.Drawing.Color.Honeydew;
             this.send_button.Location = new System.Drawing.Point(731, 408);
             this.send_button.Name = "send_button";
             this.send_button.Size = new System.Drawing.Size(163, 50);
             this.send_button.TabIndex = 1;
             this.send_button.Text = "Send";
-            this.send_button.UseVisualStyleBackColor = true;
+            this.send_button.UseVisualStyleBackColor = false;
             this.send_button.Click += new System.EventHandler(this.send_button_Click);
             // 
             // events
             // 
+            this.events.BackColor = System.Drawing.Color.Honeydew;
             this.events.FormattingEnabled = true;
             this.events.Location = new System.Drawing.Point(744, 39);
             this.events.Name = "events";
@@ -77,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 60);
+            this.label2.Location = new System.Drawing.Point(164, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 16);
             this.label2.TabIndex = 4;
@@ -86,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 92);
+            this.label3.Location = new System.Drawing.Point(155, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 5;
@@ -95,7 +100,8 @@
             // 
             // receiver
             // 
-            this.receiver.Location = new System.Drawing.Point(142, 57);
+            this.receiver.BackColor = System.Drawing.Color.Honeydew;
+            this.receiver.Location = new System.Drawing.Point(219, 60);
             this.receiver.Name = "receiver";
             this.receiver.Size = new System.Drawing.Size(225, 22);
             this.receiver.TabIndex = 6;
@@ -103,16 +109,29 @@
             // 
             // subject
             // 
-            this.subject.Location = new System.Drawing.Point(142, 89);
+            this.subject.BackColor = System.Drawing.Color.Honeydew;
+            this.subject.Location = new System.Drawing.Point(219, 92);
             this.subject.Name = "subject";
             this.subject.Size = new System.Drawing.Size(225, 22);
             this.subject.TabIndex = 7;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(121, 108);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 38;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // message_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 505);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.subject);
             this.Controls.Add(this.receiver);
             this.Controls.Add(this.label3);
@@ -124,6 +143,7 @@
             this.Name = "message_client";
             this.Text = "message_client";
             this.Load += new System.EventHandler(this.message_client_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +159,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox receiver;
         private System.Windows.Forms.TextBox subject;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

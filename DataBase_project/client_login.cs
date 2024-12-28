@@ -51,7 +51,13 @@ namespace DataBase_project
             {
                 MessageBox.Show("please enter username and password");
             }
+
        
+        }
+
+        private void client_login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

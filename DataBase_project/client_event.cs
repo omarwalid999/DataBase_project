@@ -130,5 +130,15 @@ namespace DataBase_project
         {
 
         }
+
+        private void message_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eventscombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

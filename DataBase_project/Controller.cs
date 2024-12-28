@@ -369,7 +369,7 @@ namespace DBapplication
         //changes event details from client_event form
         public int change_event_details(int clientid,string eventname, int budget, int noa, string date)
         {
-            string query = "UPDATE event\r\nSET eventname = '" + eventname + "', budget=" + budget + ", no_of_attendees=" + noa + ",event_date='" + date + "'\r\nWHERE client_ID=" + clientid + ";";
+            string query = "UPDATE event\r\nSET eventname = '" + eventname + "', budget=" + budget + ", no_of_attendees=" + noa + ",event_date='" + date + "'WHERE client_ID=" + clientid + ";";
             return dbMan.ExecuteNonQuery(query);
         }
         //gets employee id responsible for event from client id
@@ -381,7 +381,7 @@ namespace DBapplication
         //gets venues
         public DataTable ShowVeneus(int capacity, int price)
         {
-            string query = "SELECT venue_name as venue, capacity as maximum_capacity, venue_address as adddress, price FROM venue WHERE capacity>="+capacity+" AND price=<"+price+";";
+            string query = "SELECT venue_name as venue, capacity as maximum_capacity, venue_address as adddress, price FROM venue WHERE capacity>"+capacity+" AND price<"+price+";";
             return dbMan.ExecuteReader(query);
         }
         public DataTable ShowVeneusnames(int capacity, int price)
