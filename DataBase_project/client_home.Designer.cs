@@ -43,10 +43,10 @@
             // 
             // events
             // 
-            this.events.Location = new System.Drawing.Point(198, 62);
+            this.events.Location = new System.Drawing.Point(223, 78);
             this.events.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.events.Name = "events";
-            this.events.Size = new System.Drawing.Size(277, 58);
+            this.events.Size = new System.Drawing.Size(312, 72);
             this.events.TabIndex = 0;
             this.events.Text = "My Events";
             this.events.UseVisualStyleBackColor = true;
@@ -54,10 +54,10 @@
             // 
             // NewEvent
             // 
-            this.NewEvent.Location = new System.Drawing.Point(198, 144);
+            this.NewEvent.Location = new System.Drawing.Point(223, 180);
             this.NewEvent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewEvent.Name = "NewEvent";
-            this.NewEvent.Size = new System.Drawing.Size(277, 55);
+            this.NewEvent.Size = new System.Drawing.Size(312, 69);
             this.NewEvent.TabIndex = 1;
             this.NewEvent.Text = "New Event";
             this.NewEvent.UseVisualStyleBackColor = true;
@@ -65,10 +65,10 @@
             // 
             // logout
             // 
-            this.logout.Location = new System.Drawing.Point(443, 259);
+            this.logout.Location = new System.Drawing.Point(498, 324);
             this.logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(195, 35);
+            this.logout.Size = new System.Drawing.Size(219, 44);
             this.logout.TabIndex = 3;
             this.logout.Text = "Log Out";
             this.logout.UseVisualStyleBackColor = true;
@@ -83,9 +83,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DataBase_project.Properties.Resources.mail;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 106);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 97);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
@@ -103,27 +104,28 @@
             // notifications_count
             // 
             this.notifications_count.ForeColor = System.Drawing.Color.Red;
-            this.notifications_count.Location = new System.Drawing.Point(671, 56);
+            this.notifications_count.Location = new System.Drawing.Point(755, 70);
+            this.notifications_count.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.notifications_count.Name = "notifications_count";
-            this.notifications_count.Size = new System.Drawing.Size(28, 22);
+            this.notifications_count.Size = new System.Drawing.Size(31, 26);
             this.notifications_count.TabIndex = 11;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DataBase_project.Properties.Resources.notif1;
-            this.pictureBox2.Location = new System.Drawing.Point(629, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(708, 15);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 58);
+            this.pictureBox2.Size = new System.Drawing.Size(79, 72);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
             // client_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 360);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.notifications_count);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
