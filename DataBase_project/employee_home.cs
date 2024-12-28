@@ -109,7 +109,7 @@ namespace DataBase_project
 
         private void logout_Click(object sender, EventArgs e)
         {
-            employee_login el = new employee_login();
+            login el = new login();
             el.Show();
             this.Hide();
         }

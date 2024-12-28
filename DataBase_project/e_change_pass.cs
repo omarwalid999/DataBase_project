@@ -22,29 +22,57 @@ namespace DataBase_project
 
         private void change_pass_button_Click(object sender, EventArgs e)
         {
+            int type = controllerobj.login_username_check(username.Text);
             if (username.Text == "" || oldpass.Text == "" || newpass.Text == "" || newpass_confirm.Text == "")
             {
                 MessageBox.Show("please fill all required spaces!");
             }
-            else if (controllerobj.get_dep_id(username.Text) == 6)
-            {
-                MessageBox.Show("This username belongs to a manager!");
+           else if (oldpass.Text == newpass.Text) {
+                MessageBox.Show("passwords matching!");
+                return;
             }
-            else if (!controllerobj.check_login_c(username.Text, oldpass.Text))
+            else if (type == -1)
             {
-                MessageBox.Show("username and old password incorrect!");
+                MessageBox.Show("Invalid username!");
             }
-            else if (newpass.Text != newpass_confirm.Text)
+            else if (type == 2)
             {
-                MessageBox.Show("new passwords don't match");
+                
+                 if (!controllerobj.check_login_e(username.Text, oldpass.Text))
+                {
+                    MessageBox.Show("username and old password incorrect!");
+                }
+                else if (newpass.Text != newpass_confirm.Text)
+                {
+                    MessageBox.Show("new passwords don't match");
+                }
+                else
+                {
+                    controllerobj.change_pass_e(username.Text, newpass.Text);
+                    MessageBox.Show("password changed successfuly!");
+                    this.Close();
+                    login client_Login = new login();
+                    client_Login.Show();
+                }
             }
             else
             {
-                controllerobj.change_pass_e(username.Text, newpass.Text);
-                MessageBox.Show("password changed successfuly!");
-                this.Close();
-                client_login client_Login = new client_login();
-                client_Login.Show();
+                if (!controllerobj.check_login_c(username.Text, oldpass.Text))
+                {
+                    MessageBox.Show("username and old password incorrect!");
+                }
+                else if (newpass.Text != newpass_confirm.Text)
+                {
+                    MessageBox.Show("new passwords don't match");
+                }
+                else
+                {
+                    controllerobj.change_pass_c(username.Text, newpass.Text);
+                    MessageBox.Show("password changed successfuly!");
+                    this.Close();
+                    login client_Login = new login();
+                    client_Login.Show();
+                }
             }
         }
     }
