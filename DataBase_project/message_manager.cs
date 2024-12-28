@@ -45,10 +45,17 @@ namespace DataBase_project
                 msg_id = controllerobj.message_count_em() + 1;
                 controllerobj.addmessage_em(msg_id, message_text.Text, time, manager_id, employee_id, false);
                 MessageBox.Show("message sent to employee successfuly!");
-                employee_home f = new employee_home(employee_id);
+                Manager_home f = new Manager_home(manager_id);
                 f.Show();
                 this.Close();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Manager_home f = new Manager_home(manager_id);
+            f.Show();
+            this.Close();
         }
     }
 }

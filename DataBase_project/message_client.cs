@@ -28,7 +28,7 @@ namespace DataBase_project
             DataTable dt = new DataTable();
             dt = controllerobj.client_events(id);
             events.DataSource = dt;
-            events.DisplayMember = "eventname";
+            events.DisplayMember = "event_name";
             events.ValueMember = "event_ID";
         }
 
@@ -60,8 +60,25 @@ namespace DataBase_project
                 bool flag = true;
                 int msg_id = controllerobj.message_count_ec() + 1;
                 int employee_id = controllerobj.employee_event((int)events.SelectedValue);
-                controllerobj.addmessage_ec(msg_id, message_text.Text, time, id, employee_id, flag);
+                int result=controllerobj.addmessage_ec(msg_id, message_text.Text, time, id, employee_id, flag);
+                if (result == -1) {
+                    MessageBox.Show("failed to send message!");
+                }
+                else
+                {
+                    MessageBox.Show("message sent successfuly!");
+                    this.Close();
+                    client_home f = new client_home(id);
+                    f.Show();
+                }
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            client_home f = new client_home(id);
+            f.Show();
         }
     }
 }
