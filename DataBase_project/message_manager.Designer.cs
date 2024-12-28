@@ -35,13 +35,16 @@
             this.send_button = new System.Windows.Forms.Button();
             this.message_text = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // username_combobox
             // 
+            this.username_combobox.BackColor = System.Drawing.Color.Honeydew;
             this.username_combobox.FormattingEnabled = true;
-            this.username_combobox.Location = new System.Drawing.Point(70, 93);
+            this.username_combobox.Location = new System.Drawing.Point(190, 115);
             this.username_combobox.Name = "username_combobox";
             this.username_combobox.Size = new System.Drawing.Size(286, 24);
             this.username_combobox.TabIndex = 28;
@@ -86,6 +89,7 @@
             // 
             // message_text
             // 
+            this.message_text.BackColor = System.Drawing.Color.Honeydew;
             this.message_text.Location = new System.Drawing.Point(24, 154);
             this.message_text.Multiline = true;
             this.message_text.Name = "message_text";
@@ -95,17 +99,29 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 98);
+            this.label3.Location = new System.Drawing.Point(144, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 16);
             this.label3.TabIndex = 29;
             this.label3.Text = "TO:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DataBase_project.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(135, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // message_manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 611);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.username_combobox);
             this.Controls.Add(this.label1);
@@ -117,6 +133,7 @@
             this.Text = "message_manager";
             this.Load += new System.EventHandler(this.message_manager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.employees)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,5 +148,6 @@
         private System.Windows.Forms.Button send_button;
         private System.Windows.Forms.TextBox message_text;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

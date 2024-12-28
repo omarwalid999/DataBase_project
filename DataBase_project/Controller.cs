@@ -268,6 +268,11 @@ namespace DBapplication
             string query = "SELECT employee_ID, username FROM employee;";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable getserv()
+        {
+            string query = "SELECT service_id, name_of_service FROM services_offered;";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable get_venue()
         {
             string query = "SELECT venue_name, venue_ID FROM venue;";
@@ -538,17 +543,17 @@ namespace DBapplication
             string query = "SELECT vendors.*, services_offered.name_of_service FROM vendors, services_offered WHERE vendors.vendor_ID = services_offered.vendor_ID ;";
             return dbMan.ExecuteReader(query);
         }
-        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email)
+        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
         {
-            string query = "INSERT INTO vendors (vendor_ID, vendor_name, rating, vendor_address, phone, email)" +
-                            "Values (" + vendor_ID + ",'" + vendor_name + "'," + rating + ",'" + address + "','" + phone + "','" + email + "');";
+            string query = $"INSERT INTO vendors (vendor_ID, vendor_name, rating, vendor_address, phone, email, service_id) VALUES({vendor_ID}, '{vendor_name}', {rating}, '{address}', '{phone}', '{email}', '{service}')";
             /*string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)"
                 + "Values(" + vendor_ID + ",'" + service + "');";*/
-           /* int result2=dbMan.ExecuteNonQuery(query2);
-            int result = result1 + result2;*/
+            /* int result2=dbMan.ExecuteNonQuery(query2);
+             int result = result1 + result2;*/
             return dbMan.ExecuteNonQuery(query);
             
         }
+
         public int deletevendor(int vendor_ID)
         {
             string query = "DELETE FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendors.vendor_ID=" + vendor_ID + ";";

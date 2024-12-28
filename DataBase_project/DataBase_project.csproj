@@ -198,6 +198,7 @@
     <Compile Include="Goals.Designer.cs">
       <DependentUpon>Goals.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordHasher.cs" />
     <Compile Include="Hire.cs">
       <SubType>Form</SubType>
     </Compile>

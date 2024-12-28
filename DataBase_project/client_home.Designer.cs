@@ -76,6 +76,7 @@
             this.back2 = new System.Windows.Forms.Button();
             this.nextt = new System.Windows.Forms.Button();
             this.notifications_count = new System.Windows.Forms.TextBox();
+            this.notif = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientseventdatagridview)).BeginInit();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.venuesDGview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.budgett)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notif)).BeginInit();
             this.SuspendLayout();
             // 
             // events
@@ -124,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DataBase_project.Properties.Resources.mail;
-            this.pictureBox1.Location = new System.Drawing.Point(806, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(791, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 87);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -593,11 +595,22 @@
             // notifications_count
             // 
             this.notifications_count.ForeColor = System.Drawing.Color.Red;
-            this.notifications_count.Location = new System.Drawing.Point(671, 56);
+            this.notifications_count.Location = new System.Drawing.Point(753, 49);
             this.notifications_count.Name = "notifications_count";
             this.notifications_count.Size = new System.Drawing.Size(28, 22);
-            this.notifications_count.TabIndex = 11;
-            this.notifications_count.TextChanged += new System.EventHandler(this.notifications_count_TextChanged);
+            this.notifications_count.TabIndex = 93;
+            // 
+            // notif
+            // 
+            this.notif.Image = global::DataBase_project.Properties.Resources.notif1;
+            this.notif.Location = new System.Drawing.Point(711, 5);
+            this.notif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.notif.Name = "notif";
+            this.notif.Size = new System.Drawing.Size(70, 58);
+            this.notif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.notif.TabIndex = 92;
+            this.notif.TabStop = false;
+            this.notif.Click += new System.EventHandler(this.notif_Click);
             // 
             // client_home
             // 
@@ -605,6 +618,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1026, 589);
+            this.Controls.Add(this.notifications_count);
+            this.Controls.Add(this.notif);
+            this.ClientSize = new System.Drawing.Size(893, 589);
             this.Controls.Add(this.back2);
             this.Controls.Add(this.nextt);
             this.Controls.Add(this.textBox1);
@@ -647,7 +663,6 @@
             this.Controls.Add(this.sendfeedbackbutton);
             this.Controls.Add(this.editeventbutton);
             this.Controls.Add(this.eventscombobox);
-            this.Controls.Add(this.notifications_count);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.NewEvent);
@@ -663,6 +678,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.venuesDGview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.capacity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.budgett)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.notif)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,6 +734,6 @@
         private System.Windows.Forms.Button back2;
         private System.Windows.Forms.Button nextt;
         private System.Windows.Forms.TextBox notifications_count;
-
+        private System.Windows.Forms.PictureBox notif;
     }
 }

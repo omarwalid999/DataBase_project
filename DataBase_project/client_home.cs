@@ -575,6 +575,13 @@ namespace DataBase_project
             c.Show();
             this.Hide();
         }
+
+        private void notif_Click(object sender, EventArgs e)
+        {
+            client_notifications c = new client_notifications(id1);
+            c.Show();
+            this.Hide();
+        }
         //momken neshil previous events w nezawed fi my events button feedback
     }
 }

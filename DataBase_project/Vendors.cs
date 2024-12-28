@@ -22,7 +22,12 @@ namespace DataBase_project
             manager_id = id;
             DataTable dt = c.vendorsdetails();
             vendorsview.DataSource = dt;
-            
+            DataTable dt1 = c.getserv();
+            comboBox1.DataSource = dt1;
+            comboBox1.DisplayMember = "name_of_service";
+            comboBox1.ValueMember = "service_ID";
+
+
 
         }
 
@@ -40,9 +45,9 @@ namespace DataBase_project
         {
             int id = Convert.ToInt32(vendoridtext.Text.ToString());
             int rate = Convert.ToInt32(ratingtext.Text.ToString());
-            string service = servicetext.Text.ToString();
+            string service = comboBox1.Text;
             string vendor = vendornametext.Text.ToString();
-            if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
+            if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
@@ -55,23 +60,26 @@ namespace DataBase_project
             {
                 MessageBox.Show("Invalid Value");
             }
-            //else
-            //{
-            //    int result;
-            //    result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
-            //    if (result != 0)
-            //    {
-            //        MessageBox.Show("Added successfully");
-            //        DataTable dt1 = c.vendorsdetails();
-            //        vendorsview.DataSource = dt1;
-            //        vendorsview.Refresh();
-            //    } else
-            //    {
-            //        MessageBox.Show("failed to add vendor");
-            //    }
+            else
+            {
+                int result;
+                result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
+                if (result != 0)
+                {
+                    MessageBox.Show("Added successfully");
+                    DataTable dt1 = c.vendorsdetails();
+                    vendorsview.DataSource = dt1;
+                    vendorsview.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("failed to add vendor");
+                }
 
             }
-        
+        }
+
+
 
 
         private void deletevendor_Click(object sender, EventArgs e)
@@ -109,7 +117,7 @@ namespace DataBase_project
         {
             int id;
             int rate;
-            if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
+            if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || comboBox1.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
@@ -127,7 +135,7 @@ namespace DataBase_project
             else
             {
                 int result;
-                result = c.Updatevendor(id, vendornametext.Text, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, servicetext.Text);
+                result = c.Updatevendor(id, vendornametext.Text, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, comboBox1.Text);
                 if (result != 0)
                 {
                     MessageBox.Show("Updated successfully");
