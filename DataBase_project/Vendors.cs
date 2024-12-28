@@ -38,10 +38,10 @@ namespace DataBase_project
 
         private void addvendor_Click(object sender, EventArgs e)
         {
-            int id=Convert.ToInt32(vendoridtext.Text.ToString());
-            int rate=Convert.ToInt32(ratingtext.Text.ToString());  
-            string service=servicetext.Text.ToString();
-            string vendor=vendornametext.Text.ToString();
+            int id = Convert.ToInt32(vendoridtext.Text.ToString());
+            int rate = Convert.ToInt32(ratingtext.Text.ToString());
+            string service = servicetext.Text.ToString();
+            string vendor = vendornametext.Text.ToString();
             if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");

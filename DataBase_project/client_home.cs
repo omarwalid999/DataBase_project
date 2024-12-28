@@ -568,6 +568,13 @@ namespace DataBase_project
         {
 
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            client_home c = new client_home(id1);
+            c.Show();
+            this.Hide();
+        }
         //momken neshil previous events w nezawed fi my events button feedback
     }
 }
