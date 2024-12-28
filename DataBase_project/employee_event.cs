@@ -76,5 +76,12 @@ namespace DataBase_project
             DataTable eventss = controllerobj.chosen(event_id);
             event_details_GDview.DataSource = eventss;
         }
+
+        //private void button2_Click_1(object sender, EventArgs e)
+        //{
+        //    inv ee = new inv(id2);
+        //    ee.Show();
+            
+        //}
     }
 }

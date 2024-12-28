@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace DataBase_project
 {
-    public partial class statistics1 : Form
+    public partial class inv : Form
     {
-        public statistics1()
+        public inv()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

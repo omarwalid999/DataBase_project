@@ -53,35 +53,38 @@
             // 
             // ScheduledEventsButton
             // 
+            this.ScheduledEventsButton.BackColor = System.Drawing.Color.Honeydew;
             this.ScheduledEventsButton.Location = new System.Drawing.Point(141, 2);
             this.ScheduledEventsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ScheduledEventsButton.Name = "ScheduledEventsButton";
             this.ScheduledEventsButton.Size = new System.Drawing.Size(136, 51);
             this.ScheduledEventsButton.TabIndex = 0;
             this.ScheduledEventsButton.Text = "Scheduled Events";
-            this.ScheduledEventsButton.UseVisualStyleBackColor = true;
+            this.ScheduledEventsButton.UseVisualStyleBackColor = false;
             this.ScheduledEventsButton.Click += new System.EventHandler(this.ScheduledEventsButton_Click);
             // 
             // TasksListButton
             // 
+            this.TasksListButton.BackColor = System.Drawing.Color.Honeydew;
             this.TasksListButton.Location = new System.Drawing.Point(275, 1);
             this.TasksListButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TasksListButton.Name = "TasksListButton";
             this.TasksListButton.Size = new System.Drawing.Size(137, 52);
             this.TasksListButton.TabIndex = 1;
             this.TasksListButton.Text = "Tasks List";
-            this.TasksListButton.UseVisualStyleBackColor = true;
+            this.TasksListButton.UseVisualStyleBackColor = false;
             this.TasksListButton.Click += new System.EventHandler(this.TasksListButton_Click);
             // 
             // VendorsButton
             // 
+            this.VendorsButton.BackColor = System.Drawing.Color.Honeydew;
             this.VendorsButton.Location = new System.Drawing.Point(411, 2);
             this.VendorsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VendorsButton.Name = "VendorsButton";
             this.VendorsButton.Size = new System.Drawing.Size(134, 50);
             this.VendorsButton.TabIndex = 2;
             this.VendorsButton.Text = "Vendors";
-            this.VendorsButton.UseVisualStyleBackColor = true;
+            this.VendorsButton.UseVisualStyleBackColor = false;
             this.VendorsButton.Click += new System.EventHandler(this.VendorsButton_Click);
             // 
             // logout
@@ -250,6 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(713, 360);
             this.Controls.Add(this.notifications_count);
             this.Controls.Add(this.pictureBox2);

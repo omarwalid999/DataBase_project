@@ -75,14 +75,22 @@ namespace DataBase_project
             }
             else
             {
-                if(controllerobj.check_login_c(username_textbox.Text, password_textbox.Text))
+                string storedHashedPassword = controllerobj.get_hashed_password(username_textbox.Text);
+                if (!string.IsNullOrEmpty(storedHashedPassword) &&
+                       PasswordHelper.VerifyPassword(password_textbox.Text, storedHashedPassword))
                 {
-                    int client_id=controllerobj.client_id(username_textbox.Text);
+
+                    int client_id = controllerobj.client_id(username_textbox.Text);
+                    //string storedHashedPassword = controllerobj.get_hashed_password(username_textbox.Text);
+
+
+
                     MessageBox.Show(" Client Logged in successfuly!");
                     client_home f = new client_home(client_id);
                     f.Show();
                     this.Hide();
                 }
+                
                 else
                 {
                     MessageBox.Show("please enter username and password correctly!");
