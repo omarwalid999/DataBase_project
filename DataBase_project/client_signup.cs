@@ -57,10 +57,11 @@ namespace DataBase_project
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+       
+        private void back_button_Click(object sender, EventArgs e)
         {
-            Home f= new Home();
-            f.Show();
+            Home home = new Home();
+            home.Show();
             this.Close();
         }
     }

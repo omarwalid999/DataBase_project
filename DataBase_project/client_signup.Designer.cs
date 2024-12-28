@@ -46,9 +46,8 @@
             this.confirmpasskey = new System.Windows.Forms.TextBox();
             this.perror_message = new System.Windows.Forms.Label();
             this.error_message = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.back_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // fileSystemWatcher1
@@ -232,23 +231,25 @@
             this.error_message.Visible = false;
             this.error_message.Click += new System.EventHandler(this.error_message_Click);
             // 
-            // pictureBox1
+            // back_button
             // 
-            this.pictureBox1.Image = global::DataBase_project.Properties.Resources.eventura;
-            this.pictureBox1.Location = new System.Drawing.Point(553, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(235, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.back_button.BackColor = System.Drawing.Color.Honeydew;
+            this.back_button.Location = new System.Drawing.Point(699, 407);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(89, 31);
+            this.back_button.TabIndex = 19;
+            this.back_button.Text = "back";
+            this.back_button.UseVisualStyleBackColor = false;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // client_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::DataBase_project.Properties.Resources.WhatsApp_Image_2024_12_27_at_18_41_44_c42ab493;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.back_button);
             this.Controls.Add(this.error_message);
             this.Controls.Add(this.perror_message);
             this.Controls.Add(this.confirmpasskey);
@@ -269,7 +270,6 @@
             this.Name = "client_signup";
             this.Text = "client_signup";
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +294,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label perror_message;
         private System.Windows.Forms.Label error_message;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button back_button;
     }
 }
