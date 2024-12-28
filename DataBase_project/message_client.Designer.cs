@@ -124,8 +124,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 38;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
+            
             // message_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

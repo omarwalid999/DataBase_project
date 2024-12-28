@@ -28,7 +28,7 @@ namespace DataBase_project
             DataTable dt = new DataTable();
             dt = controllerobj.client_events(id);
             events.DataSource = dt;
-            events.DisplayMember = "event_name";
+            events.DisplayMember = "eventname";
             events.ValueMember = "event_ID";
         }
 
@@ -58,17 +58,10 @@ namespace DataBase_project
             {
                 DateTime time = DateTime.Now;
                 bool flag = true;
-                int msg_id = controllerobj.message_count_ec()+1;
+                int msg_id = controllerobj.message_count_ec() + 1;
                 int employee_id = controllerobj.employee_event((int)events.SelectedValue);
                 controllerobj.addmessage_ec(msg_id, message_text.Text, time, id, employee_id, flag);
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            client_home f = new client_home(id);
-            f.Show();
-            this.Hide();
         }
     }
 }
