@@ -541,8 +541,9 @@ namespace DBapplication
         public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
         {
             string query = "INSERT INTO vendors (vendor_ID, vendor_name, rating, vendor_address, phone, email)" +
-                            "Values (" + vendor_ID + ",'" + vendor_name + "','" + rating + "','" + address + "','" + phone + "','" + email + "');";
-            string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)" + "Values(" + vendor_ID + ",'" + service + "');";
+                            "Values (" + vendor_ID + ",'" + vendor_name + "'," + rating + ",'" + address + "','" + phone + "','" + email + "');";
+            string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)"
+                + "Values(" + vendor_ID + ",'" + service + "');";
             int result1=dbMan.ExecuteNonQuery(query);
             int result2=dbMan.ExecuteNonQuery(query2);
             int result = result1 + result2;
@@ -551,7 +552,7 @@ namespace DBapplication
         }
         public int deletevendor(int vendor_ID)
         {
-            string query = "DELETE vendors.*, services_offered.* FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendors.vendor_ID=" + vendor_ID + ";";
+            string query = "DELETE FROM vendors, services_offered WHERE vendors.vendor_ID=services_offered.vendor_ID AND vendors.vendor_ID=" + vendor_ID + ";";
             return dbMan.ExecuteNonQuery(query);
 
         }
@@ -570,12 +571,11 @@ namespace DBapplication
             string query = "SELECT * FROM services_offered ;";
             return dbMan.ExecuteReader(query);
         }
-        public int addservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price)
+        public int addservice(int service_id, int vendor_id, string name_of_service, int invoice_id, int price)
         {
-            string query = "INSERT INTO services_offeres(service_ID, vendor_ID, name_of_service, invoice_id, price) " +
-                 "Values(" + service_ID + "," + vendor_ID + ", '" + name_of_service + "'," + invoice_ID + "," + price + ");";
+            string query = "INSERT INTO event(event_ID, budget, event_type,event_date, employee_id, venue_id, client_id, no_of_attendees, eventname)" +
+                "Values("+ service_id + "," + vendor_id + ",'" + name_of_service + "'," + invoice_id + "," + price + "); ";
             return dbMan.ExecuteNonQuery(query);
-
         }
         public int deleteservice(int service_ID , int invoiceide)
         {

@@ -35,12 +35,12 @@ namespace DataBase_project
 
         private void addservice_Click(object sender, EventArgs e)
         {
-            int serviceid;         // = Convert.ToInt32(serviceidtext.Text);
-            int vendorid;           //= Convert.ToInt32(vendortext.Text);
-            int invoiceid;             // = Convert.ToInt32(invoicetext.Text);
-            int price;                  //= Convert.ToInt32(pricetext.Text);
+            int serviceid = Convert.ToInt32(serviceidtext.Text);
+            int vendorid = Convert.ToInt32(vendortext.Text);
+            int invoiceid = Convert.ToInt32(invoicetext.Text);
+            int price = Convert.ToInt32(pricetext.Text.ToString());
             string servicename = servicenametext.Text;
-            if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
+            if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "" )
             {
                 MessageBox.Show("Please enter all required fields");
             }
