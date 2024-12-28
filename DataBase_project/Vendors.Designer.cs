@@ -42,11 +42,11 @@
             this.vaddresstext = new System.Windows.Forms.TextBox();
             this.phonetext = new System.Windows.Forms.TextBox();
             this.vemailtext = new System.Windows.Forms.TextBox();
-            this.servicetext = new System.Windows.Forms.TextBox();
             this.addvendor = new System.Windows.Forms.Button();
             this.deletevendor = new System.Windows.Forms.Button();
             this.updatevendor = new System.Windows.Forms.Button();
             this.back5 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.vendorsview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(373, 32);
+            this.label1.Location = new System.Drawing.Point(364, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 1;
@@ -82,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(373, 81);
+            this.label3.Location = new System.Drawing.Point(364, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 3;
@@ -100,7 +100,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(364, 133);
+            this.label5.Location = new System.Drawing.Point(362, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 16);
             this.label5.TabIndex = 5;
@@ -126,7 +126,7 @@
             // 
             // vendoridtext
             // 
-            this.vendoridtext.Location = new System.Drawing.Point(459, 32);
+            this.vendoridtext.Location = new System.Drawing.Point(465, 32);
             this.vendoridtext.Name = "vendoridtext";
             this.vendoridtext.Size = new System.Drawing.Size(100, 22);
             this.vendoridtext.TabIndex = 8;
@@ -140,7 +140,7 @@
             // 
             // ratingtext
             // 
-            this.ratingtext.Location = new System.Drawing.Point(441, 78);
+            this.ratingtext.Location = new System.Drawing.Point(465, 81);
             this.ratingtext.Name = "ratingtext";
             this.ratingtext.Size = new System.Drawing.Size(100, 22);
             this.ratingtext.TabIndex = 10;
@@ -165,13 +165,6 @@
             this.vemailtext.Name = "vemailtext";
             this.vemailtext.Size = new System.Drawing.Size(100, 22);
             this.vemailtext.TabIndex = 13;
-            // 
-            // servicetext
-            // 
-            this.servicetext.Location = new System.Drawing.Point(459, 194);
-            this.servicetext.Name = "servicetext";
-            this.servicetext.Size = new System.Drawing.Size(100, 22);
-            this.servicetext.TabIndex = 14;
             // 
             // addvendor
             // 
@@ -213,16 +206,24 @@
             this.back5.UseVisualStyleBackColor = true;
             this.back5.Click += new System.EventHandler(this.back5_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(434, 191);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(142, 24);
+            this.comboBox1.TabIndex = 19;
+            // 
             // Vendors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.back5);
             this.Controls.Add(this.updatevendor);
             this.Controls.Add(this.deletevendor);
             this.Controls.Add(this.addvendor);
-            this.Controls.Add(this.servicetext);
             this.Controls.Add(this.vemailtext);
             this.Controls.Add(this.phonetext);
             this.Controls.Add(this.vaddresstext);
@@ -262,10 +263,10 @@
         private System.Windows.Forms.TextBox vaddresstext;
         private System.Windows.Forms.TextBox phonetext;
         private System.Windows.Forms.TextBox vemailtext;
-        private System.Windows.Forms.TextBox servicetext;
         private System.Windows.Forms.Button addvendor;
         private System.Windows.Forms.Button deletevendor;
         private System.Windows.Forms.Button updatevendor;
         private System.Windows.Forms.Button back5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -126,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DataBase_project.Properties.Resources.mail;
-            this.pictureBox1.Location = new System.Drawing.Point(806, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(791, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 87);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -620,6 +620,7 @@
             this.ClientSize = new System.Drawing.Size(1026, 589);
             this.Controls.Add(this.notifications_count);
             this.Controls.Add(this.notif);
+            this.ClientSize = new System.Drawing.Size(893, 589);
             this.Controls.Add(this.back2);
             this.Controls.Add(this.nextt);
             this.Controls.Add(this.textBox1);

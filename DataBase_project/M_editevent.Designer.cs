@@ -44,28 +44,29 @@
             this.evtypecombo = new System.Windows.Forms.ComboBox();
             this.empcombo = new System.Windows.Forms.ComboBox();
             this.venuecombo = new System.Windows.Forms.ComboBox();
-            this.back8 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.client_combobox = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.eventinfoview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // eventinfoview
             // 
+            this.eventinfoview.BackgroundColor = System.Drawing.Color.Honeydew;
             this.eventinfoview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.eventinfoview.Location = new System.Drawing.Point(12, 52);
+            this.eventinfoview.Location = new System.Drawing.Point(156, 58);
             this.eventinfoview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventinfoview.Name = "eventinfoview";
             this.eventinfoview.RowHeadersWidth = 51;
             this.eventinfoview.RowTemplate.Height = 24;
-            this.eventinfoview.Size = new System.Drawing.Size(398, 414);
+            this.eventinfoview.Size = new System.Drawing.Size(732, 270);
             this.eventinfoview.TabIndex = 0;
-            this.eventinfoview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.eventinfoview_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(672, 140);
+            this.label2.Location = new System.Drawing.Point(26, 509);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 2;
@@ -74,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(416, 70);
+            this.label3.Location = new System.Drawing.Point(26, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 3;
@@ -83,7 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(655, 52);
+            this.label4.Location = new System.Drawing.Point(335, 432);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 20);
             this.label4.TabIndex = 4;
@@ -92,7 +93,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(416, 135);
+            this.label5.Location = new System.Drawing.Point(26, 416);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 5;
@@ -101,7 +102,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(678, 205);
+            this.label6.Location = new System.Drawing.Point(681, 362);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 6;
@@ -110,7 +111,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(448, 262);
+            this.label7.Location = new System.Drawing.Point(351, 367);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 20);
             this.label7.TabIndex = 7;
@@ -119,7 +120,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(416, 201);
+            this.label8.Location = new System.Drawing.Point(26, 466);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 20);
             this.label8.TabIndex = 8;
@@ -128,7 +129,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(677, 274);
+            this.label9.Location = new System.Drawing.Point(692, 429);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 20);
             this.label9.TabIndex = 9;
@@ -136,7 +137,8 @@
             // 
             // budgettext
             // 
-            this.budgettext.Location = new System.Drawing.Point(756, 132);
+            this.budgettext.BackColor = System.Drawing.Color.Honeydew;
+            this.budgettext.Location = new System.Drawing.Point(180, 510);
             this.budgettext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.budgettext.Name = "budgettext";
             this.budgettext.Size = new System.Drawing.Size(112, 26);
@@ -144,7 +146,8 @@
             // 
             // capacitytext
             // 
-            this.capacitytext.Location = new System.Drawing.Point(538, 197);
+            this.capacitytext.BackColor = System.Drawing.Color.Honeydew;
+            this.capacitytext.Location = new System.Drawing.Point(180, 466);
             this.capacitytext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.capacitytext.Name = "capacitytext";
             this.capacitytext.Size = new System.Drawing.Size(112, 26);
@@ -152,7 +155,8 @@
             // 
             // eventnametext
             // 
-            this.eventnametext.Location = new System.Drawing.Point(774, 270);
+            this.eventnametext.BackColor = System.Drawing.Color.Honeydew;
+            this.eventnametext.Location = new System.Drawing.Point(804, 426);
             this.eventnametext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventnametext.Name = "eventnametext";
             this.eventnametext.Size = new System.Drawing.Size(112, 26);
@@ -160,19 +164,21 @@
             // 
             // updatevent
             // 
-            this.updatevent.Location = new System.Drawing.Point(694, 438);
+            this.updatevent.BackColor = System.Drawing.Color.Honeydew;
+            this.updatevent.Location = new System.Drawing.Point(434, 494);
             this.updatevent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.updatevent.Name = "updatevent";
-            this.updatevent.Size = new System.Drawing.Size(84, 29);
+            this.updatevent.Size = new System.Drawing.Size(239, 35);
             this.updatevent.TabIndex = 21;
             this.updatevent.Text = "UPDATE";
-            this.updatevent.UseVisualStyleBackColor = true;
+            this.updatevent.UseVisualStyleBackColor = false;
             this.updatevent.Click += new System.EventHandler(this.updatevent_Click);
             // 
             // evtypecombo
             // 
+            this.evtypecombo.BackColor = System.Drawing.Color.Honeydew;
             this.evtypecombo.FormattingEnabled = true;
-            this.evtypecombo.Location = new System.Drawing.Point(513, 62);
+            this.evtypecombo.Location = new System.Drawing.Point(156, 367);
             this.evtypecombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.evtypecombo.Name = "evtypecombo";
             this.evtypecombo.Size = new System.Drawing.Size(136, 28);
@@ -181,8 +187,9 @@
             // 
             // empcombo
             // 
+            this.empcombo.BackColor = System.Drawing.Color.Honeydew;
             this.empcombo.FormattingEnabled = true;
-            this.empcombo.Location = new System.Drawing.Point(501, 125);
+            this.empcombo.Location = new System.Drawing.Point(156, 413);
             this.empcombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.empcombo.Name = "empcombo";
             this.empcombo.Size = new System.Drawing.Size(136, 28);
@@ -190,50 +197,54 @@
             // 
             // venuecombo
             // 
+            this.venuecombo.BackColor = System.Drawing.Color.Honeydew;
             this.venuecombo.FormattingEnabled = true;
-            this.venuecombo.Location = new System.Drawing.Point(737, 195);
+            this.venuecombo.Location = new System.Drawing.Point(780, 359);
             this.venuecombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.venuecombo.Name = "venuecombo";
             this.venuecombo.Size = new System.Drawing.Size(136, 28);
             this.venuecombo.TabIndex = 24;
             // 
-            // back8
-            // 
-            this.back8.Location = new System.Drawing.Point(789, 502);
-            this.back8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.back8.Name = "back8";
-            this.back8.Size = new System.Drawing.Size(84, 29);
-            this.back8.TabIndex = 25;
-            this.back8.Text = "Back";
-            this.back8.UseVisualStyleBackColor = true;
-            this.back8.Click += new System.EventHandler(this.back8_Click);
-            // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(662, 76);
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Honeydew;
+            this.dateTimePicker1.Location = new System.Drawing.Point(435, 429);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(224, 26);
             this.dateTimePicker1.TabIndex = 27;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // client_combobox
             // 
+            this.client_combobox.BackColor = System.Drawing.Color.Honeydew;
             this.client_combobox.FormattingEnabled = true;
-            this.client_combobox.Location = new System.Drawing.Point(522, 254);
+            this.client_combobox.Location = new System.Drawing.Point(435, 359);
             this.client_combobox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.client_combobox.Name = "client_combobox";
             this.client_combobox.Size = new System.Drawing.Size(136, 28);
             this.client_combobox.TabIndex = 41;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(123, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // M_editevent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(928, 562);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.client_combobox);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.back8);
             this.Controls.Add(this.venuecombo);
             this.Controls.Add(this.empcombo);
             this.Controls.Add(this.evtypecombo);
@@ -255,6 +266,7 @@
             this.Text = "M_editevent";
             this.Load += new System.EventHandler(this.M_editevent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.eventinfoview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,8 +290,8 @@
         private System.Windows.Forms.ComboBox evtypecombo;
         private System.Windows.Forms.ComboBox empcombo;
         private System.Windows.Forms.ComboBox venuecombo;
-        private System.Windows.Forms.Button back8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox client_combobox;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
