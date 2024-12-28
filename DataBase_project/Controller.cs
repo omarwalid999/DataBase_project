@@ -93,7 +93,7 @@ namespace DBapplication
 
         public DataTable client_events(int client_id)
         {
-            string query = $"SELECT * FROM event WHERE client_ID='{client_id}' ";
+            string query = $"SELECT * FROM event WHERE client_ID={client_id} ";
             return dbMan.ExecuteReader(query);
         }
 
@@ -353,7 +353,7 @@ namespace DBapplication
         //show types of events 3lhsna new event
         public DataTable ShowTypes()
         {
-            string query = "SELECT * FROM event_types;";
+            string query = "SELECT * FROM event_types, venue WHERE ;";
             return dbMan.ExecuteReader(query);
         }
         public DataTable ShowAllEvents(int clientid) //for datagrid view

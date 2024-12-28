@@ -162,15 +162,11 @@ namespace DataBase_project
             cancell.Visible = false;
             eventscombobox.Visible = false;
             nextt.Visible = true;
+            sendfeedbackbutton.Visible = false;
             DataTable dt2 = c.ShowVeneusnames(no_of_attendeess, client_budget);
             venuess.DataSource = dt2;
-            venuess.DisplayMember = "venue_name";
+            venuess.DisplayMember = "venue";
             venuess.ValueMember = "venue_ID";
-            sendfeedbackbutton.Visible = false;
-
-
-
-
         }
 
         private void events_Click(object sender, EventArgs e)
@@ -267,13 +263,13 @@ namespace DataBase_project
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            client_home ch = new client_home(id1);
-            ch.Show();
-            this.Hide();
+        //private void pictureBox2_Click(object sender, EventArgs e)
+        //{
+        //    client_home ch = new client_home(id1);
+        //    ch.Show();
+        //    this.Hide();
 
-        }
+        //}
 
         private void cancel_Click(object sender, EventArgs e)
         {
@@ -511,12 +507,12 @@ namespace DataBase_project
                 event_type = 4;
             }
             event_id++;
-            int client_budget = Convert.ToInt32(budgett.Value);
-            int no_of_attendees = Convert.ToInt32(capacity.Value);
+            client_budget = Convert.ToInt32(budgett.Value);
+            no_of_attendeess = Convert.ToInt32(capacity.Value);
             event_date = event_date_picker.Value.ToString("yyyy-MM-dd");
             employee_id = GenerateRandomEmployee(1, 10);
             int venueid = Convert.ToInt32(venuess.SelectedValue);
-            int s = c.InsertEvent(event_id, client_budget, event_type, event_date, employee_id, venueid, id1, no_of_attendees, eventname.Text);
+            int s = c.InsertEvent(event_id, client_budget, event_type, event_date, employee_id, venueid, id1, no_of_attendeess, eventname.Text);
             if (s != 0)
             {
                 MessageBox.Show("event registered successfully");
@@ -566,6 +562,11 @@ namespace DataBase_project
             {
                 MessageBox.Show("you can't submit an empty feedback.");
             }
+        }
+
+        private void notifications_count_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
