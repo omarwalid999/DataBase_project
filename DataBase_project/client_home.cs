@@ -76,7 +76,7 @@ namespace DataBase_project
 
         private void logout_Click(object sender, EventArgs e)
         {
-            client_login cl = new client_login();
+            login cl = new login();
             cl.Show();
             this.Hide();
         }
