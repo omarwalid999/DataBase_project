@@ -29,42 +29,61 @@
         private void InitializeComponent()
         {
             this.allclientsview = new System.Windows.Forms.DataGridView();
-            this.back12 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.addnewclient = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.allclientsview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // allclientsview
             // 
+            this.allclientsview.BackgroundColor = System.Drawing.Color.Honeydew;
             this.allclientsview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.allclientsview.Location = new System.Drawing.Point(61, 39);
+            this.allclientsview.Location = new System.Drawing.Point(24, 136);
+            this.allclientsview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.allclientsview.Name = "allclientsview";
             this.allclientsview.RowHeadersWidth = 51;
             this.allclientsview.RowTemplate.Height = 24;
-            this.allclientsview.Size = new System.Drawing.Size(629, 313);
+            this.allclientsview.Size = new System.Drawing.Size(864, 335);
             this.allclientsview.TabIndex = 0;
             this.allclientsview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.allclientsview_CellContentClick);
             // 
-            // back12
+            // pictureBox2
             // 
-            this.back12.Location = new System.Drawing.Point(653, 379);
-            this.back12.Name = "back12";
-            this.back12.Size = new System.Drawing.Size(75, 23);
-            this.back12.TabIndex = 1;
-            this.back12.Text = "Back";
-            this.back12.UseVisualStyleBackColor = true;
-            this.back12.Click += new System.EventHandler(this.back12_Click);
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(123, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // addnewclient
+            // 
+            this.addnewclient.BackColor = System.Drawing.Color.Honeydew;
+            this.addnewclient.Location = new System.Drawing.Point(333, 495);
+            this.addnewclient.Name = "addnewclient";
+            this.addnewclient.Size = new System.Drawing.Size(272, 55);
+            this.addnewclient.TabIndex = 43;
+            this.addnewclient.Text = "Want to add a new client?";
+            this.addnewclient.UseVisualStyleBackColor = false;
+            this.addnewclient.Click += new System.EventHandler(this.addnewclient_Click);
             // 
             // AllClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.back12);
+            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.addnewclient);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.allclientsview);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AllClients";
-            this.Text = "AllClients";
             this.Load += new System.EventHandler(this.AllClients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.allclientsview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -72,6 +91,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView allclientsview;
-        private System.Windows.Forms.Button back12;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button addnewclient;
     }
 }

@@ -45,23 +45,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.eventnametext = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.back9 = new System.Windows.Forms.Button();
             this.eventdate = new System.Windows.Forms.DateTimePicker();
             this.client_combobox = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 52);
+            this.label1.Location = new System.Drawing.Point(171, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Event_ID";
+            this.label1.Text = "Event ID";
             // 
             // eventidtext
             // 
-            this.eventidtext.Location = new System.Drawing.Point(138, 52);
+            this.eventidtext.BackColor = System.Drawing.Color.Honeydew;
+            this.eventidtext.Location = new System.Drawing.Point(265, 116);
             this.eventidtext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventidtext.Name = "eventidtext";
             this.eventidtext.Size = new System.Drawing.Size(112, 26);
@@ -70,25 +72,26 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 124);
+            this.label4.Location = new System.Drawing.Point(171, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Event_Date";
+            this.label4.Text = "Event Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 191);
+            this.label3.Location = new System.Drawing.Point(167, 255);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 20);
+            this.label3.Size = new System.Drawing.Size(88, 20);
             this.label3.TabIndex = 17;
-            this.label3.Text = "Event_Type";
+            this.label3.Text = "Event Type";
             // 
             // evtypecombo
             // 
+            this.evtypecombo.BackColor = System.Drawing.Color.Honeydew;
             this.evtypecombo.FormattingEnabled = true;
-            this.evtypecombo.Location = new System.Drawing.Point(138, 191);
+            this.evtypecombo.Location = new System.Drawing.Point(278, 255);
             this.evtypecombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.evtypecombo.Name = "evtypecombo";
             this.evtypecombo.Size = new System.Drawing.Size(136, 28);
@@ -98,7 +101,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 272);
+            this.label2.Location = new System.Drawing.Point(183, 336);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 20);
             this.label2.TabIndex = 24;
@@ -106,7 +109,8 @@
             // 
             // budgettext
             // 
-            this.budgettext.Location = new System.Drawing.Point(138, 269);
+            this.budgettext.BackColor = System.Drawing.Color.Honeydew;
+            this.budgettext.Location = new System.Drawing.Point(265, 333);
             this.budgettext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.budgettext.Name = "budgettext";
             this.budgettext.Size = new System.Drawing.Size(112, 26);
@@ -115,7 +119,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(371, 71);
+            this.label5.Location = new System.Drawing.Point(556, 108);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 26;
@@ -123,19 +127,21 @@
             // 
             // insertevent
             // 
-            this.insertevent.Location = new System.Drawing.Point(659, 418);
+            this.insertevent.BackColor = System.Drawing.Color.Honeydew;
+            this.insertevent.Location = new System.Drawing.Point(642, 414);
             this.insertevent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.insertevent.Name = "insertevent";
-            this.insertevent.Size = new System.Drawing.Size(84, 29);
+            this.insertevent.Size = new System.Drawing.Size(142, 33);
             this.insertevent.TabIndex = 27;
-            this.insertevent.Text = "ADD";
-            this.insertevent.UseVisualStyleBackColor = true;
+            this.insertevent.Text = "Add Event";
+            this.insertevent.UseVisualStyleBackColor = false;
             this.insertevent.Click += new System.EventHandler(this.button1_Click);
             // 
             // empcombo
             // 
+            this.empcombo.BackColor = System.Drawing.Color.Honeydew;
             this.empcombo.FormattingEnabled = true;
-            this.empcombo.Location = new System.Drawing.Point(474, 71);
+            this.empcombo.Location = new System.Drawing.Point(659, 108);
             this.empcombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.empcombo.Name = "empcombo";
             this.empcombo.Size = new System.Drawing.Size(136, 28);
@@ -145,7 +151,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 350);
+            this.label6.Location = new System.Drawing.Point(183, 414);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 29;
@@ -153,8 +159,9 @@
             // 
             // venuecombo
             // 
+            this.venuecombo.BackColor = System.Drawing.Color.Honeydew;
             this.venuecombo.FormattingEnabled = true;
-            this.venuecombo.Location = new System.Drawing.Point(138, 346);
+            this.venuecombo.Location = new System.Drawing.Point(265, 410);
             this.venuecombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.venuecombo.Name = "venuecombo";
             this.venuecombo.Size = new System.Drawing.Size(136, 28);
@@ -164,7 +171,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(371, 148);
+            this.label8.Location = new System.Drawing.Point(556, 185);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 20);
             this.label8.TabIndex = 31;
@@ -172,7 +179,8 @@
             // 
             // capacitytext
             // 
-            this.capacitytext.Location = new System.Drawing.Point(497, 148);
+            this.capacitytext.BackColor = System.Drawing.Color.Honeydew;
+            this.capacitytext.Location = new System.Drawing.Point(682, 185);
             this.capacitytext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.capacitytext.Name = "capacitytext";
             this.capacitytext.Size = new System.Drawing.Size(112, 26);
@@ -181,7 +189,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(371, 218);
+            this.label9.Location = new System.Drawing.Point(556, 249);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(96, 20);
             this.label9.TabIndex = 33;
@@ -189,7 +197,8 @@
             // 
             // eventnametext
             // 
-            this.eventnametext.Location = new System.Drawing.Point(497, 218);
+            this.eventnametext.BackColor = System.Drawing.Color.Honeydew;
+            this.eventnametext.Location = new System.Drawing.Point(682, 249);
             this.eventnametext.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventnametext.Name = "eventnametext";
             this.eventnametext.Size = new System.Drawing.Size(112, 26);
@@ -198,26 +207,15 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(417, 298);
+            this.label7.Location = new System.Drawing.Point(602, 329);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 20);
             this.label7.TabIndex = 35;
             this.label7.Text = "Client";
             // 
-            // back9
-            // 
-            this.back9.Location = new System.Drawing.Point(742, 488);
-            this.back9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.back9.Name = "back9";
-            this.back9.Size = new System.Drawing.Size(84, 29);
-            this.back9.TabIndex = 38;
-            this.back9.Text = "Back";
-            this.back9.UseVisualStyleBackColor = true;
-            this.back9.Click += new System.EventHandler(this.back9_Click);
-            // 
             // eventdate
             // 
-            this.eventdate.Location = new System.Drawing.Point(137, 124);
+            this.eventdate.Location = new System.Drawing.Point(278, 185);
             this.eventdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventdate.Name = "eventdate";
             this.eventdate.Size = new System.Drawing.Size(224, 26);
@@ -226,21 +224,34 @@
             // 
             // client_combobox
             // 
+            this.client_combobox.BackColor = System.Drawing.Color.Honeydew;
             this.client_combobox.FormattingEnabled = true;
-            this.client_combobox.Location = new System.Drawing.Point(497, 290);
+            this.client_combobox.Location = new System.Drawing.Point(682, 321);
             this.client_combobox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.client_combobox.Name = "client_combobox";
             this.client_combobox.Size = new System.Drawing.Size(136, 28);
             this.client_combobox.TabIndex = 40;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DataBase_project.Properties.Resources.logo;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(123, 115);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // AddEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.client_combobox);
             this.Controls.Add(this.eventdate);
-            this.Controls.Add(this.back9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.eventnametext);
             this.Controls.Add(this.label9);
@@ -261,6 +272,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddEvent";
             this.Text = "AddEvent";
+            this.Load += new System.EventHandler(this.AddEvent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,8 +298,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox eventnametext;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button back9;
         private System.Windows.Forms.DateTimePicker eventdate;
         private System.Windows.Forms.ComboBox client_combobox;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

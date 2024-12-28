@@ -31,26 +31,24 @@ namespace DataBase_project
           
         }
 
-        private void editclient_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void clientcombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void back12_Click(object sender, EventArgs e)
-        {
-            Manager_home M6= new Manager_home(manager_id);
-            M6.Show();
-            this.Hide();
-        }
 
         private void allclientsview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Manager_home M6 = new Manager_home(manager_id);
+            M6.Show();
+            this.Hide();
+        }
+
+        private void addnewclient_Click(object sender, EventArgs e)
+        {
+            client_signup c = new client_signup();
+            c.Show();
+            this.Hide();
         }
     }
 }
