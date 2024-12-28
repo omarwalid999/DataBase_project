@@ -80,7 +80,7 @@ namespace DataBase_project
             int empid = Convert.ToInt32(empcombo.SelectedValue);//employee
             int budget = Convert.ToInt32(budgettext.Text.ToString());//budget
             int capacity = Convert.ToInt32(capacitytext.Text.ToString());//capacity
-            
+
             string eventname = eventnametext.Text;
             int venue_cap = c.capacity(venue_id);
 
@@ -102,7 +102,7 @@ namespace DataBase_project
                 string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 int r;
 
-                r = c.UpdateEvent(eventid,budget, typeid, date, empid, venue_id, Convert.ToInt32(client_combobox.SelectedValue), capacity, eventname);
+                r = c.UpdateEvent(eventid, budget, typeid, date, empid, venue_id, Convert.ToInt32(client_combobox.SelectedValue), capacity, eventname);
                 if (r != 0)
                 {
                     MessageBox.Show("Event updated successfully");
@@ -114,22 +114,11 @@ namespace DataBase_project
             }
         }
 
-
-        private void back8_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
-            M_Events ev=new M_Events(manager_id);
+            M_Events ev = new M_Events(manager_id);
             ev.Show();
             this.Hide();
-        }
-
-        private void eventinfoview_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
     }

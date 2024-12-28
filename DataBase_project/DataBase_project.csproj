@@ -218,11 +218,11 @@
     <Compile Include="employee_home.Designer.cs">
       <DependentUpon>employee_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="employee_login.cs">
+    <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="employee_login.Designer.cs">
-      <DependentUpon>employee_login.cs</DependentUpon>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="client_login.cs">
       <SubType>Form</SubType>
@@ -416,8 +416,8 @@
     <EmbeddedResource Include="employee_home.resx">
       <DependentUpon>employee_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employee_login.resx">
-      <DependentUpon>employee_login.cs</DependentUpon>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employee_notifications.resx">
       <DependentUpon>employee_notifications.cs</DependentUpon>
@@ -578,6 +578,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\notif1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eventura.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

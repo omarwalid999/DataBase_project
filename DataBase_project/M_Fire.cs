@@ -47,17 +47,17 @@ namespace DataBase_project
                 MessageBox.Show("Failed to fire employee");
             }
         }
-        //= Convert.ToInt32(firecombo.SelectedValue.ToString());
-        // string selectedemp = firecombo.SelectedItem.ToString();
-        // int empid = c.empid(selectedemp);
 
-
-        private void back3_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            All_Employees E =new All_Employees(manager_id);
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            All_Employees E = new All_Employees(manager_id);
             E.Show();
             this.Hide();
-
         }
     }
 }

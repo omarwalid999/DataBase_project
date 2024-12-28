@@ -52,6 +52,19 @@ namespace DataBase_project
             }
         }
 
+        private void error_message_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Close();
+        }
+
         private void client_signup_Load(object sender, EventArgs e)
         {
 

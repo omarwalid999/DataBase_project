@@ -52,13 +52,6 @@ namespace DataBase_project
 
         }
 
-        private void back7_Click(object sender, EventArgs e)
-        {
-            Manager_home M4= new Manager_home(m_id);
-            M4.Show();
-            this.Hide();
-
-        }
 
         private void deletevent_Click(object sender, EventArgs e)
         {
@@ -68,7 +61,11 @@ namespace DataBase_project
             if (result != 0)
             {
                 MessageBox.Show("Event deleted successfully");
-               
+
+            }
+            else
+            {
+                MessageBox.Show("failed to delete event");
             }
 
         }
@@ -77,6 +74,13 @@ namespace DataBase_project
         {
             AddEvent a=new AddEvent(m_id);
             a.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Manager_home M4 = new Manager_home(m_id);
+            M4.Show();
             this.Hide();
         }
     }

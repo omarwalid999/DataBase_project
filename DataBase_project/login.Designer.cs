@@ -1,6 +1,6 @@
 ﻿namespace DataBase_project
 {
-    partial class employee_login
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.password_textbox = new System.Windows.Forms.TextBox();
             this.username_textbox = new System.Windows.Forms.TextBox();
+            this.back_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // change_password_button
@@ -49,12 +50,14 @@
             // 
             // login_button
             // 
+            this.login_button.BackColor = System.Drawing.Color.Honeydew;
+            this.login_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_button.Location = new System.Drawing.Point(272, 249);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(144, 46);
             this.login_button.TabIndex = 11;
             this.login_button.Text = "Login";
-            this.login_button.UseVisualStyleBackColor = true;
+            this.login_button.UseVisualStyleBackColor = false;
             this.login_button.Click += new System.EventHandler(this.login_button_Click);
             this.login_button.KeyDown += new System.Windows.Forms.KeyEventHandler(this.login_button_KeyDown);
             // 
@@ -78,6 +81,7 @@
             // 
             // password_textbox
             // 
+            this.password_textbox.BackColor = System.Drawing.Color.Honeydew;
             this.password_textbox.Location = new System.Drawing.Point(247, 181);
             this.password_textbox.Name = "password_textbox";
             this.password_textbox.PasswordChar = '*';
@@ -86,24 +90,39 @@
             // 
             // username_textbox
             // 
+            this.username_textbox.BackColor = System.Drawing.Color.Honeydew;
             this.username_textbox.Location = new System.Drawing.Point(247, 142);
             this.username_textbox.Name = "username_textbox";
             this.username_textbox.Size = new System.Drawing.Size(212, 22);
             this.username_textbox.TabIndex = 13;
             // 
-            // employee_login
+            // back_button
+            // 
+            this.back_button.BackColor = System.Drawing.Color.Honeydew;
+            this.back_button.Location = new System.Drawing.Point(557, 399);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(89, 31);
+            this.back_button.TabIndex = 14;
+            this.back_button.Text = "back";
+            this.back_button.UseVisualStyleBackColor = false;
+            this.back_button.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackgroundImage = global::DataBase_project.Properties.Resources.WhatsApp_Image_2024_12_27_at_18_41_44_c42ab493;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(666, 450);
+            this.Controls.Add(this.back_button);
             this.Controls.Add(this.username_textbox);
             this.Controls.Add(this.change_password_button);
             this.Controls.Add(this.login_button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password_textbox);
-            this.Name = "employee_login";
+            this.Name = "login";
             this.Text = "employee_login";
             this.Load += new System.EventHandler(this.employee_login_Load);
             this.ResumeLayout(false);
@@ -119,5 +138,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox password_textbox;
         private System.Windows.Forms.TextBox username_textbox;
+        private System.Windows.Forms.Button back_button;
     }
 }
