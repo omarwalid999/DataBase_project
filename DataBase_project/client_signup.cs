@@ -51,5 +51,17 @@ namespace DataBase_project
                 error_message.Visible = true;
             }
         }
+
+        private void error_message_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Home f= new Home();
+            f.Show();
+            this.Close();
+        }
     }
 }

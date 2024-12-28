@@ -33,8 +33,82 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Engine.13.0.4003\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Prompting.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Shared.13.0.4003\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -144,11 +218,11 @@
     <Compile Include="employee_home.Designer.cs">
       <DependentUpon>employee_home.cs</DependentUpon>
     </Compile>
-    <Compile Include="employee_login.cs">
+    <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="employee_login.Designer.cs">
-      <DependentUpon>employee_login.cs</DependentUpon>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="client_login.cs">
       <SubType>Form</SubType>
@@ -341,8 +415,8 @@
     <EmbeddedResource Include="employee_home.resx">
       <DependentUpon>employee_home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="employee_login.resx">
-      <DependentUpon>employee_login.cs</DependentUpon>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="employee_notifications.resx">
       <DependentUpon>employee_notifications.cs</DependentUpon>
@@ -412,6 +486,7 @@
     <EmbeddedResource Include="Vendors.resx">
       <DependentUpon>Vendors.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -502,6 +577,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\notif1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eventura.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

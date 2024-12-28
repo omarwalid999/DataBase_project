@@ -1,6 +1,6 @@
 ﻿namespace DataBase_project
 {
-    partial class employee_login
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
