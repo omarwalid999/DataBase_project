@@ -361,3 +361,16 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DataBase_project/DataSet1.Designer.cs
+/DataBase_project/DataSet1.xsd
+/DataBase_project/DataSet1.xss
+/DataBase_project/report.Designer.cs
+/DataBase_project/report.resx
+/DataBase_project/types.rpt
+/a.aspx
+/DataBase_project/packages.config
+/DataBase_project/types.cs
+/DataBase_project/DataSet1.xsc
+/DataBase_project/SqlServerTypes/readme.htm
+/DataBase_project/SqlServerTypes/Loader.cs
+/DataBase_project/report.cs

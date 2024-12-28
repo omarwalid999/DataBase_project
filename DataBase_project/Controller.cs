@@ -482,16 +482,15 @@ namespace DBapplication
             string query = "SELECT vendors.*, services_offered.name_of_service FROM vendors, services_offered WHERE vendors.vendor_ID = services_offered.vendor_ID ;";
             return dbMan.ExecuteReader(query);
         }
-        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email, string service)
+        public int addvendor(int vendor_ID, string vendor_name, int rating, string address, string phone, string email)
         {
             string query = "INSERT INTO vendors (vendor_ID, vendor_name, rating, vendor_address, phone, email)" +
                             "Values (" + vendor_ID + ",'" + vendor_name + "'," + rating + ",'" + address + "','" + phone + "','" + email + "');";
-            string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)"
-                + "Values(" + vendor_ID + ",'" + service + "');";
-            int result1=dbMan.ExecuteNonQuery(query);
-            int result2=dbMan.ExecuteNonQuery(query2);
-            int result = result1 + result2;
-            return result;
+            /*string query2 = "INSERT INTO services_offered(vendor_ID, name_of_service)"
+                + "Values(" + vendor_ID + ",'" + service + "');";*/
+           /* int result2=dbMan.ExecuteNonQuery(query2);
+            int result = result1 + result2;*/
+            return dbMan.ExecuteNonQuery(query);
             
         }
         public int deletevendor(int vendor_ID)
@@ -517,7 +516,7 @@ namespace DBapplication
         }
         public int addservice(int service_id, int vendor_id, string name_of_service, int invoice_id, int price)
         {
-            string query = "INSERT INTO event(event_ID, budget, event_type,event_date, employee_id, venue_id, client_id, no_of_attendees, eventname)" +
+            string query = "INSERT INTO services_offered(service_ID, vendor_ID,name_of_service, invoice_ID,price)" +
                 "Values("+ service_id + "," + vendor_id + ",'" + name_of_service + "'," + invoice_id + "," + price + "); ";
             return dbMan.ExecuteNonQuery(query);
         }
@@ -527,14 +526,10 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(query);
 
         }
-        public int Updateservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price, string vendor_name)
+        public int Updateservice(int service_ID, int vendor_ID, string name_of_service, int invoice_ID, int price)
         {
-            string query = "UPDATE services_offered SET service_ID='" + service_ID + "' , vendor_ID='" + vendor_ID + "' , name_of_service='" + name_of_service + "' , invoice_id='" + invoice_ID + "' , price='" + price + "' WHERE service_ID= " + service_ID + " ; ";
-            string query2 = "UPDATE vendors SET vendor_ID= '" + vendor_ID + " ' , vendor_name= ' " + vendor_name + " ' WHERE vendor_ID= " + vendor_ID + " ;";
-            int result1 = dbMan.ExecuteNonQuery(query);
-            int result2 = dbMan.ExecuteNonQuery(query2);
-            int result = result1 + result2;
-            return result;
+            string query = "UPDATE services_offered SET service_ID=" + service_ID + " , vendor_ID=" + vendor_ID + " , name_of_service='" + name_of_service + "' , invoice_id=" + invoice_ID + ", price=" + price + " WHERE service_ID= " + service_ID + " ; ";
+            return dbMan.ExecuteNonQuery(query);
         }
         //Goals
         public DataTable goalslist()

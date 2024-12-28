@@ -38,15 +38,15 @@ namespace DataBase_project
 
         private void addvendor_Click(object sender, EventArgs e)
         {
-            int id=Convert.ToInt32(vendoridtext.Text);
-            int rate=Convert.ToInt32(ratingtext.Text);  
-            string service=servicetext.Text;
-            string vendor=vendornametext.Text;
+            int id=Convert.ToInt32(vendoridtext.Text.ToString());
+            int rate=Convert.ToInt32(ratingtext.Text.ToString());  
+            string service=servicetext.Text.ToString();
+            string vendor=vendornametext.Text.ToString();
             if (vendoridtext.Text == "" || vendornametext.Text == "" || vaddresstext.Text == "" || ratingtext.Text == "" || phonetext.Text == "" || vemailtext.Text == "" || servicetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
             }
-            else if (!int.TryParse(vendoridtext.Text, out id) || !int.TryParse(ratingtext.Text, out rate))
+            else if (!int.TryParse(vendoridtext.Text.ToString(), out id) || !int.TryParse(ratingtext.Text.ToString(), out rate))
             {
                 MessageBox.Show("Invalid value");
 
@@ -58,11 +58,16 @@ namespace DataBase_project
             else
             {
                 int result;
-                result = c.addvendor(Convert.ToInt32(vendoridtext.Text), vendor, rate, vaddresstext.Text, phonetext.Text, vemailtext.Text, service);
+                result = c.addvendor(Convert.ToInt32(vendoridtext.Text.ToString()), vendor, rate, vaddresstext.Text.ToString(), phonetext.Text.ToString(), vemailtext.Text.ToString(), service);
                 if (result != 0)
                 {
                     MessageBox.Show("Added successfully");
+                    DataTable dt1 = c.vendorsdetails();
+                    vendorsview.DataSource = dt1;
                     vendorsview.Refresh();
+                } else
+                {
+                    MessageBox.Show("failed to add vendor");
                 }
 
             }
@@ -71,7 +76,7 @@ namespace DataBase_project
 
         private void deletevendor_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(vendoridtext.Text);
+            int id = Convert.ToInt32(vendoridtext.Text.ToString());
            
             if (vendoridtext.Text == "" )
             {

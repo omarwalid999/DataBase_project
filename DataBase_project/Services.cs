@@ -35,9 +35,9 @@ namespace DataBase_project
 
         private void addservice_Click(object sender, EventArgs e)
         {
-            int serviceid = Convert.ToInt32(serviceidtext.Text);
-            int vendorid = Convert.ToInt32(vendortext.Text);
-            int invoiceid = Convert.ToInt32(invoicetext.Text);
+            int serviceid = Convert.ToInt32(serviceidtext.Text.ToString());
+            int vendorid = Convert.ToInt32(vendortext.Text.ToString());
+            int invoiceid = Convert.ToInt32(invoicetext.Text.ToString());
             int price = Convert.ToInt32(pricetext.Text.ToString());
             string servicename = servicenametext.Text;
             if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "" )
@@ -67,11 +67,11 @@ namespace DataBase_project
 
         private void deleteservice_Click(object sender, EventArgs e)
         {
-            int serviceid = Convert.ToInt32(serviceidtext.Text);
-            int vendorid = Convert.ToInt32(vendortext.Text);
-            int invoiceid = Convert.ToInt32(invoicetext.Text);
-            int price = Convert.ToInt32(pricetext.Text);
-            string servicename = servicenametext.Text;
+            int serviceid = Convert.ToInt32(serviceidtext.Text.ToString());
+            int vendorid = Convert.ToInt32(vendortext.Text.ToString());
+            int invoiceid = Convert.ToInt32(invoicetext.Text.ToString());
+            int price = Convert.ToInt32(pricetext.Text.ToString());
+            string servicename = servicenametext.Text.ToString();
             if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
@@ -100,10 +100,10 @@ namespace DataBase_project
 
         private void updateservice_Click(object sender, EventArgs e)
         {
-            int id;
-            int id2;
-            int id3;
-            int id4;
+            int id= Convert.ToInt32(serviceidtext.Text.ToString());
+            int id2= Convert.ToInt32(vendortext.Text.ToString()); ;
+            int id3= Convert.ToInt32(invoicetext.Text.ToString()); ;
+            int id4= Convert.ToInt32(pricetext.Text.ToString()); ;
             if (serviceidtext.Text == "" || vendortext.Text == "" || servicenametext.Text == "" || invoicetext.Text == "" || pricetext.Text == "")
             {
                 MessageBox.Show("Please enter all required fields");
@@ -116,13 +116,16 @@ namespace DataBase_project
                 else
                 {
                     int result;
-                   // result = c.Updateservice(id, id2, servicenametext.Text, id3, id4);
+                   result = c.Updateservice(id, id2, servicenametext.Text.ToString(), id3, id4);
 
-                   // if (result != 0)
-                   // {
-                       // MessageBox.Show("service updates successfully");
-                       // servicesview.Refresh();
-                   // }
+                   if (result != 0)
+                   {
+                        MessageBox.Show("service updates successfully");
+                        servicesview.Refresh();
+                   } else
+                {
+
+                }
 
                 }
 
