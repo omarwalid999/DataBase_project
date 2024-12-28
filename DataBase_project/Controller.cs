@@ -12,6 +12,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Net;
 using DataBase_project;
 using System.Runtime.InteropServices;
+using System.Web.UI;
 
 namespace DBapplication
 {
@@ -401,6 +402,28 @@ namespace DBapplication
                 "Values("+event_id+", "+budget+","+event_type+", '"+date+"',"+employee_id+","+venue_id+","+client_id+","+noa+", '"+eventname+"'); ";
             return dbMan.ExecuteNonQuery(query);
         }
+        public DataTable ShowAgeGroups()
+        {
+            string query = "SELECT Age,Count(employee_ID) FROM employee Group By Age;";
+            return dbMan.ExecuteReader(query);
+        }
+     
+        public DataTable ShowMaxCapacity()
+        {
+            string query = " SELECT MAX(capacity) From Venue;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable ShowMaxPrice()
+        {
+            string query = $"SELECT MAX(price) FROM venue";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable showstatistics()
+        {
+            string query = "SELECT venue_name,capacity FROM venue Order By capacity";
+            return dbMan.ExecuteReader(query);
+        }
+
         //rawan
         //events
         public DataTable AllEvents()

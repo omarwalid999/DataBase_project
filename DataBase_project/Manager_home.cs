@@ -99,5 +99,12 @@ namespace DataBase_project
             f.Show();
             this.Hide();
         }
+
+        private void Stats_Click(object sender, EventArgs e)
+        {
+            Statistics c = new Statistics();
+            c.Show();
+            this.Hide();
+        }
     }
 }

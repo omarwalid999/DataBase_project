@@ -46,9 +46,10 @@
             // allevents
             // 
             this.allevents.BackColor = System.Drawing.Color.Honeydew;
-            this.allevents.Location = new System.Drawing.Point(98, 198);
+            this.allevents.Location = new System.Drawing.Point(110, 248);
+            this.allevents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.allevents.Name = "allevents";
-            this.allevents.Size = new System.Drawing.Size(175, 70);
+            this.allevents.Size = new System.Drawing.Size(197, 88);
             this.allevents.TabIndex = 0;
             this.allevents.Text = "All Events";
             this.allevents.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@
             // allemployees
             // 
             this.allemployees.BackColor = System.Drawing.Color.Honeydew;
-            this.allemployees.Location = new System.Drawing.Point(98, 106);
+            this.allemployees.Location = new System.Drawing.Point(110, 132);
+            this.allemployees.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.allemployees.Name = "allemployees";
-            this.allemployees.Size = new System.Drawing.Size(175, 70);
+            this.allemployees.Size = new System.Drawing.Size(197, 88);
             this.allemployees.TabIndex = 1;
             this.allemployees.Text = "All Employees";
             this.allemployees.UseVisualStyleBackColor = false;
@@ -68,9 +70,10 @@
             // goals
             // 
             this.goals.BackColor = System.Drawing.Color.Honeydew;
-            this.goals.Location = new System.Drawing.Point(96, 293);
+            this.goals.Location = new System.Drawing.Point(108, 366);
+            this.goals.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.goals.Name = "goals";
-            this.goals.Size = new System.Drawing.Size(177, 70);
+            this.goals.Size = new System.Drawing.Size(199, 88);
             this.goals.TabIndex = 2;
             this.goals.Text = "Goals";
             this.goals.UseVisualStyleBackColor = false;
@@ -79,9 +82,10 @@
             // vendors
             // 
             this.vendors.BackColor = System.Drawing.Color.Honeydew;
-            this.vendors.Location = new System.Drawing.Point(525, 106);
+            this.vendors.Location = new System.Drawing.Point(591, 132);
+            this.vendors.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.vendors.Name = "vendors";
-            this.vendors.Size = new System.Drawing.Size(179, 70);
+            this.vendors.Size = new System.Drawing.Size(201, 88);
             this.vendors.TabIndex = 3;
             this.vendors.Text = "Vendors";
             this.vendors.UseVisualStyleBackColor = false;
@@ -90,9 +94,10 @@
             // services
             // 
             this.services.BackColor = System.Drawing.Color.Honeydew;
-            this.services.Location = new System.Drawing.Point(313, 198);
+            this.services.Location = new System.Drawing.Point(352, 248);
+            this.services.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.services.Name = "services";
-            this.services.Size = new System.Drawing.Size(179, 70);
+            this.services.Size = new System.Drawing.Size(201, 88);
             this.services.TabIndex = 4;
             this.services.Text = "Services";
             this.services.UseVisualStyleBackColor = false;
@@ -101,9 +106,10 @@
             // eventtypes
             // 
             this.eventtypes.BackColor = System.Drawing.Color.Honeydew;
-            this.eventtypes.Location = new System.Drawing.Point(525, 198);
+            this.eventtypes.Location = new System.Drawing.Point(591, 248);
+            this.eventtypes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.eventtypes.Name = "eventtypes";
-            this.eventtypes.Size = new System.Drawing.Size(179, 70);
+            this.eventtypes.Size = new System.Drawing.Size(201, 88);
             this.eventtypes.TabIndex = 5;
             this.eventtypes.Text = "Event_Types";
             this.eventtypes.UseVisualStyleBackColor = false;
@@ -112,9 +118,10 @@
             // allclients
             // 
             this.allclients.BackColor = System.Drawing.Color.Honeydew;
-            this.allclients.Location = new System.Drawing.Point(313, 106);
+            this.allclients.Location = new System.Drawing.Point(352, 132);
+            this.allclients.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.allclients.Name = "allclients";
-            this.allclients.Size = new System.Drawing.Size(172, 70);
+            this.allclients.Size = new System.Drawing.Size(194, 88);
             this.allclients.TabIndex = 6;
             this.allclients.Text = "All Clients";
             this.allclients.UseVisualStyleBackColor = false;
@@ -123,10 +130,10 @@
             // notif
             // 
             this.notif.Image = global::DataBase_project.Properties.Resources.notif1;
-            this.notif.Location = new System.Drawing.Point(718, 10);
+            this.notif.Location = new System.Drawing.Point(808, 12);
             this.notif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.notif.Name = "notif";
-            this.notif.Size = new System.Drawing.Size(70, 58);
+            this.notif.Size = new System.Drawing.Size(79, 72);
             this.notif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.notif.TabIndex = 8;
             this.notif.TabStop = false;
@@ -135,10 +142,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DataBase_project.Properties.Resources.mail;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(70, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(79, 72);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -147,27 +154,29 @@
             // notifications_count
             // 
             this.notifications_count.ForeColor = System.Drawing.Color.Red;
-            this.notifications_count.Location = new System.Drawing.Point(760, 54);
+            this.notifications_count.Location = new System.Drawing.Point(855, 68);
+            this.notifications_count.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.notifications_count.Name = "notifications_count";
-            this.notifications_count.Size = new System.Drawing.Size(28, 22);
+            this.notifications_count.Size = new System.Drawing.Size(31, 26);
             this.notifications_count.TabIndex = 9;
             // 
             // Stats
             // 
             this.Stats.BackColor = System.Drawing.Color.Honeydew;
-            this.Stats.Location = new System.Drawing.Point(322, 297);
+            this.Stats.Location = new System.Drawing.Point(362, 371);
             this.Stats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Stats.Name = "Stats";
-            this.Stats.Size = new System.Drawing.Size(169, 66);
+            this.Stats.Size = new System.Drawing.Size(190, 82);
             this.Stats.TabIndex = 10;
             this.Stats.Text = "View Statistics";
             this.Stats.UseVisualStyleBackColor = false;
+            this.Stats.Click += new System.EventHandler(this.Stats_Click);
             // 
             // Manager_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.Stats);
             this.Controls.Add(this.notifications_count);
             this.Controls.Add(this.notif);
@@ -179,6 +188,7 @@
             this.Controls.Add(this.goals);
             this.Controls.Add(this.allemployees);
             this.Controls.Add(this.allevents);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Manager_home";
             this.Text = "Manager_home";
             this.Load += new System.EventHandler(this.Manager_home_Load);
