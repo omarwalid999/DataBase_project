@@ -64,17 +64,15 @@ namespace DataBase_project
                 if (result != 0)
                 {
                     MessageBox.Show("Added susscessfully");
+                    DataTable dt1 = c.goalslist();
+                    goalsview.DataSource = dt1;
                     goalsview.Refresh();
                 }
+                else
+                {
+                    MessageBox.Show("failed to add");
+                }
             }
-
-        }
-
-        private void back92_Click(object sender, EventArgs e)
-        {
-            Manager_home M6= new Manager_home(manager_id);
-            M6.Show();
-            this.Hide();
 
         }
 
@@ -98,12 +96,24 @@ namespace DataBase_project
                 if (result != 0)
                 {
                     MessageBox.Show("deleted susscessfully");
+                    DataTable dt1 = c.goalslist();
+                    goalsview.DataSource = dt1;
                     goalsview.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("failed to delete");
                 }
             }
 
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Manager_home M6 = new Manager_home(manager_id);
+            M6.Show();
+            this.Hide();
+        }
     }
     }
 

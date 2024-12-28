@@ -106,16 +106,22 @@ namespace DataBase_project
 
         }
 
-        private void back9_Click(object sender, EventArgs e)
-        {
-            M_Events ev2 = new M_Events(manager_id);
-            ev2.Show();
-            this.Hide();
-        }
 
         private void eventdate_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddEvent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            M_Events ev2 = new M_Events(manager_id);
+            ev2.Show();
+            this.Hide();
         }
     }
     }
