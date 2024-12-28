@@ -218,6 +218,12 @@
     <Compile Include="employee_home.Designer.cs">
       <DependentUpon>employee_home.cs</DependentUpon>
     </Compile>
+    <Compile Include="inv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inv.Designer.cs">
+      <DependentUpon>inv.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="employee_home.resx">
       <DependentUpon>employee_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inv.resx">
+      <DependentUpon>inv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>

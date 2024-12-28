@@ -343,6 +343,12 @@ namespace DBapplication
             string query = $"INSERT INTO task (task_id, task, task_status, employee_ID) VALUES ({taskid}, '{tasks}', '{status}', {id})"; ;
             return dbMan.ExecuteNonQuery(query);
         }
+        public int insert_invoice(int invoice_id, int amount, int event_id, int id, int vend, string date)
+        {
+
+            string query = $"INSERT INTO invoice (invoice_ID, amount, event_ID, service_ID, vendorid, invoice_date) VALUES ({invoice_id}, {amount}, {event_id}, {id}, {vend}, 'date')"; ;
+            return dbMan.ExecuteNonQuery(query);
+        }
         public DataTable chosen(int id)
         {
             string query = $"SELECT DISTINCT client.Fname, event.eventname, event.event_date, venue.venue_name, client.client_ID, event.no_of_attendees FROM event INNER JOIN client ON event.client_ID = client.client_ID INNER JOIN venue ON event.venue_ID = venue.venue_ID INNER JOIN employee ON event.employee_ID = employee.employee_ID\r\nWHERE \r\n    event.event_ID = {id};\r\n ";
