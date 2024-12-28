@@ -312,6 +312,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="client_home.resx">
       <DependentUpon>client_home.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="client_login.resx">
       <DependentUpon>client_login.cs</DependentUpon>
